@@ -16,7 +16,7 @@ import { faqSchema } from "@/lib/seo";
 
 const title = "Home Remodeling Financing in Southwest Florida";
 const description =
-  "Financing available upon credit approval through third-party lenders for remodels, impact windows, roofs and lanais. Simple steps, fair payment schedule.";
+  "Financing available upon credit approval through third-party lenders for remodels, impact windows, kitchens and lanais. Simple steps, fair payment schedule.";
 
 export const metadata: Metadata = {
   title,
@@ -40,7 +40,7 @@ export default function FinancingPage() {
         accent="Spread the Cost Out."
         intro={
           <p>
-            Impact windows, a new roof or a kitchen add up fast, and the bill doesn&apos;t have to land in one lump.
+            Impact windows, a new bathroom or a kitchen add up fast, and the bill doesn&apos;t have to land in one lump.
             Mention financing at your free estimate and we&apos;ll go over lender options during the same visit.
             Financing is available upon credit approval through third-party lenders.
           </p>

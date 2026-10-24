@@ -28,9 +28,8 @@ function getProject(slug: string) {
 /** Lower-case trade noun for "Looking for a ___ contractor in ___?" */
 const tradeNoun: Record<string, string> = {
   "impact-windows-doors": "impact window and door",
-  "lanai-screen-enclosures": "lanai and screen enclosure",
+  "lanai-enclosures": "lanai and screen enclosure",
   "exterior-remodeling": "stucco and exterior remodeling",
-  roofing: "roofing",
   siding: "siding",
   "whole-home-remodeling": "whole-home remodeling",
   "kitchen-remodeling": "kitchen remodeling",

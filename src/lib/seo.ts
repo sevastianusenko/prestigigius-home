@@ -57,7 +57,7 @@ export function localBusinessSchema(): JsonLd {
     "@id": ORG_ID,
     name: site.name,
     legalName: site.legalName,
-    description: `${site.tagline}. Home remodeling, restoration, impact windows, roofing and storm rebuilds. Licensed & insured, ${site.licenseLabel}.`,
+    description: `${site.tagline}. Home remodeling, restoration, impact windows, lanais and storm rebuilds. Licensed & insured, ${site.licenseLabel}.`,
     url: absoluteUrl("/"),
     logo: absoluteUrl("/icon"),
     image: absoluteUrl("/opengraph-image"),

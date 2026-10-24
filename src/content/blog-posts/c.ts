@@ -231,7 +231,7 @@ Ready to replace your slider? Call Prestigious Home Improvements at (941) 223-48
       "hurricane sliding glass doors",
       "impact sliding glass door cost",
     ],
-    relatedServices: ["impact-windows-doors", "outdoor-living", "lanai-screen-enclosures"],
+    relatedServices: ["impact-windows-doors", "outdoor-living", "lanai-enclosures"],
   },
 
   // 11 — Outswing vs inswing

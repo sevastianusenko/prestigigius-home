@@ -20,7 +20,7 @@ const P = {
   stripped: stock("restoration-04"),
   patched: stock("restoration-05"),
   peeling: stock("restoration-01"),
-  tearOff: stock("roofing-03"),
+  aerial: stock("storm-damage-02"),
   stucco: stock("siding-stucco-03"),
   lanaiBefore: jobPhoto("manatee-county-lanai-wall-block-rebuild", 1, "lanai", "Old aluminum-framed lanai wall with glass panels before replacement, Manatee County", "Before: the original aluminum lanai wall."),
   lanaiAfter: jobPhoto("manatee-county-lanai-wall-block-rebuild", 3, "lanai", "New stucco block wall with storm-rated windows and a full-lite door, Manatee County", "After: block wall, storm-rated windows and door."),
@@ -29,11 +29,11 @@ const P = {
 export const stormPage = {
   seoTitle: "Storm & Water Damage Repair Port Charlotte FL | Rebuilds",
   seoDescription:
-    "Storm and water damage rebuilds in Port Charlotte & SWFL after mitigation: drywall, floors, cabinets, roof and openings. Permitted, adjuster-ready estimates. Free assessment.",
+    "Storm and water damage rebuilds in Port Charlotte & SWFL after mitigation: drywall, floors, cabinets, windows and doors. Permitted, adjuster-ready estimates. Free assessment.",
   hero: {
     eyebrow: "Hurricane · flood · roof leak · plumbing leak",
     title: "Storm & Water Damage Rebuilds in Port Charlotte",
-    lead: "The mitigation company dries the house. We put it back together: drywall, insulation, floors, cabinets, and the roof or window damage that let the water in. Permitted, documented for your adjuster, and run by one of the owners.",
+    lead: "The mitigation company dries the house. We put it back together: drywall, insulation, floors, cabinets, and the window and door damage that let the water in. Permitted, documented for your adjuster, and run by one of the owners.",
     photos: [P.patched, P.wrecked, P.debris] as Photo[],
     proof: [
       { value: "Dry", label: "log checked before drywall" },
@@ -49,9 +49,9 @@ export const stormPage = {
       price: "$30,000–$85,000",
     },
     {
-      title: "Roof-to-interior rebuild",
-      text: "Wind opened the roof and rain came in. Decking and roofing repaired under permit first, then insulation, ceilings and finishes below.",
-      photo: P.tearOff,
+      title: "Wind-damage rebuild",
+      text: "Broken windows, sliders or a garage door let the rain in. We replace the openings with impact units and rebuild ceilings and finishes, scheduled around your roofer.",
+      photo: P.aerial,
       price: "$35,000–$120,000",
     },
     {
@@ -82,7 +82,6 @@ export const stormPage = {
       "Moisture-resistant drywall at the bottom course",
       "Tile or water-tolerant vinyl instead of carpet or laminate",
       "Impact windows, doors and wind-rated garage doors",
-      "Better roof-to-wall connections where they can be reached",
     ],
   },
   learn: [

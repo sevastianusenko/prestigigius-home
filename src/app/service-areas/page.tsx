@@ -21,7 +21,7 @@ import { absoluteUrl, faqSchema } from "@/lib/seo";
 
 const title = "Service Areas — Charlotte, Sarasota & Lee County";
 const description =
-  "Remodeling, impact windows, roofing and restoration in Port Charlotte, North Port, Punta Gorda, Englewood, Venice, Sarasota, Fort Myers and Cape Coral.";
+  "Remodeling, impact windows, lanais and restoration in Port Charlotte, North Port, Punta Gorda, Englewood, Venice, Sarasota, Fort Myers and Cape Coral.";
 
 export const metadata: Metadata = {
   title,

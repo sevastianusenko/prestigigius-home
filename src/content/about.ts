@@ -14,7 +14,7 @@ export const about: AboutContent = {
     "We are Tim Fomin and Vlad Filippov, and Prestigious Home Improvements is the company we built after years of installing windows and doors for other contractors across Southwest Florida. We were the crew that showed up after a big window company sold the job: we pulled the old frames, set the new impact units, sealed and trimmed them, and moved on to the next house in Port Charlotte, North Port, Sarasota or Fort Myers. We did that for years, through the building boom and through the rebuild after Hurricane Ian.",
     "Working as subcontractors taught us two things. First, how an opening is actually supposed to be built in this climate: the bucks, the flashing, the design pressures, the product approvals, the inspections. Second, what goes wrong between the salesperson and the install. Promises made at the kitchen table that nobody on site had heard about. Lead times that were never explained. A homeowner who could not get a call back. We decided that if we ran our own company, the person who priced the job would be the person who ran it.",
     "We incorporated Prestigious Home Improvements, Inc. in Port Charlotte in October 2022, one month after Ian. For the first couple of years the company was the two of us, doing windows, doors, sliders, siding and shutters, mostly by referral. In 2025 we took the step that let us take on the whole house: the company became a licensed Florida Certified Residential Contractor, license CRC1327831. That license is valid statewide, it is on file with the Charlotte County Construction License Board, and you can check it yourself on myfloridalicense.com.",
-    "That changed what we can do for you. We still install impact windows and doors every week, but now we also run full renovations and restorations: kitchens, bathrooms, additions and Florida rooms, lanai and screen enclosures, roofing, siding and stucco, painting, flooring, outdoor living, and the storm-damage rebuilds that too many families in Charlotte, Sarasota and Lee counties are still living with. We pull the permits, we schedule the inspections, and our own crew does the work.",
+    "That changed what we can do for you. We still install impact windows and doors every week, but now we also run full renovations and restorations: kitchens, bathrooms, additions and Florida rooms, lanai enclosures, siding and stucco, painting, flooring, outdoor living, and the storm-damage rebuilds that too many families in Charlotte, Sarasota and Lee counties are still living with. We pull the permits, we schedule the inspections, and our own crew does the work.",
     "We are a small, family-owned company and we intend to stay that way. Tim prices every job and manages it. Vlad leads the crew in the field. You get one phone number, a written scope before a single tool comes out, and a written workmanship warranty when we are done. Our customers have given us a 5.0 rating on Google and on Yelp, and the Better Business Bureau accredited us with an A+ rating in January 2026. Those reviews come from real jobs on real streets, and we work to keep every one of them.",
     "If you are planning a remodel, a window and door package, or putting a house back together after a storm, call us. We will come out, measure, listen, and leave you with an honest number.",
   ],
@@ -123,7 +123,7 @@ export const origin = {
     {
       kicker: "2025",
       title: "Licensed for the whole house",
-      text: "The company is licensed under CRC1327831 as a Florida Certified Residential Contractor. That opened the door to kitchens, baths, additions, lanais, roofing and storm rebuilds alongside the window and door work we started with.",
+      text: "The company is licensed under CRC1327831 as a Florida Certified Residential Contractor. That opened the door to kitchens, baths, additions, lanais and storm rebuilds alongside the window and door work we started with.",
     },
     {
       kicker: "Today",
@@ -149,7 +149,7 @@ export const trackRecord = {
   groups: [
     { title: "Windows & doors", text: "Impact windows, sliders, entry doors and shutters, where we started." },
     { title: "Interior remodels", text: "Kitchens, bathrooms, flooring, tile and whole-home renovations." },
-    { title: "Exterior & structure", text: "Roofing, siding, stucco, painting, additions and Florida rooms." },
+    { title: "Exterior & structure", text: "Siding, stucco, painting, additions and Florida rooms." },
     { title: "Outdoor & restoration", text: "Lanais, screen enclosures, outdoor living and storm-damage rebuilds." },
   ] as Card[],
 };
@@ -201,7 +201,7 @@ export const careers = {
     eyebrow: "What this job is",
     title: "Start From Zero, Learn on the Job",
     paragraphs: [
-      "Prestigious Home Improvements is a residential general contractor based in Port Charlotte. Most of our work happens inside people's homes: impact windows and doors, remodels, lanais, roofing and storm repairs across Charlotte, Sarasota and Lee Counties.",
+      "Prestigious Home Improvements is a residential general contractor based in Port Charlotte. Most of our work happens inside people's homes: impact windows and doors, remodels, lanais and storm repairs across Charlotte, Sarasota and Lee Counties.",
       "You do not need to know the trade yet. The owners still work on site, so you learn directly from the people who built the company, one job at a time, until you can do it without anyone looking over your shoulder.",
     ],
     notNeeded: { label: "Not required", text: "A construction background, a long resume or a full set of tools on day one." },
@@ -269,7 +269,7 @@ export const careers = {
     },
     {
       q: "What kind of work is it?",
-      a: "Mostly hands-on field work in occupied homes: removing and installing windows and doors, framing and finish work, demolition and clean-up on remodels, and helping on lanai, roofing and storm-repair jobs. Work that needs a separately licensed trade, such as electrical or plumbing, goes to licensed subcontractors.",
+      a: "Mostly hands-on field work in occupied homes: removing and installing windows and doors, framing and finish work, demolition and clean-up on remodels, and helping on lanai and storm-repair jobs. Work that needs a separately licensed trade, such as electrical or plumbing, goes to licensed subcontractors.",
     },
     {
       q: "How much does it pay?",
@@ -337,8 +337,8 @@ export const referral = {
       { who: "Someone still living with builder-grade windows and no shutters", service: "Impact windows & doors" },
       { who: "A neighbor still putting things back together after Ian, Helene or Milton", service: "Storm rebuilds" },
       { who: "A friend who keeps making excuses for their kitchen when you come over", service: "Kitchen & bath" },
-      { who: "Someone whose screen enclosure is torn, rusted or sagging", service: "Lanai & screens" },
-      { who: "A relative whose roof keeps coming up in insurance letters", service: "Roofing" },
+      { who: "Someone whose screen enclosure is torn, rusted or sagging", service: "Lanai enclosures" },
+      { who: "A relative who wants a real room out of an open patio", service: "Lanai enclosures" },
       { who: "Someone who just bought an older home that needs a refresh", service: "Whole-home" },
     ],
     outro: "Pictured someone while reading that list? Send us their name.",

@@ -1,6 +1,6 @@
 # BRIEF — Prestigious Home Improvements website
 
-Marketing site for **Prestigious Home Improvements, Inc.** — licensed residential general contractor in Port Charlotte, Southwest Florida (full renovation and restoration: whole-home, kitchens, baths, additions, impact windows & doors, lanais, exterior, roofing, siding, painting, flooring, outdoor living, restoration, storm rebuilds). Facts: `src/content/site.ts`. Company dossier: `prestigious-home-improvements-research.md`. Keyword core: `keywords-core.csv`, competitor analysis: `ca-competitors-semantic-core.md`.
+Marketing site for **Prestigious Home Improvements, Inc.** — licensed residential general contractor in Port Charlotte, Southwest Florida (full renovation and restoration: whole-home, kitchens, baths, additions, impact windows & doors, lanai enclosures, exterior, siding, painting, flooring, outdoor living, restoration, storm rebuilds). Facts: `src/content/site.ts`. Company dossier: `prestigious-home-improvements-research.md`. Keyword core: `keywords-core.csv`, competitor analysis: `ca-competitors-semantic-core.md`.
 
 Reference for structure and polish: **hybridrenovations.com** (HubSpot site of a LA general contractor). We copy the *structure, section rhythm and level of detail*, never their text or photos.
 
@@ -64,7 +64,7 @@ Types in `src/content/types.ts`. Modules and their exports:
 - `photos.ts` → `export const photos: Photo[]` (≥ 70 verified images across all categories)
 - `services/interior-core.ts` → `interiorCore` (whole-home-remodeling, kitchen-remodeling, bathroom-remodeling, home-additions)
 - `services/interior-finish.ts` → `interiorFinish` (painting, flooring, outdoor-living)
-- `services/exterior-core.ts` → `exteriorCore` (impact-windows-doors, lanai-screen-enclosures, exterior-remodeling, roofing, siding)
+- `services/exterior-core.ts` → `exteriorCore` (impact-windows-doors, lanai-enclosures, exterior-remodeling, siding)
 - `services/restoration.ts` → `restorationServices` (home-restoration, storm-damage-rebuild)
 - `services/index.ts` aggregates them in menu order: `services`, `getService(slug)`, `serviceGroups`
 - `projects.ts` → `export const projects: Project[]` (12, `sample: true`)
@@ -74,7 +74,7 @@ Types in `src/content/types.ts`. Modules and their exports:
 - `faqs.ts` → `export const generalFaqs: Faq[]` (12 general: licensing, permits, insurance, financing, timelines, warranty, HOA, hurricane season)
 - `about.ts` → `export const about = { story: string[], values: {title,text}[], team: {name, role, bio}[], milestones: {year,text}[] }`
 
-Slugs are fixed by `nav.services` in `site.ts`. Service slugs: whole-home-remodeling, kitchen-remodeling, bathroom-remodeling, home-additions, impact-windows-doors, lanai-screen-enclosures, exterior-remodeling, roofing, siding, painting, flooring, outdoor-living, home-restoration, storm-damage-rebuild.
+Slugs are fixed by `nav.services` in `site.ts`. 13 services, confirmed by the client 2026-10-24: the company does NOT do roofing (service, page and roofing articles removed; never offer roof work, only mention roofs as a cause of damage or as part of an addition's structure), and the lanai service is named "Lanai Enclosures". Service slugs: whole-home-remodeling, kitchen-remodeling, bathroom-remodeling, home-additions, impact-windows-doors, lanai-enclosures, exterior-remodeling, siding, painting, flooring, outdoor-living, home-restoration, storm-damage-rebuild.
 
 ## Routes (`src/app/**`) — page agents
 

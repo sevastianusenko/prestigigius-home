@@ -15,7 +15,7 @@ import { photo } from "@/lib/photos";
 
 const title = "Home Remodeling Services in Port Charlotte, FL";
 const description =
-  "Kitchens, baths, additions, impact windows, roofing, lanais and storm rebuilds from one licensed contractor serving Port Charlotte and Southwest Florida.";
+  "Kitchens, baths, additions, impact windows, lanais and storm rebuilds from one licensed contractor serving Port Charlotte and Southwest Florida.";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -47,7 +47,7 @@ export default function ServicesPage() {
         crumbs={[{ label: "Services", href: "/services" }]}
         eyebrow="Services · Port Charlotte & SWFL"
         title="One Licensed Contractor for the Whole House"
-        subhead={`From a single bathroom to a full gut renovation, impact windows to a new roof. We plan it, permit it under ${site.license} and build it with our own crew across Charlotte, Sarasota and Lee County.`}
+        subhead={`From a single bathroom to a full gut renovation, impact windows to a new lanai. We plan it, permit it under ${site.license} and build it with our own crew across Charlotte, Sarasota and Lee County.`}
         photo={photo("whole-home")}
       />
       <TrustStrip />

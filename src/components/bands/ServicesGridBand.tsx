@@ -20,7 +20,7 @@ export type ServicesGridBandProps = {
 export default function ServicesGridBand({
   eyebrow = "What we do",
   title = "Residential Remodeling\nAcross Southwest Florida",
-  intro = "Kitchens and baths, impact windows, lanais, roofs and full storm rebuilds. One licensed contractor runs the whole job, from the permit to the final walkthrough, in Charlotte, Sarasota and Lee Counties.",
+  intro = "Kitchens and baths, impact windows, lanais and full storm rebuilds. One licensed contractor runs the whole job, from the permit to the final walkthrough, in Charlotte, Sarasota and Lee Counties.",
   slugs,
 }: ServicesGridBandProps) {
   const list = slugs?.length

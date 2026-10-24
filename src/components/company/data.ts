@@ -152,8 +152,7 @@ export const qualifyingProjects: string[] = [
   "Kitchen and bathroom remodels",
   "Whole-home renovations",
   "Impact windows and doors",
-  "Roof replacement",
-  "Lanai and screen enclosures",
+  "Lanai enclosures",
   "Home additions and Florida rooms",
   "Siding, stucco and exterior painting",
   "Storm and water-damage rebuilds (including the gap insurance does not cover)",
@@ -182,7 +181,7 @@ export const financingFaqs: Faq[] = [
   },
   {
     q: "Is there a minimum project size?",
-    a: "Lenders set their own minimums. Most remodeling, window, roofing and lanai projects we quote qualify. Ask us at the estimate and we will tell you what applies to your job.",
+    a: "Lenders set their own minimums. Most remodeling, window and lanai projects we quote qualify. Ask us at the estimate and we will tell you what applies to your job.",
   },
   {
     q: "Can I combine financing with insurance money?",
@@ -199,7 +198,7 @@ export const financingFaqs: Faq[] = [
 export const warrantyFaqs: Faq[] = [
   {
     q: "How long does your workmanship warranty last?",
-    a: "The term is written into your contract and depends on the scope. A roof, a set of impact windows and an interior repaint wear differently, so we put the exact coverage for your job on paper before you sign rather than quoting one number for everything.",
+    a: "The term is written into your contract and depends on the scope. A bathroom, a set of impact windows and an interior repaint wear differently, so we put the exact coverage for your job on paper before you sign rather than quoting one number for everything.",
   },
   {
     q: "Who do I call if something goes wrong?",
@@ -207,7 +206,7 @@ export const warrantyFaqs: Faq[] = [
   },
   {
     q: "What if the problem is the product, not the installation?",
-    a: "We still come out and look. If a window, fixture or roofing material failed on its own, we document it and file the claim with the manufacturer for you, then handle the swap when the replacement arrives.",
+    a: "We still come out and look. If a window, fixture or finish material failed on its own, we document it and file the claim with the manufacturer for you, then handle the swap when the replacement arrives.",
   },
   {
     q: "Do I need to register anything myself?",
@@ -221,7 +220,7 @@ export const warrantyFaqs: Faq[] = [
 
 export const warrantyCovered: string[] = [
   "Defects in our installation and workmanship on the work listed in your contract",
-  "Leaks at windows, doors, roofs and openings we installed, when caused by our installation",
+  "Leaks at windows, doors and other openings we installed, when caused by our installation",
   "Tile, grout and setting failures caused by improper installation (cracked or loose tile, failed shower pans)",
   "Cabinets, trim and doors that we installed coming out of level, plumb or alignment",
   "Plumbing and electrical connections we made",
@@ -232,10 +231,6 @@ export const manufacturerWarranties: { title: string; text: string }[] = [
   {
     title: "Impact windows & doors",
     text: "Frame, glass and hardware warranties come from the manufacturer. We register the product where required and give you the paperwork with model and NOA numbers.",
-  },
-  {
-    title: "Roofing",
-    text: "Shingle, tile and metal roofing systems carry manufacturer material warranties. Enhanced system warranties depend on the product line and installer requirements.",
   },
   {
     title: "Cabinets, fixtures & appliances",

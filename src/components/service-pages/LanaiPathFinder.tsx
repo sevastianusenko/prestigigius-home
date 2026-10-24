@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import type { LanaiPath } from "@/content/service-pages/lanai-screen-enclosures";
+import type { LanaiPath } from "@/content/service-pages/lanai-enclosures";
 
 type Finder = { open: Record<"sound" | "damaged", LanaiPath>; room: Record<"under" | "cage", LanaiPath> };
 

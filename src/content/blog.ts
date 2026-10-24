@@ -12,7 +12,6 @@ import { postsJ } from "./blog-posts/j";
 import { postsK } from "./blog-posts/k";
 import { postsN } from "./blog-posts/n";
 import { postsL } from "./blog-posts/l";
-import { postsM } from "./blog-posts/m";
 
 /**
  * Blog articles for SWFL homeowners. Body format: "## " = H2, "- " = bullet,
@@ -405,7 +404,7 @@ const basePosts: Post[] = [
       "order of work home renovation",
       "whole home remodeling port charlotte",
     ],
-    relatedServices: ["whole-home-remodeling", "impact-windows-doors", "roofing"],
+    relatedServices: ["whole-home-remodeling", "impact-windows-doors", "home-restoration"],
   },
 
   // ---------------------------------------------------------------- 6
@@ -551,7 +550,7 @@ const basePosts: Post[] = [
       "florida 25 percent roof rule",
       "how to pick a contractor after a hurricane",
     ],
-    relatedServices: ["storm-damage-rebuild", "home-restoration", "roofing"],
+    relatedServices: ["storm-damage-rebuild", "home-restoration", "impact-windows-doors"],
   },
 
   // ---------------------------------------------------------------- 8
@@ -627,7 +626,7 @@ const basePosts: Post[] = [
 /** Evergreen explainers (docs/BLOG-BRIEF.md) first, then the original guides; newest first. */
 export const posts: Post[] = [
   ...postsA, ...postsB, ...postsC, ...postsD,
-  ...postsE, ...postsF, ...postsG, ...postsH, ...postsI, ...postsJ, ...postsK, ...postsL, ...postsM, ...postsN,
+  ...postsE, ...postsF, ...postsG, ...postsH, ...postsI, ...postsJ, ...postsK, ...postsL, ...postsN,
   ...basePosts,
 ].sort((a, b) =>
   b.date.localeCompare(a.date),

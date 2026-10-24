@@ -49,7 +49,7 @@ const reviewStories: Project[] = [
     title: "Replacing a 1985 Aluminum Lanai Wall With Block and Storm-Rated Glass",
     city: "Manatee County",
     date: "2026-02",
-    serviceSlugs: ["lanai-screen-enclosures", "impact-windows-doors", "exterior-remodeling"],
+    serviceSlugs: ["lanai-enclosures", "impact-windows-doors", "exterior-remodeling"],
     summary:
       "An original aluminum lanai wall and storm door from about 1985 replaced with a reinforced block wall, storm-rated windows and a storm-rated door, finished inside to match the house.",
     storyTitle: "A lanai wall that had to go",

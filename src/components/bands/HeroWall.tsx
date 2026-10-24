@@ -18,7 +18,6 @@ function defaultWall(): Photo[] {
     "lanai",
     "windows-doors",
     "whole-home",
-    "roofing",
     "outdoor-living",
     "addition",
     "flooring",

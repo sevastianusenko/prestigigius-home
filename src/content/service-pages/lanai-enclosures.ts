@@ -1,6 +1,6 @@
 /**
- * Content for the redesigned Lanai & Screen Enclosures service page
- * (src/app/services/lanai-screen-enclosures/page.tsx). Real job photos where we
+ * Content for the redesigned Lanai Enclosures service page
+ * (src/app/services/lanai-enclosures/page.tsx). Real job photos where we
  * have them (pool-lanai sliders, the Manatee lanai wall, a Sarasota pool home);
  * stock only for rescreen / cage cards, labelled "Illustrative" on the page.
  * Prices must stay consistent with src/content/services/exterior-core.ts.
@@ -44,12 +44,12 @@ export type LanaiPath = {
 };
 
 export const lanaiPage = {
-  seoTitle: "Lanai & Screen Enclosures Port Charlotte FL | Pool Cages",
+  seoTitle: "Lanai Enclosures Port Charlotte FL | Pool Cages",
   seoDescription:
     "Pool cage rescreens and engineered rebuilds, lanai remodels and under-roof lanai conversions with impact glass in Port Charlotte, North Port & SWFL. Permitted. Free estimate.",
   hero: {
     eyebrow: "Rescreens · pool cages · lanai conversions",
-    title: "Lanai & Screen Enclosures in Port Charlotte",
+    title: "Lanai Enclosures in Port Charlotte",
     lead: "From October to May the lanai is the room you live in. We check the frame before we sell you screen, rebuild cages to current wind engineering, and turn under-roof lanais into real rooms with impact glass set by our own window crew.",
     photos: [P.cageWall, P.slider4, P.poolHome] as Photo[],
     proof: [

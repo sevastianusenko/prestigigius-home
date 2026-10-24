@@ -61,7 +61,7 @@ export default function HomePage() {
       <ReviewsBand />
       <FinancingBand
         title="Start the Remodel Now, Pay for It Over Time"
-        text="A new kitchen, a full set of impact windows or a new roof is a serious number, and it does not have to be paid in one go. Ask about financing at your free estimate and we will walk you through the options, subject to credit approval."
+        text="A new kitchen, a full set of impact windows or a whole-home remodel is a serious number, and it does not have to be paid in one go. Ask about financing at your free estimate and we will walk you through the options, subject to credit approval."
       />
       <FaqBand eyebrow="FAQ" title="Questions Homeowners Ask Us" items={generalFaqs.slice(0, 8)} />
       <ServiceAreasBand />

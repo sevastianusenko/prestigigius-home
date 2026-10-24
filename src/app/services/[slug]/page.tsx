@@ -29,7 +29,7 @@ type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
 
 /** Services with a dedicated, hand-built page in src/app/services/<slug>/page.tsx. */
-const CUSTOM_PAGES = new Set(["impact-windows-doors", "bathroom-remodeling", "kitchen-remodeling", "storm-damage-rebuild", "whole-home-remodeling", "home-additions", "lanai-screen-enclosures", "exterior-remodeling", "roofing", "siding", "painting", "flooring", "outdoor-living", "home-restoration"]);
+const CUSTOM_PAGES = new Set(["impact-windows-doors", "bathroom-remodeling", "kitchen-remodeling", "storm-damage-rebuild", "whole-home-remodeling", "home-additions", "lanai-enclosures", "exterior-remodeling", "siding", "painting", "flooring", "outdoor-living", "home-restoration"]);
 
 export function generateStaticParams() {
   return services.filter((s) => !CUSTOM_PAGES.has(s.slug)).map((s) => ({ slug: s.slug }));

@@ -2,7 +2,7 @@ import type { Service } from "../types";
 
 /**
  * Exterior core services: impact windows & doors, lanais, exterior/stucco,
- * roofing, siding. Prices are typical Southwest Florida ranges for 2026 and are
+ * siding. Prices are typical Southwest Florida ranges for 2026 and are
  * shown as guidance only; every job gets a written, fixed-price estimate.
  */
 export const exteriorCore: Service[] = [
@@ -384,20 +384,20 @@ export const exteriorCore: Service[] = [
         text: "We meet the final inspection, walk the house with you, clean up, and hand over product approvals and the opening list for your wind mitigation inspector.",
       },
     ],
-    related: ["lanai-screen-enclosures", "exterior-remodeling", "storm-damage-rebuild"],
+    related: ["lanai-enclosures", "exterior-remodeling", "storm-damage-rebuild"],
   },
 
   // ---------------------------------------------------------------------------
   // 2. LANAI & SCREEN ENCLOSURES
   // ---------------------------------------------------------------------------
   {
-    slug: "lanai-screen-enclosures",
-    title: "Lanai & Screen Enclosures",
-    navLabel: "Lanai & Screen Enclosures",
+    slug: "lanai-enclosures",
+    title: "Lanai Enclosures",
+    navLabel: "Lanai Enclosures",
     group: "exterior",
     blurb:
       "Lanai remodels, rescreens, pool cage rebuilds and under-roof lanai conversions with impact glass.",
-    seoTitle: "Lanai & Screen Enclosures Port Charlotte FL | Prestigious",
+    seoTitle: "Lanai Enclosures Port Charlotte FL | Prestigious",
     seoDescription:
       "Lanai remodels, rescreening, pool cage rebuilds and lanai conversions with impact sliders in Port Charlotte, North Port and SWFL. Permitted. Free estimate.",
     keywords: [
@@ -410,7 +410,7 @@ export const exteriorCore: Service[] = [
       "lanai conversion florida",
       "patio cover port charlotte",
     ],
-    eyebrow: "Lanai & Screen Enclosures · Port Charlotte & SWFL",
+    eyebrow: "Lanai Enclosures · Port Charlotte & SWFL",
     headline: "A Lanai You Will Use All Year, Built for the Next Storm Season",
     subhead:
       "Rescreens, engineered pool cage rebuilds, open-air lanai remodels and full conversions with impact glass, permitted and built by a licensed Port Charlotte crew.",
@@ -1040,361 +1040,7 @@ export const exteriorCore: Service[] = [
   },
 
   // ---------------------------------------------------------------------------
-  // 4. ROOFING
-  // ---------------------------------------------------------------------------
-  {
-    slug: "roofing",
-    title: "Roofing",
-    navLabel: "Roofing",
-    group: "exterior",
-    blurb:
-      "Shingle, metal and tile re-roofs and repairs, permitted and documented for your insurer.",
-    seoTitle: "Roofing Contractor Port Charlotte FL | Prestigious",
-    seoDescription:
-      "Shingle, metal and tile roof replacement and repair in Port Charlotte and SWFL. Wind mitigation upgrades, insurance roof letters, permits. Free estimate.",
-    keywords: [
-      "roofing contractor port charlotte",
-      "roof replacement charlotte county",
-      "roof repair port charlotte",
-      "metal roof port charlotte",
-      "tile roof replacement florida",
-      "florida 25 percent roof rule",
-      "wind mitigation roof",
-      "roof inspection for insurance florida",
-    ],
-    eyebrow: "Roofing · Port Charlotte & SWFL",
-    headline: "Roofing Built for Hurricane Country, and for Your Insurer",
-    subhead:
-      "Shingle, metal and tile re-roofs, repairs and honest inspections, managed start to finish by a licensed local general contractor, with roof coverings installed by our state-licensed roofing partner.",
-    heroPhoto: "roofing",
-    howWeWork: [
-      {
-        title: "Re-roofs down to the deck",
-        text: "Full tear-off, rotted sheathing replaced, deck re-nailed and a secondary water barrier laid before any new covering goes on.",
-      },
-      {
-        title: "Repairs that find the real leak",
-        text: "We trace leaks from the attic side and the roof side, then repair flashing, boots and damaged covering instead of smearing sealant over the symptom.",
-      },
-      {
-        title: "Roofs for additions and conversions",
-        text: "New roof framing and coverings for additions, Florida rooms and lanai conversions, tied into the existing roof and matched to it.",
-      },
-      {
-        title: "A free, honest roof check",
-        text: "As part of your free estimate we tell you in writing what you have, what it needs and roughly how much life it has left. No obligation.",
-      },
-    ],
-    intro: [
-      "In Florida the roof is the line item your insurance company cares about most. Carriers look at roof age, material and condition before they will write or renew a policy, and many will not cover a shingle roof past 15 years without an inspection. We help homeowners in Charlotte, Sarasota and Lee counties figure out whether a roof needs a repair, a partial replacement or a full re-roof, and we document the work so it counts with the insurer.",
-      "We manage roofing the same way we manage every exterior job: one contract, one schedule, our project lead on site. Roof coverings are installed by a state-licensed roofing contractor we work with on every job, with permits pulled under that license as Florida law requires. We coordinate the roof with your impact windows, soffit, fascia, gutters and paint so the trades follow each other instead of tripping over each other.",
-      "Most of the region is in the wind-borne debris region with design wind speeds well above the national average, so roof-to-wall connections, deck nailing and secondary water barriers matter. Permits run through Charlotte County, North Port, Punta Gorda, Sarasota County or Lee County. HOAs often specify tile profile or shingle color. Re-roofs during hurricane season are planned around the forecast, with the deck dried in the same day it is opened. In flood zones, a re-roof combined with other work can count toward the FEMA 50% improvement threshold, so we track it.",
-    ],
-    scopes: [
-      {
-        title: "Roof repair",
-        summary:
-          "Fix leaks, lifted shingles, cracked tiles and failed flashing without replacing the whole roof.",
-        changes: [
-          { label: "Leak trace", detail: "Attic and roof inspection to find the real entry point" },
-          { label: "Covering", detail: "Damaged shingles, tiles or panels replaced with matching material" },
-          { label: "Flashing", detail: "Pipe boots, wall flashing and valleys resealed or replaced" },
-          { label: "Deck", detail: "Soft or rotted decking cut out and replaced" },
-          { label: "Interior", detail: "Ceiling stain and drywall repair if needed" },
-        ],
-        priceRange: "$500–$4k",
-        duration: "1–2 days",
-      },
-      {
-        title: "Shingle re-roof",
-        summary:
-          "Tear-off and replacement with architectural shingles rated for high wind.",
-        changes: [
-          { label: "Tear-off", detail: "Old roof removed down to the deck; rotted sheathing replaced" },
-          { label: "Deck", detail: "Re-nailed to current code for better wind mitigation credit" },
-          { label: "Barrier", detail: "Self-adhered secondary water barrier on the full deck" },
-          { label: "Shingles", detail: "High-wind architectural shingles with Florida Product Approval" },
-          { label: "Details", detail: "New drip edge, vents, pipe boots and flashing" },
-        ],
-        priceRange: "$14k–$30k",
-        duration: "2–4 days",
-      },
-      {
-        title: "Metal re-roof",
-        summary:
-          "Standing seam or exposed-fastener metal for long life and strong wind performance.",
-        changes: [
-          { label: "Panel", detail: "Standing seam or 5V crimp in Galvalume or painted finishes" },
-          { label: "Underlayment", detail: "High-temperature self-adhered underlayment" },
-          { label: "Attachment", detail: "Clips and fasteners per tested product approval" },
-          { label: "Trim", detail: "Matching ridge, eave and rake trim; coastal-grade fasteners" },
-        ],
-        priceRange: "$28k–$60k",
-        duration: "4–8 days",
-      },
-      {
-        title: "Tile re-roof",
-        summary:
-          "Concrete or clay tile replaced and reset with modern underlayment and attachment.",
-        changes: [
-          { label: "Tile", detail: "New concrete or clay tile, or salvage and reset where possible" },
-          { label: "Underlayment", detail: "Full new underlayment system, the part that actually keeps water out" },
-          { label: "Attachment", detail: "Foam adhesive or mechanical fastening per product approval" },
-          { label: "Details", detail: "New hip and ridge, bird stops and flashing" },
-          { label: "HOA", detail: "Profile and color matched to community standards" },
-        ],
-        priceRange: "$35k–$75k",
-        duration: "1–3 weeks",
-      },
-      {
-        title: "Insurance roof inspection and letters",
-        summary:
-          "Documentation for carriers: condition reports, remaining life, and records of completed work.",
-        changes: [
-          { label: "Inspection", detail: "Roof and attic photographed and documented" },
-          { label: "Condition", detail: "Written summary of age, condition and estimated remaining life" },
-          { label: "Repairs", detail: "Any repairs the carrier requires, priced and completed" },
-          { label: "Close-out", detail: "Permit, final inspection and product approvals for your file" },
-        ],
-        priceRange: "$150–$450",
-        duration: "Same week",
-      },
-    ],
-    included: [
-      "Roof and attic inspection with photos",
-      "Written repair-vs-replace recommendation with prices",
-      "Permits under a state-licensed roofing contractor and all inspections",
-      "Full tear-off and disposal on re-roofs",
-      "Decking replacement priced per sheet in the contract",
-      "Deck re-nailing and secondary water barrier on re-roofs",
-      "New flashing, vents, pipe boots and drip edge",
-      "Products with Florida Product Approval for your wind zone",
-      "Same-day dry-in when the deck is opened",
-      "Magnetic nail sweep and full site cleanup",
-      "Permit record, product approvals and photos for your insurer",
-      "Manufacturer warranty registration and written workmanship warranty",
-    ],
-    cost: {
-      title: "What Drives the Price of a Roof Project",
-      text: [
-        "In 2026 a shingle re-roof on a typical 2,000-square-foot Port Charlotte home runs $14,000 to $30,000. Metal runs $28,000 to $60,000, and concrete or clay tile runs $35,000 to $75,000. Most repairs land between $500 and $4,000.",
-        "Roof size and pitch set the base price. Rotted decking is the most common surprise, so we list a per-sheet price in the contract instead of guessing. A new roof with a secondary water barrier and upgraded deck attachment can also earn wind mitigation credits that reduce your premium, and financing is offered subject to credit approval.",
-      ],
-      factors: [
-        "Roof size, pitch and number of layers to remove",
-        "Material: shingle, metal or tile",
-        "Amount of rotted decking found at tear-off",
-        "Number of penetrations, valleys and skylights",
-        "Roof-to-wall connection or deck nailing upgrades",
-        "HOA color and profile requirements",
-        "Two-story access and disposal costs",
-      ],
-    },
-    localNotes: [
-      {
-        title: "The Florida 25% rule",
-        text: "Under the Florida Building Code, if more than 25% of a roof section is repaired or replaced within 12 months, the whole section traditionally had to be brought up to current code. Since 2022, roofs built to the 2007 code or newer only need the damaged portion redone to current code. We check your roof's permit history and tell you which applies.",
-      },
-      {
-        title: "Wind mitigation credits",
-        text: "Roof covering, deck attachment, roof-to-wall connection, roof shape and secondary water barrier all appear on the wind mitigation form. A re-roof is the cheapest moment to improve several of them at once, and we document each one for your inspector.",
-      },
-      {
-        title: "Insurance and roof age",
-        text: "Many Florida carriers require a roof inspection on shingle roofs older than about 15 years and may decline renewal on older roofs. Florida law limits refusing coverage on roofs under 15 years old based only on age if an inspection shows useful life remains. We provide the documentation either way.",
-      },
-    ],
-    faqs: [
-      {
-        q: "What does a roof replacement cost in Port Charlotte?",
-        a: "In 2026 a shingle re-roof on a typical home runs $14,000 to $30,000, metal $28,000 to $60,000, and tile $35,000 to $75,000. We give you a written, fixed price after inspecting the roof and attic.",
-      },
-      {
-        q: "Should I repair or replace my roof?",
-        a: "Repair if the roof has used less than about two-thirds of its expected life and the damage is local. Replace when leaks are spreading, the underlayment is failing, or your insurer will not renew. We price both when both make sense.",
-      },
-      {
-        q: "What is the Florida 25% roof rule?",
-        a: "It used to mean that repairing more than 25% of a roof section in 12 months forced a full re-roof of that section. Since 2022, roofs built to the 2007 Florida Building Code or later only need the damaged part redone to current code. Older roofs still follow the original rule.",
-      },
-      {
-        q: "Who actually installs the roof?",
-        a: "Roof coverings are installed and permitted by a state-licensed roofing contractor we work with on every job, as Florida law requires. We hold the contract, manage the schedule and coordinate the roof with the rest of your exterior.",
-      },
-      {
-        q: "Can a new roof lower my insurance premium?",
-        a: "Often, yes. A new roof with a secondary water barrier, upgraded deck nailing and proper roof-to-wall connections can improve your wind mitigation report. Ask your agent which credits your carrier offers.",
-      },
-      {
-        q: "How long does a re-roof take?",
-        a: "Two to four days for most shingle roofs, four to eight days for metal, and one to three weeks for tile. Permits and material ordering add one to three weeks before we start.",
-      },
-      {
-        q: "Can you provide a roof letter for my insurance company?",
-        a: "Yes. We inspect the roof and attic, photograph it, and give you a written condition summary with estimated remaining life. If the carrier asks for repairs, we price and complete them.",
-      },
-    ],
-    promises: [
-      {
-        title: "A straight repair-or-replace answer",
-        text: "If the roof still has solid years in it, we say so. If a repair will get you through, we price the repair, not a whole new roof.",
-      },
-      {
-        title: "Rotted decking priced before we start",
-        text: "Replacement sheathing has a per-sheet price written into your contract, so what we find at tear-off never turns into a surprise invoice.",
-      },
-      {
-        title: "Flashing, boots and vents replaced",
-        text: "Every re-roof gets new flashing, pipe boots, vents and drip edge. Old metal is not reused under a new covering.",
-      },
-      {
-        title: "Dried in the same day",
-        text: "Any section of deck we open is covered with water barrier before the crew leaves, which matters a lot in summer.",
-      },
-      {
-        title: "Licensed roofer, one point of contact",
-        text: "Coverings are installed and permitted by our state-licensed roofing partner. We hold the contract, run the schedule and check the work.",
-      },
-      {
-        title: "Documents your insurer asks for",
-        text: "Permit record, final inspection, product approvals and photos, organized for your wind mitigation and four-point inspections.",
-      },
-    ],
-    signsTitle: "Not Sure Your Roof Needs Replacing? Find Out for Free.",
-    signs: [
-      {
-        title: "The roof covering",
-        text: "Lifted, creased or missing shingles, cracked or slipped tiles, loose metal panels, and granule loss that shows how much wear is left.",
-      },
-      {
-        title: "Flashing and penetrations",
-        text: "Walls, valleys, vents, pipes and skylights, the places where most Florida roof leaks actually begin.",
-      },
-      {
-        title: "The deck and the attic",
-        text: "Soft spots underfoot, water stains, daylight or wet insulation in the attic, all signs of trouble under the surface.",
-      },
-      {
-        title: "Ventilation and age",
-        text: "We compare the roof's age and attic airflow with its expected life, so our advice covers the whole roof, not one bad spot.",
-      },
-      {
-        title: "What your insurer will see",
-        text: "We look at the roof the way a carrier's inspector will, so you know before renewal whether a repair or replacement is coming.",
-      },
-      {
-        title: "A written answer, no obligation",
-        text: "You get a plain write-up: replace, repair, or keep an eye on it. Formal insurance roof letters are available as a separate service.",
-      },
-    ],
-    optionsTitle: "The Right Roof for Your Florida Home",
-    optionsIntro:
-      "We replace and repair the roof types common across Charlotte, Sarasota and Lee counties. Every covering we install carries a Florida Product Approval for your wind zone, and HOA rules often narrow the choice, so we check them first.",
-    options: [
-      {
-        title: "Architectural shingle",
-        text: "The most common and budget-friendly choice, in high-wind rated shingles and a wide range of colors.",
-        bullets: [
-          "Best for: most single-family homes and tight budgets",
-          "Install: two to four days on a typical home",
-        ],
-      },
-      {
-        title: "Metal",
-        text: "Standing seam or 5V crimp panels that shed water fast, reflect heat and hold up well in high wind.",
-        bullets: [
-          "Best for: long-term owners and coastal exposure",
-          "Install: about four to eight days",
-        ],
-      },
-      {
-        title: "Concrete and clay tile",
-        text: "The classic Florida look for Mediterranean and Spanish-style homes, installed over a new underlayment system.",
-        bullets: [
-          "Best for: tile communities and homes built for the weight",
-          "Install: one to three weeks",
-        ],
-      },
-      {
-        title: "Flat and low-slope",
-        text: "Membrane roofing for lanai roofs, porches, additions and flat sections that shingles cannot handle.",
-        bullets: [
-          "Best for: additions, Florida rooms and covered lanais",
-          "Install: often paired with a larger re-roof or remodel",
-        ],
-      },
-    ],
-    benefitsTitle: "A Roof Is a Whole System, Not Just Shingles",
-    benefits: [
-      {
-        title: "Trusses and roof-to-wall connections",
-        text: "The framing carries the roof, and the straps or clips tying it to the walls keep it attached in high wind. They show up on your wind mitigation form.",
-      },
-      {
-        title: "Roof deck and nailing",
-        text: "The plywood or OSB everything fastens to. We replace soft sections and re-nail the deck to current code, which can earn an insurance credit.",
-      },
-      {
-        title: "Secondary water barrier",
-        text: "A self-adhered membrane over the deck that keeps water out if the covering is damaged in a storm. Another line item insurers look for.",
-      },
-      {
-        title: "Drip edge and flashing",
-        text: "Metal at the edges, valleys, walls and penetrations, where wind-driven rain usually gets in first.",
-      },
-      {
-        title: "The covering you see",
-        text: "Shingle, metal or tile, fastened exactly as its Florida Product Approval specifies for your design wind speed.",
-      },
-      {
-        title: "Ridge and attic ventilation",
-        text: "Ridge and soffit vents let hot, damp attic air out, which helps the whole roof last and takes load off your AC.",
-      },
-    ],
-    processTitle: "A Re-Roof Done Right, All the Way to the Deck",
-    process: [
-      {
-        n: "01",
-        title: "Protect the property",
-        kicker: "Before anything comes off",
-        text: "We cover landscaping, shield the AC unit, pool and windows, and organize the site so it stays clean from start to finish.",
-      },
-      {
-        n: "02",
-        title: "Tear off to the deck",
-        kicker: "Nothing covered over",
-        text: "The old roof comes off down to bare wood. We do not lay new material over old, so nothing gets hidden.",
-      },
-      {
-        n: "03",
-        title: "Deck inspection and repair",
-        kicker: "Per-sheet price in the contract",
-        text: "With the deck exposed, we show you any rotted or weak sheathing before replacing it, and you pay only for what your roof needs.",
-      },
-      {
-        n: "04",
-        title: "Re-nail and dry in",
-        kicker: "Same-day dry-in",
-        text: "The deck is re-nailed to current code and covered with secondary water barrier the same day it is opened, with inspections where required.",
-      },
-      {
-        n: "05",
-        title: "Flashing, covering and vents",
-        kicker: "Installed to the approval",
-        text: "New drip edge, flashing and boots, then the covering and ridge ventilation, fastened to the tested pattern for your wind zone.",
-      },
-      {
-        n: "06",
-        title: "Cleanup and close-out",
-        kicker: "Paperwork in hand",
-        text: "Magnetic nail sweep, final inspection, a walk around the finished roof, and the permit record and photos for your insurer.",
-      },
-    ],
-    related: ["storm-damage-rebuild", "exterior-remodeling", "impact-windows-doors"],
-  },
-
-  // ---------------------------------------------------------------------------
-  // 5. SIDING
+  // 4. SIDING
   // ---------------------------------------------------------------------------
   {
     slug: "siding",

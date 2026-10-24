@@ -54,7 +54,7 @@ export const postsB: Project[] = [
     city: "Manatee County",
     date: "2026-04",
     serviceSlugs: [
-      "lanai-screen-enclosures",
+      "lanai-enclosures",
       "impact-windows-doors",
       "home-additions",
       "exterior-remodeling",
@@ -221,7 +221,7 @@ export const postsB: Project[] = [
       "White sliding glass doors on a covered, screened pool lanai in Southwest Florida, sill tracks set on the deck. See the job and get a free estimate.",
     city: "Southwest Florida",
     date: "",
-    serviceSlugs: ["impact-windows-doors", "lanai-screen-enclosures"],
+    serviceSlugs: ["impact-windows-doors", "lanai-enclosures"],
     summary:
       "Several new white two-panel sliding glass doors on a covered pool lanai under a screen enclosure, including two openings side by side on one wall.",
     storyTitle: "Three sliders, one pool lanai",

@@ -12,7 +12,7 @@ import { photo } from "@/lib/photos";
  * Paragraphs adapted from about.story (src/content/about.ts).
  */
 const paragraphs = [
-  `Before Prestigious had its own name on the truck, Tim Fomin and Vlad Filippov spent years as the installers other Southwest Florida contractors sent out after the sale was made. We set impact windows and doors across Charlotte, Sarasota and Lee counties, through the building boom and the long rebuild after Hurricane Ian. In October ${site.founded} we opened our own company in Port Charlotte, and today it is a licensed Florida Certified Residential Contractor (${site.license}) running kitchens, baths, additions, lanais, roofing and storm repairs as well as windows.`,
+  `Before Prestigious had its own name on the truck, Tim Fomin and Vlad Filippov spent years as the installers other Southwest Florida contractors sent out after the sale was made. We set impact windows and doors across Charlotte, Sarasota and Lee counties, through the building boom and the long rebuild after Hurricane Ian. In October ${site.founded} we opened our own company in Port Charlotte, and today it is a licensed Florida Certified Residential Contractor (${site.license}) running kitchens, baths, additions, lanais and storm repairs as well as windows.`,
   "What we learned on other people's jobs is that most renovation trouble is not the carpentry, it is the hand-off. A promise made at the kitchen table never reaches the crew, and the homeowner cannot get anyone on the phone. So we keep it simple: the person who prices your job is the person who runs it, from the first measurement to the final inspection.",
 ];
 

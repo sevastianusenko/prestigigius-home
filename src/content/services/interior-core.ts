@@ -1163,6 +1163,6 @@ export const interiorCore: Service[] = [
         a: "In most deed-restricted neighborhoods, yes, and it is separate from the county permit. Associations often require matching roof and stucco colors and may limit garage conversions. We prepare the submission with drawings and samples and wait for written approval before we break ground.",
       },
     ],
-    related: ["lanai-screen-enclosures", "impact-windows-doors", "outdoor-living"],
+    related: ["lanai-enclosures", "impact-windows-doors", "outdoor-living"],
   },
 ];

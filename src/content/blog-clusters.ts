@@ -22,7 +22,6 @@ export const blogClusters: { topic: string; pillar: string; children: string[] }
   { topic: "Hardie siding", pillar: "hardie-board-siding-florida", children: ["hardie-siding-cost", "hardie-board-and-batten"] },
   { topic: "Stucco", pillar: "stucco-repair-florida", children: ["florida-stucco-house-colors", "how-to-paint-stucco"] },
   { topic: "Kitchen remodeling", pillar: "kitchen-remodel-cost-florida", children: ["quartz-vs-granite-countertops", "cabinet-refacing-cost", "kitchen-island-with-sink", "how-long-does-a-kitchen-remodel-take"] },
-  { topic: "Roofing and insurance", pillar: "roof-replacement-cost-florida", children: ["metal-roof-vs-shingle-florida", "tile-roof-vs-shingle", "wind-mitigation-inspection-florida", "roof-inspection-for-insurance-florida"] },
   { topic: "Floors and slab prep", pillar: "lvp-flooring-cost", children: ["lvp-vs-tile-florida", "self-leveling-concrete-before-flooring", "tile-removal-cost", "terrazzo-floor-restoration"] },
 ];
 

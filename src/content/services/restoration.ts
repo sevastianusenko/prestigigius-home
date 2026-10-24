@@ -330,7 +330,7 @@ export const restorationServices: Service[] = [
     navLabel: "Storm & Water Damage",
     group: "restoration",
     blurb:
-      "After the water is out and the house is dry, we rebuild: drywall, insulation, floors, cabinets, roof-to-interior repairs, with permits and insurance paperwork.",
+      "After the water is out and the house is dry, we rebuild: drywall, insulation, floors, cabinets, windows and doors, with permits and insurance paperwork.",
     seoTitle: "Storm & Water Damage Repair Port Charlotte FL | Rebuilds",
     seoDescription:
       "Water and storm damage rebuilds in Port Charlotte and SWFL: drywall, insulation, floors and cabinets after mitigation. Permits, adjuster-ready estimates.",
@@ -348,7 +348,7 @@ export const restorationServices: Service[] = [
     eyebrow: "Storm & Water Damage · Port Charlotte & SWFL",
     headline: "After the Water Is Out, a Rebuild You Can Plan Around",
     subhead:
-      "Once mitigation signs off on a dry house, we put it back together: drywall, insulation, floors, cabinets and the roof or window repairs that let the water in. A dated schedule, one owner to call, and a room-by-room estimate your adjuster can follow.",
+      "Once mitigation signs off on a dry house, we put it back together: drywall, insulation, floors, cabinets and the window, door and exterior repairs that let the water in. A dated schedule, one owner to call, and a room-by-room estimate your adjuster can follow.",
     heroPhoto: "storm-damage",
     howWeWork: [
       {
@@ -383,7 +383,7 @@ export const restorationServices: Service[] = [
       },
       {
         title: "Every repair permitted",
-        text: "Roofing, openings, electrical, plumbing and drywall are permitted and inspected, and you keep the finaled records for your insurer and a future sale.",
+        text: "Openings, electrical, plumbing and drywall are permitted and inspected, and you keep the finaled records for your insurer and a future sale.",
       },
       {
         title: "Licensed, insured, claim stays yours",
@@ -428,13 +428,13 @@ export const restorationServices: Service[] = [
       },
       {
         title: "Rebuild",
-        text: "We rebuild what mitigation removed, plus the roof, window or exterior damage that let the water in.",
+        text: "We rebuild what mitigation removed, plus the window, door or exterior damage that let the water in. Roof work stays with your roofer; we schedule around it.",
         bullets: ["Starts once readings confirm the house is dry", "Permitted, inspected and itemized for your adjuster", "Built back with water-tolerant materials where it makes sense"],
       },
       {
         title: "Storm hardening (optional)",
         text: "Upgrades made while the walls are open, so the next storm does less damage.",
-        bullets: ["Moisture-resistant drywall at the bottom course", "Impact windows, doors and wind-rated garage doors", "Better roof-to-wall connections where reachable"],
+        bullets: ["Moisture-resistant drywall at the bottom course", "Impact windows, doors and wind-rated garage doors", "Water-tolerant flooring and raised base cabinets"],
       },
     ],
     processTitle: "From Damage Assessment to Finaled Permits",
@@ -510,15 +510,15 @@ export const restorationServices: Service[] = [
         duration: "1–3 weeks",
       },
       {
-        title: "Roof-to-interior storm rebuild",
+        title: "Wind-damage rebuild: openings and interior",
         summary:
-          "Wind opened the roof, rain came in. We repair the roof deck and roofing, then the ceilings, insulation and finishes below.",
+          "Wind broke windows, sliders or the garage door and rain came in. Once your roofer has any roof damage dried in, we replace the openings and rebuild the ceilings and finishes inside.",
         changes: [
-          { label: "Roof", detail: "Damaged decking and trusses repaired, roofing replaced to current code under permit" },
+          { label: "Openings", detail: "Damaged windows, sliders and garage doors replaced with impact-rated units" },
+          { label: "Exterior", detail: "Stucco, soffit, fascia and gutter repairs around the damage" },
           { label: "Attic", detail: "Wet insulation removed by mitigation, new insulation blown or rolled in" },
           { label: "Ceilings", detail: "New drywall ceilings, texture and paint" },
-          { label: "Openings", detail: "Damaged windows, sliders and garage doors replaced with impact-rated units" },
-          { label: "Exterior", detail: "Soffit, fascia, stucco and gutter repairs" },
+          { label: "Roof", detail: "Not in our scope: we schedule around your roofer so the house is dried in first" },
         ],
         priceRange: "$35k–$120k",
         duration: "6–12 weeks",
@@ -532,7 +532,7 @@ export const restorationServices: Service[] = [
           { label: "Systems", detail: "Electrical, plumbing and HVAC repaired or replaced by licensed trades" },
           { label: "Interior", detail: "Insulation, drywall, kitchen, baths, flooring, doors and paint throughout" },
           { label: "Flood rules", detail: "Substantial-damage review with the building department; elevation or flood-resistant materials if required" },
-          { label: "Hardening", detail: "Impact openings and roof-to-wall connections upgraded where feasible" },
+          { label: "Hardening", detail: "Impact windows, doors and a wind-rated garage door" },
         ],
         priceRange: "$110k–$280k",
         duration: "4–8 months",
@@ -578,7 +578,7 @@ export const restorationServices: Service[] = [
         "Cabinets, countertops and flooring that need full replacement",
         "Electrical, plumbing and HVAC repairs needed after flooding",
         "Flood zone status and the 50% substantial-damage threshold",
-        "Code upgrades triggered by the repair, such as roofing or openings",
+        "Code upgrades triggered by the repair, such as openings or electrical",
         "Material lead times after a regional storm",
       ],
     },
@@ -589,7 +589,7 @@ export const restorationServices: Service[] = [
       },
       {
         title: "Permits are required for storm repairs",
-        text: "Replacing drywall, roofing, windows, doors, electrical and plumbing after a storm still needs permits in Charlotte, Sarasota and Lee counties. After Ian and Milton, unpermitted repairs caused problems at resale and with insurers. Every rebuild we do is permitted and inspected, and you get the finaled permits.",
+        text: "Replacing drywall, windows, doors, electrical and plumbing after a storm still needs permits in Charlotte, Sarasota and Lee counties. After Ian and Milton, unpermitted repairs caused problems at resale and with insurers. Every rebuild we do is permitted and inspected, and you get the finaled permits.",
       },
       {
         title: "Insurance, adjusters and assignment of benefits",
@@ -599,7 +599,7 @@ export const restorationServices: Service[] = [
     faqs: [
       {
         q: "Are you a water damage restoration company?",
-        a: "We are the rebuild half of water damage restoration. A mitigation company extracts water, removes wet materials and dries the structure. We come in after they confirm the house is dry and rebuild everything they removed, plus any roof, window or structural repairs. If you do not have a mitigation company yet, call one first; standing water and wet drywall need attention within 24 to 48 hours.",
+        a: "We are the rebuild half of water damage restoration. A mitigation company extracts water, removes wet materials and dries the structure. We come in after they confirm the house is dry and rebuild everything they removed, plus any window, door or structural repairs. If you do not have a mitigation company yet, call one first; standing water and wet drywall need attention within 24 to 48 hours.",
       },
       {
         q: "How soon can you start after the mitigation company is done?",
@@ -615,7 +615,7 @@ export const restorationServices: Service[] = [
       },
       {
         q: "Does a storm repair need a permit in Charlotte County?",
-        a: "Yes, for most of it. Roofing, windows, doors, structural repairs, electrical, plumbing and significant drywall replacement all need permits in Charlotte, Sarasota and Lee counties. We pull them and meet every inspection. Unpermitted repairs can cause trouble with your insurer and when you sell.",
+        a: "Yes, for most of it. Windows, doors, structural repairs, electrical, plumbing and significant drywall replacement all need permits in Charlotte, Sarasota and Lee counties. We pull them and meet every inspection. Unpermitted repairs can cause trouble with your insurer and when you sell.",
       },
       {
         q: "What is the 50% substantial-damage rule?",
@@ -623,9 +623,9 @@ export const restorationServices: Service[] = [
       },
       {
         q: "Can you rebuild so the next storm does less damage?",
-        a: "Yes. Common upgrades include moisture-resistant drywall at the bottom course, tile or water-tolerant vinyl floors instead of carpet or laminate, impact windows and doors, wind-rated garage doors, and better roof-to-wall connections. Some of these also earn wind mitigation credits on your insurance.",
+        a: "Yes. Common upgrades include moisture-resistant drywall at the bottom course, tile or water-tolerant vinyl floors instead of carpet or laminate, impact windows and doors, and wind-rated garage doors. Some of these also earn wind mitigation credits on your insurance.",
       },
     ],
-    related: ["roofing", "home-restoration", "impact-windows-doors"],
+    related: ["home-restoration", "impact-windows-doors", "exterior-remodeling"],
   },
 ];

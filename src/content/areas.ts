@@ -13,7 +13,7 @@ export const areas: Area[] = [
     driveTime: "Our home base",
     seoTitle: "Home Remodeling Contractor in Port Charlotte, FL",
     seoDescription:
-      "Licensed Port Charlotte contractor (CRC1327831): kitchens, baths, impact windows, lanais, roofing and storm rebuilds. Local crew, free in-home estimates.",
+      "Licensed Port Charlotte contractor (CRC1327831): kitchens, baths, impact windows, lanais and storm rebuilds. Local crew, free in-home estimates.",
     intro: [
       "Port Charlotte is home. Our office is here, our crew lives here, and most of our jobs are a short drive down US-41, Veterans Boulevard or Kings Highway. Much of the city was laid out by General Development Corporation from the late 1950s onward, so a large share of the houses we work on are single-story concrete block (CBS) homes from the 1960s through the 1980s, with a second wave of newer construction since the 2000s. Original single-pane aluminum windows, galvanized plumbing, closed-off galley kitchens and 1980s bathrooms are what we see every week.",
       "Port Charlotte has roughly 165 miles of man-made canals, and many waterfront homes sit in FEMA flood zones. That matters when you remodel: if improvements to a home in a Special Flood Hazard Area exceed 50% of the structure's value, the county can require the house to be brought up to current flood elevation rules. We look at your flood zone and elevation certificate during the estimate, so the scope and budget work with the rules, not against them. Deep Creek, east of I-75, has its own mix of larger 1980s and 1990s homes, golf-course lots and active HOAs.",
@@ -23,7 +23,7 @@ export const areas: Area[] = [
       "impact-windows-doors",
       "kitchen-remodeling",
       "bathroom-remodeling",
-      "lanai-screen-enclosures",
+      "lanai-enclosures",
       "storm-damage-rebuild",
       "whole-home-remodeling",
     ],
@@ -60,7 +60,7 @@ export const areas: Area[] = [
       "kitchen-remodeling",
       "bathroom-remodeling",
       "impact-windows-doors",
-      "lanai-screen-enclosures",
+      "lanai-enclosures",
       "home-additions",
       "storm-damage-rebuild",
     ],
@@ -87,16 +87,15 @@ export const areas: Area[] = [
     driveTime: "About 15 min from Port Charlotte",
     seoTitle: "Remodeling & Renovation Contractor in Punta Gorda, FL",
     seoDescription:
-      "Licensed Punta Gorda contractor for remodels, impact windows and doors, lanais and roofing. Canal homes, deed restrictions and city permits handled.",
+      "Licensed Punta Gorda contractor for remodels, impact windows and doors, lanais and kitchens. Canal homes, deed restrictions and city permits handled.",
     intro: [
       "Punta Gorda sits right across the Peace River from us, and it is a different market from Port Charlotte. The historic district has frame homes dating back to the early 1900s, while Punta Gorda Isles and Burnt Store Isles are built around deep-water, sailboat-access canals, with larger block homes from the 1970s through the 2000s. South of town, Burnt Store Lakes and the homes around Burnt Store Marina add newer construction on bigger lots.",
-      "Hurricane Charley in 2004 hit Punta Gorda directly, and many homes were rebuilt or re-roofed in the years after. Ian in 2022 and Milton in 2024 brought the next round of roof, lanai cage and water damage. Today we see a lot of homes with roofs and windows from the post-Charley rebuild that are now due, screen enclosures that never fully recovered, and kitchens and baths ready for a full update.",
+      "Hurricane Charley in 2004 hit Punta Gorda directly, and many homes were rebuilt in the years after. Ian in 2022 and Milton in 2024 brought the next round of roof, lanai cage and water damage. Today we see a lot of homes with windows and doors from the post-Charley rebuild that are now due, screen enclosures that never fully recovered, and kitchens and baths ready for a full update.",
       "Most waterfront homes in Punta Gorda Isles and Burnt Store Isles are in FEMA flood zones, so the 50% substantial-improvement rule matters for big remodels, and deed restrictions control exterior colors, roofs and additions. Punta Gorda is an incorporated city with its own building division, so permits inside city limits go through the City of Punta Gorda; homes outside the city, such as Burnt Store Lakes, are permitted by Charlotte County. We handle either.",
     ],
     popularServices: [
       "impact-windows-doors",
-      "roofing",
-      "lanai-screen-enclosures",
+      "lanai-enclosures",
       "kitchen-remodeling",
       "whole-home-remodeling",
     ],
@@ -110,8 +109,8 @@ export const areas: Area[] = [
         a: "Often, yes, especially for exterior colors, roofing materials, fences and additions. We help you prepare the submission and keep the scope inside the restrictions.",
       },
       {
-        q: "My roof was replaced after Charley. Is it due again?",
-        a: "Many shingle roofs installed after 2004 are at or near the end of their service life, and insurers often push for replacement at that age. We inspect the roof and tell you honestly whether it needs a repair or a replacement.",
+        q: "My windows were replaced after Charley. Is it time again?",
+        a: "Many windows and doors installed in the post-Charley rebuild were not impact-rated, and seals and hardware have aged. We look at each opening and tell you honestly whether a repair, a few replacements or a full impact upgrade makes sense.",
       },
     ],
   },
@@ -135,7 +134,7 @@ export const areas: Area[] = [
       "home-restoration",
       "kitchen-remodeling",
       "bathroom-remodeling",
-      "lanai-screen-enclosures",
+      "lanai-enclosures",
     ],
     faqs: [
       {
@@ -170,8 +169,7 @@ export const areas: Area[] = [
       "kitchen-remodeling",
       "bathroom-remodeling",
       "impact-windows-doors",
-      "lanai-screen-enclosures",
-      "roofing",
+      "lanai-enclosures",
     ],
     faqs: [
       {
@@ -207,7 +205,7 @@ export const areas: Area[] = [
       "kitchen-remodeling",
       "bathroom-remodeling",
       "impact-windows-doors",
-      "lanai-screen-enclosures",
+      "lanai-enclosures",
       "exterior-remodeling",
     ],
     faqs: [
@@ -233,7 +231,7 @@ export const areas: Area[] = [
     driveTime: "About 40 min from Port Charlotte",
     seoTitle: "Remodeling & Storm Rebuild Contractor in Fort Myers, FL",
     seoDescription:
-      "Licensed Fort Myers contractor for storm-damage rebuilds, impact windows and doors, kitchens, baths and roofing. Lee County and City of Fort Myers permits.",
+      "Licensed Fort Myers contractor for storm-damage rebuilds, impact windows and doors, kitchens and baths. Lee County and City of Fort Myers permits.",
     intro: [
       "Fort Myers has some of the oldest housing in Southwest Florida. Along McGregor Boulevard and in neighborhoods near downtown there are frame and block homes from the 1920s through the 1950s, and much of south Fort Myers was built out in the 1970s and 1980s with block ranch homes, many in gated golf communities with active HOAs. Newer construction east of I-75 rounds out the mix.",
       "Hurricane Ian in 2022 made landfall just to the west, and its storm surge flooded the Iona area, neighborhoods along the Caloosahatchee and the communities closest to Fort Myers Beach. Thousands of homes needed drywall, flooring, cabinets and electrical replaced from the flood line down, and many fell under the FEMA 50% rule. Milton in 2024 brought another round of roof and window damage. A lot of homes still have temporary repairs or rebuilds that were rushed.",
@@ -243,7 +241,6 @@ export const areas: Area[] = [
       "storm-damage-rebuild",
       "home-restoration",
       "impact-windows-doors",
-      "roofing",
       "kitchen-remodeling",
       "bathroom-remodeling",
     ],
@@ -270,19 +267,18 @@ export const areas: Area[] = [
     driveTime: "About 45 min from Port Charlotte",
     seoTitle: "Remodeling Contractor in Cape Coral, FL",
     seoDescription:
-      "Licensed Cape Coral contractor: impact windows and doors, lanais and pool cages, kitchens, baths, roofing and storm rebuilds. City permits handled.",
+      "Licensed Cape Coral contractor: impact windows and doors, lanais and pool cages, kitchens, baths and storm rebuilds. City permits handled.",
     intro: [
       "Cape Coral has more than 400 miles of canals, more than any other city in the world, and the canal is the reason many people live here. Developed from the late 1950s by Gulf American Land Corporation, the city's southeast quadrant has the oldest homes, mostly 1960s and 1970s block ranches, while the north and west filled in from the 1990s on, with building booms in the 2000s and again after 2015. Almost all of it is single-story concrete block construction.",
-      "Typical Cape Coral projects are about the outdoor living space as much as the house: pool cages and lanai enclosures, sliding glass walls to the pool deck, impact windows and doors facing the canal, and kitchens that open to the back of the house. Older homes in the southeast Cape also need full interior remodels, new roofs and updated electrical. Gulf-access canal homes are mostly in FEMA flood zones, so the 50% rule comes into play on large remodels and rebuilds.",
+      "Typical Cape Coral projects are about the outdoor living space as much as the house: pool cages and lanai enclosures, sliding glass walls to the pool deck, impact windows and doors facing the canal, and kitchens that open to the back of the house. Older homes in the southeast Cape also need full interior remodels, new openings and updated electrical. Gulf-access canal homes are mostly in FEMA flood zones, so the 50% rule comes into play on large remodels and rebuilds.",
       "Hurricane Ian in 2022 hit Cape Coral hard, with storm surge along the southern canals and wind damage to roofs and pool cages across the city, and Milton in 2024 added more. Cape Coral is an incorporated city, so permits go through the City of Cape Coral Department of Community Development. We know their submittal requirements and inspection process, and we handle them for you.",
     ],
     popularServices: [
       "impact-windows-doors",
-      "lanai-screen-enclosures",
+      "lanai-enclosures",
       "outdoor-living",
       "storm-damage-rebuild",
       "kitchen-remodeling",
-      "roofing",
     ],
     faqs: [
       {
@@ -317,7 +313,7 @@ export const areas: Area[] = [
       "impact-windows-doors",
       "kitchen-remodeling",
       "bathroom-remodeling",
-      "lanai-screen-enclosures",
+      "lanai-enclosures",
       "exterior-remodeling",
       "outdoor-living",
     ],
@@ -393,7 +389,7 @@ export const areas: Area[] = [
       "kitchen-remodeling",
       "bathroom-remodeling",
       "exterior-remodeling",
-      "lanai-screen-enclosures",
+      "lanai-enclosures",
     ],
     faqs: [
       {

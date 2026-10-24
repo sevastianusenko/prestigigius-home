@@ -883,6 +883,6 @@ export const interiorFinish: Service[] = [
         a: "Yes, financing is available on approval. Many homeowners phase the work, for example pavers and a patio cover now and the kitchen next year, and we design the first phase so the second fits without rework.",
       },
     ],
-    related: ["lanai-screen-enclosures", "home-additions", "exterior-remodeling"],
+    related: ["lanai-enclosures", "home-additions", "exterior-remodeling"],
   },
 ];

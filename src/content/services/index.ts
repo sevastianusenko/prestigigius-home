@@ -12,9 +12,8 @@ const order = [
   "storm-damage-rebuild",
   "whole-home-remodeling",
   "home-additions",
-  "lanai-screen-enclosures",
+  "lanai-enclosures",
   "exterior-remodeling",
-  "roofing",
   "siding",
   "painting",
   "flooring",
@@ -41,7 +40,7 @@ export const serviceGroups: { key: Service["group"]; title: string; intro: strin
   {
     key: "exterior",
     title: "Exterior & Hurricane Protection",
-    intro: "Impact windows and doors, lanais, roofing, siding, stucco and paint that stand up to Gulf Coast weather.",
+    intro: "Impact windows and doors, lanais, siding, stucco and paint that stand up to Gulf Coast weather.",
   },
   {
     key: "restoration",

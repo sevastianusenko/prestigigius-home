@@ -31,11 +31,11 @@ export const generalFaqs: Faq[] = [
   },
   {
     q: "Do you offer a warranty?",
-    a: "Yes. Every job comes with a written workmanship warranty covering our installation and labor, with the terms spelled out in your contract. Manufacturer warranties on windows, doors, roofing, cabinets and other products are passed through to you, and we register them where the manufacturer requires it. If something we built is not right, you call Tim and we come back.",
+    a: "Yes. Every job comes with a written workmanship warranty covering our installation and labor, with the terms spelled out in your contract. Manufacturer warranties on windows, doors, cabinets and other products are passed through to you, and we register them where the manufacturer requires it. If something we built is not right, you call Tim and we come back.",
   },
   {
     q: "Can you work during hurricane season?",
-    a: "Yes, we work year-round, but we plan around the season (June 1 to November 30). We avoid leaving a roof or an opening exposed overnight, we watch the forecast, and if a named storm is coming we secure the site and any open work before it arrives. If you want impact windows or a new roof in place before next season, the best time to start is winter or early spring, because of product lead times and permit review.",
+    a: "Yes, we work year-round, but we plan around the season (June 1 to November 30). We avoid leaving a roof or an opening exposed overnight, we watch the forecast, and if a named storm is coming we secure the site and any open work before it arrives. If you want impact windows or a new lanai enclosure in place before next season, the best time to start is winter or early spring, because of product lead times and permit review.",
   },
   {
     q: "Do you handle HOA and condo approvals?",
