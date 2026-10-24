@@ -1,0 +1,21 @@
+/** Generated from client-photos/manifest.json — web copies of client job photos (EXIF/GPS stripped). */
+export const projectPhotoDims: Record<string, [number, number][]> = {
+  "siesta-key-waterfront-new-build-windows-sliders": [[1600, 1200], [1200, 1600], [1600, 1200], [1200, 1600], [1200, 1600], [1600, 1200], [1600, 1200]],
+  "parrish-two-story-block-home-impact-windows": [[1200, 1600], [1200, 1600], [1200, 1600], [1200, 1600], [1200, 1600], [1200, 1600], [1200, 1600]],
+  "north-port-new-construction-pgt-sliding-doors": [[1200, 1600], [1200, 1600], [1200, 1600], [1200, 1600], [1200, 1600]],
+  "manatee-county-lanai-wall-block-rebuild": [[1200, 1600], [1200, 1600], [1600, 1200], [1600, 1200]],
+  "sarasota-french-doors-four-panel-slider": [[1200, 1600], [1200, 1600], [1200, 1600], [1200, 1600]],
+  "port-charlotte-pgt-windows-pool-bath-door": [[1200, 1600], [1200, 1600], [1200, 1600], [1200, 1600], [1200, 1600], [1200, 1600]],
+  "bonita-springs-window-replacement": [[1200, 1600], [1200, 1600], [1200, 1600], [1200, 1600]],
+  "sarasota-metal-building-folding-windows": [[1200, 1600], [1200, 1600], [1200, 1600]],
+  "venice-double-entry-doors-decorative-glass": [[1200, 1600], [1200, 1600]],
+  "sarasota-pool-home-window-replacement": [[1200, 1600], [1200, 1600]],
+  "sarasota-six-panel-entry-doors": [[1200, 1600], [1200, 1600]],
+  "sarasota-kitchen-pass-through-window": [[1200, 1600], [1200, 1600]],
+  "lakewood-ranch-arched-transom-windows": [[1200, 1600], [1200, 1600]],
+  "arched-impact-windows-stucco-home": [[480, 640], [480, 640], [480, 640], [480, 640]],
+  "pool-lanai-sliding-glass-doors": [[1280, 960], [960, 1280], [960, 1280], [960, 1280], [960, 1280]],
+  "new-construction-clerestory-picture-windows": [[960, 1280], [960, 1280]],
+  "modern-double-entry-door-new-construction": [[1200, 1600], [1200, 1600]],
+  "sarasota-glass-entry-door": [[1200, 1600]],
+};

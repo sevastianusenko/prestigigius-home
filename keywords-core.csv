@@ -1,0 +1,139 @@
+﻿keyword,cluster,priority,intent,geo,vol_fl,vol_charlotte_co,vol_sarasota_co,cpc_fl,competition_fl,kd_us,intent_dfs
+home remodeling port charlotte fl,brand_home,A,commercial,florida,10,10,10,,MEDIUM,14,commercial
+home renovation port charlotte,brand_home,A,commercial,florida,,,,,,,commercial
+remodeling contractors port charlotte,brand_home,A,commercial,florida,,,,,,,commercial
+remodeling company port charlotte,brand_home,A,commercial,florida,,,,,,,commercial
+general contractor port charlotte fl,brand_home,A,commercial,florida,50,20,10,10.01,LOW,0,commercial
+licensed general contractor charlotte county,brand_home,A,commercial,florida,,,,,,,commercial
+design build port charlotte,brand_home,A,commercial,florida,,,,,,,commercial
+home improvement contractor port charlotte,brand_home,A,commercial,florida,,,,,,,commercial
+home remodeling southwest florida,brand_home,A,commercial,florida,,,,,,,commercial
+remodeling contractor sarasota fl,brand_home,A,commercial,florida,140,20,70,36.19,LOW,7,commercial
+home renovation fort myers,brand_home,A,commercial,florida,50,0,10,181.05,LOW,0,commercial
+home remodeling north port fl,brand_home,A,commercial,florida,,,,,,,commercial
+home remodeling punta gorda,brand_home,A,commercial,florida,10,10,0,24.59,HIGH,,commercial
+home remodeling contractor near me,brand_home,A,commercial,near me,720,10,20,6.11,LOW,16,commercial
+home renovation companies near me,brand_home,A,commercial,near me,140,10,10,28.67,LOW,32,commercial
+remodeling company near me,brand_home,A,commercial,near me,720,10,20,13.7,MEDIUM,37,commercial
+licensed home renovation contractors near me,brand_home,A,commercial,near me,10,,10,,HIGH,33,commercial
+whole home remodel port charlotte,whole_home,A,commercial,florida,,,,,,,commercial
+whole house renovation port charlotte,whole_home,A,commercial,florida,,,,,,,commercial
+complete home renovation florida,whole_home,A,commercial,florida,,,,,,,commercial
+full home remodel contractors near me,whole_home,A,commercial,near me,10,,,,,,commercial
+whole house remodel contractors near me,whole_home,A,commercial,near me,10,,10,,HIGH,6,commercial
+whole house remodel cost florida,whole_home,A,commercial,florida,,,,,,,commercial
+house renovation contractors near me,whole_home,A,commercial,near me,720,10,20,6.11,LOW,10,commercial
+home renovation contractors with financing,whole_home,A,commercial,generic,10,,0,,,21,commercial
+fixer upper renovation contractor,whole_home,A,commercial,generic,,,,,,,commercial
+florida condo renovation,whole_home,A,commercial,florida,,,,,,,commercial
+condo renovation contractor port charlotte,whole_home,A,commercial,florida,,,,,,,commercial
+condo renovation contractor near me,whole_home,A,commercial,near me,,,,,,,commercial
+whole home renovation checklist,whole_home,C,informational,generic,,,,,,,informational
+whole house remodel before and after,whole_home,C,informational,generic,10,,0,,LOW,0,commercial
+whole home renovation timeline,whole_home,C,informational,generic,,,,,,,commercial
+renovation vs remodel vs restoration,whole_home,C,informational,generic,,,,,,,informational
+how much does it cost to remodel a house in florida,whole_home,C,informational,florida,,,,,,,informational
+home restoration port charlotte,restoration,A,commercial,florida,,,,,,,commercial
+home restoration companies near me,restoration,A,commercial,near me,20,0,10,,MEDIUM,29,commercial
+house restoration contractor florida,restoration,A,commercial,florida,,,,,,,commercial
+old house renovation contractors near me,restoration,A,commercial,near me,,,,,,,commercial
+historic home restoration florida,restoration,A,commercial,florida,,,,,,,commercial
+old florida home restoration,restoration,A,commercial,florida,,,,,,,informational
+old home remodeling near me,restoration,A,commercial,near me,,,,,,,commercial
+storm damage restoration port charlotte,restoration,A,commercial,florida,,,,,,,commercial
+hurricane damage repair contractor,restoration,A,commercial,generic,,,,,,,commercial
+hurricane damage rebuild,restoration,A,commercial,generic,,,,,,,informational
+water damage repair contractor port charlotte,restoration,A,commercial,florida,,,,,,,commercial
+fire damage rebuild contractor,restoration,A,commercial,generic,,,,,,,commercial
+home rebuild after hurricane,restoration,A,commercial,generic,,,,,,,informational
+property restoration charlotte county,restoration,A,commercial,florida,,,,,,,commercial
+home restoration contractors near me,restoration,A,commercial,near me,10,0,10,10.47,HIGH,17,commercial
+impact windows port charlotte,windows_doors,A,commercial,florida,,,,,,,navigational
+hurricane windows port charlotte,windows_doors,A,commercial,florida,10,10,10,,HIGH,,navigational
+impact windows and doors port charlotte,windows_doors,A,commercial,florida,,,,,,,commercial
+impact windows installation near me,windows_doors,A,commercial,near me,,,,,,,commercial
+hurricane impact windows sarasota,windows_doors,A,commercial,florida,10,10,10,,LOW,,commercial
+impact windows fort myers,windows_doors,A,commercial,florida,90,10,10,20.61,MEDIUM,0,navigational
+impact windows cost florida,windows_doors,A,commercial,florida,20,10,10,,MEDIUM,0,commercial
+impact windows installation cost,windows_doors,A,commercial,generic,210,10,10,17.1,LOW,0,commercial
+replacement windows port charlotte,windows_doors,A,commercial,florida,30,20,10,126.63,HIGH,0,navigational
+window replacement company near me,windows_doors,A,commercial,near me,210,10,10,36.18,MEDIUM,22,commercial
+sliding glass door replacement port charlotte,windows_doors,A,commercial,florida,,,,,,,navigational
+impact sliding glass doors,windows_doors,A,commercial,generic,590,10,20,14.95,HIGH,0,transactional
+entry door installation port charlotte,windows_doors,A,commercial,florida,,,,,,,navigational
+french doors installation port charlotte,windows_doors,A,commercial,florida,,,,,,,navigational
+hurricane shutters port charlotte,windows_doors,A,commercial,florida,30,20,10,21.84,MEDIUM,0,informational
+impact windows near me prices,windows_doors,A,commercial,near me,,,,,,,commercial
+best impact windows company,windows_doors,A,commercial,generic,,,,,,,commercial
+are impact windows worth it,windows_doors,C,informational,generic,20,10,10,5.37,MEDIUM,0,commercial
+do impact windows increase home value,windows_doors,C,informational,generic,20,10,10,33.66,LOW,0,commercial
+impact windows vs hurricane shutters,windows_doors,C,informational,generic,20,10,10,6.29,MEDIUM,0,commercial
+florida building code windows 2026,windows_doors,C,informational,florida,,,,,,,informational
+home additions port charlotte,additions_adu,A,commercial,florida,,,,,,,commercial
+room addition contractors near me,additions_adu,A,commercial,near me,70,10,10,11.45,HIGH,0,commercial
+room addition cost florida,additions_adu,A,commercial,florida,,,,,,,commercial
+second story addition florida,additions_adu,A,commercial,florida,,,,,,,informational
+florida room addition,additions_adu,A,commercial,florida,260,10,10,7.33,HIGH,0,informational
+florida room addition cost,additions_adu,A,commercial,florida,110,10,10,7.09,HIGH,0,commercial
+screen room additions near me,additions_adu,A,commercial,near me,10,,0,16.05,HIGH,8,commercial
+lanai enclosure port charlotte,additions_adu,A,commercial,florida,,,,,,,navigational
+lanai remodel,additions_adu,A,commercial,generic,10,10,10,,HIGH,4,commercial
+in-law suite addition,additions_adu,A,commercial,generic,20,10,10,,LOW,0,transactional
+master suite addition,additions_adu,A,commercial,generic,10,10,0,,MEDIUM,0,informational
+home addition cost per square foot,additions_adu,A,commercial,generic,40,10,10,,LOW,5,commercial
+garage conversion contractors near me,additions_adu,B,commercial,near me,70,0,10,26.68,HIGH,0,commercial
+adu builder florida,additions_adu,B,commercial,florida,20,10,10,5.9,MEDIUM,3,informational
+adu builders sarasota,additions_adu,B,commercial,florida,,,,,,,commercial
+garage conversion to living space,additions_adu,B,commercial,generic,210,10,10,5.98,LOW,0,transactional
+kitchen remodeling port charlotte,kitchen,A,commercial,florida,10,10,10,7.8,HIGH,,commercial
+kitchen remodel contractors near me,kitchen,A,commercial,near me,320,10,10,9.68,LOW,0,commercial
+kitchen remodel cost florida,kitchen,A,commercial,florida,,,,,,,commercial
+kitchen remodeling sarasota fl,kitchen,A,commercial,florida,320,10,210,4.71,LOW,12,commercial
+kitchen remodeling fort myers,kitchen,A,commercial,florida,140,10,10,15.27,MEDIUM,0,commercial
+custom kitchen cabinets port charlotte,kitchen,A,commercial,florida,,,,,,,commercial
+countertops installation port charlotte,kitchen,A,commercial,florida,,,,,,,navigational
+kitchen remodel near me with financing,kitchen,A,commercial,near me,10,0,0,,,0,commercial
+kitchen remodel costs 2026,kitchen,A,commercial,generic,10,,10,,HIGH,,commercial
+bathroom remodeling port charlotte,bathroom,A,commercial,florida,,,,,,,commercial
+bathroom remodel near me with financing,bathroom,A,commercial,near me,10,0,0,152,HIGH,16,commercial
+bathroom remodel cost breakdown,bathroom,A,commercial,generic,10,10,10,5.94,MEDIUM,4,commercial
+tub to shower conversion port charlotte,bathroom,A,commercial,florida,,,,,,,navigational
+walk in shower installation,bathroom,A,commercial,generic,260,10,10,48.65,MEDIUM,5,transactional
+master bath remodel,bathroom,A,commercial,generic,210,10,10,13.45,HIGH,20,informational
+ada bathroom remodel,bathroom,A,commercial,generic,10,10,10,15.48,LOW,0,transactional
+senior bathroom remodel,bathroom,A,commercial,generic,50,0,10,26.81,HIGH,0,transactional
+bathroom remodeling sarasota fl,bathroom,A,commercial,florida,390,10,260,23.51,LOW,7,navigational
+bathroom remodel contractors near me,bathroom,A,commercial,near me,720,10,10,47.83,LOW,28,commercial
+exterior remodeling contractors near me,exterior,B,commercial,near me,20,0,10,,LOW,0,commercial
+exterior renovation port charlotte,exterior,B,commercial,florida,,,,,,,commercial
+siding contractor port charlotte,exterior,B,commercial,florida,,,,,,,commercial
+stucco repair port charlotte,exterior,B,commercial,florida,20,20,10,18.96,HIGH,0,commercial
+exterior painting port charlotte,exterior,B,commercial,florida,,,,,,,commercial
+roofing contractor port charlotte,exterior,B,commercial,florida,10,10,10,,,0,commercial
+roof replacement charlotte county,exterior,B,commercial,florida,,,,,,,commercial
+flooring installation port charlotte,exterior,B,commercial,florida,,,,,,,commercial
+tile installation port charlotte,exterior,B,commercial,florida,,,,,,,navigational
+drywall repair port charlotte,exterior,B,commercial,florida,20,10,10,12.19,HIGH,0,navigational
+interior painting contractor port charlotte,exterior,B,commercial,florida,,,,,,,navigational
+outdoor living port charlotte,exterior,B,commercial,florida,,,,,,,informational
+patio cover port charlotte,exterior,B,commercial,florida,,,,,,,commercial
+screen enclosure repair port charlotte,exterior,B,commercial,florida,,,,,,,commercial
+curb appeal remodel,exterior,B,commercial,generic,10,,,,,,commercial
+exterior remodel cost,exterior,B,commercial,generic,10,0,0,,LOW,0,commercial
+whole house renovation checklist pdf,blog,C,informational,generic,10,0,10,0.08,HIGH,0,informational
+home renovation timeline,blog,C,informational,generic,10,10,0,,LOW,16,informational
+do you need a permit for bathroom renovation in florida,blog,C,informational,florida,,,,,,,informational
+charlotte county building permit remodel,blog,C,informational,florida,,,,,,,navigational
+how to pick a contractor for remodel,blog,C,informational,generic,10,10,,,,74,informational
+design build vs general contractor,blog,C,informational,generic,10,,,,LOW,0,commercial
+home improvement contractor vs general contractor,blog,C,informational,generic,10,,10,,,0,commercial
+best home renovations for roi,blog,C,informational,generic,30,10,10,0.09,LOW,17,commercial
+hurricane proofing an old florida home,blog,C,informational,florida,,,,,,,transactional
+remodeling a 1980s florida home,blog,C,informational,florida,,,,,,,informational
+restoring a florida ranch house,blog,C,informational,florida,,,,,,,informational
+condo renovation rules florida,blog,C,informational,florida,,,,,,,informational
+wind mitigation inspection discounts,blog,C,informational,generic,,,,,,,commercial
+what renovations can you do in a condo,blog,C,informational,generic,10,,,,,,informational
+remodeling after hurricane damage insurance and permits,blog,C,informational,generic,,,,,,,commercial
+home remodeling cost vs value,blog,C,informational,generic,10,,0,,,31,commercial
+renovation vs remodel,blog,C,informational,generic,170,10,10,,LOW,21,informational

@@ -1,0 +1,59 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# оригиналы фото с объектов — 549 МБ, в репозиторий не кладём.
+# в public/photos/ попадают только сжатые версии, которые реально используются на страницах.
+assets/photos/
+assets/_duplicate-docs/
+
+# необработанные свежие фото с объектов (прямо с телефона) — ждут обработки/выбора,
+# пока не привязаны ни к одной странице. Случайно попали в прод через git add -A 10.10.2026.
+public/photos/new photo/
+
+.vercel
+.env*
+
+# competitor reference copy (internal, never publish)
+docs/reference/
+
+# client photo originals (contain GPS) — never publish
+client-photos/originals/
