@@ -14,14 +14,16 @@ import { projects } from "@/content/projects";
 import { services } from "@/content/services";
 import { site } from "@/content/site";
 
+import { OG_DEFAULT } from "@/components/og";
 export const metadata: Metadata = {
-  title: "Remodeling Projects in Port Charlotte & SWFL",
+  title: { absolute: "Window, Door & Lanai Projects, SWFL | Prestigious" },
   description:
-    "Before-and-after kitchens, baths, lanais, impact windows and whole-home remodels across Port Charlotte, North Port, Punta Gorda and Southwest Florida.",
+    "Impact windows, sliding glass doors, entry doors and a lanai wall rebuild, photographed by our crew across Southwest Florida.",
   alternates: { canonical: "/projects" },
   openGraph: {
-    title: "Remodeling Projects in Port Charlotte & SWFL",
-    description: "Actual houses and actual before-and-after photos from Prestigious Home Improvements.",
+    images: [OG_DEFAULT],
+    title: { absolute: "Window, Door & Lanai Projects, SWFL | Prestigious" },
+    description: "Impact windows, sliding glass doors, entry doors and a lanai wall rebuild, photographed by our crew across Southwest Florida.",
     url: "/projects",
     type: "website",
   },

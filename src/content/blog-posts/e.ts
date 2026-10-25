@@ -496,7 +496,7 @@ export const postsE: Post[] = [
     seoDescription:
       "Aluminum window capping wraps wood trim in bent coil to stop painting, but it can hide rot. Learn how capping and window flashing metal work in Florida.",
     excerpt:
-      "Aluminum capping covers wood window trim with bent metal so it never needs paint. Here is when it makes sense, when it hides rot, and how metal flashing fits in.",
+      "Aluminum capping covers wood window trim with bent metal so it does not need paint. Here is when it makes sense, when it hides rot, and how metal flashing fits in.",
     date: "2026-10-22",
     readMinutes: 5,
     cover: img(
@@ -506,7 +506,7 @@ export const postsE: Post[] = [
       "exterior",
     ),
     body: [
-      "**Aluminum window capping** (also called window wrapping or trim cladding) is painted aluminum coil stock bent on a brake to fit over existing wood window trim, sills and brickmold, so the wood is covered and never needs painting again. It is common on sided houses in the North and Midwest and on some Florida frame homes. Done over sound, dry wood it is a low-maintenance finish; done over wet or rotted wood, it hides the problem and can make it worse.",
+      "**Aluminum window capping** (also called window wrapping or trim cladding) is painted aluminum coil stock bent on a brake to fit over existing wood window trim, sills and brickmold, so the wood is covered and does not need painting again. It is common on sided houses in the North and Midwest and on some Florida frame homes. Done over sound, dry wood it is a low-maintenance finish; done over wet or rotted wood, it hides the problem and can make it worse.",
       "Capping is related to, but different from, **window flashing metal**: the drip caps and head flashings that shed water above windows. Below we explain both, how they apply to Florida homes, and what they cost. For the full picture of flashing behind the window, see our pillar on [window flashing](/resources/window-flashing-liquid-applied).",
       "## How Aluminum Window Capping Works",
       "An installer measures each piece of trim, cuts coil stock (commonly about 0.019 inch thick, prefinished in white, almond, bronze and other colors), and bends it on a sheet-metal brake into a profile that wraps the face and edges of the casing, sill and head. Pieces are fastened with color-matched trim nails or screws and the joints are lapped and sealed. Done well, it looks crisp and tailored.",

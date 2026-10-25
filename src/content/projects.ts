@@ -48,7 +48,7 @@ const reviewStories: Project[] = [
     slug: "manatee-county-lanai-wall-block-rebuild",
     title: "Replacing a 1985 Aluminum Lanai Wall With Block and Storm-Rated Glass",
     city: "Manatee County",
-    date: "2026-02",
+    date: "2026-04",
     serviceSlugs: ["lanai-enclosures", "impact-windows-doors", "exterior-remodeling"],
     summary:
       "An original aluminum lanai wall and storm door from about 1985 replaced with a reinforced block wall, storm-rated windows and a storm-rated door, finished inside to match the house.",
@@ -87,7 +87,7 @@ const reviewStories: Project[] = [
   {
     slug: "impact-windows-sliders-entry-doors",
     title: "8 Impact Windows, 2 Large Sliding Glass Doors and 2 Entry Doors",
-    city: "Sarasota",
+    city: "Southwest Florida",
     date: "2026-05",
     serviceSlugs: ["impact-windows-doors"],
     summary:

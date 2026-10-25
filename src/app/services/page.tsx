@@ -52,7 +52,7 @@ export default function ServicesPage() {
       />
       <TrustStrip />
 
-      {serviceGroups.map((group) => {
+      {serviceGroups.map((group, gi) => {
         const slugs = services.filter((s) => s.group === group.key).map((s) => s.slug);
         if (slugs.length === 0) return null;
         return (
@@ -62,6 +62,7 @@ export default function ServicesPage() {
               title={group.title}
               intro={group.intro}
               slugs={slugs}
+              showCta={gi === serviceGroups.length - 1}
             />
           </div>
         );

@@ -7,7 +7,7 @@ import TrustStrip from "@/components/TrustStrip";
 import CtaBand from "@/components/CtaBand";
 
 export const metadata: Metadata = {
-  title: "Page not found | Prestigious Home Improvements",
+  title: "Page Not Found",
   description: "That page moved or never existed. Find our remodeling services, projects and free estimate here.",
   robots: { index: false },
 };

@@ -49,7 +49,7 @@ export default function ContactCard() {
       <p className="eyebrow">Talk to Tim directly</p>
       <h2 className="mt-3 text-2xl font-bold !text-white">Prefer the phone?</h2>
       <p className="mt-2 text-[15px] leading-relaxed text-navy-100/80">
-        You will reach an owner, not a call center. Leave a message after hours and we call back next business morning.
+        You will reach an owner, not a call center. Leave a message after hours and we call back within one business day.
       </p>
       <dl className="mt-7 space-y-5">
         {rows.map((r) => (

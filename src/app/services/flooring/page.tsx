@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import HeroRatings from "@/components/service-pages/HeroRatings";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TrustStrip from "@/components/TrustStrip";
 import CtaBand from "@/components/CtaBand";
@@ -72,7 +73,7 @@ export default function FlooringPage() {
                   href={`/free-estimate?service=${SLUG}`}
                   className="inline-flex min-h-12 items-center justify-center rounded-full btn-gold px-7 font-heading text-[15px] font-bold"
                 >
-                  Book a Free In-Home Measure
+                  Get a Free Estimate
                 </Link>
                 <a
                   href={site.phoneHref}
@@ -81,17 +82,8 @@ export default function FlooringPage() {
                   Call {site.phone}
                 </a>
               </div>
-              <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/15 pt-6">
-                {C.hero.proof.map((p) => (
-                  <div key={p.label}>
-                    <dt className="sr-only">{p.label}</dt>
-                    <dd>
-                      <span className="block font-heading text-3xl font-extrabold text-amber-500">{p.value}</span>
-                      <span className="mt-1 block text-sm text-navy-100/80">{p.label}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <p className="mt-3 text-sm text-navy-100/75">In-home visit, written price within a week.</p>
+              <HeroRatings className="mt-8" />
             </div>
 
             <div className="grid grid-cols-6 grid-rows-[repeat(6,minmax(0,1fr))] gap-3 sm:gap-4" style={{ aspectRatio: "1 / 1" }}>
@@ -101,12 +93,20 @@ export default function FlooringPage() {
                 { p: C.hero.photos[2], cls: "col-span-2 row-span-3" },
               ].map(({ p, cls }, i) => (
                 <figure key={p.id} className={`relative overflow-hidden rounded-[16px] bg-navy-900 ${cls}`}>
-                  <Image src={p.src} alt={p.alt} fill priority={i === 0} sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    priority={i === 0}
+                    fetchPriority={i === 0 ? "high" : undefined}
+                    sizes={i === 0 ? "(min-width: 1280px) 370px, (min-width: 1024px) 29vw, 62vw" : "(min-width: 1280px) 180px, (min-width: 1024px) 14vw, 31vw"}
+                    className="object-cover"
+                  />
                 </figure>
               ))}
-              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.06] p-4 ring-1 ring-white/10 sm:p-5">
-                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-amber-500">Illustrative photos</p>
-                <p className="mt-2 text-sm leading-snug text-navy-100 sm:text-[15px]">
+              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.04] p-4 ring-1 ring-white/10 sm:p-5">
+                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-navy-100/60">Illustrative photos</p>
+                <p className="mt-2 text-sm leading-snug text-navy-100/80 sm:text-[15px]">
                   These show the floors we install. Samples come to your house so you choose in your own light.
                 </p>
               </div>
@@ -120,7 +120,7 @@ export default function FlooringPage() {
       {/* 2. WHAT WE INSTALL */}
       <section className="section-y bg-sand-50" aria-labelledby="products-heading">
         <Container>
-          <BandHead
+          <BandHead id="products-heading"
             eyebrow="What we install"
             title="Plank, Tile and Wood on a Flat, Dry Slab"
             intro="Plus the part most flooring jobs start with: getting the old floor out cleanly, from glued-down carpet to 1980s tile and original terrazzo."
@@ -148,7 +148,7 @@ export default function FlooringPage() {
       {/* 3. SLAB — dark band */}
       <section className="section-y bg-navy-900 text-white" aria-labelledby="slab-heading">
         <Container>
-          <BandHead
+          <BandHead id="slab-heading"
             dark
             eyebrow="Why new floors fail"
             title="Everything Starts With the Slab"
@@ -169,7 +169,7 @@ export default function FlooringPage() {
       {/* 4. ESTIMATOR */}
       <section className="section-y bg-sand-100" aria-labelledby="estimate-heading">
         <Container>
-          <BandHead
+          <BandHead id="estimate-heading"
             eyebrow="Ballpark it"
             title="What Would New Floors Cost?"
             intro="Pick a floor, set the area and tell us what is there now to see the typical 2026 installed range."
@@ -182,7 +182,7 @@ export default function FlooringPage() {
       {/* 5. SIGNS */}
       <section className="section-y bg-white" aria-labelledby="signs-heading">
         <Container>
-          <BandHead
+          <BandHead id="signs-heading"
             eyebrow="Know the signs"
             title={service.signsTitle ?? "Signs It's Time for New Floors"}
             intro="Tap a tile with a coin, sniff the carpet after a rainy week, and walk the open plan barefoot."
@@ -205,7 +205,7 @@ export default function FlooringPage() {
       {/* 6. COATING SYSTEMS */}
       <section className="section-y bg-sand-50" aria-labelledby="options-heading">
         <Container>
-          <BandHead eyebrow="Choosing a floor" title={service.optionsTitle ?? "Plank, Tile or Wood?"} intro={service.optionsIntro} className="mb-10" />
+          <BandHead id="options-heading" eyebrow="Choosing a floor" title={service.optionsTitle ?? "Plank, Tile or Wood?"} intro={service.optionsIntro} className="mb-10" />
           <ul className="grid gap-5 md:grid-cols-3">
             {(service.options ?? []).map((o) => (
               <li key={o.title} className="flex flex-col rounded-[16px] border border-sand-200 bg-white p-6 shadow-card md:p-7">
@@ -237,7 +237,7 @@ export default function FlooringPage() {
       {/* 7. PRICES */}
       <section className="section-y bg-sand-50" aria-labelledby="scopes-heading">
         <Container>
-          <BandHead
+          <BandHead id="scopes-heading"
             eyebrow="Which floor is yours?"
             title="Typical Flooring Projects and What They Cost"
             intro="Typical 2026 installed prices. Your estimate separates materials, removal, prep and install, so you can compare products without guessing."
@@ -258,7 +258,7 @@ export default function FlooringPage() {
       {/* 8. LOCAL NOTES */}
       <section className="section-y bg-white" aria-labelledby="rules-heading">
         <Container>
-          <BandHead eyebrow="Southwest Florida" title="Condo Sound Rules, Slab Moisture and Flood Zones" className="mb-10" />
+          <BandHead id="rules-heading" eyebrow="Southwest Florida" title="Condo Sound Rules, Slab Moisture and Flood Zones" className="mb-10" />
           <ul className="grid gap-5 lg:grid-cols-3">
             {service.localNotes.map((n, i) => (
               <li key={n.title} className="rounded-[16px] border border-sand-200 bg-sand-50 p-6 md:p-7">
@@ -278,7 +278,7 @@ export default function FlooringPage() {
       {/* 9. LEARN MORE */}
       <section className="section-y bg-sand-50" aria-labelledby="learn-heading">
         <Container>
-          <BandHead eyebrow="Before you choose" title="More From Our Guides" className="mb-8" />
+          <BandHead id="learn-heading" eyebrow="Before you choose" title="More From Our Guides" className="mb-8" />
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {learn.map((p) => (
               <li key={p.slug}>
@@ -298,7 +298,7 @@ export default function FlooringPage() {
       <ServiceAreasBand />
       <CtaBand
         title="Start With a Free Measure and Slab Check"
-        text="We measure every room, check the slab for flatness and moisture, and give you an itemized estimate with leveling already in it. Free, no pressure."
+        text="We measure every room, check the slab for flatness and moisture, and give you an itemized estimate with leveling already in it."
       />
     </>
   );

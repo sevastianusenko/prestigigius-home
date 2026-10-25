@@ -159,7 +159,7 @@ export default function LeadForm({ compact = false, service }: { compact?: boole
         disabled={status === "sending"}
         className="mt-6 inline-flex h-13 w-full items-center justify-center gap-2 rounded-full px-7 font-semibold btn-black disabled:cursor-wait disabled:opacity-70"
       >
-        {status === "sending" ? "Sending…" : "Request my free estimate"}
+        {status === "sending" ? "Sending…" : "Get my free estimate"}
       </button>
       <p className="mt-3 text-center text-xs text-ink-500">
         No spam, no sharing. We reply within one business day. Prefer to talk?{" "}

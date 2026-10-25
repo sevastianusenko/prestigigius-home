@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav, site } from "@/content/site";
+import { MOBILE_NAV_EVENT } from "./MobileCtaBar";
 
 function Chevron({ open }: { open: boolean }) {
   return (
@@ -27,6 +28,11 @@ export default function MobileNav() {
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
+
+  // Tell the sticky mobile CTA bar to get out of the way while the drawer is open
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent(MOBILE_NAV_EVENT, { detail: open }));
+  }, [open]);
 
   // Lock scroll + Escape to close
   useEffect(() => {
@@ -111,7 +117,7 @@ export default function MobileNav() {
               );
             })}
             <li>
-              <Link href={nav.estimateBuilder.href} className="block py-4 font-heading text-lg font-bold text-amber-600">
+              <Link href={nav.estimateBuilder.href} className="block py-4 font-heading text-lg font-bold text-navy-900">
                 {nav.estimateBuilder.label}
               </Link>
             </li>

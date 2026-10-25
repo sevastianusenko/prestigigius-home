@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_DEFAULT } from "@/components/og";
 import Section from "@/components/ui/Section";
 import TrustStrip from "@/components/TrustStrip";
 import LeadForm from "@/components/LeadForm";
@@ -14,15 +15,15 @@ import { financingFaqs, financingPlanSteps, paymentSchedule, qualifyingProjects 
 import { site } from "@/content/site";
 import { faqSchema } from "@/lib/seo";
 
-const title = "Home Remodeling Financing in Southwest Florida";
+const title = "Home Remodeling Financing";
 const description =
-  "Financing available upon credit approval through third-party lenders for remodels, impact windows, kitchens and lanais. Simple steps, fair payment schedule.";
+  "Financing on credit approval through third-party lenders for remodels, impact windows, kitchens and lanais. Simple steps, a fair payment schedule.";
 
 export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/financing" },
-  openGraph: { title, description, url: "/financing", type: "website" },
+  openGraph: { title, description, url: "/financing", type: "website", images: [OG_DEFAULT] },
 };
 
 const crumbs = [{ label: "Financing" }];
@@ -45,7 +46,7 @@ export default function FinancingPage() {
             Financing is available upon credit approval through third-party lenders.
           </p>
         }
-        primary={{ href: "/free-estimate", label: "Book My Free In-Home Estimate" }}
+        primary={{ href: "/free-estimate", label: "Get a Free Estimate" }}
         secondary={{ href: site.phoneHref, label: `Call ${site.phone}` }}
         aside={
           <div className="rounded-[14px] bg-white p-7 text-navy-900 shadow-card md:p-8">

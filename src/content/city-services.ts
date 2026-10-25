@@ -31,10 +31,10 @@ export const cityServices: CityService[] = [
     service: "bathroom-remodeling",
     seoTitle: "Bathroom Remodeling Sarasota FL | Walk-In Showers & Baths",
     seoDescription:
-      "Bathroom remodeling in Sarasota, FL: walk-in showers, tub-to-shower conversions, condo and mid-century baths. Flood-tested waterproofing, permits handled. Free estimate.",
+      "Bathroom remodeling in Sarasota, FL: walk-in showers, tub-to-shower conversions, condo and mid-century baths. Flood-tested waterproofing, permits handled.",
     h1: "Bathroom Remodeling in Sarasota, FL",
     eyebrow: "Sarasota · Siesta Key · Palmer Ranch · Lakewood Ranch",
-    lead: "From original pink-tile baths in mid-century Gulf Gate ranches to condo bathrooms on the keys, we rebuild Sarasota bathrooms from the studs out, with every waterproofing layer photographed and flood-tested before tile.",
+    lead: "From original pink-tile baths in mid-century Gulf Gate ranches to condo bathrooms on the keys, we rebuild bathrooms from the studs out, and Sarasota is where several of our window and door jobs are, with every waterproofing layer photographed and flood-tested before tile.",
     localTitle: "What Sarasota Bathrooms Usually Need",
     local: [
       "Sarasota's housing runs from 1950s and 1960s ranch homes in Gulf Gate, South Gate and around the Sarasota School of Architecture neighborhoods to 1970s and 1980s block homes off Beneva and Bee Ridge, and newer construction in Palmer Ranch and Lakewood Ranch. The older homes still have the original bathrooms more often than you would think: small tub-shower combinations, colored ceramic tile set in a mortar bed, cast-iron drains and galvanized supply lines behind the wall.",
@@ -81,15 +81,15 @@ export const cityServices: CityService[] = [
     service: "kitchen-remodeling",
     seoTitle: "Kitchen Remodeling Sarasota FL | Cabinets, Quartz & Islands",
     seoDescription:
-      "Kitchen remodeling in Sarasota, FL: new cabinets and quartz, open layouts in mid-century homes, condo kitchens. Cabinets inspected before demo, dates in writing. Free estimate.",
+      "Kitchen remodeling in Sarasota, FL: new cabinets and quartz, open layouts in mid-century homes, condo kitchens. Cabinets inspected before demo.",
     h1: "Kitchen Remodeling in Sarasota, FL",
     eyebrow: "Sarasota · Gulf Gate · Palmer Ranch · Lakewood Ranch",
     lead: "Closed-in galley kitchens in mid-century Sarasota ranches, builder-grade kitchens in Palmer Ranch and Lakewood Ranch, and condo kitchens on the keys. We order and inspect your cabinets before the old kitchen comes out, and your finish date goes into the contract.",
     localTitle: "What Sarasota Kitchens Usually Need",
     local: [
-      "Older Sarasota homes, especially the 1950s through 1970s ranches in Gulf Gate, South Gate and nearby, were built with small, closed kitchens. The most common request we get there is to open the kitchen to the living area. Interior walls in these block homes are often not load-bearing, but not always, and a wall that comes out usually has wiring, plumbing or ductwork to reroute. An engineer confirms it before anything is cut.",
+      "Older Sarasota homes, especially the 1950s through 1970s ranches in Gulf Gate, South Gate and nearby, were built with small, closed kitchens. The most common request in these homes is to open the kitchen to the living area. Interior walls in these block homes are often not load-bearing, but not always, and a wall that comes out usually has wiring, plumbing or ductwork to reroute. An engineer confirms it before anything is cut.",
       "In Palmer Ranch, Lakewood Ranch and other master-planned communities, the house is newer but the kitchen is builder-grade: laminate counters, particleboard boxes and an island too small to use. There the work is usually new cabinets and counters in the same layout, sometimes a bigger island, with HOA review only if the exterior changes, such as a new vented hood through the wall.",
-      "Our own Sarasota jobs show how the kitchen connects to the rest of the house. On one, we set a PGT pass-through window over the kitchen sink so the counter now serves straight out to the lanai. If you are planning a kitchen and new windows or sliders, we sequence both under one contract so nothing gets opened twice.",
+      "Our own Sarasota jobs show how the kitchen connects to the rest of the house. On one, we set a new white PGT single-hung window in the existing opening over the kitchen sink, between the kitchen and a lanai with a serving ledge outside. If you are planning a kitchen and new windows or sliders, we sequence both under one contract so nothing gets opened twice.",
     ],
     notes: [
       {
@@ -120,7 +120,7 @@ export const cityServices: CityService[] = [
       },
       {
         q: "Can you add a pass-through window from the kitchen to the lanai?",
-        a: "Yes, it is a job we have done in Sarasota. The opening is cut in the block wall, a header is set, and an impact-rated pass-through window is installed and trimmed so the counter becomes a serving ledge to the lanai.",
+        a: "Yes. On one Sarasota job the opening over the sink was already there, with a concrete ledge outside on the lanai. We set a new white PGT single-hung window in that existing opening and trimmed it inside and out, so plates can pass from the counter to the ledge. If your wall has no opening yet, cutting one is a separate, engineered and permitted scope we price at the visit.",
       },
     ],
     jobCities: ["Sarasota", "Sarasota County", "Siesta Key", "Lakewood Ranch", "Venice"],
@@ -131,7 +131,7 @@ export const cityServices: CityService[] = [
     service: "kitchen-remodeling",
     seoTitle: "Kitchen Remodeling Fort Myers FL | Post-Ian Kitchen Rebuilds",
     seoDescription:
-      "Kitchen remodeling in Fort Myers, FL: post-Ian kitchen rebuilds, new cabinets and quartz, open layouts in McGregor and gated communities. Lee County permits handled. Free estimate.",
+      "Kitchen remodeling in Fort Myers, FL: post-Ian kitchen rebuilds, new cabinets and quartz, open layouts in gated communities. Lee County permits handled.",
     h1: "Kitchen Remodeling in Fort Myers, FL",
     eyebrow: "Fort Myers · McGregor · Iona · Cypress Lake",
     lead: "Many Fort Myers kitchens were rebuilt in a hurry after Ian, and many more are still original to 1980s gated communities. We plan the whole kitchen on paper, inspect cabinets before demo and give you a finish date in writing.",
@@ -181,10 +181,10 @@ export const cityServices: CityService[] = [
     service: "impact-windows-doors",
     seoTitle: "Impact Windows Fort Myers FL | Impact Doors & Sliders",
     seoDescription:
-      "Impact windows and doors in Fort Myers, FL, installed by career installers. Post-Ian replacements, sliders, entry doors, Lee County permits and wind mitigation paperwork. Free estimate.",
+      "Impact windows and doors in Fort Myers, FL, by career installers. Post-Ian replacements, sliders, entry doors, permits and wind mitigation paperwork.",
     h1: "Impact Windows & Doors in Fort Myers, FL",
     eyebrow: "Fort Myers · McGregor · Iona · Gateway",
-    lead: "Before we had our own company, we spent years installing windows and doors for other contractors. In Fort Myers we measure, permit and install every opening ourselves, from a single slider to a whole house that still has its pre-Ian windows.",
+    lead: "Before we had our own company, we spent years installing windows and doors for other contractors. Around Fort Myers we measure, permit and install every opening ourselves; our nearest finished job is in Bonita Springs, just south of the city. We take on anything from a single slider to a whole house that still has its pre-Ian windows.",
     localTitle: "What Fort Myers Homes Usually Need",
     local: [
       "Hurricane Ian made landfall just west of Fort Myers in 2022, and Milton added more wind damage in 2024. Homes that came through with their original aluminum windows or with shutters that were never put up are now the ones insurers ask about. Impact glass removes the shutter routine entirely, and with every opening protected a wind-mitigation inspector can credit opening protection on your report.",

@@ -28,7 +28,7 @@ export type HouseEra = { label: string; years: string; checks: { title: string; 
 export const wholeHomePage = {
   seoTitle: "Whole-Home Remodeling Port Charlotte FL | One Contract",
   seoDescription:
-    "Whole-home remodeling in Port Charlotte, North Port, Punta Gorda & Venice: kitchen, baths, floors and open layouts under one contract and one schedule. Licensed CRC1327831. Free estimate.",
+    "Whole-home remodeling in Port Charlotte, North Port, Punta Gorda & Venice: kitchen, baths, floors and open layouts under one contract and one schedule.",
   hero: {
     eyebrow: "Kitchen · baths · floors · open layouts",
     title: "Whole-Home Remodeling in Port Charlotte & North Port",
@@ -36,7 +36,7 @@ export const wholeHomePage = {
     photos: [P.open, P.gutted, P.drywall] as Photo[],
     proof: [
       { value: "1", label: "contract, crew and schedule" },
-      { value: "10–20%", label: "typically saved vs room by room" },
+      { value: "Often", label: "cheaper than room by room" },
       { value: "5.0", label: "Google rating" },
     ],
   },
@@ -73,7 +73,7 @@ export const wholeHomePage = {
   why: [
     {
       title: "One round of permits and setup",
-      text: "Each separate project has its own mobilization, permits, dumpster and inspections. Doing the house as one project typically saves 10 to 20 percent.",
+      text: "Each separate project has its own mobilization, permits, dumpster and inspections. Doing the house as one project is often cheaper than room by room, because it typically saves on mobilization, permits and dumpsters.",
     },
     {
       title: "Finishes that match",
@@ -85,7 +85,7 @@ export const wholeHomePage = {
     },
   ],
   eraIntro:
-    "Most homes in Port Charlotte, North Port and Punta Gorda are concrete block on a slab, built between the 1970s and the early 2000s. Each era has its own usual suspects. Pick yours to see what we look at during the free walk-through, before anything is priced.",
+    "Most homes in Port Charlotte, North Port and Punta Gorda are concrete block on a slab, built between the 1970s and the early 2000s. Each era has its own usual suspects. Pick yours to see what we look at during the free walkthrough, before anything is priced.",
   eras: [
     {
       label: "1970s",
@@ -107,7 +107,7 @@ export const wholeHomePage = {
         { title: "Polybutylene supply lines", text: "Widely installed in this period and prone to failing at the fittings. Replaced with PEX where walls open." },
         { title: "Popcorn ceilings", text: "Tested for asbestos before removal; most homeowners want them gone in a whole-home job." },
         { title: "Soffits hiding ductwork", text: "Kitchen soffits often carry ducts, so removing them means rerouting HVAC. We plan that in the layout." },
-        { title: "Panel capacity", text: "Many panels from this era are tight for today's kitchen circuits. Checked at the walk-through." },
+        { title: "Panel capacity", text: "Many panels from this era are tight for today's kitchen circuits. Checked at the walkthrough." },
         { title: "Original windows", text: "Pre-2002 openings were not built to today's hurricane code. Replacing them fits the same permit cycle." },
       ],
     },
@@ -155,7 +155,7 @@ export const wholeHomePage = {
     columns: ["One whole-home project", "Room by room over several years"],
     rows: [
       { label: "Permits, setup and dumpsters", values: ["Once", "Every time"] },
-      { label: "Total cost", values: ["Typically 10–20% less", "Higher, and climbs with each project"] },
+      { label: "Total cost", values: ["Often less: shared mobilization, permits and dumpsters", "Higher, and climbs with each project"] },
       { label: "Finishes", values: ["One floor, one trim, one palette", "Rooms from different years that never quite match"] },
       { label: "Living with construction", values: ["One planned stretch, on a dated schedule", "Dust again with every project"] },
       { label: "Hidden problems", values: ["Found and priced once, up front", "Found again each time a wall opens"] },

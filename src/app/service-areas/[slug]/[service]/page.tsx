@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/ui/Container";
+import HeroRatings from "@/components/service-pages/HeroRatings";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TrustStrip from "@/components/TrustStrip";
 import CtaBand from "@/components/CtaBand";
@@ -44,7 +45,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     title: { absolute: page.seoTitle },
     description: page.seoDescription,
     alternates: { canonical: url },
-    openGraph: { title: page.seoTitle, description: page.seoDescription, url, type: "website" },
+    openGraph: { title: page.seoTitle, description: page.seoDescription, url, type: "website", images: [{ url: `/service-areas/${slug}/opengraph-image`, width: 1200, height: 630, alt: page.seoTitle }],
+    },
   };
 }
 
@@ -128,7 +130,7 @@ export default async function CityServicePage({ params }: { params: Promise<Para
                   href={`/free-estimate?service=${service.slug}`}
                   className="inline-flex min-h-12 items-center justify-center rounded-full btn-gold px-7 font-heading text-[15px] font-bold"
                 >
-                  Free Estimate in {area.name}
+                  Get a Free Estimate in {area.name}
                 </Link>
                 <a
                   href={site.phoneHref}
@@ -137,21 +139,8 @@ export default async function CityServicePage({ params }: { params: Promise<Para
                   Call {site.phone}
                 </a>
               </div>
-              <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/15 pt-6">
-                {[
-                  { value: area.driveTime.match(/\d+\s*min/)?.[0] ?? "Local", label: "from our Port Charlotte base" },
-                  { value: "Fixed", label: "written price before work" },
-                  { value: "5.0", label: "Google rating" },
-                ].map((p) => (
-                  <div key={p.label}>
-                    <dt className="sr-only">{p.label}</dt>
-                    <dd>
-                      <span className="block font-heading text-3xl font-extrabold text-amber-500">{p.value}</span>
-                      <span className="mt-1 block text-sm text-navy-100/80">{p.label}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <p className="mt-3 text-sm text-navy-100/75">In-home visit, written price within a week.</p>
+              <HeroRatings className="mt-8" />
             </div>
 
             <div className="grid grid-cols-6 grid-rows-[repeat(6,minmax(0,1fr))] gap-3 sm:gap-4" style={{ aspectRatio: "1 / 1" }}>
@@ -161,14 +150,30 @@ export default async function CityServicePage({ params }: { params: Promise<Para
                 { p: hero.photos[2], cls: "col-span-2 row-span-3" },
               ].map(({ p, cls }, i) => (
                 <figure key={p.id} className={`relative overflow-hidden rounded-[16px] bg-navy-900 ${cls}`}>
-                  <Image src={p.src} alt={p.alt} fill priority={i === 0} sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    priority={i === 0}
+                    fetchPriority={i === 0 ? "high" : undefined}
+                    sizes={i === 0 ? "(min-width: 1280px) 370px, (min-width: 1024px) 29vw, 62vw" : "(min-width: 1280px) 180px, (min-width: 1024px) 14vw, 31vw"}
+                    className="object-cover"
+                  />
                 </figure>
               ))}
-              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.06] p-4 ring-1 ring-white/10 sm:p-5">
-                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-amber-500">
+              <div
+                className={`col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] p-4 ring-1 ring-white/10 sm:p-5 ${
+                  hero.real ? "bg-white/[.06]" : "bg-white/[.04]"
+                }`}
+              >
+                <p
+                  className={`font-heading text-xs font-bold uppercase tracking-[.16em] ${
+                    hero.real ? "text-amber-500" : "text-navy-100/60"
+                  }`}
+                >
                   {hero.real ? "Real jobs, real photos" : "Illustrative photos"}
                 </p>
-                <p className="mt-2 text-sm leading-snug text-navy-100 sm:text-[15px]">
+                <p className={`mt-2 text-sm leading-snug sm:text-[15px] ${hero.real ? "text-navy-100" : "text-navy-100/80"}`}>
                   {hero.real
                     ? "Taken by our crew on Southwest Florida window and door jobs."
                     : `These show the finishes we build. Our own ${area.name}-area jobs are further down the page.`}
@@ -186,7 +191,7 @@ export default async function CityServicePage({ params }: { params: Promise<Para
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-start lg:gap-14">
             <div>
-              <BandHead eyebrow={`${service.title} · ${area.name}`} title={page.localTitle} />
+              <BandHead id="local-heading" eyebrow={`${service.title} · ${area.name}`} title={page.localTitle} />
               <div className="mt-6 space-y-5 text-[17px] leading-[1.65] text-ink-900">
                 {page.local.map((p, i) => (
                   <p key={i}>{p}</p>
@@ -211,7 +216,7 @@ export default async function CityServicePage({ params }: { params: Promise<Para
         <Container>
           {serviceSlug === "bathroom-remodeling" ? (
             <>
-              <BandHead eyebrow="How we build a shower" title={service.optionsTitle ?? "What Goes Behind the Tile"} intro={bathroomPage.layersIntro} className="mb-10" />
+              <BandHead id="how-heading" eyebrow="How we build a shower" title={service.optionsTitle ?? "What Goes Behind the Tile"} intro={bathroomPage.layersIntro} className="mb-10" />
               <WallLayers layers={service.options ?? []} />
             </>
           ) : serviceSlug === "kitchen-remodeling" ? (
@@ -236,7 +241,7 @@ export default async function CityServicePage({ params }: { params: Promise<Para
       {/* 4. PRICES */}
       <section className="section-y bg-white" aria-labelledby="scopes-heading">
         <Container>
-          <BandHead
+          <BandHead id="scopes-heading"
             eyebrow={`${service.title} prices`}
             title={`Typical ${service.title} Prices in ${area.name}`}
             intro={`Typical 2026 Southwest Florida ranges, which is what ${area.name} projects follow too. Your written estimate lists every line before work starts.`}
@@ -257,7 +262,7 @@ export default async function CityServicePage({ params }: { params: Promise<Para
       <section className="section-y bg-sand-50" aria-labelledby="jobs-heading">
         <Container>
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <BandHead
+            <BandHead id="jobs-heading"
               eyebrow="Our own jobs"
               title={`Recent Work In and Near ${area.name}`}
               intro="Photos from our crew. Each card shows the city where the job actually is."
@@ -308,7 +313,7 @@ export default async function CityServicePage({ params }: { params: Promise<Para
       {/* 6. MORE */}
       <section className="section-y bg-sand-50" aria-labelledby="more-heading">
         <Container>
-          <BandHead eyebrow="Keep exploring" title={`More From Us in ${area.name}`} className="mb-8" />
+          <BandHead id="more-heading" eyebrow="Keep exploring" title={`More From Us in ${area.name}`} className="mb-8" />
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <li>
               <Link href={`/service-areas/${area.slug}`} className="group flex h-full items-center justify-between gap-3 rounded-[14px] border border-sand-200 bg-white p-4 transition hover:border-amber-500 hover:shadow-card">

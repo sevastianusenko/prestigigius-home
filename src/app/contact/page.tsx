@@ -17,14 +17,16 @@ import { generalFaqs } from "@/content/faqs";
 import { site } from "@/content/site";
 import { ORG_ID, absoluteUrl, faqSchema } from "@/lib/seo";
 
-const title = "Contact Us — Port Charlotte Home Remodeling";
-const description = `Call ${site.phone} or send a message for a free in-home estimate. Serving Charlotte, Sarasota and Lee County. Mon–Fri 8–6.`;
+import { OG_DEFAULT } from "@/components/og";
+const title = "Contact Us, Port Charlotte";
+const description = `Call ${site.phone} or send a message for a free in-home estimate, Sarasota to Bonita Springs. ${site.hours}.`;
 
 export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/contact" },
-  openGraph: { title, description, url: "/contact", type: "website" },
+  openGraph: {
+    images: [OG_DEFAULT], title, description, url: "/contact", type: "website" },
 };
 
 const crumbs = [{ label: "Contact" }];
@@ -35,7 +37,7 @@ const h2Cls = "font-heading text-3xl font-extrabold leading-tight text-navy-900 
 const replyPromises: { title: string; text: string; icon: ReactNode }[] = [
   {
     title: "Quick replies on weekdays",
-    text: `Messages are answered during office hours, ${site.hours}. After hours, expect a call back the next business morning.`,
+    text: `Messages are answered during office hours, ${site.hours}. We call back within one business day.`,
     icon: <ClockIcon className="h-5 w-5" />,
   },
   {

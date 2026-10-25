@@ -30,7 +30,7 @@ export default function PromisesBand({
                 <span className="grid h-10 w-10 place-items-center rounded-full bg-amber-100 text-amber-600">
                   <CheckIcon className="h-5 w-5" />
                 </span>
-                <span aria-hidden="true" className="font-heading text-[13px] font-bold tracking-[.14em] text-ink-500/60">
+                <span aria-hidden="true" className="font-heading text-[13px] font-bold tracking-[.14em] text-ink-500">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>

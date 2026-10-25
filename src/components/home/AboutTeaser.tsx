@@ -3,7 +3,8 @@ import Link from "next/link";
 import Section from "@/components/ui/Section";
 import Eyebrow from "@/components/ui/Eyebrow";
 import { site } from "@/content/site";
-import { photo } from "@/lib/photos";
+import { jobPhoto } from "@/content/project-posts/helpers";
+import { RealJobBadge } from "@/components/ProjectMedia";
 
 /**
  * Home "Why Prestigious" teaser. Mirrors the reference's
@@ -12,7 +13,7 @@ import { photo } from "@/lib/photos";
  * Paragraphs adapted from about.story (src/content/about.ts).
  */
 const paragraphs = [
-  `Before Prestigious had its own name on the truck, Tim Fomin and Vlad Filippov spent years as the installers other Southwest Florida contractors sent out after the sale was made. We set impact windows and doors across Charlotte, Sarasota and Lee counties, through the building boom and the long rebuild after Hurricane Ian. In October ${site.founded} we opened our own company in Port Charlotte, and today it is a licensed Florida Certified Residential Contractor (${site.license}) running kitchens, baths, additions, lanais and storm repairs as well as windows.`,
+  `Before Prestigious had its own name on the truck, Tim Fomin and Vlad Filippov spent years as the installers other Southwest Florida contractors sent out after the sale was made. We set impact windows and doors across Charlotte, Sarasota and Lee counties for years. In October ${site.founded}, one month after Hurricane Ian, we incorporated our own company in Port Charlotte and kept installing windows, doors, sliders, siding and shutters as subcontractors for licensed contractors, much of it Ian rebuild work. In 2025 the company earned its own license as a Florida Certified Residential Contractor (${site.license}), and today it contracts kitchens, baths, additions, lanais and storm rebuilds as well as windows.`,
   "What we learned on other people's jobs is that most renovation trouble is not the carpentry, it is the hand-off. A promise made at the kitchen table never reaches the crew, and the homeowner cannot get anyone on the phone. So we keep it simple: the person who prices your job is the person who runs it, from the first measurement to the final inspection.",
 ];
 
@@ -21,7 +22,12 @@ const customerQuote =
   "It truly is a family business and Tim and Vlad are extremely knowledgeable in the skills needed for executing replacement and installation of doors and windows according to county building codes.";
 
 export default function AboutTeaser() {
-  const team = photo("team");
+  const team = jobPhoto(
+    "siesta-key-waterfront-new-build-windows-sliders",
+    3,
+    "windows-doors",
+    "Prestigious Home Improvements van in front of a two-story Siesta Key new construction home with a tall stair tower and black windows",
+  );
   return (
     <Section id="why-us" tone="paper">
       <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -44,6 +50,7 @@ export default function AboutTeaser() {
         <div className="relative">
           <div className="relative aspect-[4/3] overflow-hidden rounded-[14px] bg-sand-200 shadow-card">
             <Image src={team.src} alt={team.alt} fill sizes="(min-width: 1024px) 560px, 100vw" className="object-cover" />
+            <RealJobBadge />
           </div>
           <figure className="relative mx-4 -mt-14 rounded-[14px] bg-navy-900 p-6 text-white shadow-card sm:mr-0 sm:ml-10 sm:max-w-md">
             <blockquote className="text-base leading-relaxed text-navy-100">

@@ -26,7 +26,7 @@ const P = {
 export const paintingPage = {
   seoTitle: "House Painters Port Charlotte FL | Interior & Exterior",
   seoDescription:
-    "Interior repaints, cabinet painting and elastomeric stucco exteriors in Port Charlotte & SWFL. Prep listed line by line, paint named in writing, fixed price. Free estimate.",
+    "Interior repaints, cabinet painting and elastomeric stucco exteriors in Port Charlotte & SWFL. Prep listed line by line, paint named in writing.",
   hero: {
     eyebrow: "Interior · cabinets · stucco exteriors",
     title: "Interior & Exterior Painting in Port Charlotte",

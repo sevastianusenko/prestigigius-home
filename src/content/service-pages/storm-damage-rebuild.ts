@@ -29,7 +29,7 @@ const P = {
 export const stormPage = {
   seoTitle: "Storm & Water Damage Repair Port Charlotte FL | Rebuilds",
   seoDescription:
-    "Storm and water damage rebuilds in Port Charlotte & SWFL after mitigation: drywall, floors, cabinets, windows and doors. Permitted, adjuster-ready estimates. Free assessment.",
+    "Storm and water damage rebuilds in Port Charlotte & SWFL after mitigation: drywall, floors, cabinets, windows and doors. Adjuster-ready estimates.",
   hero: {
     eyebrow: "Hurricane · flood · roof leak · plumbing leak",
     title: "Storm & Water Damage Rebuilds in Port Charlotte",
@@ -37,7 +37,7 @@ export const stormPage = {
     photos: [P.patched, P.wrecked, P.debris] as Photo[],
     proof: [
       { value: "Dry", label: "log checked before drywall" },
-      { value: "Every", label: "repair permitted" },
+      { value: "Permitted", label: "wherever required" },
       { value: "5.0", label: "Google rating" },
     ],
   },
@@ -78,6 +78,7 @@ export const stormPage = {
     after: P.lanaiAfter,
     projectSlug: "manatee-county-lanai-wall-block-rebuild",
     quoteName: "Ronald S.",
+    note: "Not storm damage: an upgrade example of the same idea.",
     points: [
       "Moisture-resistant drywall at the bottom course",
       "Tile or water-tolerant vinyl instead of carpet or laminate",

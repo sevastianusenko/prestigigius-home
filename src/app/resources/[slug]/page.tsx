@@ -38,32 +38,62 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const description = clamp(post.seoDescription || post.excerpt, 155);
   const path = `/resources/${post.slug}`;
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords: post.keywords,
     alternates: { canonical: path },
-    authors: [{ name: site.owners[0].name }],
+    authors: [{ name: site.legalName, url: site.url }],
     openGraph: {
       title,
       description,
       url: path,
       type: "article",
       publishedTime: post.date,
-      authors: [site.owners[0].name],
+      authors: [site.legalName],
       tags: post.keywords,
       images: [{ url: post.cover.src, alt: post.cover.alt }],
     },
   };
 }
 
-function initials(name: string) {
-  return name
-    .replace(/\(.*?\)/g, "")
-    .split(/\s+/)
-    .filter(Boolean)
-    .map((w) => w[0])
-    .slice(0, 2)
-    .join("");
+/** Plain text for schema: drop **bold**, _em_, `code` and [link](url) markup. */
+function plainText(md: string): string {
+  return md
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/\*\*|__|`/g, "")
+    .replace(/^\s*[-*]\s+/, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/**
+ * Question/answer pairs from an FAQ section: H3 lines ending in "?" under an H2
+ * that mentions "Frequently Asked Questions" or "FAQ", each paired with the
+ * paragraphs that follow until the next heading.
+ */
+function postFaqs(body: string[]): { q: string; a: string }[] {
+  const lines = body
+    .flatMap((b) => b.split("\n"))
+    .map((l) => l.trim())
+    .filter(Boolean);
+  const pairs: { q: string; parts: string[] }[] = [];
+  let inFaq = false;
+  let open = false;
+  for (const line of lines) {
+    if (line.startsWith("#")) {
+      open = false;
+      const text = line.replace(/^#+\s*/, "");
+      if (line.startsWith("## ")) {
+        inFaq = /frequently asked questions|\bfaqs?\b/i.test(text);
+      } else if (inFaq && line.startsWith("### ") && text.endsWith("?")) {
+        pairs.push({ q: plainText(text), parts: [] });
+        open = true;
+      }
+      continue;
+    }
+    if (open) pairs[pairs.length - 1].parts.push(plainText(line));
+  }
+  return pairs.filter((p) => p.parts.length > 0).map((p) => ({ q: p.q, a: p.parts.join(" ") }));
 }
 
 export default async function ResourcePage({ params }: { params: Promise<Params> }) {
@@ -77,7 +107,6 @@ export default async function ResourcePage({ params }: { params: Promise<Params>
     .map((s) => getService(s))
     .filter((s): s is NonNullable<typeof s> => Boolean(s));
   const more = relatedPosts(post, posts, 3);
-  const author = site.owners[0];
   const url = absUrl(`/resources/${post.slug}`, site.url);
 
   const crumbs = [
@@ -98,14 +127,23 @@ export default async function ResourcePage({ params }: { params: Promise<Params>
     ...(category ? { articleSection: category.label } : {}),
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     url,
-    author: {
-      "@type": "Person",
-      name: author.name,
-      jobTitle: author.role,
-      worksFor: { "@type": "Organization", name: site.legalName },
-    },
+    author: { "@type": "Organization", name: site.legalName, url: site.url },
     publisher: { "@type": "Organization", name: site.legalName, url: site.url },
   };
+
+  const faqPairs = postFaqs(post.body);
+  const faqPage =
+    faqPairs.length >= 2
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqPairs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }
+      : null;
 
   const tocList = (
     <ol className="mt-4 space-y-2.5 border-l border-sand-200 text-[15px]">
@@ -124,7 +162,7 @@ export default async function ResourcePage({ params }: { params: Promise<Params>
 
   return (
     <>
-      <Schema data={article} />
+      <Schema data={faqPage ? [article, faqPage] : article} />
 
       {/* Hero: category, date, read time, title, byline, cover */}
       <section className="bg-sand-100">
@@ -154,12 +192,12 @@ export default async function ResourcePage({ params }: { params: Promise<Params>
                 aria-hidden="true"
                 className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-navy-900 font-heading text-sm font-bold text-amber-500"
               >
-                {initials(author.name)}
+                PH
               </span>
               <p className="text-sm leading-snug text-ink-500">
-                By <span className="font-semibold text-navy-900">{author.name}</span>
+                By <span className="font-semibold text-navy-900">the {site.name} team</span>
                 <br />
-                {author.role} · {site.name} (FL {site.license})
+                Licensed Florida contractor {site.license}
               </p>
             </div>
           </div>
@@ -211,16 +249,16 @@ export default async function ResourcePage({ params }: { params: Promise<Params>
                   aria-hidden="true"
                   className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-navy-900 font-heading text-lg font-bold text-amber-500"
                 >
-                  {initials(author.name)}
+                  PH
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[.18em] text-amber-600">About the author</p>
-                  <p className="mt-1 font-heading text-lg font-bold text-navy-900">{author.name}</p>
+                  <p className="mt-1 font-heading text-lg font-bold text-navy-900">The {site.name} team</p>
                   <p className="text-sm text-ink-500">
-                    {author.role}, {site.name}
+                    {site.legalName}, {site.address.city}, FL
                   </p>
                   <p className="mt-3 text-[15px] leading-relaxed text-ink-900">
-                    Tim runs every job we take on, from the first walkthrough to the final inspection. The company is licensed as a {site.licenseLabel}.
+                    Written by the people who price and run our jobs, from the first walkthrough to the final inspection. The company is licensed as a {site.licenseLabel}.
                     Questions about your own project? Call{" "}
                     <a href={site.phoneHref} className="font-semibold text-sea-600 hover:underline">
                       {site.phone}

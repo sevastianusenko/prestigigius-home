@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import HeroRatings from "@/components/service-pages/HeroRatings";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TrustStrip from "@/components/TrustStrip";
 import CtaBand from "@/components/CtaBand";
@@ -74,7 +75,7 @@ export default function ExteriorRemodelingPage() {
                   href={`/free-estimate?service=${SLUG}`}
                   className="inline-flex min-h-12 items-center justify-center rounded-full btn-gold px-7 font-heading text-[15px] font-bold"
                 >
-                  Book a Free Stucco Inspection
+                  Get a Free Estimate
                 </Link>
                 <a
                   href={site.phoneHref}
@@ -83,17 +84,8 @@ export default function ExteriorRemodelingPage() {
                   Call {site.phone}
                 </a>
               </div>
-              <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/15 pt-6">
-                {C.hero.proof.map((p) => (
-                  <div key={p.label}>
-                    <dt className="sr-only">{p.label}</dt>
-                    <dd>
-                      <span className="block font-heading text-3xl font-extrabold text-amber-500">{p.value}</span>
-                      <span className="mt-1 block text-sm text-navy-100/80">{p.label}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <p className="mt-3 text-sm text-navy-100/75">In-home visit, written price within a week.</p>
+              <HeroRatings className="mt-8" />
             </div>
 
             <div className="grid grid-cols-6 grid-rows-[repeat(6,minmax(0,1fr))] gap-3 sm:gap-4" style={{ aspectRatio: "1 / 1" }}>
@@ -103,7 +95,15 @@ export default function ExteriorRemodelingPage() {
                 { p: C.hero.photos[2], cls: "col-span-2 row-span-3" },
               ].map(({ p, cls }, i) => (
                 <figure key={p.id} className={`relative overflow-hidden rounded-[16px] bg-navy-900 ${cls}`}>
-                  <Image src={p.src} alt={p.alt} fill priority={i === 0} sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    priority={i === 0}
+                    fetchPriority={i === 0 ? "high" : undefined}
+                    sizes={i === 0 ? "(min-width: 1280px) 370px, (min-width: 1024px) 29vw, 62vw" : "(min-width: 1280px) 180px, (min-width: 1024px) 14vw, 31vw"}
+                    className="object-cover"
+                  />
                 </figure>
               ))}
               <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.06] p-4 ring-1 ring-white/10 sm:p-5">
@@ -122,7 +122,7 @@ export default function ExteriorRemodelingPage() {
       {/* 2. WHAT WE DO */}
       <section className="section-y bg-sand-50" aria-labelledby="products-heading">
         <Container>
-          <BandHead
+          <BandHead id="products-heading"
             eyebrow="What we do"
             title="From One Crack to a Whole New Face for the House"
             intro="Every stucco job starts with moisture readings and sounding. Every curb appeal job starts with a plan for the order of work."
@@ -150,7 +150,7 @@ export default function ExteriorRemodelingPage() {
       {/* 3. PATCH / RE-TEXTURE / REBUILD — dark band */}
       <section className="section-y bg-navy-900 text-white" aria-labelledby="options-heading">
         <Container>
-          <BandHead dark eyebrow="The right fix" title={service.optionsTitle ?? "Patch, Re-Texture, or Rebuild?"} intro={service.optionsIntro} />
+          <BandHead id="options-heading" dark eyebrow="The right fix" title={service.optionsTitle ?? "Patch, Re-Texture, or Rebuild?"} intro={service.optionsIntro} />
           <ol className="mt-10 grid gap-5 md:grid-cols-3">
             {(service.options ?? []).map((o, i) => (
               <li key={o.title} className="flex flex-col rounded-[16px] bg-white/[.06] p-7 ring-1 ring-white/10">
@@ -176,7 +176,7 @@ export default function ExteriorRemodelingPage() {
       {/* 4. ORDER OF WORK */}
       <section className="section-y bg-sand-100" aria-labelledby="sequence-heading">
         <Container>
-          <BandHead eyebrow="Order of work" title="Openings, Then Stucco, Then Paint" intro={C.sequenceIntro} className="mb-10" />
+          <BandHead id="sequence-heading" eyebrow="Order of work" title="Openings, Then Stucco, Then Paint" intro={C.sequenceIntro} className="mb-10" />
           <SequenceToggle sequences={C.sequences} />
         </Container>
       </section>
@@ -193,7 +193,7 @@ export default function ExteriorRemodelingPage() {
               <figcaption className="mt-3 text-sm text-ink-500">{C.layersPhoto.caption}</figcaption>
             </figure>
             <div>
-              <BandHead
+              <BandHead id="layers-heading"
                 eyebrow="How a block wall stays dry"
                 title={service.benefitsTitle ?? "Stucco on Block Is a Layered System"}
                 intro="Paint is only the last layer. When a wall leaks, the cause is almost always one of the layers underneath, which is why we test before we price."
@@ -217,7 +217,7 @@ export default function ExteriorRemodelingPage() {
       {/* 6. SIGNS */}
       <section className="section-y bg-sand-50" aria-labelledby="signs-heading">
         <Container>
-          <BandHead
+          <BandHead id="signs-heading"
             eyebrow="Know the signs"
             title={service.signsTitle ?? "When a Stucco Crack Is More Than Cosmetic"}
             intro="Fine hairline cracks are normal in Florida stucco. These are the ones worth a closer look."
@@ -247,7 +247,7 @@ export default function ExteriorRemodelingPage() {
         <section className="section-y bg-white" aria-labelledby="jobs-heading">
           <Container>
             <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <BandHead eyebrow="Recent exterior jobs" title="New Openings, Patched and Finished" />
+              <BandHead id="jobs-heading" eyebrow="Recent exterior jobs" title="New Openings, Patched and Finished" />
               <Link href="/projects" className="shrink-0 font-heading text-sm font-bold text-navy-900 underline decoration-amber-500 decoration-2 underline-offset-4 hover:text-amber-600">
                 All projects
               </Link>
@@ -284,7 +284,7 @@ export default function ExteriorRemodelingPage() {
       {/* 8. PRICES */}
       <section className="section-y bg-sand-50" aria-labelledby="scopes-heading">
         <Container>
-          <BandHead
+          <BandHead id="scopes-heading"
             eyebrow="Which project is yours?"
             title="Typical Exterior Projects and What They Cost"
             intro="Typical 2026 Port Charlotte and North Port ranges. Likely hidden repairs behind the stucco appear on your estimate as a clear allowance."
@@ -305,7 +305,7 @@ export default function ExteriorRemodelingPage() {
       {/* 9. FLORIDA NOTES */}
       <section className="section-y bg-white" aria-labelledby="rules-heading">
         <Container>
-          <BandHead eyebrow="Southwest Florida" title="Block Walls, Wind Codes and Weather" className="mb-10" />
+          <BandHead id="rules-heading" eyebrow="Southwest Florida" title="Block Walls, Wind Codes and Weather" className="mb-10" />
           <ul className="grid gap-5 lg:grid-cols-3">
             {service.localNotes.map((n, i) => (
               <li key={n.title} className="rounded-[16px] border border-sand-200 bg-sand-50 p-6 md:p-7">
@@ -325,7 +325,7 @@ export default function ExteriorRemodelingPage() {
       {/* 10. LEARN MORE */}
       <section className="section-y bg-sand-50" aria-labelledby="learn-heading">
         <Container>
-          <BandHead eyebrow="Before you hire" title="Straight Answers From Our Stucco and Exterior Guides" className="mb-8" />
+          <BandHead id="learn-heading" eyebrow="Before you hire" title="Straight Answers From Our Stucco and Exterior Guides" className="mb-8" />
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {learn.map((p) => (
               <li key={p.slug}>
@@ -345,7 +345,7 @@ export default function ExteriorRemodelingPage() {
       <ServiceAreasBand />
       <CtaBand
         title="Find Out What Is Behind That Crack"
-        text="We tap, probe and moisture-test the walls, check the roofline and openings, and give you a written, fixed-price scope. Free, no pressure."
+        text="We tap, probe and moisture-test the walls, check the roofline and openings, and give you a written, fixed-price scope before any wall is opened."
       />
     </>
   );

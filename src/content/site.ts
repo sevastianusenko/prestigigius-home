@@ -19,11 +19,11 @@ export const site = {
   },
   hours: "Mon–Fri 8:00 AM – 6:00 PM · Sat by appointment",
   license: "CRC1327831",
-  licenseLabel: "Florida Certified Residential Contractor #CRC1327831",
+  licenseLabel: "Florida Certified Residential Contractor CRC1327831",
   founded: 2022,
   owners: [
-    { name: "Timofey (Tim) Fomin", role: "President & Co-Founder" },
-    { name: "Vladimir (Vlad) Filippov", role: "Co-Founder · Field Operations" },
+    { name: "Tim Fomin", role: "President & Co-Founder · Estimates & Project Management" },
+    { name: "Vlad Filippov", role: "Co-Founder · Field Operations" },
   ],
   ratings: {
     google: { score: "5.0", count: 8, href: "https://www.google.com/maps/search/Prestigious+Home+Improvements+Inc+Port+Charlotte+FL" },
@@ -44,8 +44,13 @@ export const site = {
     "Sarasota",
     "Fort Myers",
     "Cape Coral",
+    "Lakewood Ranch",
+    "Bonita Springs",
+    "Siesta Key",
   ],
-  counties: ["Charlotte County", "Sarasota County", "Lee County"],
+  /** one phrase for the service-area span, used in copy everywhere */
+  serviceSpan: "from Sarasota and Lakewood Ranch down to Fort Myers and Bonita Springs",
+  counties: ["Charlotte County", "Sarasota County", "Lee County", "Manatee County"],
   /** Referral reward — PLACEHOLDER, confirm amount with the client (OPEN-QUESTIONS.md) */
   referral: { reward: "$250", rewardNote: "paid after your friend's project is complete" },
   trust: [
@@ -58,7 +63,7 @@ export const site = {
     { value: "5.0", label: "Google rating" },
     { value: "A+", label: "BBB accredited" },
     { value: "2022", label: "Family-owned since" },
-    { value: "100%", label: "Permitted & inspected" },
+    { value: "Every", label: "Required permit pulled by us" },
   ],
 } as const;
 
@@ -79,12 +84,12 @@ export const processSteps: Step[] = [
     n: "03",
     title: "One crew, one person to call",
     kicker: "Tim runs the job",
-    text: "We pull the permits, order the materials and install with our own crew. You get one phone number and updates at every milestone.",
+    text: "We handle the permits, order the materials and install with our own crew. You get one phone number and updates at every milestone.",
   },
   {
     n: "04",
     title: "Final walkthrough & warranty",
-    kicker: "We are done when you say so",
+    kicker: "Done when the punch list is closed",
     text: "We build the punch list together, close it out, pass the final inspection and hand you a written workmanship warranty.",
   },
 ];

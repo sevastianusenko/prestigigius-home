@@ -49,7 +49,7 @@ export const postsA: Post[] = [
       "## How a Window Buck Works in a Block Wall",
       "The window buck carries two kinds of load. First, it carries wind pressure: during a storm, positive pressure pushes the window inward and negative pressure (suction) pulls it outward. Those forces travel from the glass to the window frame, through the window screws into the buck, and through the buck anchors into the block. Second, it is part of the water management path. The joint between buck and block, and between window and buck, must be sealed or flashed so wind-driven rain does not get behind the stucco.",
       "Every link in that chain matters. An impact window rated for high design pressures is only as strong as the substrate it is screwed into. A rotten buck or an anchor spaced too far from the edge of the block can let a window that passed laboratory testing pull out of the wall in real conditions.",
-      "## Wood vs. Concrete Buck: Which Is Better?",
+      "## Wood vs Concrete Buck: Which Is Better?",
       "Homeowners often ask about a wood vs concrete buck. In practice the comparison is between a wood (or composite) buck and installing the window directly into the concrete or block with no buck. Both are legitimate when done to the manufacturer's tested installation instructions.",
       "### Wood (pressure-treated) buck",
       "- **Pros:** easy to true up an out-of-square opening; holds wood screws well; lets the installer adjust the opening size to fit a standard window; inexpensive material.",

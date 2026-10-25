@@ -5,6 +5,8 @@ import { site } from "@/content/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Schema from "@/components/Schema";
+import MobileCtaBar from "@/components/MobileCtaBar";
+import { OG_DEFAULT } from "@/components/og";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -14,7 +16,9 @@ const montserrat = Montserrat({
 });
 
 const openSans = Open_Sans({
-  subsets: ["latin"],
+  // "symbols" covers the arrows and check marks (→ ✓ ★) used in buttons and lists;
+  // without it the browser discovers that file late and repaints the hero (slow LCP).
+  subsets: ["latin", "symbols"],
   weight: ["400", "600", "700"],
   variable: "--font-opensans",
   display: "swap",
@@ -26,7 +30,7 @@ const defaultDescription =
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: defaultTitle, template: `%s` },
+  title: { default: defaultTitle, template: `%s | ${site.name}` },
   description: defaultDescription,
   applicationName: site.name,
   alternates: { canonical: "/" },
@@ -37,8 +41,9 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: defaultTitle,
     description: defaultDescription,
+    images: [OG_DEFAULT],
   },
-  twitter: { card: "summary_large_image", title: defaultTitle, description: defaultDescription },
+  twitter: { card: "summary_large_image", title: defaultTitle, description: defaultDescription, images: [OG_DEFAULT.url] },
   formatDetection: { telephone: true, address: true, email: true },
 };
 
@@ -99,6 +104,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         <main id="main">{children}</main>
         <Footer />
+        <MobileCtaBar />
       </body>
     </html>
   );

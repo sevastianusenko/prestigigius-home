@@ -8,14 +8,16 @@ import EstimateBuilder, { type EstimateService } from "@/components/estimate/Est
 import { services } from "@/content/services";
 import { site } from "@/content/site";
 
+import { OG_DEFAULT } from "@/components/og";
 export const metadata: Metadata = {
   // 53 chars
-  title: "Remodeling Cost Estimate Builder | Port Charlotte FL",
+  title: { absolute: "Remodeling Cost Estimate Builder | Port Charlotte FL" },
   description:
     "Pick your projects, choose the scope and get a ballpark remodeling price for your Southwest Florida home in about a minute. Your written estimate is free.",
   alternates: { canonical: "/estimate-builder" },
   openGraph: {
-    title: "Remodeling Cost Estimate Builder | Port Charlotte FL",
+    images: [OG_DEFAULT],
+    title: { absolute: "Remodeling Cost Estimate Builder | Port Charlotte FL" },
     description: "A ballpark price for your SWFL remodel in about a minute.",
     url: "/estimate-builder",
     type: "website",
@@ -25,7 +27,7 @@ export const metadata: Metadata = {
 const howItWorks = [
   {
     title: "Pick your projects",
-    text: "One room or several. Combine a kitchen with new floors, or a roof with impact windows.",
+    text: "One room or several. Combine a kitchen with a bathroom, or new floors with impact windows.",
   },
   {
     title: "Match the scope",

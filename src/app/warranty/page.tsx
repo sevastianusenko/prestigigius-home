@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_DEFAULT } from "@/components/og";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
 import TrustStrip from "@/components/TrustStrip";
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/warranty" },
-  openGraph: { title, description, url: "/warranty", type: "website" },
+  openGraph: { title, description, url: "/warranty", type: "website", images: [OG_DEFAULT] },
 };
 
 const crumbs = [{ label: "Warranty" }];

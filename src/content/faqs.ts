@@ -11,11 +11,11 @@ export const generalFaqs: Faq[] = [
   },
   {
     q: "Do you pull the permits?",
-    a: "Yes, on every job that needs one, under our license. In Charlotte County that usually means Charlotte County Community Development or the City of Punta Gorda; in Sarasota County it is the county, or the cities of North Port, Venice or Sarasota depending on the address; in Lee County it is the county, Cape Coral or Fort Myers. We prepare the drawings and product approvals, submit the application, schedule every inspection and close the permit out. Never let a contractor ask you to pull an owner-builder permit for their work.",
+    a: "Yes, on every job that needs one, under our license. In Charlotte County that usually means Charlotte County Community Development or the City of Punta Gorda; in Sarasota County it is the county, or the cities of North Port, Venice or Sarasota depending on the address; in Lee County it is the county, Cape Coral, Fort Myers or Bonita Springs; in Manatee County, the county handles Lakewood Ranch's northern villages and Parrish. We prepare the drawings and product approvals, submit the application, schedule every inspection and close the permit out. Never let a contractor ask you to pull an owner-builder permit for their work.",
   },
   {
     q: "Is the estimate really free?",
-    a: "Yes. Tim comes to the house, measures, looks at the conditions you can't see from a photo, listens to what you want, and sends you a written, itemized estimate, usually within a few days. There is no fee and no obligation, and we do not do the high-pressure \"sign tonight\" routine.",
+    a: "Yes. Tim comes to the house, measures, looks at the conditions you can't see from a photo, listens to what you want, and sends you a written, itemized estimate, usually within a week of the visit. There is no fee and no obligation, and we do not do the high-pressure \"sign tonight\" routine.",
   },
   {
     q: "How do you price a job, and what happens if something changes?",
@@ -27,7 +27,7 @@ export const generalFaqs: Faq[] = [
   },
   {
     q: "How long does a typical project take?",
-    a: "It depends on the scope and on permitting. As a rough guide: a window and door package is installed in 1 to 3 days once the product arrives, a bathroom takes 2 to 4 weeks, a kitchen 4 to 8 weeks, and an addition or whole-home remodel several months. Impact products are made to order and typically take 6 to 12 weeks to arrive, and permit review can add a few weeks, longer after a storm. You get a written schedule before we start and updates when anything moves.",
+    a: "It depends on the scope and on permitting. As a rough guide: a window and door package is installed in 1–4 working days once the product arrives, a bathroom takes 2 to 4 weeks, a kitchen 4 to 8 weeks, and an addition or whole-home remodel several months. Impact products are made to order and typically take 8–14 weeks to arrive, and permit review can add a few weeks, longer after a storm. You get a written schedule before we start and updates when anything moves.",
   },
   {
     q: "Do you offer a warranty?",
@@ -35,7 +35,7 @@ export const generalFaqs: Faq[] = [
   },
   {
     q: "Can you work during hurricane season?",
-    a: "Yes, we work year-round, but we plan around the season (June 1 to November 30). We avoid leaving a roof or an opening exposed overnight, we watch the forecast, and if a named storm is coming we secure the site and any open work before it arrives. If you want impact windows or a new lanai enclosure in place before next season, the best time to start is winter or early spring, because of product lead times and permit review.",
+    a: "Yes, we work year-round, but we plan around the season (June 1 to November 30). We avoid leaving an opening exposed overnight, we watch the forecast, and if a named storm is coming we secure the site and any open work before it arrives. If you want impact windows or a new lanai enclosure in place before next season, the best time to start is winter or early spring, because of product lead times and permit review.",
   },
   {
     q: "Do you handle HOA and condo approvals?",
@@ -47,7 +47,7 @@ export const generalFaqs: Faq[] = [
   },
   {
     q: "What areas do you serve?",
-    a: "We are based in Port Charlotte and work across Charlotte, Sarasota and Lee counties: Port Charlotte, Punta Gorda, North Port, Englewood, Rotonda West, Venice, Sarasota, Fort Myers and Cape Coral. We have also completed work in Manatee County. If you are unsure whether we cover your address, call and ask.",
+    a: "We are based in Port Charlotte and work from Sarasota and Lakewood Ranch down to Fort Myers and Bonita Springs, across Charlotte, Sarasota, Lee and Manatee counties: Port Charlotte, Punta Gorda, North Port, Englewood, Venice, Sarasota, Siesta Key, Lakewood Ranch, Fort Myers, Cape Coral and Bonita Springs. If you are unsure whether we cover your address, call and ask.",
   },
   {
     q: "How does the payment schedule work?",

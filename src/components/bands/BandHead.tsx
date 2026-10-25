@@ -14,6 +14,7 @@ export function renderTitle(title: ReactNode): ReactNode {
 
 /** Eyebrow + H2 + intro used at the top of every band. */
 export default function BandHead({
+  id,
   eyebrow,
   title,
   intro,
@@ -21,6 +22,8 @@ export default function BandHead({
   center = false,
   className = "",
 }: {
+  /** id for the h2, so a parent section can point aria-labelledby at it */
+  id?: string;
   eyebrow?: ReactNode;
   title?: ReactNode;
   intro?: ReactNode;
@@ -32,7 +35,7 @@ export default function BandHead({
   return (
     <header className={`max-w-[1010px] ${center ? "mx-auto text-center" : ""} ${className}`}>
       {eyebrow && <p className={`eyebrow mb-3 ${dark ? "eyebrow-dark" : ""}`}>{eyebrow}</p>}
-      {title && <h2 className={`h2-display ${dark ? "!text-white" : ""}`}>{renderTitle(title)}</h2>}
+      {title && <h2 id={id} className={`h2-display ${dark ? "!text-white" : ""}`}>{renderTitle(title)}</h2>}
       {intro && (
         <div
           className={`mt-4 max-w-3xl text-[17px] leading-relaxed ${center ? "mx-auto" : ""} ${

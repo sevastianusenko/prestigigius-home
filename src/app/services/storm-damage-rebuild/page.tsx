@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import HeroRatings from "@/components/service-pages/HeroRatings";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TrustStrip from "@/components/TrustStrip";
 import CtaBand from "@/components/CtaBand";
@@ -75,7 +76,7 @@ export default function StormDamageRebuildPage() {
                   href={`/free-estimate?service=${SLUG}`}
                   className="inline-flex min-h-12 items-center justify-center rounded-full btn-gold px-7 font-heading text-[15px] font-bold"
                 >
-                  Book a Free Damage Assessment
+                  Get a Free Estimate
                 </Link>
                 <a
                   href={site.phoneHref}
@@ -87,17 +88,7 @@ export default function StormDamageRebuildPage() {
               <p className="mt-4 max-w-xl text-sm text-navy-100/80">
                 Water still standing or drywall still wet? Call a water mitigation company first. Wet materials need attention within 24 to 48 hours.
               </p>
-              <dl className="mt-8 grid max-w-lg grid-cols-3 gap-4 border-t border-white/15 pt-6">
-                {C.hero.proof.map((p) => (
-                  <div key={p.label}>
-                    <dt className="sr-only">{p.label}</dt>
-                    <dd>
-                      <span className="block font-heading text-3xl font-extrabold text-amber-500">{p.value}</span>
-                      <span className="mt-1 block text-sm text-navy-100/80">{p.label}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <HeroRatings className="mt-8" />
             </div>
 
             <div className="grid grid-cols-6 grid-rows-[repeat(6,minmax(0,1fr))] gap-3 sm:gap-4" style={{ aspectRatio: "1 / 1" }}>
@@ -107,12 +98,20 @@ export default function StormDamageRebuildPage() {
                 { p: C.hero.photos[2], cls: "col-span-2 row-span-3" },
               ].map(({ p, cls }, i) => (
                 <figure key={p.id} className={`relative overflow-hidden rounded-[16px] bg-navy-900 ${cls}`}>
-                  <Image src={p.src} alt={p.alt} fill priority={i === 0} sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    priority={i === 0}
+                    fetchPriority={i === 0 ? "high" : undefined}
+                    sizes={i === 0 ? "(min-width: 1280px) 370px, (min-width: 1024px) 29vw, 62vw" : "(min-width: 1280px) 180px, (min-width: 1024px) 14vw, 31vw"}
+                    className="object-cover"
+                  />
                 </figure>
               ))}
-              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.06] p-4 ring-1 ring-white/10 sm:p-5">
-                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-amber-500">Illustrative photos</p>
-                <p className="mt-2 text-sm leading-snug text-navy-100 sm:text-[15px]">
+              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.04] p-4 ring-1 ring-white/10 sm:p-5">
+                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-navy-100/60">Illustrative photos</p>
+                <p className="mt-2 text-sm leading-snug text-navy-100/80 sm:text-[15px]">
                   These show the stages of a rebuild. The before-and-after further down is one of our own jobs.
                 </p>
               </div>
@@ -126,7 +125,7 @@ export default function StormDamageRebuildPage() {
       {/* 2. WHAT WE REBUILD */}
       <section className="section-y bg-sand-50" aria-labelledby="products-heading">
         <Container>
-          <BandHead
+          <BandHead id="products-heading"
             eyebrow="What we rebuild"
             title="From One Wet Room to a Whole-House Hurricane Rebuild"
             intro="Charlotte County went through Ian in 2022 and Milton in 2024, plus the everyday leaks in between. These are the rebuilds we are called for most."
@@ -154,7 +153,7 @@ export default function StormDamageRebuildPage() {
       {/* 3. MITIGATION FIRST — dark band */}
       <section className="section-y bg-navy-900 text-white" aria-labelledby="order-heading">
         <Container>
-          <BandHead dark eyebrow="What to do first" title={service.optionsTitle ?? "Mitigation First, Rebuild Second"} intro={service.optionsIntro} />
+          <BandHead id="order-heading" dark eyebrow="What to do first" title={service.optionsTitle ?? "Mitigation First, Rebuild Second"} intro={service.optionsIntro} />
           <ol className="mt-10 grid gap-5 md:grid-cols-3">
             {(service.options ?? []).map((o, i) => (
               <li key={o.title} className="flex flex-col rounded-[16px] bg-white/[.06] p-7 ring-1 ring-white/10">
@@ -180,7 +179,7 @@ export default function StormDamageRebuildPage() {
       {/* 4. HIDDEN DAMAGE SIGNS */}
       <section className="section-y bg-white" aria-labelledby="signs-heading">
         <Container>
-          <BandHead
+          <BandHead id="signs-heading"
             eyebrow="Know the signs"
             title={service.signsTitle ?? "Signs of Hidden Water Damage"}
             intro="Water travels inside walls and under floors long after the storm. If you see any of these, the drywall or framing behind them has probably taken on water."
@@ -203,7 +202,7 @@ export default function StormDamageRebuildPage() {
       {/* 5. 50% RULE CHECK */}
       <section className="section-y bg-sand-100" aria-labelledby="fifty-heading">
         <Container>
-          <BandHead eyebrow="Flood zones" title="Check the 50% Substantial-Damage Rule" intro={C.calculator.intro} className="mb-10" />
+          <BandHead id="fifty-heading" eyebrow="Flood zones" title="Check the 50% Substantial-Damage Rule" intro={C.calculator.intro} className="mb-10" />
           <SubstantialDamageCheck note={C.calculator.note} />
         </Container>
       </section>
@@ -215,9 +214,12 @@ export default function StormDamageRebuildPage() {
             <div>
               <BeforeAfter before={C.hardening.before} after={C.hardening.after} label="Aluminum lanai wall replaced with block and storm-rated glass" />
               <p className="mt-3 text-sm text-ink-500">Our job in Manatee County, same wall before and after. Drag the handle to compare.</p>
+              <p className="mt-1 text-sm font-semibold text-navy-900">
+                {(C.hardening as { note?: string }).note ?? "Not storm damage: an upgrade example of the same idea."}
+              </p>
             </div>
             <div>
-              <BandHead eyebrow="Rebuild it stronger" title="While the Walls Are Open, Make the Next Storm Do Less" />
+              <BandHead id="harden-heading" eyebrow="Rebuild it stronger" title="While the Walls Are Open, Make the Next Storm Do Less" />
               <ul className="mt-6 space-y-3 text-[15px] text-ink-900">
                 {C.hardening.points.map((p) => (
                   <li key={p} className="flex gap-2.5">
@@ -254,7 +256,7 @@ export default function StormDamageRebuildPage() {
       {/* 7. PRICES */}
       <section className="section-y bg-sand-50" aria-labelledby="scopes-heading">
         <Container>
-          <BandHead
+          <BandHead id="scopes-heading"
             eyebrow="Which rebuild is yours?"
             title="Typical Storm and Water Damage Rebuilds and What They Cost"
             intro="Typical 2026 Southwest Florida ranges. You get a written, itemized room-by-room estimate after the free assessment."
@@ -292,7 +294,7 @@ export default function StormDamageRebuildPage() {
       {/* 8. FLORIDA RULES */}
       <section className="section-y bg-white" aria-labelledby="rules-heading">
         <Container>
-          <BandHead eyebrow="Florida rules" title="Three Rules That Shape Every Storm Rebuild Here" className="mb-10" />
+          <BandHead id="rules-heading" eyebrow="Florida rules" title="Three Rules That Shape Every Storm Rebuild Here" className="mb-10" />
           <ul className="grid gap-5 lg:grid-cols-3">
             {service.localNotes.map((n, i) => (
               <li key={n.title} className="rounded-[16px] border border-sand-200 bg-sand-50 p-6 md:p-7">
@@ -312,7 +314,7 @@ export default function StormDamageRebuildPage() {
       {/* 9. LEARN MORE */}
       <section className="section-y bg-sand-50" aria-labelledby="learn-heading">
         <Container>
-          <BandHead eyebrow="Before you rebuild" title="Straight Answers From Our Guides" className="mb-8" />
+          <BandHead id="learn-heading" eyebrow="Before you rebuild" title="Straight Answers From Our Guides" className="mb-8" />
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {learn.map((p) => (
               <li key={p.slug}>
@@ -332,7 +334,7 @@ export default function StormDamageRebuildPage() {
       <ServiceAreasBand />
       <CtaBand
         title="Need a Rebuild Estimate Your Adjuster Can Follow?"
-        text="We document the damage room by room, find where the water came in, and give you an itemized written estimate. Free, no pressure."
+        text="We document the damage room by room, find where the water came in, and give you an itemized written estimate you can share with your insurer."
       />
     </>
   );

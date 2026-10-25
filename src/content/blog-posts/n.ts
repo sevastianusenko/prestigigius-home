@@ -85,7 +85,7 @@ export const postsN: Post[] = [
       "## Wear Layer, Thickness, and SPC vs WPC Flooring",
       "The wear layer is the clear top coat that protects the printed design. For homes, **12 to 20 mil** is the useful range. Choose 20 mil if you have large dogs, kids or a steady stream of sand from the beach or pool. Overall plank thickness matters less than the core and the wear layer.",
       "On the core, the question of **SPC vs WPC flooring** comes down to feel versus toughness:",
-      "- **SPC (stone plastic composite):** a dense, rigid core made mostly of limestone powder and PVC. It resists dents, handles temperature swings near sliders and windows, and tolerates minor slab imperfections. This is what we install most often.",
+      "- **SPC (stone plastic composite):** a dense, rigid core made mostly of limestone powder and PVC. It resists dents, handles temperature swings near sliders and windows, and tolerates minor slab imperfections. It is the floor we recommend most often for these homes.",
       "- **WPC (wood plastic composite):** a foamed core that feels softer and a little warmer underfoot, and is somewhat quieter. It is easier to dent under heavy furniture.",
       "Both are waterproof planks. Neither one fixes a wet slab, and neither replaces proper leveling.",
       "## Florida Humidity and Your Floor",

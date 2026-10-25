@@ -30,7 +30,7 @@ const P = {
 export const impactPage = {
   seoTitle: "Impact Windows & Doors Port Charlotte & Sarasota FL",
   seoDescription:
-    "Impact windows, sliding glass doors and entry doors installed by career installers. Real SWFL jobs, written per-opening pricing, permits included. Free estimate.",
+    "Impact windows, sliding glass doors and entry doors installed by career installers. Real SWFL jobs, written per-opening pricing, permits included.",
   hero: {
     eyebrow: "Impact windows · sliding glass doors · entry doors",
     title: "Impact Windows & Doors in Port Charlotte & Sarasota",
@@ -95,7 +95,7 @@ export const impactPage = {
     },
     {
       title: "Cooler, quieter rooms",
-      text: "Laminated glass with Low-E coatings cuts heat gain, UV fading and street noise. Most homeowners notice the quiet on the first night.",
+      text: "Laminated glass with Low-E coatings cuts heat gain, UV fading and street noise. Most homeowners notice the quiet right away.",
     },
   ],
   install: [

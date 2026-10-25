@@ -26,9 +26,9 @@ const P = {
 export type FloorMaterial = { label: string; low: number; high: number; note: string };
 
 export const flooringPage = {
-  seoTitle: "Flooring & Tile Installation Port Charlotte FL | LVP & Porcelain",
+  seoTitle: "Flooring & Tile Installation Port Charlotte FL | LVP, Tile",
   seoDescription:
-    "Luxury vinyl plank, porcelain tile and engineered wood in Port Charlotte & SWFL. Old tile and terrazzo removal, slab leveling priced up front, condo sound rules. Free measure.",
+    "Luxury vinyl plank, porcelain tile and engineered wood in Port Charlotte & SWFL. Tile and terrazzo removal, slab leveling priced up front. Free measure.",
   hero: {
     eyebrow: "LVP · porcelain tile · engineered wood",
     title: "Flooring & Tile Installation in Port Charlotte",

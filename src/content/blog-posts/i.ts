@@ -320,7 +320,7 @@ The safest entry is no curb at all. Our [curbless shower](/resources/curbless-sh
 - **Tub cut-out or step-through inserts:** cheaper, but they still leave a step and a slippery tub floor. We rarely recommend them for long-term aging in place.
 If a wheelchair may ever be involved, ADA guidelines for roll-in showers are a good target: an interior of at least 30 by 60 inches and a threshold of about 1/2 inch, beveled. A private home does not have to meet ADA, but those numbers help.
 ## Walk-In Shower With Seat
-A walk-in shower with seat is the single most requested feature from our older clients. Sitting to wash removes the balancing act of standing on one foot.
+A walk-in shower with a seat is one of the features older homeowners ask about most. Sitting to wash removes the balancing act of standing on one foot.
 ### Built-in bench
 A tiled bench framed into the shower before waterproofing. It is solid and permanent, but it takes floor space and must be sloped so water runs off.
 ### Fold-down seat

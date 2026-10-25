@@ -18,15 +18,25 @@ import { getService } from "@/content/services";
 import { site } from "@/content/site";
 import { faqSchema } from "@/lib/seo";
 
-const title = "Free In-Home Estimate — Port Charlotte & SWFL";
+import { OG_DEFAULT } from "@/components/og";
+/** Lowercase a service title for use mid-sentence, keeping proper nouns ("Florida"). */
+function inSentence(title: string): string {
+  return title
+    .split(" ")
+    .map((w) => (/^Florida/.test(w) ? w : w.toLowerCase()))
+    .join(" ");
+}
+
+const title = "Free In-Home Estimate, Port Charlotte & SWFL | Prestigious";
 const description =
-  "Request a free, no-obligation in-home estimate for your remodel, impact windows, roof or lanai. Written, itemized price. Licensed FL contractor.";
+  "Request a free, no-obligation in-home estimate for your remodel, impact windows, kitchen or lanai. Written, itemized price. Licensed FL contractor.";
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: "/free-estimate" },
-  openGraph: { title, description, url: "/free-estimate", type: "website" },
+  openGraph: {
+    images: [OG_DEFAULT], title, description, url: "/free-estimate", type: "website" },
 };
 
 const crumbs = [{ label: "Free Estimate" }];
@@ -64,9 +74,9 @@ export default async function FreeEstimatePage({
         intro={
           <p>
             {service
-              ? `Tell us about your ${service.title.toLowerCase()} project. `
+              ? `Tell us about your ${inSentence(service.title)} project. `
               : "Tell us what you want to change. "}
-            An owner calls you back, walks the house with you, measures, and sends a written, itemized price. Free,
+            An owner calls you back, walks the house with you, measures, and sends a written, itemized price, usually within a week of the visit. Free,
             whether or not you hire us.
           </p>
         }

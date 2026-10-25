@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTabs } from "./useTabs";
 
 type Layer = { title: string; text: string; bullets?: string[] };
 
@@ -31,20 +32,18 @@ export default function WallLayers({
 }) {
   const [active, setActive] = useState(0);
   const current = layers[active];
+  const tabs = useTabs(layers.length, active, setActive);
 
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_1.05fr] lg:items-start lg:gap-12">
-      <ol className="space-y-3" role="tablist" aria-label={label}>
+      <div className="space-y-3" {...tabs.listProps} aria-orientation="vertical" aria-label={label}>
         {layers.map((l, i) => {
           const on = i === active;
           return (
-            <li key={l.title}>
               <button
+                key={l.title}
                 type="button"
-                role="tab"
-                aria-selected={on}
-                aria-controls="wall-layer-panel"
-                onClick={() => setActive(i)}
+                {...tabs.tabProps(i)}
                 className={`flex w-full items-start gap-4 rounded-[14px] border p-4 text-left transition md:p-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                   on ? "border-amber-500 bg-white shadow-card" : "border-sand-200 bg-white/60 hover:border-amber-500/60 hover:bg-white"
                 }`}
@@ -63,12 +62,11 @@ export default function WallLayers({
                   </span>
                 </span>
               </button>
-            </li>
           );
         })}
-      </ol>
+      </div>
 
-      <figure id="wall-layer-panel" role="tabpanel" className="lg:sticky lg:top-24">
+      <figure {...tabs.panelProps} className="lg:sticky lg:top-24">
         <div className="overflow-hidden rounded-[18px] bg-navy-950 p-5 shadow-card sm:p-7">
           <div className="flex items-center justify-between text-[11px] font-bold uppercase tracking-[.16em] text-navy-100/70">
             <span>{inside}</span>

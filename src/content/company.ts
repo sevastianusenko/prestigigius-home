@@ -28,7 +28,7 @@ export const promises: TitledText[] = [
   },
   {
     title: "A clean house at the end of every day",
-    text: "Floors protected, dust contained, debris hauled off. You should be able to cook dinner and walk through your home after the crew leaves each afternoon.",
+    text: "Floors protected, dust contained, debris hauled off. We keep a working sink and a path through the house whenever the scope allows.",
   },
   {
     title: "A walkthrough before the final invoice",
@@ -96,7 +96,7 @@ export const contactNext: TitledText[] = [
   },
   {
     title: "We call you back and book a visit",
-    text: "A real person from our team returns your message, usually the same business day, and sets a time to come out.",
+    text: "A real person from our team returns your message, within one business day, and sets a time to come out.",
   },
   {
     title: "You get a written, itemized estimate",

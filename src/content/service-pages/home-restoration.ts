@@ -31,7 +31,7 @@ export type SystemRow = {
 export const restorationPage = {
   seoTitle: "Home Restoration Port Charlotte FL | Older Florida Homes",
   seoDescription:
-    "Restoring 1960s–1990s Florida homes in Port Charlotte & SWFL: gut renovations, polybutylene and cast-iron replacement, rewiring, terrazzo, impact upgrades. Licensed CRC1327831.",
+    "Restoring 1960s–1990s Florida homes in Port Charlotte & SWFL: gut renovations, polybutylene and cast-iron replacement, rewiring and impact upgrades.",
   hero: {
     eyebrow: "1960s–1990s ranch, canal and condo homes",
     title: "Home Restoration for Older Florida Homes",

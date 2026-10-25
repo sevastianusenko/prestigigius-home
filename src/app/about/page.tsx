@@ -16,23 +16,36 @@ import MeetOwner from "@/components/about/MeetOwner";
 import HomeownerQuotes from "@/components/about/HomeownerQuotes";
 import { aboutHero, origin, whoWeAre } from "@/content/about";
 import { site } from "@/content/site";
-import { photo } from "@/lib/photos";
+import { jobPhoto } from "@/content/project-posts/helpers";
+import { RealJobBadge } from "@/components/ProjectMedia";
 import { absoluteUrl, organizationRef } from "@/lib/seo";
 
-const title = "About Us | Prestigious Home Improvements, Port Charlotte";
+import { OG_DEFAULT } from "@/components/og";
+const title = "About Us, Port Charlotte FL";
 const description =
-  "Former window and door installers turned licensed Florida contractors (CRC1327831). Our story, our owner, and the promises we make on every SWFL home.";
+  "Former window and door installers turned licensed Florida contractors (CRC1327831). Our story, our owners, and the promises we make on every SWFL home.";
 
 export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/about" },
-  openGraph: { title, description, url: "/about", type: "website" },
+  openGraph: {
+    images: [OG_DEFAULT], title, description, url: "/about", type: "website" },
 };
 
 export default function AboutPage() {
-  const heroPhoto = photo("team");
-  const sidePhoto = photo("team", 1);
+  const heroPhoto = jobPhoto(
+    "parrish-two-story-block-home-impact-windows",
+    7,
+    "windows-doors",
+    "Front of a new two-story concrete block home in Parrish with black impact windows set in red liquid-flashed openings and a covered entry",
+  );
+  const sidePhoto = jobPhoto(
+    "manatee-county-lanai-wall-block-rebuild",
+    3,
+    "lanai",
+    "New white stucco block wall on a Manatee County lanai with storm-rated windows, a full-lite door and a tall narrow window under the screen enclosure",
+  );
 
   const aboutSchema = {
     "@context": "https://schema.org",
@@ -52,7 +65,7 @@ export default function AboutPage() {
         eyebrow={aboutHero.eyebrow}
         lines={aboutHero.lines}
         lead={<p>{aboutHero.lead}</p>}
-        primary={{ href: "/free-estimate", label: "Request a Free Estimate" }}
+        primary={{ href: "/free-estimate", label: "Get a Free Estimate" }}
         bullets={[`Licensed & insured · ${site.license}`, `${site.ratings.google.score} on Google`, `BBB ${site.ratings.bbb.grade}`]}
         photo={heroPhoto}
       />
@@ -73,6 +86,7 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-[14px] bg-sand-100 shadow-card">
             <Image src={sidePhoto.src} alt={sidePhoto.alt} fill sizes="(min-width: 1024px) 520px, 100vw" className="object-cover" />
+            <RealJobBadge />
           </div>
         </div>
       </Section>
@@ -98,7 +112,7 @@ export default function AboutPage() {
 
       <CtaBand
         title="Get Your Free Estimate"
-        text="Tim comes out, measures, and leaves you with a written, itemized price. It costs nothing, even if you go with someone else."
+        text="Tim comes out, measures, and leaves you with a written, itemized price, usually within a week of the visit. It costs nothing, even if you go with someone else."
       />
     </>
   );

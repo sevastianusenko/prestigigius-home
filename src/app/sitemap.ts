@@ -37,6 +37,9 @@ const staticRoutes: StaticRoute[] = [
   // /review (post-job "leave us a review" page) is intentionally excluded.
 ];
 
+/** Last content review of static, service, area and city-service pages. Bump when they change. */
+const CONTENT_UPDATED = new Date("2026-10-24");
+
 /** Parse "2026-10-20" or "2026-03"; fall back to `fallback` if unparseable. */
 function toDate(value: string, fallback: Date): Date {
   const parsed = new Date(value);
@@ -44,46 +47,45 @@ function toDate(value: string, fallback: Date): Date {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
 
   const statics: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
     url: absoluteUrl(route.path),
-    lastModified: now,
+    lastModified: CONTENT_UPDATED,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
 
   const serviceEntries: MetadataRoute.Sitemap = services.map((service) => ({
     url: absoluteUrl(`/services/${service.slug}`),
-    lastModified: now,
+    lastModified: CONTENT_UPDATED,
     changeFrequency: "monthly",
     priority: 0.9,
   }));
 
   const projectEntries: MetadataRoute.Sitemap = projects.map((project) => ({
     url: absoluteUrl(`/projects/${project.slug}`),
-    lastModified: toDate(project.date, now),
+    lastModified: toDate(project.date, CONTENT_UPDATED),
     changeFrequency: "monthly",
     priority: 0.6,
   }));
 
   const postEntries: MetadataRoute.Sitemap = posts.map((post) => ({
     url: absoluteUrl(`/resources/${post.slug}`),
-    lastModified: toDate(post.date, now),
+    lastModified: toDate(post.date, CONTENT_UPDATED),
     changeFrequency: "monthly",
     priority: 0.5,
   }));
 
   const areaEntries: MetadataRoute.Sitemap = areas.map((area) => ({
     url: absoluteUrl(`/service-areas/${area.slug}`),
-    lastModified: now,
+    lastModified: CONTENT_UPDATED,
     changeFrequency: "monthly",
     priority: 0.7,
   }));
 
   const cityServiceEntries: MetadataRoute.Sitemap = cityServices.map((c) => ({
     url: absoluteUrl(`/service-areas/${c.area}/${c.service}`),
-    lastModified: now,
+    lastModified: CONTENT_UPDATED,
     changeFrequency: "monthly",
     priority: 0.8,
   }));

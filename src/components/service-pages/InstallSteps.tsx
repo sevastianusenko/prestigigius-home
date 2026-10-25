@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { Fragment, useState } from "react";
+import { useTabs } from "./useTabs";
 import type { Photo } from "@/content/types";
 
 type Step = { n: string; title: string; text: string; photo: Photo };
@@ -13,20 +14,18 @@ type Step = { n: string; title: string; text: string; photo: Photo };
 export default function InstallSteps({ steps }: { steps: Step[] }) {
   const [active, setActive] = useState(0);
   const current = steps[active];
+  const tabs = useTabs(steps.length, active, setActive);
 
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_1.15fr] lg:items-start lg:gap-12">
-      <ol className="space-y-3" role="tablist" aria-label="Installation steps">
+      <div className="space-y-3" {...tabs.listProps} aria-orientation="vertical" aria-label="Installation steps">
         {steps.map((s, i) => {
           const on = i === active;
           return (
-            <li key={s.n}>
+            <Fragment key={s.n}>
               <button
                 type="button"
-                role="tab"
-                aria-selected={on}
-                aria-controls={`install-panel-${i}`}
-                onClick={() => setActive(i)}
+                {...tabs.tabProps(i)}
                 className={`group flex w-full items-start gap-4 rounded-[14px] border p-4 text-left transition md:p-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                   on ? "border-amber-500 bg-white shadow-card" : "border-sand-200 bg-white/60 hover:border-amber-500/60 hover:bg-white"
                 }`}
@@ -45,21 +44,21 @@ export default function InstallSteps({ steps }: { steps: Step[] }) {
                   </span>
                 </span>
               </button>
-              {/* mobile: photo under the active step */}
+              {/* mobile: photo under the active step (decorative copy; the tabpanel carries it for screen readers) */}
               {on ? (
-                <figure className="mt-3 lg:hidden">
+                <figure aria-hidden="true" className="mt-3 lg:hidden">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-[14px] bg-navy-950">
-                    <Image src={s.photo.src} alt={s.photo.alt} fill sizes="100vw" className="object-cover" />
+                    <Image src={s.photo.src} alt="" fill sizes="100vw" className="object-cover" />
                   </div>
                   {s.photo.caption ? <figcaption className="mt-2 text-sm text-ink-500">{s.photo.caption}</figcaption> : null}
                 </figure>
               ) : null}
-            </li>
+            </Fragment>
           );
         })}
-      </ol>
+      </div>
 
-      <figure id={`install-panel-${active}`} role="tabpanel" className="sticky top-24 hidden lg:block">
+      <figure {...tabs.panelProps} className="sr-only lg:not-sr-only lg:sticky! lg:top-24">
         <div className="relative aspect-[4/5] overflow-hidden rounded-[18px] bg-navy-950 shadow-card">
           <Image key={current.photo.src} src={current.photo.src} alt={current.photo.alt} fill sizes="560px" className="object-cover" />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/85 via-navy-950/30 to-transparent p-5 pt-16">

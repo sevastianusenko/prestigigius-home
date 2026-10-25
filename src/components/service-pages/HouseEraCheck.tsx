@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTabs } from "./useTabs";
 import type { HouseEra } from "@/content/service-pages/whole-home-remodeling";
 
 function Check() {
@@ -11,24 +12,22 @@ function Check() {
   );
 }
 
-/** "When was your house built?": pick a decade, see what the walk-through checks for. */
+/** "When was your house built?": pick a decade, see what the walkthrough checks for. */
 export default function HouseEraCheck({ eras }: { eras: HouseEra[] }) {
   const [active, setActive] = useState(1);
   const current = eras[active];
+  const tabs = useTabs(eras.length, active, setActive);
 
   return (
     <div className="overflow-hidden rounded-[18px] bg-navy-950 shadow-card">
-      <div className="grid grid-cols-2 gap-px bg-white/10 sm:grid-cols-4" role="tablist" aria-label="Decade the house was built">
+      <div className="grid grid-cols-2 gap-px bg-white/10 sm:grid-cols-4" {...tabs.listProps} aria-label="Decade the house was built">
         {eras.map((e, i) => {
           const on = i === active;
           return (
             <button
               key={e.label}
               type="button"
-              role="tab"
-              aria-selected={on}
-              aria-controls="house-era-panel"
-              onClick={() => setActive(i)}
+              {...tabs.tabProps(i)}
               className={`px-4 py-4 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-amber-500 sm:py-5 ${
                 on ? "bg-amber-500 text-navy-950" : "bg-navy-950 text-white hover:bg-navy-900"
               }`}
@@ -40,7 +39,7 @@ export default function HouseEraCheck({ eras }: { eras: HouseEra[] }) {
         })}
       </div>
 
-      <div id="house-era-panel" role="tabpanel" className="p-5 sm:p-7">
+      <div {...tabs.panelProps} className="p-5 sm:p-7">
         <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-amber-500">
           What we check in a {current.label} house · {current.checks.length} items
         </p>
@@ -56,7 +55,7 @@ export default function HouseEraCheck({ eras }: { eras: HouseEra[] }) {
           ))}
         </ul>
         <p className="mt-6 border-t border-white/10 pt-4 text-sm text-navy-100/70">
-          Typical findings for the era, not a diagnosis of your house. The walk-through is free, and what we find goes into the price
+          Typical findings for the era, not a diagnosis of your house. The walkthrough is free, and what we find goes into the price
           before you sign.
         </p>
       </div>

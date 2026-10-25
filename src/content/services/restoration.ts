@@ -288,8 +288,8 @@ export const restorationServices: Service[] = [
         text: "Many canal homes in Port Charlotte, Punta Gorda Isles and Englewood sit in FEMA flood zones. If restoration costs reach 50% of the structure's market value, the local building department can require the whole house to meet current flood rules, including elevation. We check this before you sign so the scope stays under the line or you know what crossing it means.",
       },
       {
-        title: "Permits across three counties",
-        text: "We pull restoration permits in Charlotte County, the cities of Punta Gorda and North Port, Sarasota County (Englewood, Venice, Sarasota) and Lee County (Fort Myers, Cape Coral). Each office has its own review times; we build those into the schedule we give you.",
+        title: "Permits across four counties",
+        text: "We pull restoration permits in Charlotte County, the cities of Punta Gorda and North Port, Sarasota County (Englewood, Venice, Sarasota), Lee County (Fort Myers, Cape Coral, Bonita Springs) and Manatee County (northern Lakewood Ranch, Parrish). Each office has its own review times; we build those into the schedule we give you.",
       },
     ],
     faqs: [
@@ -560,7 +560,7 @@ export const restorationServices: Service[] = [
       "Flood zone and 50% substantial-damage check before work starts",
       "Insulation, drywall, texture and paint by our own crew",
       "Flooring, baseboards, doors, cabinets and countertops",
-      "Roof, window, stucco and exterior repairs under permit",
+      "Window, door, stucco and exterior repairs under permit",
       "Licensed plumbing and electrical where the damage requires it",
       "Supplement documentation if hidden damage turns up",
       "Final walkthrough, finaled permits and written workmanship warranty",

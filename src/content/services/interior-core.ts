@@ -53,9 +53,9 @@ export const interiorCore: Service[] = [
       },
     ],
     intro: [
-      "A whole-home remodel is what most Southwest Florida homeowners actually need once the kitchen is dated, both bathrooms have the original tile, and the carpet and popcorn ceilings came with the house. Doing it room by room over five years means five rounds of dust, five permits and finishes that never quite match. We plan the whole house at once, then build it with our own crew under one Florida Certified Residential Contractor license, CRC1327831. Tim Fomin and Vlad Filippov started as installers, and they still walk every job.",
+      "A whole-home remodel is what most Southwest Florida homeowners actually need once the kitchen is dated, both bathrooms have the original tile, and the carpet and popcorn ceilings came with the house. Doing it room by room over five years means five rounds of dust, five permits and finishes that never quite match. We plan the whole house at once, then build it with our own crew under one Florida Certified Residential Contractor license, CRC1327831. Tim Fomin and Vlad Filippov started out installing windows and doors for licensed contractors; the company has held its own contractor license since 2025, and they still walk every job.",
       "Whole-home projects go wrong in predictable ways: nobody owns the schedule, selections are made after demo, and the price grows with every change order. Hidden problems turn up too, like cast-iron drain lines that are scaled shut, aluminum branch wiring, or an electrical panel that cannot carry a new kitchen. We prevent most of that with a pre-construction inspection, a written scope that lists every room and every allowance, and a schedule that puts inspections where the county needs them. When we do find something behind a wall, you get a written change order with a price before any work happens.",
-      "Homes here are built differently than the remodeling shows assume. Most Port Charlotte, North Port and Punta Gorda houses are concrete block with stucco on a slab, built between the 1970s and the early 2000s. That means plumbing runs under the slab, exterior walls are furred block that cannot hide much, and moving a toilet or island sink means cutting concrete. Humidity punishes cheap cabinets and the wrong drywall. Any work that touches openings must meet hurricane code, many communities have HOA or condo rules, and Charlotte, Sarasota and Lee counties each run their own permitting. We work in all of them every week.",
+      "Homes here are built differently than the remodeling shows assume. Most Port Charlotte, North Port and Punta Gorda houses are concrete block with stucco on a slab, built between the 1970s and the early 2000s. That means plumbing runs under the slab, exterior walls are furred block that cannot hide much, and moving a toilet or island sink means cutting concrete. Humidity punishes cheap cabinets and the wrong drywall. Any work that touches openings must meet hurricane code, many communities have HOA or condo rules, and Charlotte, Sarasota, Lee and Manatee counties each run their own permitting, and we know each office's process.",
     ],
     scopes: [
       {
@@ -191,11 +191,11 @@ export const interiorCore: Service[] = [
         text: "Florida Certified Residential Contractor. Verify the license on the state DBPR website before you sign any contract, ours included.",
       },
     ],
-    processTitle: "From First Walk-Through to Final Inspection",
+    processTitle: "From First Walkthrough to Final Inspection",
     process: [
       {
         n: "01",
-        title: "Whole-house walk-through",
+        title: "Whole-house walkthrough",
         kicker: "Free, at your home",
         text: "We look at the slab, drains, panel, windows and attic as well as the rooms you want changed, because surprises cost less on day one than in week six.",
       },
@@ -233,7 +233,7 @@ export const interiorCore: Service[] = [
     faqs: [
       {
         q: "What does a whole-home remodel cost in Port Charlotte and Southwest Florida?",
-        a: "In 2026 our whole-home projects run from about $45,000 for a cosmetic refresh to $350,000 or more for a full gut. A new kitchen, two bathrooms and floors throughout a typical 1,600 to 2,000 square-foot block home usually lands between $95,000 and $170,000. What moves the number most is whether plumbing moves through the slab, the cabinet and tile selections, and what the walk-through finds in the panel and drains. You get a written, fixed price before anything is signed.",
+        a: "In 2026 our whole-home projects run from about $45,000 for a cosmetic refresh to $350,000 or more for a full gut. A new kitchen, two bathrooms and floors throughout a typical 1,600 to 2,000 square-foot block home usually lands between $95,000 and $170,000. What moves the number most is whether plumbing moves through the slab, the cabinet and tile selections, and what the walkthrough finds in the panel and drains. You get a written, fixed price before anything is signed.",
       },
       {
         q: "Can we live in the house during a whole-home remodel?",
@@ -252,16 +252,12 @@ export const interiorCore: Service[] = [
         a: "We stop, show you, and write a change order with the price and the fix. Nothing extra is done without your signature. Our pre-construction inspection catches most issues, like old drain lines or an undersized panel, before the contract is signed.",
       },
       {
-        q: "What deposit do you ask for?",
-        a: "Our payment schedule is written into the contract and tied to stages of completed work. Worth knowing with any contractor: under Florida law, a contractor who collects more than 10 percent of the price as an initial payment must apply for the permits within 30 days and start work within 90 days of the permits being issued, unless you agree to a longer period in writing.",
-      },
-      {
         q: "Do you handle design, or do I need an architect?",
         a: "For most remodels we handle layout and selections with you directly. When walls come out or the structure changes, we bring in a Florida engineer to sign the plans. A separate architect is usually only needed for additions or major exterior changes.",
       },
       {
         q: "Is it cheaper to remodel one room at a time?",
-        a: "Usually not. Each separate project has its own mobilization, permits, dumpster and inspections, and you live through the dust again each time. Doing the house in one project typically saves 10 to 20 percent and gives you finishes that match.",
+        a: "Usually not. Each separate project has its own mobilization, permits, dumpster and inspections, and you live through the dust again each time. Doing the house in one project is often cheaper than room by room, because it typically saves on mobilization, permits and dumpsters, and it gives you finishes that match.",
       },
       {
         q: "My house was built in the 1970s or 1980s. Does that change anything?",
@@ -273,7 +269,7 @@ export const interiorCore: Service[] = [
       },
       {
         q: "Are you licensed and insured?",
-        a: "Yes. Prestigious Home Improvements holds Florida Certified Residential Contractor license CRC1327831, carries workers compensation and general liability insurance, and pulls permits on every job that needs one.",
+        a: "Yes. Prestigious Home Improvements holds Florida Certified Residential Contractor license CRC1327831, carries workers' compensation and general liability insurance, and pulls permits on every job that needs one.",
       },
     ],
     related: ["kitchen-remodeling", "bathroom-remodeling", "flooring"],
@@ -358,7 +354,7 @@ export const interiorCore: Service[] = [
       },
       {
         title: "Full Replacement, Same Layout",
-        summary: "Everything new while the sink, range and fridge stay where they are. The kitchen we build most.",
+        summary: "Everything new while the sink, range and fridge stay where they are. The most common full-kitchen scope.",
         changes: [
           { label: "Demo", detail: "Cabinets, counters, soffits, old floor out" },
           { label: "Cabinets", detail: "Uppers to the ceiling, pantry pull-outs" },
@@ -533,10 +529,6 @@ export const interiorCore: Service[] = [
         a: "You see photos and receive a priced change order in writing with the price and the schedule impact, and nothing happens until you sign it. In older Port Charlotte homes the usual finds are corroded drain lines, an undersized panel or a soffit full of ductwork. Surprises happen. Spending your money without asking does not.",
       },
       {
-        q: "What deposit do you ask for?",
-        a: "Our payment schedule is written into the contract and tied to stages of finished work. Worth knowing whoever you hire: under Florida law, a contractor who collects more than 10 percent of the price as an initial payment must apply for the permit within 30 days and start work within 90 days of the permit being issued, unless you agree to a longer period in writing.",
-      },
-      {
         q: "Will my electrical need upgrading?",
         a: "Often. That comes from code, not from us trying to upsell. With a permit open, current code applies: a pair of 20-amp countertop circuits, GFCI protection on countertop outlets, AFCI protection on kitchen circuits, and dedicated circuits for appliances like the dishwasher and disposal. Many 1970s and 1980s homes here have none of that, and some have panels that cannot carry it. We look at the panel during the first visit, so any upgrade is already in your number.",
       },
@@ -651,7 +643,7 @@ export const interiorCore: Service[] = [
       },
       {
         title: "Tub-to-Shower Conversion",
-        summary: "The tub comes out and a tiled walk-in shower goes in. Our most requested bathroom job, and the most underestimated.",
+        summary: "The tub comes out and a tiled walk-in shower goes in. The bathroom job homeowners ask about most, and the most underestimated.",
         changes: [
           { label: "Tub removal", detail: "Wall and slab checked underneath" },
           { label: "Drain", detail: "Converted for a shower, slab cut if needed" },
@@ -664,7 +656,7 @@ export const interiorCore: Service[] = [
       },
       {
         title: "Full Replacement, Same Layout",
-        summary: "Everything new, with every fixture kept in its current spot. The guest or hall bath we build most often.",
+        summary: "Everything new, with every fixture kept in its current spot. The most common guest-bath scope.",
         changes: [
           { label: "Shower or tub", detail: "Rebuilt in the same spot" },
           { label: "Waterproofing", detail: "New membrane behind all of it" },
@@ -1141,10 +1133,6 @@ export const interiorCore: Service[] = [
       {
         q: "What happens if digging turns up a problem?",
         a: "You see photos and receive a priced change order in writing with the price and the schedule impact, and nothing proceeds until you sign. On additions the usual surprises are poor soil under the footing, a septic line or buried utility where the plans did not show one, or rot at the existing fascia where the roof ties in.",
-      },
-      {
-        q: "What deposit do you ask for?",
-        a: "Our payment schedule is written into the contract and tied to stages of completed work. Worth knowing with any contractor: under Florida law, a contractor who collects more than 10 percent of the price as an initial payment must apply for the permits within 30 days and start work within 90 days of the permits being issued, unless you agree to a longer period in writing.",
       },
       {
         q: "Can you build an in-law suite with a kitchen?",

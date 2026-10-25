@@ -123,7 +123,7 @@ export default function Header() {
               );
             })}
             <li>
-              <Link href={nav.estimateBuilder.href} className={`${topLink} !text-amber-600`}>
+              <Link href={nav.estimateBuilder.href} className={topLink}>
                 {nav.estimateBuilder.label}
               </Link>
             </li>

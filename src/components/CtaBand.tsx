@@ -10,7 +10,7 @@ const checks = [
 
 export default function CtaBand({
   title = "Get Your Free Estimate",
-  text = "We come to the house, measure, talk through the work and leave you with a written, itemized number. Free and no-obligation, anywhere from Venice to Cape Coral.",
+  text = "We come to the house, measure, talk through the work and leave you with a written, itemized number. Free and no-obligation, anywhere from Sarasota and Lakewood Ranch down to Fort Myers and Bonita Springs.",
 }: {
   title?: string;
   text?: string;
@@ -56,7 +56,7 @@ export default function CtaBand({
             <p className="mt-2 text-sm text-navy-100/70">{site.hours}</p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Button variant="gold" href="/free-estimate" size="lg" className="w-full sm:w-auto">
-                Request a Free Estimate
+                Get a Free Estimate
               </Button>
               <Button href="/estimate-builder" variant="outline-white" size="lg" className="w-full sm:w-auto">
                 Build a Ballpark

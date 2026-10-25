@@ -4,7 +4,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { reviewPage } from "@/content/about";
 import { site } from "@/content/site";
 
-const title = "Leave a Review | Prestigious Home Improvements";
+const title = "Leave a Review";
 const description =
   "Thank you for letting us work on your house. A short review on Google, Yelp or the BBB helps your neighbors see what working with us is like.";
 

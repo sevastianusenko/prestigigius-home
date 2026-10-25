@@ -14,7 +14,7 @@ const kickers = ["At your estimate", "All or part", "Cash or financed"];
 
 export default function FinancingBand({
   title = "Start Now, Spread the Cost Over Time",
-  text = "A roof, a kitchen remodel or a whole house of impact windows costs real money, and you don't have to pay it in one shot. Ask about it at your free estimate and we'll go over the choices with you, subject to credit approval.",
+  text = "A bathroom, a kitchen remodel or a whole house of impact windows costs real money, and you don't have to pay it in one shot. Ask about it at your free estimate and we'll go over the choices with you, subject to credit approval.",
 }: FinancingBandProps) {
   return (
     <section className="relative overflow-hidden bg-navy-900 section-y">
@@ -27,7 +27,7 @@ export default function FinancingBand({
             <div className="mt-4 text-[17px] leading-relaxed text-navy-100/85">{text}</div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Button variant="gold" href="/free-estimate" size="lg">
-                Book My Free In-Home Estimate
+                Get a Free Estimate
               </Button>
               <Button href={site.phoneHref} size="lg" variant="outline-white">
                 Call {site.phone}

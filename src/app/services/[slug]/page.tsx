@@ -206,7 +206,7 @@ export default async function ServicePage({ params }: Props) {
 
       <CtaBand
         title={`Ready to Price Your ${name} Project?`}
-        text="Book a free in-home consultation. You get a written, itemized fixed price, usually within 48 hours of the visit."
+        text="Book a free in-home consultation. You get a written, itemized fixed price, usually within a week of the visit."
       />
     </>
   );

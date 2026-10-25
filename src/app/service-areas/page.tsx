@@ -19,18 +19,26 @@ import { getService } from "@/content/services";
 import { site } from "@/content/site";
 import { absoluteUrl, faqSchema } from "@/lib/seo";
 
-const title = "Service Areas — Charlotte, Sarasota & Lee County";
+import { OG_DEFAULT } from "@/components/og";
+const title = "Service Areas: 4 Counties, 11 Cities | Prestigious";
 const description =
-  "Remodeling, impact windows, lanais and restoration in Port Charlotte, North Port, Punta Gorda, Englewood, Venice, Sarasota, Fort Myers and Cape Coral.";
+  "Remodeling, impact windows, lanais and restoration in 11 cities from Sarasota to Bonita Springs, across Charlotte, Sarasota, Lee and Manatee counties.";
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: "/service-areas" },
-  openGraph: { title, description, url: "/service-areas", type: "website" },
+  openGraph: {
+    images: [OG_DEFAULT], title, description, url: "/service-areas", type: "website" },
 };
 
 const crumbs = [{ label: "Service Areas" }];
+
+/** Cities whose address can fall on either side of a county line. */
+const COUNTY_NOTES: Record<string, string> = {
+  "Sarasota County": "Englewood straddles the Sarasota and Charlotte county line; we confirm your parcel first.",
+  "Manatee County": "Northern Lakewood Ranch villages and Parrish. Southern Lakewood Ranch is permitted by Sarasota County.",
+};
 
 /** service area, permits, HOA, hurricane season */
 const AREA_FAQ_QUESTIONS = [
@@ -74,7 +82,7 @@ export default function ServiceAreasPage() {
             <div>
               <p className="eyebrow eyebrow-dark">Service areas · Southwest Florida</p>
               <h1 className="mt-4 text-4xl font-extrabold leading-[1.06] tracking-[-0.01em] !text-white sm:text-5xl lg:text-[56px]">
-                Serving Charlotte, Sarasota and Lee Counties
+                Serving Charlotte, Sarasota, Lee and Manatee Counties
               </h1>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-navy-100 md:text-xl">
                 Based in {site.address.city}, we remodel and restore homes from Englewood&apos;s beach cottages to Cape Coral&apos;s canal
@@ -86,7 +94,7 @@ export default function ServiceAreasPage() {
                   href="/free-estimate"
                   className="inline-flex min-h-12 items-center justify-center rounded-full btn-gold px-7 font-heading text-[15px] font-bold"
                 >
-                  Request a Free Estimate
+                  Get a Free Estimate
                 </Link>
                 <a
                   href={site.phoneHref}
@@ -159,7 +167,7 @@ export default function ServiceAreasPage() {
         </ul>
       </Section>
 
-      <Section tone="paper" eyebrow="Counties" title="Three Counties, Three Building Departments">
+      <Section tone="paper" eyebrow="Counties" title="Four Counties, a Dozen Permit Offices">
         <div className="grid gap-10 lg:grid-cols-[1fr_1.3fr] lg:items-start">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-ink-500">
@@ -170,6 +178,7 @@ export default function ServiceAreasPage() {
               {byCounty.map(({ county, cities }) => (
                 <li key={county} className="rounded-[14px] border border-sand-200 bg-white p-6 shadow-card">
                   <h3 className="text-lg font-bold">{county}</h3>
+                  {COUNTY_NOTES[county] ? <p className="mt-1 text-sm text-ink-500">{COUNTY_NOTES[county]}</p> : null}
                   {cities.length > 0 ? (
                     <p className="mt-2 text-[15px] text-ink-500">
                       {cities.map((c, i) => (
@@ -215,7 +224,7 @@ export default function ServiceAreasPage() {
 
       <CtaBand
         title="Not sure if we cover your street?"
-        text="If you are between Venice and Fort Myers, we probably do. Call or book a free estimate and we will confirm."
+        text="If you are anywhere from Sarasota and Lakewood Ranch down to Fort Myers and Bonita Springs, we probably do. Call or book a free estimate and we will confirm."
       />
     </>
   );

@@ -119,7 +119,7 @@ export const termsSections: LegalSection[] = [
   {
     title: "Photos and reviews",
     body: [
-      "Some photos on this website are representative stock images or sample projects used until our own project photos are published, and are marked as samples where shown. Reviews are quoted from public review platforms and shortened to first name and last initial.",
+      "Some photos on this website are stock images used until our own project photos are published. Stock images are labelled 'Illustrative photo' where they appear; photos from our own jobs are labelled 'Our job photo'. Reviews are quoted from public review platforms, with last names shortened to an initial and long reviews trimmed with an ellipsis.",
     ],
   },
   {

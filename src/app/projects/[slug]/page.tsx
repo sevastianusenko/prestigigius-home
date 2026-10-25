@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const title = clamp(project.seoTitle ?? project.title, 60);
   const description = clamp(project.seoDescription ?? project.summary, 160);
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: `/projects/${project.slug}` },
     openGraph: {
@@ -291,7 +291,7 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
                 href="/free-estimate"
                 className="inline-flex h-13 items-center justify-center rounded-full px-7 font-semibold btn-gold"
               >
-                Request a Free Estimate
+                Get a Free Estimate
               </Link>
               {primary ? (
                 <Link

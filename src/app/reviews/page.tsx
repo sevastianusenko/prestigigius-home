@@ -12,15 +12,17 @@ import { testimonials } from "@/content/testimonials";
 import { site } from "@/content/site";
 import { ORG_ID, absoluteUrl } from "@/lib/seo";
 
-const title = "Reviews — 5.0 on Google, Yelp & BBB A+";
+import { OG_DEFAULT } from "@/components/og";
+const title = "Reviews: 5.0 on Google and Yelp, A+ BBB | Prestigious";
 const description =
-  "Read real reviews from Port Charlotte, North Port and Sarasota homeowners. 5.0 on Google and Yelp, BBB A+ accredited. Leave your own review.";
+  "Read real reviews from Sarasota, Englewood and Manatee County homeowners. 5.0 on Google and Yelp, BBB A+ accredited. Leave your own review.";
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: "/reviews" },
-  openGraph: { title, description, url: "/reviews", type: "website" },
+  openGraph: {
+    images: [OG_DEFAULT], title, description, url: "/reviews", type: "website" },
 };
 
 const crumbs = [{ label: "Reviews" }];
@@ -77,7 +79,7 @@ export default function ReviewsPage() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-navy-100/85">
               Real customers from around Southwest Florida, describing their jobs in their own words. Every review here
-              was posted publicly on Google, Yelp or the BBB; we only shorten last names to an initial.
+              was posted publicly on Google, Yelp or the BBB; we shorten last names to an initial and trim long reviews with an ellipsis.
             </p>
             <div className="mt-6 flex gap-0.5 text-amber-500" role="img" aria-label="5 out of 5 stars">
               {Array.from({ length: 5 }).map((_, i) => (
@@ -125,7 +127,7 @@ export default function ReviewsPage() {
       {/* 5. CTA */}
       <CtaBand
         title="Ready to be our next five-star review?"
-        text="Free in-home estimate anywhere from Englewood to Cape Coral. Written, itemized and free of pressure."
+        text="Free in-home estimate anywhere from Sarasota and Lakewood Ranch down to Fort Myers and Bonita Springs. Written, itemized and free of pressure."
       />
     </>
   );

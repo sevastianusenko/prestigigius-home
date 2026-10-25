@@ -11,10 +11,10 @@ export type AboutContent = {
 
 export const about: AboutContent = {
   story: [
-    "We are Tim Fomin and Vlad Filippov, and Prestigious Home Improvements is the company we built after years of installing windows and doors for other contractors across Southwest Florida. We were the crew that showed up after a big window company sold the job: we pulled the old frames, set the new impact units, sealed and trimmed them, and moved on to the next house in Port Charlotte, North Port, Sarasota or Fort Myers. We did that for years, through the building boom and through the rebuild after Hurricane Ian.",
+    "We are Tim Fomin and Vlad Filippov, and Prestigious Home Improvements is the company we built after years of installing windows and doors for other contractors across Southwest Florida. We were the crew that showed up after a big window company sold the job: we pulled the old frames, set the new impact units, sealed and trimmed them, and moved on to the next house in Port Charlotte, North Port, Sarasota or Fort Myers. We did that for years, through the building boom and the storms that kept testing it.",
     "Working as subcontractors taught us two things. First, how an opening is actually supposed to be built in this climate: the bucks, the flashing, the design pressures, the product approvals, the inspections. Second, what goes wrong between the salesperson and the install. Promises made at the kitchen table that nobody on site had heard about. Lead times that were never explained. A homeowner who could not get a call back. We decided that if we ran our own company, the person who priced the job would be the person who ran it.",
-    "We incorporated Prestigious Home Improvements, Inc. in Port Charlotte in October 2022, one month after Ian. For the first couple of years the company was the two of us, doing windows, doors, sliders, siding and shutters, mostly by referral. In 2025 we took the step that let us take on the whole house: the company became a licensed Florida Certified Residential Contractor, license CRC1327831. That license is valid statewide, it is on file with the Charlotte County Construction License Board, and you can check it yourself on myfloridalicense.com.",
-    "That changed what we can do for you. We still install impact windows and doors every week, but now we also run full renovations and restorations: kitchens, bathrooms, additions and Florida rooms, lanai enclosures, siding and stucco, painting, flooring, outdoor living, and the storm-damage rebuilds that too many families in Charlotte, Sarasota and Lee counties are still living with. We pull the permits, we schedule the inspections, and our own crew does the work.",
+    "We incorporated Prestigious Home Improvements, Inc. in Port Charlotte in October 2022, one month after Hurricane Ian. From 2022 to early 2025 the company was the two of us installing windows, doors, sliders, siding and shutters as subcontractors for licensed contractors, much of it on homes being put back together after Ian. In 2025 we took the step that let us take on the whole house: the company became a licensed Florida Certified Residential Contractor, license CRC1327831. That license is valid statewide, it is on file with the Charlotte County Construction License Board, and you can check it yourself on myfloridalicense.com.",
+    "That changed what we can do for you. We still install impact windows and doors every week, but now we contract the work ourselves and also run full renovations and restorations: kitchens, bathrooms, additions and Florida rooms, lanai enclosures, siding and stucco, painting, flooring, outdoor living, and the storm-damage rebuilds that too many families in Charlotte, Sarasota and Lee counties are still living with. We pull the permits, we schedule the inspections, and our own crew does the work.",
     "We are a small, family-owned company and we intend to stay that way. Tim prices every job and manages it. Vlad leads the crew in the field. You get one phone number, a written scope before a single tool comes out, and a written workmanship warranty when we are done. Our customers have given us a 5.0 rating on Google and on Yelp, and the Better Business Bureau accredited us with an A+ rating in January 2026. Those reviews come from real jobs on real streets, and we work to keep every one of them.",
     "If you are planning a remodel, a window and door package, or putting a house back together after a storm, call us. We will come out, measure, listen, and leave you with an honest number.",
   ],
@@ -43,12 +43,12 @@ export const about: AboutContent = {
   team: [
     {
       name: "Tim Fomin",
-      role: "President · Estimates & Project Management",
-      bio: "Tim co-founded the company in 2022 after years as a window and door installer for other Southwest Florida contractors. He does every in-home estimate, writes every scope, pulls the permits and manages the job from the first visit to the final walkthrough. He is the one phone number you need.",
+      role: "President & Co-Founder · Estimates & Project Management",
+      bio: "Tim co-founded the company in 2022 after years as a window and door installer for other Southwest Florida contractors. He walks every estimate, writes every scope, coordinates permits and inspections and manages the job from the first visit to the final walkthrough. He is the one phone number you need.",
     },
     {
       name: "Vlad Filippov",
-      role: "Co-Founder · Field Operations & Installation Lead",
+      role: "Co-Founder · Field Operations",
       bio: "Vlad runs the crew on site. He spent years installing impact windows, sliders and entry doors across Charlotte, Sarasota and Lee counties before co-founding the company, and he still sets the standard for how an opening, a lanai or a kitchen gets built: measured twice, sealed properly, and inspected.",
     },
     {
@@ -64,15 +64,15 @@ export const about: AboutContent = {
     },
     {
       year: "2023",
-      text: "First full year in business: windows, doors, sliders and siding across Charlotte, Sarasota and Lee counties, mostly by referral, during the Ian rebuild.",
+      text: "First full year in business: installing windows, doors, sliders and siding as subcontractors for licensed contractors across Charlotte, Sarasota and Lee counties, much of it Ian rebuild work.",
     },
     {
       year: "2024",
-      text: "Hurricanes Helene and Milton hit the coast in September and October. Impact windows and doors are the first thing homeowners ask for, and we keep installing.",
+      text: "Hurricanes Helene and Milton hit the coast in September and October. Impact windows and doors are the first thing homeowners ask for, and we keep installing them for the contractors we work with.",
     },
     {
       year: "2025",
-      text: "Licensed as a Florida Certified Residential Contractor, CRC1327831. New website, Sarasota Home Show, and the first Yelp reviews, all five stars.",
+      text: "Licensed as a Florida Certified Residential Contractor, CRC1327831, and contracting our own jobs: kitchens, baths, additions, lanais and storm rebuilds. New website, Sarasota Home Show, and the first Yelp reviews, all five stars.",
     },
     {
       year: "2026",
@@ -94,7 +94,7 @@ type KickerCard = { kicker: string; title: string; text: string };
 export const aboutHero = {
   eyebrow: "Our story · Port Charlotte & Southwest Florida",
   lines: ["Built on Trust,", "Finished With Care"],
-  lead: "A family-owned crew remodeling and rebuilding homes across Charlotte, Sarasota and Lee Counties since 2022. One licensed contractor, one written price, and work we put our name behind.",
+  lead: "A family-owned crew installing windows and doors since 2022, licensed for the whole house since 2025. One licensed contractor, one written price, and work we put our name behind.",
 };
 
 export const whoWeAre = {
@@ -118,7 +118,7 @@ export const origin = {
     {
       kicker: "October 2022",
       title: "A company of our own",
-      text: "One month after Hurricane Ian, they incorporated Prestigious Home Improvements in Port Charlotte around a single rule: the person who prices your job is the person who runs it.",
+      text: "One month after Hurricane Ian, they incorporated Prestigious Home Improvements in Port Charlotte around a single rule: the person who prices your job is the person who runs it. Until 2025 the company installed windows, doors, sliders, siding and shutters as a subcontractor for licensed contractors, much of it Ian rebuild work.",
     },
     {
       kicker: "2025",
@@ -142,9 +142,9 @@ export const trackRecord = {
     { value: "5.0", label: "Star rating on Google" },
     { value: "A+", label: "BBB rating, accredited 2026" },
     { value: "2022", label: "Family-owned since" },
-    { value: "3", label: "Counties: Charlotte, Sarasota & Lee" },
-    { value: "14", label: "Services under one license" },
-    { value: "100%", label: "Of required permits pulled & inspected" },
+    { value: "4", label: "Counties: Charlotte, Sarasota, Lee & Manatee" },
+    { value: "13", label: "Services under one license" },
+    { value: "Every", label: "Required permit pulled and inspected" },
   ] as { value: string; label: string }[],
   groups: [
     { title: "Windows & doors", text: "Impact windows, sliders, entry doors and shutters, where we started." },
@@ -155,15 +155,15 @@ export const trackRecord = {
 };
 
 export const owner = {
-  eyebrow: "Meet the owner",
-  title: "Meet the Owner of Prestigious Home Improvements",
+  eyebrow: "Meet the owners",
+  title: "Meet the Owners of Prestigious Home Improvements",
   name: "Tim Fomin",
-  role: "President & Co-Founder",
+  role: "President & Co-Founder · Estimates & Project Management",
   /** Not shown on the site. Put Tim's own approved words here, then render it in MeetOwner. */
   quote: "",
   bio: [
     "Tim came into this business with a drill in his hand, not a sales binder. Before the company existed he and Vlad were installing impact windows and doors for other Southwest Florida contractors, and that is where he learned the part of renovation that rarely makes the brochure: the trouble usually is not the carpentry, it is the hand-off.",
-    "So when they opened Prestigious in October 2022, Tim built it so the hand-off disappears. He walks every estimate himself, writes the scope, handles the permits and stays your contact until the final inspection. Vlad leads the crew on site, so the two people who made you the promise are the two people keeping it.",
+    "So when they opened Prestigious in October 2022, Tim built it so the hand-off disappears. He walks every estimate himself, writes the scope, coordinates permits and inspections and stays your contact until the final inspection. Vlad leads the crew on site, so the two people who made you the promise are the two people keeping it.",
     "Tim still measures openings and checks the work in person, because a standard is hard to hold from behind a desk.",
   ],
 };
@@ -370,7 +370,7 @@ export const referral = {
     },
     {
       q: "Where do you work?",
-      a: "Homes in Charlotte, Sarasota and Lee Counties: Port Charlotte, Punta Gorda, North Port, Englewood, Venice, Sarasota, Fort Myers, Cape Coral and the communities around them. Residential only. If you are unsure, send the name and we will tell you.",
+      a: "Homes from Sarasota and Lakewood Ranch down to Fort Myers and Bonita Springs: Port Charlotte, Punta Gorda, North Port, Englewood, Venice, Sarasota, Siesta Key, Lakewood Ranch, Fort Myers, Cape Coral, Bonita Springs and the communities around them. Residential only. If you are unsure, send the name and we will tell you.",
     },
     {
       q: "What if two people refer the same friend?",

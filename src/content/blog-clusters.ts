@@ -11,7 +11,7 @@ export const blogClusters: { topic: string; pillar: string; children: string[] }
   { topic: "Casement windows", pillar: "casement-windows-florida", children: ["vinyl-casement-windows", "double-casement-windows"] },
   { topic: "Egress windows and bedrooms", pillar: "egress-window-requirements-florida", children: ["egress-window-for-bedroom", "legal-bedroom-requirements-florida"] },
   { topic: "Tempered and laminated glass", pillar: "laminated-vs-tempered-glass", children: ["tempered-glass-windows", "can-you-cut-tempered-glass"] },
-  { topic: "Single and double hung windows", pillar: "single-hung-vs-double-hung-windows", children: ["single-hung-window-replacement-cost", "mulled-windows"] },
+  { topic: "Single and double-hung windows", pillar: "single-hung-vs-double-hung-windows", children: ["single-hung-window-replacement-cost", "mulled-windows"] },
   { topic: "Impact windows", pillar: "pgt-vs-es-vs-cws-impact-windows", children: ["hurricane-impact-windows-cost", "impact-windows-vs-hurricane-windows"] },
   { topic: "Sliding glass doors", pillar: "impact-sliding-glass-doors", children: ["sliding-glass-door-replacement-cost", "sliding-french-doors-vs-sliding-glass-doors"] },
   { topic: "Front entry doors", pillar: "outswing-vs-inswing-front-door", children: ["front-door-replacement-cost", "front-entry-doors-with-glass"] },

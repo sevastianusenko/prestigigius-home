@@ -46,7 +46,13 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
     title: { absolute: t },
     description,
     alternates: { canonical: url },
-    openGraph: { title: t, description, url, type: "website" },
+    openGraph: {
+      title: t,
+      description,
+      url,
+      type: "website",
+      images: [{ url: `${url}/opengraph-image`, width: 1200, height: 630, alt: `Home remodeling in ${area.name}, FL` }],
+    },
   };
 }
 
@@ -135,7 +141,7 @@ export default async function AreaPage({ params }: { params: Promise<Params> }) 
                   href="/free-estimate"
                   className="inline-flex min-h-12 items-center justify-center rounded-full btn-gold px-7 font-heading text-[15px] font-bold"
                 >
-                  Free Estimate in {area.name}
+                  Get a Free Estimate in {area.name}
                 </Link>
                 <a
                   href={site.phoneHref}
@@ -174,7 +180,7 @@ export default async function AreaPage({ params }: { params: Promise<Params> }) 
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-start lg:gap-14">
             <div>
-              <BandHead eyebrow={`Remodeling in ${area.name}`} title={`What to Know Before You Remodel in ${area.name}`} />
+              <BandHead id="local-heading" eyebrow={`Remodeling in ${area.name}`} title={`What to Know Before You Remodel in ${area.name}`} />
               <div className="mt-6 space-y-5 text-[17px] leading-[1.65] text-ink-900">
                 {area.intro.map((p, i) => (
                   <p key={i}>{p}</p>
@@ -219,7 +225,7 @@ export default async function AreaPage({ params }: { params: Promise<Params> }) 
       {/* 3. POPULAR SERVICES */}
       <section className="section-y bg-white" aria-labelledby="services-heading">
         <Container>
-          <BandHead
+          <BandHead id="services-heading"
             eyebrow="Popular services"
             title={`What ${area.name} Homeowners Hire Us For`}
             intro={`Every service we offer is available in ${area.name}. These are the ones we get asked about most here.`}
@@ -255,7 +261,7 @@ export default async function AreaPage({ params }: { params: Promise<Params> }) 
         <section className="section-y bg-sand-50" aria-labelledby="jobs-heading">
           <Container>
             <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-              <BandHead
+              <BandHead id="jobs-heading"
                 eyebrow={exactJobs.length ? `Our jobs in ${area.name}` : "Our jobs nearby"}
                 title={exactJobs.length ? `Real Projects in and Around ${area.name}` : `Real Projects Near ${area.name}`}
                 intro="Photos from our own crew. Each card shows the city where the job actually is."
@@ -295,7 +301,7 @@ export default async function AreaPage({ params }: { params: Promise<Params> }) 
       {/* 5. NEARBY */}
       <section className="section-y bg-sand-50" aria-labelledby="nearby-heading">
         <Container>
-          <BandHead eyebrow="Nearby" title={`Also Serving the Area Around ${area.name}`} className="mb-8" />
+          <BandHead id="nearby-heading" eyebrow="Nearby" title={`Also Serving the Area Around ${area.name}`} className="mb-8" />
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {otherAreas.map((a) => (
               <li key={a.slug}>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { OG_DEFAULT } from "@/components/og";
 import CtaBand from "@/components/CtaBand";
 import TrustStrip from "@/components/TrustStrip";
 import PageHero from "@/components/company/PageHero";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/terms" },
-  openGraph: { title, description, url: "/terms", type: "website" },
+  openGraph: { title, description, url: "/terms", type: "website", images: [OG_DEFAULT] },
 };
 
 const crumbs = [{ label: "Terms of Use" }];

@@ -29,7 +29,7 @@ export type TimelineScope = { title: string; range: string; phases: TimelinePhas
 export const kitchenPage = {
   seoTitle: "Kitchen Remodeling Port Charlotte FL | Cabinets & Quartz",
   seoDescription:
-    "Kitchen remodeling in Port Charlotte, Sarasota & Fort Myers: cabinets, quartz, islands and open layouts. Fixed price, cabinets inspected before demo, dates in writing. Free estimate.",
+    "Kitchen remodeling in Port Charlotte, Sarasota & Fort Myers: cabinets, quartz, islands and open layouts. Fixed price, cabinets inspected before demo.",
   hero: {
     eyebrow: "Cabinets · countertops · islands · open layouts",
     title: "Kitchen Remodeling in Port Charlotte & Sarasota",
@@ -157,7 +157,7 @@ export const kitchenPage = {
     columns: ["Refacing", "New cabinets, same layout", "New layout"],
     rows: [
       { label: "Typical cost", values: ["$12,000–$25,000", "$22,000–$85,000", "$55,000–$150,000"] },
-      { label: "Without a kitchen", values: ["About 1–2 weeks", "About 3–7 weeks", "About 6–10 weeks"] },
+      { label: "Without a kitchen", values: ["About 1–2 weeks", "About 3–7 weeks", "About 6–9 weeks"] },
       { label: "Works when", values: ["Boxes are sound and you like the layout", "The layout works but the cabinets are worn", "The sink, range or a wall is in the wrong place"] },
       { label: "Watch out for", values: ["Swollen boxes near the sink", "Cabinet lead times", "Slab trenching and engineering"] },
       { label: "Permit", values: ["Usually not", "Often, for new circuits", "Yes"] },

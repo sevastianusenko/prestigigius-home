@@ -57,7 +57,7 @@ export const exteriorCore: Service[] = [
     intro: [
       "Windows and doors are where Prestigious Home Improvements started. Before Tim Fomin and Vlad Filippov licensed their own company, they spent years installing windows and sliding doors for other contractors across Southwest Florida. That is still the work our Google reviewers mention most: slider installs, impact windows and shutters done cleanly and on schedule. When you hire us, the people measuring your openings are the same people who will set the units and caulk the last bead.",
       "Almost all of Charlotte, Sarasota and Lee counties sit inside the Florida Building Code's wind-borne debris region. That means every new window and glass door has to be impact-rated or protected by approved shutters, and every product needs a Florida Product Approval or Miami-Dade Notice of Acceptance (NOA) for the design pressure your house requires. We size each opening to the right rating, pull the permit with Charlotte County, North Port, Punta Gorda, Sarasota County or Lee County, and schedule the inspections. No permit, no warranty claim, no insurance credit, so we never skip it.",
-      "Timing matters here. Hurricane season runs June 1 through November 30, and impact glass lead times stretch to 8–14 weeks once the summer rush starts. Homes in FEMA flood zones and condo or HOA communities often need extra approvals for frame color, grid pattern or glass tint. We collect those approvals up front, order once, and install without leaving your house open overnight. If you want to replace windows in phases, we plan the order so your most exposed openings get done first.",
+      "Timing matters here. Hurricane season runs June 1 through November 30, and impact glass lead times run 8–14 weeks, longer once the summer rush starts. Homes in FEMA flood zones and condo or HOA communities often need extra approvals for frame color, grid pattern or glass tint. We collect those approvals up front, order once, and install without leaving your house open overnight. If you want to replace windows in phases, we plan the order so your most exposed openings get done first.",
     ],
     scopes: [
       {
@@ -72,7 +72,7 @@ export const exteriorCore: Service[] = [
           { label: "Paperwork", detail: "Permit, final inspection and opening list for your wind mitigation report" },
         ],
         priceRange: "$22k–$55k",
-        duration: "2–4 days on site · 8–14 weeks lead time",
+        duration: "1–4 working days on site · 8–14 weeks lead time",
       },
       {
         title: "Impact sliding glass doors",
@@ -144,7 +144,7 @@ export const exteriorCore: Service[] = [
       "Manufacturer warranty registration plus our written workmanship warranty",
     ],
     cost: {
-      title: "What Drives the Price of a Impact Window Project",
+      title: "What Drives the Price of an Impact Window Project",
       text: [
         "In 2026 most impact windows in Charlotte, Sarasota and Lee counties run $1,200 to $3,800 per opening installed, and impact sliding glass doors run $4,500 to $14,000 depending on width and panel count. A typical 2,000-square-foot home with 14 to 18 openings lands between $22,000 and $55,000.",
         "The biggest swing factors are frame material, size and design pressure. A large slider facing open water needs heavier framing and glass than a small bathroom window on a sheltered side. We quote every opening on its own line so you can see exactly where the money goes, and we offer financing on approved credit.",
@@ -193,7 +193,7 @@ export const exteriorCore: Service[] = [
       },
       {
         q: "How long does installation take?",
-        a: "One to four working days on site for most homes, about one day per sliding door. Ordering takes longer: impact glass is built to size and usually ships in 8 to 14 weeks, longer in summer.",
+        a: "1–4 working days on site for most homes, about one day per sliding door. Ordering takes longer: impact glass is built to size and usually ships in 8 to 14 weeks, longer in summer.",
       },
       {
         q: "Do you handle permits and HOA approval?",
@@ -1107,7 +1107,7 @@ export const exteriorCore: Service[] = [
       {
         title: "Vinyl siding",
         summary:
-          "An affordable, low-maintenance option that never needs paint.",
+          "An affordable, low-maintenance option that does not need paint.",
         changes: [
           { label: "Panels", detail: "High-wind-rated vinyl lap or Dutch lap in heat-resistant colors" },
           { label: "Insulation", detail: "Optional foam backer for stiffness and comfort" },
@@ -1294,7 +1294,7 @@ export const exteriorCore: Service[] = [
       },
       {
         title: "Vinyl",
-        text: "A lightweight, low-maintenance siding that never needs paint, in high-wind rated profiles and heat-resistant colors.",
+        text: "A lightweight, low-maintenance siding that does not need paint, in high-wind rated profiles and heat-resistant colors.",
         bullets: [
           "Best for: tighter budgets and manufactured homes",
           "Upkeep: an occasional wash",

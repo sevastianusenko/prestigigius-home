@@ -280,7 +280,7 @@ export default function EstimateBuilder({ services, contact }: { services: Estim
         {/* STEP 1 — services */}
         {step === 0 ? (
           <div>
-            {heading("What are you thinking about?", "Pick one project or several. You can combine a kitchen with flooring, a roof with impact windows, and so on.")}
+            {heading("What are you thinking about?", "Pick one project or several. You can combine a kitchen with a bathroom, new floors with impact windows, and so on.")}
             <fieldset className="mt-8">
               <legend className="visually-hidden">Services</legend>
               <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import HeroRatings from "@/components/service-pages/HeroRatings";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TrustStrip from "@/components/TrustStrip";
 import CtaBand from "@/components/CtaBand";
@@ -75,7 +76,7 @@ export default function BathroomRemodelingPage() {
                   href={`/free-estimate?service=${SLUG}`}
                   className="inline-flex min-h-12 items-center justify-center rounded-full btn-gold px-7 font-heading text-[15px] font-bold"
                 >
-                  Get a Free In-Home Estimate
+                  Get a Free Estimate
                 </Link>
                 <a
                   href={site.phoneHref}
@@ -84,17 +85,8 @@ export default function BathroomRemodelingPage() {
                   Call {site.phone}
                 </a>
               </div>
-              <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/15 pt-6">
-                {C.hero.proof.map((p) => (
-                  <div key={p.label}>
-                    <dt className="sr-only">{p.label}</dt>
-                    <dd>
-                      <span className="block font-heading text-3xl font-extrabold text-amber-500">{p.value}</span>
-                      <span className="mt-1 block text-sm text-navy-100/80">{p.label}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <p className="mt-3 text-sm text-navy-100/75">In-home visit, written price within a week.</p>
+              <HeroRatings className="mt-8" />
             </div>
 
             <div className="grid grid-cols-6 grid-rows-[repeat(6,minmax(0,1fr))] gap-3 sm:gap-4" style={{ aspectRatio: "1 / 1" }}>
@@ -104,13 +96,21 @@ export default function BathroomRemodelingPage() {
                 { p: C.hero.photos[2], cls: "col-span-2 row-span-3" },
               ].map(({ p, cls }, i) => (
                 <figure key={p.id} className={`relative overflow-hidden rounded-[16px] bg-navy-900 ${cls}`}>
-                  <Image src={p.src} alt={p.alt} fill priority={i === 0} sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    priority={i === 0}
+                    fetchPriority={i === 0 ? "high" : undefined}
+                    sizes={i === 0 ? "(min-width: 1280px) 370px, (min-width: 1024px) 29vw, 62vw" : "(min-width: 1280px) 180px, (min-width: 1024px) 14vw, 31vw"}
+                    className="object-cover"
+                  />
                 </figure>
               ))}
-              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.06] p-4 ring-1 ring-white/10 sm:p-5">
-                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-amber-500">Illustrative photos</p>
-                <p className="mt-2 text-sm leading-snug text-navy-100 sm:text-[15px]">
-                  These show the finishes we build. At your estimate, ask to see photos of the waterproofing on a recent job.
+              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.04] p-4 ring-1 ring-white/10 sm:p-5">
+                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-navy-100/60">Illustrative photos</p>
+                <p className="mt-2 text-sm leading-snug text-navy-100/80 sm:text-[15px]">
+                  These show the finishes we build. At your estimate, ask us to walk you through how we waterproof a shower.
                 </p>
               </div>
             </div>
@@ -123,7 +123,7 @@ export default function BathroomRemodelingPage() {
       {/* 2. WHAT WE BUILD */}
       <section className="section-y bg-sand-50" aria-labelledby="products-heading">
         <Container>
-          <BandHead
+          <BandHead id="products-heading"
             eyebrow="What we build"
             title="Four Bathroom Projects We Build Most in Southwest Florida"
             intro="Every one is demoed, waterproofed and tiled by our own crew, with licensed plumbers and electricians under the same contract and the permit pulled by us."
@@ -158,7 +158,7 @@ export default function BathroomRemodelingPage() {
       {/* 3. WHERE BATHROOMS FAIL — dark band */}
       <section className="section-y bg-navy-900 text-white" aria-labelledby="fail-heading">
         <Container>
-          <BandHead
+          <BandHead id="fail-heading"
             dark
             eyebrow="Why bathrooms fail"
             title="The Problems Show Up Years After the Tile Looks Done"
@@ -179,7 +179,7 @@ export default function BathroomRemodelingPage() {
       {/* 4. BEHIND THE TILE — schematic */}
       <section className="section-y bg-sand-100" aria-labelledby="layers-heading">
         <Container>
-          <BandHead eyebrow="How we build a shower" title={service.optionsTitle ?? "What Goes Behind the Tile"} intro={C.layersIntro} className="mb-10" />
+          <BandHead id="layers-heading" eyebrow="How we build a shower" title={service.optionsTitle ?? "What Goes Behind the Tile"} intro={C.layersIntro} className="mb-10" />
           <WallLayers layers={service.options ?? []} />
         </Container>
       </section>
@@ -187,7 +187,7 @@ export default function BathroomRemodelingPage() {
       {/* 5. SWFL HOUSES */}
       <section className="section-y bg-sand-50" aria-labelledby="local-heading">
         <Container>
-          <BandHead
+          <BandHead id="local-heading"
             eyebrow="Southwest Florida houses"
             title="What We Plan For Before We Quote"
             intro="The same bathroom costs differently on a 1978 Port Charlotte slab than in a new build. These are the four things we check at the free estimate so they never show up as a surprise."
@@ -215,7 +215,7 @@ export default function BathroomRemodelingPage() {
       {/* 6. PROJECT TYPES + PRICES */}
       <section className="section-y bg-sand-50" aria-labelledby="scopes-heading">
         <Container>
-          <BandHead
+          <BandHead id="scopes-heading"
             eyebrow="Which project is yours?"
             title="Typical Bathroom Projects and What They Cost"
             intro="Typical 2026 Southwest Florida ranges, permitted and installed. Your written estimate lists every line, with allowances for tile and fixtures spelled out."
@@ -270,7 +270,7 @@ export default function BathroomRemodelingPage() {
       {/* 7. COMPARE */}
       <section className="section-y bg-white" aria-labelledby="compare-heading">
         <Container>
-          <BandHead eyebrow="Tile vs acrylic" title="Custom Tile, a One-Day System or a Kit?" className="mb-8" />
+          <BandHead id="compare-heading" eyebrow="Tile vs acrylic" title="Custom Tile, a One-Day System or a Kit?" className="mb-8" />
           <div className="overflow-x-auto rounded-[16px] border border-sand-200 bg-white shadow-card">
             <table className="w-full min-w-[680px] border-collapse text-left text-[15px]">
               <thead>
@@ -313,7 +313,7 @@ export default function BathroomRemodelingPage() {
       {/* 8. LEARN MORE */}
       <section className="section-y bg-sand-50" aria-labelledby="learn-heading">
         <Container>
-          <BandHead eyebrow="Before you remodel" title="Straight Answers From Our Bathroom Guides" className="mb-8" />
+          <BandHead id="learn-heading" eyebrow="Before you remodel" title="Straight Answers From Our Bathroom Guides" className="mb-8" />
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {learn.map((p) => (
               <li key={p.slug}>
@@ -334,7 +334,7 @@ export default function BathroomRemodelingPage() {
       <ServiceAreasBand />
       <CtaBand
         title="Ready for a Written, Fixed Price on Your Bathroom?"
-        text="We measure, check under the vanity and around the tub for old leaks, and find the drain in the slab. You get an itemized estimate. Free, no pressure."
+        text="We measure, check under the vanity and around the tub for old leaks, and find the drain in the slab. You get an itemized estimate you can compare line by line."
       />
     </>
   );

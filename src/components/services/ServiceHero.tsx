@@ -30,7 +30,7 @@ export default function ServiceHero({
   subhead,
   photo,
   serviceSlug,
-  ctaLabel = "Book a Free Home Consultation",
+  ctaLabel = "Get a Free Estimate",
 }: Props) {
   const estimateHref = serviceSlug ? `/free-estimate?service=${serviceSlug}` : "/free-estimate";
   return (

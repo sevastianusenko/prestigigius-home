@@ -46,7 +46,7 @@ export type LanaiPath = {
 export const lanaiPage = {
   seoTitle: "Lanai Enclosures Port Charlotte FL | Pool Cages",
   seoDescription:
-    "Pool cage rescreens and engineered rebuilds, lanai remodels and under-roof lanai conversions with impact glass in Port Charlotte, North Port & SWFL. Permitted. Free estimate.",
+    "Pool cage rescreens and engineered rebuilds, lanai remodels and under-roof lanai conversions with impact glass in Port Charlotte & SWFL. Permitted.",
   hero: {
     eyebrow: "Rescreens · pool cages · lanai conversions",
     title: "Lanai Enclosures in Port Charlotte",
@@ -75,7 +75,7 @@ export const lanaiPage = {
     },
     {
       title: "Under-roof lanai conversion",
-      text: "Screen out, knee walls or full impact glass in, insulated ceiling, AC and a finished floor: a room you use every month of the year.",
+      text: "Pictured: one old aluminum lanai wall rebuilt in block with storm-rated windows and a door, under the existing screen enclosure. A full conversion goes further, with glass or knee walls on the open sides, an insulated ceiling, AC and a finished floor.",
       photo: P.lanaiAfter,
       real: true,
       price: "$25,000–$70,000",

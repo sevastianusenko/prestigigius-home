@@ -7,7 +7,7 @@
 export type Photo = {
   /** stable id, e.g. "kitchen-01" */
   id: string;
-  /** direct https URL (images.unsplash.com / images.pexels.com), verified 200 */
+  /** local path (/images/stock/<id>.jpg, /images/projects/...) or direct https URL (images.unsplash.com / images.pexels.com) */
   src: string;
   alt: string;
   /** topical category used to pick images without knowing ids */
@@ -19,7 +19,6 @@ export type Photo = {
     | "lanai"
     | "windows-doors"
     | "exterior"
-    | "roofing"
     | "siding-stucco"
     | "painting"
     | "flooring"

@@ -261,7 +261,7 @@ export const postsK: Post[] = [
       "We avoid naming specific paint products here because brands change their lines every year, but these families work well on SWFL block homes:",
       "- **Warm whites and creams:** timeless, cool in the sun and right at home with barrel tile or white metal roofs. Pure stark whites can glare; a slightly warm white looks softer.",
       "- **Sand, beige and tan:** the traditional Florida stucco color, forgiving of dust and sandy soil splashback.",
-      "- **Greige and soft gray:** the most requested family for updated homes; works with gray shingle and dark window frames.",
+      "- **Greige and soft gray:** the most popular family for updated homes; works with gray shingle and dark window frames.",
       "- **Sage and muted greens:** blends into landscaping and palms; pairs well with white trim.",
       "- **Pale blue, aqua and seafoam:** coastal and cheerful, common in older Gulf-front neighborhoods; keep them soft so they do not fade blotchy.",
       "- **Soft yellows and peach:** Old Florida and Mediterranean styles; choose muted versions, since bright yellow fades fast.",

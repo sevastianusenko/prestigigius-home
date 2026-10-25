@@ -15,6 +15,8 @@ export type ServicesGridBandProps = {
   intro?: ReactNode;
   /** limit/order the grid; defaults to all services in menu order */
   slugs?: string[];
+  /** show the "Not sure where to start?" card at the end of the grid (default true) */
+  showCta?: boolean;
 };
 
 export default function ServicesGridBand({
@@ -22,6 +24,7 @@ export default function ServicesGridBand({
   title = "Residential Remodeling\nAcross Southwest Florida",
   intro = "Kitchens and baths, impact windows, lanais and full storm rebuilds. One licensed contractor runs the whole job, from the permit to the final walkthrough, in Charlotte, Sarasota and Lee Counties.",
   slugs,
+  showCta = true,
 }: ServicesGridBandProps) {
   const list = slugs?.length
     ? slugs.map((s) => services.find((x) => x.slug === s)).filter((s): s is (typeof services)[number] => Boolean(s))
@@ -39,6 +42,7 @@ export default function ServicesGridBand({
               <ServiceCard service={s} />
             </li>
           ))}
+          {showCta ? (
           <li className={`sm:col-span-2 ${lgSpan[ctaSpan]}`}>
             <div className="flex h-full flex-col justify-center gap-4 rounded-[14px] bg-navy-900 p-6 md:p-8">
               <p className="eyebrow eyebrow-dark">Not sure where to start?</p>
@@ -50,7 +54,7 @@ export default function ServicesGridBand({
                   href="/free-estimate"
                   className="inline-flex min-h-11 items-center rounded-full px-5 font-heading text-sm font-semibold btn-gold"
                 >
-                  Request a Free Estimate
+                  Get a Free Estimate
                 </Link>
                 <a
                   href={site.phoneHref}
@@ -61,6 +65,7 @@ export default function ServicesGridBand({
               </div>
             </div>
           </li>
+          ) : null}
         </ul>
       </Container>
     </section>

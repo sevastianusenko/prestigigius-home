@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTabs } from "./useTabs";
 import type { Sequence } from "@/content/service-pages/exterior-remodeling";
 
 /** Two orders of work side by side: the right sequence vs. the one that pays twice. */
@@ -8,20 +9,18 @@ export default function SequenceToggle({ sequences }: { sequences: Sequence[] })
   const [active, setActive] = useState(0);
   const current = sequences[active];
   const bad = current.tone === "bad";
+  const tabs = useTabs(sequences.length, active, setActive);
 
   return (
     <div className="rounded-[18px] border border-sand-200 bg-white p-5 shadow-card sm:p-7">
-      <div className="inline-flex rounded-full bg-sand-100 p-1" role="tablist" aria-label="Order of exterior work">
+      <div className="inline-flex rounded-full bg-sand-100 p-1" {...tabs.listProps} aria-label="Order of exterior work">
         {sequences.map((s, i) => {
           const on = i === active;
           return (
             <button
               key={s.label}
               type="button"
-              role="tab"
-              aria-selected={on}
-              aria-controls="sequence-panel"
-              onClick={() => setActive(i)}
+              {...tabs.tabProps(i)}
               className={`rounded-full px-5 py-2 font-heading text-sm font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                 on ? (s.tone === "bad" ? "bg-[#B4442E] text-white" : "bg-navy-900 text-white") : "text-navy-900 hover:text-amber-600"
               }`}
@@ -32,7 +31,7 @@ export default function SequenceToggle({ sequences }: { sequences: Sequence[] })
         })}
       </div>
 
-      <div id="sequence-panel" role="tabpanel" className="mt-7">
+      <div {...tabs.panelProps} className="mt-7">
         <ol className="grid gap-4 md:grid-cols-5">
           {current.steps.map((s, i) => (
             <li

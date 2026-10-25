@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTabs } from "./useTabs";
 import type { TimelineScope } from "@/content/service-pages/kitchen-remodeling";
 
 const COLORS = ["bg-navy-950", "bg-amber-500", "bg-navy-700", "bg-ink-500", "bg-[#8C8C8C]", "bg-navy-100"];
@@ -12,23 +13,21 @@ const COLORS = ["bg-navy-950", "bg-amber-500", "bg-navy-700", "bg-ink-500", "bg-
 export default function KitchenTimeline({ scopes }: { scopes: TimelineScope[] }) {
   const [active, setActive] = useState(1);
   const current = scopes[active];
+  const tabs = useTabs(scopes.length, active, setActive);
   const total = (s: TimelineScope) => s.phases.reduce((n, p) => n + p.weeks, 0);
   const max = Math.max(...scopes.map(total));
   const ticks = Array.from({ length: Math.ceil(max) + 1 }, (_, i) => i);
 
   return (
     <div className="rounded-[18px] border border-sand-200 bg-white p-5 shadow-card sm:p-7">
-      <div className="flex flex-wrap gap-2" role="tablist" aria-label="Kitchen project type">
+      <div className="flex flex-wrap gap-2" {...tabs.listProps} aria-label="Kitchen project type">
         {scopes.map((s, i) => {
           const on = i === active;
           return (
             <button
               key={s.title}
               type="button"
-              role="tab"
-              aria-selected={on}
-              aria-controls="kitchen-timeline-panel"
-              onClick={() => setActive(i)}
+              {...tabs.tabProps(i)}
               className={`rounded-full px-4 py-2 font-heading text-sm font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                 on ? "bg-navy-900 text-white" : "bg-sand-100 text-navy-900 hover:bg-amber-100"
               }`}
@@ -39,7 +38,7 @@ export default function KitchenTimeline({ scopes }: { scopes: TimelineScope[] })
         })}
       </div>
 
-      <div id="kitchen-timeline-panel" role="tabpanel" className="mt-7">
+      <div {...tabs.panelProps} className="mt-7">
         <div className="flex flex-wrap items-end justify-between gap-2">
           <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-amber-600">Without a working kitchen</p>
           <p className="font-heading text-3xl font-extrabold text-navy-900">{current.range}</p>

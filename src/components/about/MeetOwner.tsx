@@ -5,7 +5,7 @@ import { initials } from "@/components/company/utils";
 import { about, owner } from "@/content/about";
 
 /**
- * "Meet the Owner": pull quote + first-person-adjacent bio for Tim Fomin, then
+ * "Meet the Owners": pull quote + first-person-adjacent bio for Tim Fomin, then
  * a compact "the team he built" row linking to /about/team. Initials avatars,
  * no stock portraits of people who are not ours.
  */
@@ -33,7 +33,7 @@ export default function MeetOwner() {
               </span>
               <span>
                 <span className="block font-semibold text-white">{owner.name}</span>
-                <span className="block text-sm text-navy-100/80">{owner.role}, Prestigious Home Improvements</span>
+                <span className="block text-sm text-navy-100/80">{owner.role.split("·")[0].trim()}, Prestigious Home Improvements</span>
               </span>
             </figcaption>
           </figure>
@@ -45,7 +45,7 @@ export default function MeetOwner() {
             ))}
           </div>
           <div className="mt-10 border-t border-sand-200 pt-8">
-            <h3 className="text-xl font-bold">The team behind Tim</h3>
+            <h3 className="text-xl font-bold">The team</h3>
             <ul className="mt-5 flex flex-wrap gap-4">
               {about.team.map((m) => (
                 <li key={m.name} className="flex items-center gap-3 rounded-full bg-white py-2 pl-2 pr-5 shadow-card">

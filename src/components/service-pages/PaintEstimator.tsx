@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
+import { useTabs } from "./useTabs";
 
 type Props = {
   interior: { low: number; high: number; min: number; max: number; start: number };
@@ -16,18 +17,18 @@ export default function PaintEstimator({ interior, exterior, note }: Props) {
   const [mode, setMode] = useState<"interior" | "exterior">("interior");
   const [sqft, setSqft] = useState(interior.start);
   const [house, setHouse] = useState(0);
+  const MODES = ["interior", "exterior"] as const;
+  const tabs = useTabs(MODES.length, MODES.indexOf(mode), (i) => setMode(MODES[i]));
   const pct = ((sqft - interior.min) / (interior.max - interior.min)) * 100;
 
   return (
     <div className="rounded-[18px] border border-sand-200 bg-white p-5 shadow-card sm:p-7">
-      <div className="inline-flex rounded-full bg-sand-100 p-1" role="tablist" aria-label="Interior or exterior painting">
-        {(["interior", "exterior"] as const).map((m) => (
+      <div className="inline-flex rounded-full bg-sand-100 p-1" {...tabs.listProps} aria-label="Interior or exterior painting">
+        {MODES.map((m, i) => (
           <button
             key={m}
             type="button"
-            role="tab"
-            aria-selected={mode === m}
-            onClick={() => setMode(m)}
+            {...tabs.tabProps(i)}
             className={`rounded-full px-5 py-2 font-heading text-sm font-bold capitalize transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
               mode === m ? "bg-navy-900 text-white" : "text-navy-900 hover:text-amber-600"
             }`}
@@ -37,7 +38,7 @@ export default function PaintEstimator({ interior, exterior, note }: Props) {
         ))}
       </div>
 
-      <div className="mt-7 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-12">
+      <div {...tabs.panelProps} className="mt-7 grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-12">
         {mode === "interior" ? (
           <div>
             <label htmlFor={id} className="flex items-baseline justify-between gap-4">

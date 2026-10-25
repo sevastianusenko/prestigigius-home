@@ -3,7 +3,6 @@ import Section from "@/components/ui/Section";
 import TrustStrip from "@/components/TrustStrip";
 import CtaBand from "@/components/CtaBand";
 import Schema from "@/components/Schema";
-import ProcessBand from "@/components/bands/ProcessBand";
 import PromisesBand from "@/components/bands/PromisesBand";
 import ReviewsBand from "@/components/bands/ReviewsBand";
 import FinancingBand from "@/components/bands/FinancingBand";
@@ -16,9 +15,10 @@ import { needFromYou, processStages } from "@/components/company/data";
 import { generalFaqs } from "@/content/faqs";
 import { site } from "@/content/site";
 import { absoluteUrl, faqSchema } from "@/lib/seo";
-import { photo } from "@/lib/photos";
+import { jobPhoto } from "@/content/project-posts/helpers";
+import { OG_DEFAULT } from "@/components/og";
 
-const title = "Our Remodeling Process, Step by Step";
+const title = "Our Remodeling Process";
 const description =
   "From free estimate to final walkthrough: the 8 stages of a Prestigious Home Improvements project, what we handle, and what we need from you.";
 
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/process" },
-  openGraph: { title, description, url: "/process", type: "website" },
+  openGraph: { title, description, url: "/process", type: "website", images: [OG_DEFAULT] },
 };
 
 const crumbs = [{ label: "About", href: "/about" }, { label: "Our Process" }];
@@ -64,28 +64,29 @@ export default function ProcessPage() {
       <PageHero
         tone="dark"
         crumbs={crumbs}
-        eyebrow="How we work · Charlotte, Sarasota & Lee County"
+        eyebrow="How we work · Charlotte, Sarasota, Lee & Manatee"
         title="One Crew. One Contract."
         accent="No Guesswork."
-        photo={photo("team", 0)}
+        photo={jobPhoto(
+          "parrish-two-story-block-home-impact-windows",
+          7,
+          "windows-doors",
+          "Two-story block home in Parrish with new impact windows and an entry door set in the openings",
+        )}
+        photoPlacement="side"
+        photoBadge="Our job photo"
         intro={
           <p>
             Most remodels go sideways because nobody explains what comes next. Below is every stage of a job with us:
             what we take care of, roughly how long it runs, and the short list of things we need from you.
           </p>
         }
-        primary={{ href: "/free-estimate", label: "Book a Free Estimate" }}
+        primary={{ href: "/free-estimate", label: "Get a Free Estimate" }}
         secondary={{ href: "#timeline", label: "See All 8 Stages" }}
         bullets={["Fixed written price", "We pull every permit", "Written workmanship warranty"]}
       />
 
       <TrustStrip />
-
-      <ProcessBand
-        eyebrow="The short version"
-        title="Four Steps. No Surprises."
-        intro="Straight answers from the first phone call to the last walkthrough."
-      />
 
       <Section
         id="timeline"

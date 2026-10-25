@@ -10,8 +10,9 @@ export type ServiceAreasBandProps = { title?: ReactNode };
 
 const countyNotes: Record<string, string> = {
   "Charlotte County": "Our home base, from Port Charlotte to Punta Gorda",
-  "Sarasota County": "North Port, Venice, Englewood and Sarasota",
-  "Lee County": "Cape Coral and Fort Myers",
+  "Sarasota County": "North Port, Venice, Englewood, Sarasota and Siesta Key",
+  "Lee County": "Cape Coral, Fort Myers and Bonita Springs",
+  "Manatee County": "Lakewood Ranch and the Parrish area",
 };
 
 export default function ServiceAreasBand({ title = areasHeadline }: ServiceAreasBandProps) {
@@ -31,7 +32,7 @@ export default function ServiceAreasBand({ title = areasHeadline }: ServiceAreas
             <BandHead
               eyebrow="Service areas"
               title={title}
-              intro="Based in Port Charlotte, we work on homes up and down the Gulf Coast between Sarasota and Fort Myers. These are the towns we're in most often."
+              intro="Based in Port Charlotte, we work on homes along the Gulf Coast from Sarasota and Lakewood Ranch down to Fort Myers and Bonita Springs. These are the towns we're in most often."
             />
 
             <ul className="mt-8 flex flex-wrap gap-2.5" aria-label="Cities we serve">

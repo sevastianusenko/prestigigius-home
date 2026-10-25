@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import type { Photo } from "@/content/types";
 import { photos as allPhotos } from "@/content/photos";
 import Container from "@/components/ui/Container";
@@ -40,9 +41,10 @@ function defaultWall(): Photo[] {
 
 export type HeroWallProps = {
   eyebrow: string;
-  lines: string[];
+  /** one entry per headline line; may hold spans that hide on small screens */
+  lines: ReactNode[];
   accentLast?: boolean;
-  lead: string;
+  lead: ReactNode;
   primary: { href: string; label: string };
   secondary?: { href: string; label: string };
   bullets?: string[];
@@ -67,7 +69,7 @@ export default function HeroWall({
   const columns = Array.from({ length: COLS }, (_, c) => tiles.filter((_, i) => i % COLS === c));
 
   return (
-    <section className="relative isolate flex min-h-[620px] items-center overflow-hidden bg-navy-950 py-16 md:min-h-[730px] md:py-24">
+    <section className="relative isolate flex min-h-[560px] items-center overflow-hidden bg-navy-950 py-10 sm:min-h-[620px] sm:py-16 md:min-h-[730px] md:py-24">
       {/* Photo mosaic */}
       <div aria-hidden="true" className="hero-wall__grid">
         {columns.map((col, c) => (
@@ -76,18 +78,22 @@ export default function HeroWall({
             className={`hero-wall__col ${c >= 3 ? "hidden lg:flex" : c >= 2 ? "hidden md:flex" : ""}`}
           >
             {col.map((p, r) => {
-              const firstRow = r === 0;
+              // The first two rows of the two always-visible columns are the LCP
+              // candidates (the grid is rotated, so any of them can be largest on a phone);
+              // everything else waits.
+              const lcp = c <= 1 && r <= 1;
               return (
                 <div key={`${p.id}-${r}`} className="relative aspect-[4/5] w-full shrink-0 overflow-hidden bg-navy-900">
                   <Image
                     src={p.src}
                     alt=""
                     fill
-                    sizes="(min-width: 1024px) 34vw, (min-width: 768px) 44vw, 62vw"
+                    sizes="(min-width: 1024px) 32vw, (min-width: 768px) 42vw, 62vw"
                     quality={55}
                     className="object-cover"
-                    loading={firstRow && c < 2 ? "eager" : "lazy"}
-                    fetchPriority={firstRow && c < 2 ? "high" : "low"}
+                    priority={lcp}
+                    fetchPriority={lcp ? "high" : "low"}
+                    loading={lcp ? undefined : "lazy"}
                     draggable={false}
                   />
                 </div>

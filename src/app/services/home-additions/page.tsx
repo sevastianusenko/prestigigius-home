@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import HeroRatings from "@/components/service-pages/HeroRatings";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TrustStrip from "@/components/TrustStrip";
 import CtaBand from "@/components/CtaBand";
@@ -75,7 +76,7 @@ export default function HomeAdditionsPage() {
                   href={`/free-estimate?service=${SLUG}`}
                   className="inline-flex min-h-12 items-center justify-center rounded-full btn-gold px-7 font-heading text-[15px] font-bold"
                 >
-                  Book a Free Site Visit
+                  Get a Free Estimate
                 </Link>
                 <a
                   href={site.phoneHref}
@@ -84,17 +85,8 @@ export default function HomeAdditionsPage() {
                   Call {site.phone}
                 </a>
               </div>
-              <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/15 pt-6">
-                {C.hero.proof.map((p) => (
-                  <div key={p.label}>
-                    <dt className="sr-only">{p.label}</dt>
-                    <dd>
-                      <span className="block font-heading text-2xl font-extrabold text-amber-500 sm:text-3xl">{p.value}</span>
-                      <span className="mt-1 block text-sm text-navy-100/80">{p.label}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <p className="mt-3 text-sm text-navy-100/75">In-home visit, written price within a week.</p>
+              <HeroRatings className="mt-8" />
             </div>
 
             <div className="grid grid-cols-6 grid-rows-[repeat(6,minmax(0,1fr))] gap-3 sm:gap-4" style={{ aspectRatio: "1 / 1" }}>
@@ -104,12 +96,20 @@ export default function HomeAdditionsPage() {
                 { p: C.hero.photos[2], cls: "col-span-2 row-span-3" },
               ].map(({ p, cls }, i) => (
                 <figure key={p.id} className={`relative overflow-hidden rounded-[16px] bg-navy-900 ${cls}`}>
-                  <Image src={p.src} alt={p.alt} fill priority={i === 0} sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    priority={i === 0}
+                    fetchPriority={i === 0 ? "high" : undefined}
+                    sizes={i === 0 ? "(min-width: 1280px) 370px, (min-width: 1024px) 29vw, 62vw" : "(min-width: 1280px) 180px, (min-width: 1024px) 14vw, 31vw"}
+                    className="object-cover"
+                  />
                 </figure>
               ))}
-              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.06] p-4 ring-1 ring-white/10 sm:p-5">
-                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-amber-500">Illustrative photos</p>
-                <p className="mt-2 text-sm leading-snug text-navy-100 sm:text-[15px]">
+              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.04] p-4 ring-1 ring-white/10 sm:p-5">
+                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-navy-100/60">Illustrative photos</p>
+                <p className="mt-2 text-sm leading-snug text-navy-100/80 sm:text-[15px]">
                   These show the stages of an addition. The lanai-to-block before-and-after further down is one of our own jobs.
                 </p>
               </div>
@@ -123,7 +123,7 @@ export default function HomeAdditionsPage() {
       {/* 2. WHAT WE BUILD */}
       <section className="section-y bg-sand-50" aria-labelledby="products-heading">
         <Container>
-          <BandHead
+          <BandHead id="products-heading"
             eyebrow="What we build"
             title="Four Ways to Add Room Without Moving"
             intro="Plans, engineering, permits, foundation, shell, systems and finishes, all under one contract and one Florida license, CRC1327831."
@@ -151,7 +151,7 @@ export default function HomeAdditionsPage() {
       {/* 3. WHERE ADDITIONS FAIL — dark band */}
       <section className="section-y bg-navy-900 text-white" aria-labelledby="seams-heading">
         <Container>
-          <BandHead
+          <BandHead id="seams-heading"
             dark
             eyebrow="Why additions fail"
             title="Additions Go Wrong at the Seams"
@@ -172,7 +172,7 @@ export default function HomeAdditionsPage() {
       {/* 4. LOT CHECKS */}
       <section className="section-y bg-white" aria-labelledby="lot-heading">
         <Container>
-          <BandHead
+          <BandHead id="lot-heading"
             eyebrow="Before any design fees"
             title="Your Lot Decides What You Can Build"
             intro="We check these five at the free site visit, so you never pay for plans on a room the lot cannot hold."
@@ -193,7 +193,7 @@ export default function HomeAdditionsPage() {
       {/* 5. SIZE x COST */}
       <section className="section-y bg-sand-100" aria-labelledby="size-heading">
         <Container>
-          <BandHead
+          <BandHead id="size-heading"
             eyebrow="Ballpark it"
             title="What Would a Room That Size Cost?"
             intro="Move the slider to see the typical 2026 range for a finished room addition in Charlotte, Sarasota and Lee counties."
@@ -212,7 +212,7 @@ export default function HomeAdditionsPage() {
               <p className="mt-3 text-sm text-ink-500">Our job in Manatee County, same wall before and after. Drag the handle to compare.</p>
             </div>
             <div>
-              <BandHead eyebrow="Our job · Manatee County" title="An Aluminum Lanai Wall, Rebuilt in Block" />
+              <BandHead id="job-heading" eyebrow="Our job · Manatee County" title="An Aluminum Lanai Wall, Rebuilt in Block" />
               <p className="mt-4 text-[15px] leading-relaxed text-ink-500">
                 Turning an aluminum lanai wall into block is structural work: drawings, a permit and inspections. Here, county review took
                 about three months. The paperwork is often the longest part of a lanai conversion or Florida room, and we put that time in
@@ -246,7 +246,7 @@ export default function HomeAdditionsPage() {
       {/* 7. PRICES */}
       <section className="section-y bg-sand-50" aria-labelledby="scopes-heading">
         <Container>
-          <BandHead
+          <BandHead id="scopes-heading"
             eyebrow="Which addition is yours?"
             title="Typical Additions and What They Cost"
             intro="Typical 2026 Southwest Florida ranges. Plans, engineering, permits and impact openings are included in our estimates, not added later."
@@ -267,7 +267,7 @@ export default function HomeAdditionsPage() {
       {/* 8. FLORIDA RULES */}
       <section className="section-y bg-white" aria-labelledby="rules-heading">
         <Container>
-          <BandHead eyebrow="Florida rules" title="Permits, Wind Code, Flood Zones and HOAs" className="mb-10" />
+          <BandHead id="rules-heading" eyebrow="Florida rules" title="Permits, Wind Code, Flood Zones and HOAs" className="mb-10" />
           <ul className="grid gap-5 lg:grid-cols-3">
             {service.localNotes.map((n, i) => (
               <li key={n.title} className="rounded-[16px] border border-sand-200 bg-sand-50 p-6 md:p-7">
@@ -287,7 +287,7 @@ export default function HomeAdditionsPage() {
       {/* 9. LEARN MORE */}
       <section className="section-y bg-sand-50" aria-labelledby="learn-heading">
         <Container>
-          <BandHead eyebrow="Before you build" title="Straight Answers From Our Guides" className="mb-8" />
+          <BandHead id="learn-heading" eyebrow="Before you build" title="Straight Answers From Our Guides" className="mb-8" />
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {learn.map((p) => (
               <li key={p.slug}>
@@ -307,7 +307,7 @@ export default function HomeAdditionsPage() {
       <ServiceAreasBand />
       <CtaBand
         title="Find Out What Your Lot Will Allow"
-        text="We walk the property, check setbacks, flood zone, septic and HOA rules, and tell you honestly what you can build. Free, no pressure."
+        text="We walk the property, check setbacks, flood zone, septic and HOA rules, and tell you honestly what you can build before you pay for drawings."
       />
     </>
   );

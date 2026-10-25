@@ -117,7 +117,7 @@ export const areas: Area[] = [
   {
     slug: "englewood",
     name: "Englewood",
-    county: "Sarasota & Charlotte counties",
+    county: "Sarasota County",
     zip: ["34223", "34224", "34295", "33947"],
     driveTime: "About 30 min from Port Charlotte",
     seoTitle: "Remodeling Contractor in Englewood & Rotonda West, FL",
@@ -147,7 +147,7 @@ export const areas: Area[] = [
       },
       {
         q: "Do you work in Rotonda West?",
-        a: "Yes, regularly. It is about 25 minutes from our base. Windows, doors, lanai enclosures and kitchen and bath remodels are the most common projects there.",
+        a: "Yes. It is about 30 minutes from our base. Windows, doors, lanai enclosures and kitchen and bath remodels are the most common projects there.",
       },
     ],
   },
@@ -298,12 +298,12 @@ export const areas: Area[] = [
   {
     slug: "lakewood-ranch",
     name: "Lakewood Ranch",
-    county: "Manatee & Sarasota counties",
+    county: "Manatee County",
     zip: ["34202", "34211", "34212", "34240"],
     driveTime: "About 60 min from Port Charlotte",
     seoTitle: "Remodeling & Impact Windows in Lakewood Ranch, FL",
     seoDescription:
-      "Licensed contractor for Lakewood Ranch: impact windows and doors, kitchens, baths, lanais and exterior work. Manatee and Sarasota County permits and HOA review handled.",
+      "Licensed contractor for Lakewood Ranch: impact windows and doors, kitchens, baths, lanais and exterior work. County permits and HOA design review handled.",
     intro: [
       "Lakewood Ranch is one of the largest master-planned communities in the country, built out from the mid-1990s onward across the Manatee and Sarasota county line. Most homes are concrete block with stucco and tile or shingle roofs, from the first 1990s villages to the newest neighborhoods still under construction. The bones are generally good; what owners call us about is what the builder left standard: non-impact windows and sliders, builder-grade kitchens and baths, and plain lanais.",
       "Almost everything visible from outside goes through architectural review. The community's design review committees and individual village HOAs set rules for window frame colors, grid styles, roof materials, paint palettes and lanai enclosures, and they want drawings and product sheets before work starts. We prepare that package, wait for written approval, and only then order material.",
@@ -340,7 +340,7 @@ export const areas: Area[] = [
     driveTime: "About 55 min from Port Charlotte",
     seoTitle: "Remodeling & Window Replacement in Bonita Springs, FL",
     seoDescription:
-      "Licensed contractor for Bonita Springs: impact windows and doors, storm-damage rebuilds, kitchens, baths and stucco. City of Bonita Springs permits handled. Free estimate.",
+      "Licensed contractor for Bonita Springs: impact windows and doors, storm-damage rebuilds, kitchens, baths and stucco. City permits handled.",
     intro: [
       "Bonita Springs sits at the southern end of Lee County, between Estero and Naples. The housing ranges from older block homes and cottages near the Imperial River and Old 41 to large gated golf and country club communities from the 1980s through the 2000s, plus newer neighborhoods east of I-75. Most homes are concrete block with stucco, and many older ones still have their original windows.",
       "Hurricane Ian in 2022 pushed storm surge into Bonita Beach and flooded neighborhoods along the Imperial River, and many homes needed drywall, flooring and cabinets replaced. Homes close to the water are often in FEMA flood zones, where the 50% substantial-improvement rule applies to large remodels and rebuilds. We check your zone and the structure value before the scope is final.",
@@ -377,7 +377,7 @@ export const areas: Area[] = [
     driveTime: "About 55 min from Port Charlotte",
     seoTitle: "Impact Windows & Remodeling on Siesta Key, FL",
     seoDescription:
-      "Licensed contractor for Siesta Key homes and condos: impact windows and sliders, storm-damage rebuilds, kitchens and baths. Sarasota County permits and flood rules handled.",
+      "Licensed contractor for Siesta Key homes and condos: impact windows and sliders, storm rebuilds, kitchens and baths. Permits and flood rules handled.",
     intro: [
       "Siesta Key is a barrier island, and building here is shaped by the water on both sides. Homes range from mid-century cottages and ranches to large elevated new builds on the bay and canals, alongside condo buildings near the beach. Exposure to wind and salt air is high, so window and door products need design pressures for coastal exposure and hardware that holds up to salt.",
       "Most of the island is in high-risk FEMA flood zones. Helene's surge and Milton's wind in 2024 damaged homes and condos across the key. For large remodels and rebuilds, the FEMA 50% substantial-improvement rule applies, and work near the Gulf can also run into Sarasota County's coastal setback rules. We check the flood zone, elevation certificate and setbacks before the scope is final.",

@@ -10,18 +10,20 @@ import ReferralForm from "@/components/forms/ReferralForm";
 import { referral } from "@/content/about";
 import { site } from "@/content/site";
 
+import { OG_DEFAULT } from "@/components/og";
 // TODO confirm reward amount with client (site.referral.reward is a placeholder)
 const reward = site.referral.reward;
 const rewardNote = site.referral.rewardNote;
 
-const title = `Refer a Friend, Get ${reward} | Prestigious Home Improvements`;
+const title = `Refer a Friend, Get ${reward}`;
 const description = `Past customer? Send us a friend who needs work done. When their project is finished, we send you ${reward}. No limit on referrals.`;
 
 export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/referral" },
-  openGraph: { title, description, url: "/referral", type: "website" },
+  openGraph: {
+    images: [OG_DEFAULT], title, description, url: "/referral", type: "website" },
 };
 
 export default function ReferralPage() {

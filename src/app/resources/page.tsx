@@ -11,13 +11,15 @@ import { absUrl } from "@/components/projects/utils";
 import { posts } from "@/content/blog";
 import { site } from "@/content/site";
 
+import { OG_DEFAULT } from "@/components/og";
 export const metadata: Metadata = {
-  title: "Home Renovation Guides for SW Florida | Prestigious",
+  title: { absolute: "Home Renovation Guides for Southwest Florida | Prestigious" },
   description:
     "Straight answers on remodeling costs, permits, hurricane code and insurance for Port Charlotte, Charlotte, Sarasota and Lee County homeowners.",
   alternates: { canonical: "/resources" },
   openGraph: {
-    title: "Home Renovation Guides for SW Florida | Prestigious",
+    images: [OG_DEFAULT],
+    title: { absolute: "Home Renovation Guides for Southwest Florida | Prestigious" },
     description: "Plain-spoken remodeling guides from a licensed Port Charlotte contractor.",
     url: "/resources",
     type: "website",
@@ -74,7 +76,7 @@ export default function ResourcesPage() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-500">
               Plain answers, real Florida numbers and honest advice for homeowners in Charlotte, Sarasota and Lee
-              Counties, written by the licensed contractor who pulls the permits.
+              Counties, written by the team that prices and runs our jobs.
             </p>
           </div>
         </Container>
@@ -106,7 +108,7 @@ export default function ResourcesPage() {
 
       <CtaBand
         title="Get Your Free Estimate"
-        text="One of the owners comes to the house, sizes up the work and gives you a written, itemized estimate. No charge and no obligation, anywhere from Englewood to Cape Coral."
+        text="One of the owners comes to the house, sizes up the work and gives you a written, itemized estimate. No charge and no obligation, anywhere from Sarasota and Lakewood Ranch down to Fort Myers and Bonita Springs."
       />
     </>
   );

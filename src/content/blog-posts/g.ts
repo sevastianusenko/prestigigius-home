@@ -195,15 +195,15 @@ Need glass replaced or windows upgraded after a storm? Call Prestigious Home Imp
     relatedServices: ["impact-windows-doors", "storm-damage-rebuild", "bathroom-remodeling"],
   },
 
-  // 8a — Single hung window replacement cost
+  // 8a — Single-hung window replacement cost
   {
     slug: "single-hung-window-replacement-cost",
-    title: "Single Hung Window Replacement Cost in Florida: 2026 Price Guide",
-    seoTitle: "Single Hung Window Replacement Cost (2026 Florida)",
+    title: "Single-Hung Window Replacement Cost in Florida: 2026 Price Guide",
+    seoTitle: "Single-Hung Window Replacement Cost (2026 Florida)",
     seoDescription:
-      "Single hung window replacement cost in SW Florida: typical 2026 prices for impact and vinyl single hung windows, what drives cost, and how to compare.",
+      "Single-hung window replacement cost in SW Florida: typical 2026 prices for impact and vinyl single-hung windows, what drives cost, and how to compare.",
     excerpt:
-      "In Southwest Florida, most single hung window replacements are impact windows, typically at the lower end of $1,200–$3,800 per opening. Here is what drives the price and how to read a quote.",
+      "In Southwest Florida, most single-hung window replacements are impact windows, typically at the lower end of $1,200–$3,800 per opening. Here is what drives the price and how to read a quote.",
     date: "2026-10-22",
     readMinutes: 6,
     cover: img(
@@ -213,31 +213,31 @@ Need glass replaced or windows upgraded after a storm? Call Prestigious Home Imp
       "windows-doors",
     ),
     body: lines(`
-In Southwest Florida, a single hung impact window replacement typically costs $1,200 to $3,800 per opening installed in 2026, and standard-size single hung units usually land in the lower part of that range. A non-impact vinyl single hung window costs less, but in the wind-borne debris region it needs approved shutters to meet code, which changes the math.
-Single hung windows have a fixed top sash and a sliding bottom sash. If you are still deciding on the style, our comparison of [single hung vs double hung windows](/resources/single-hung-vs-double-hung-windows) covers ventilation, cleaning and maintenance. This guide is about price.
-## Typical Single Hung Windows Prices in 2026
+In Southwest Florida, a single-hung impact window replacement typically costs $1,200 to $3,800 per opening installed in 2026, and standard-size single-hung units usually land in the lower part of that range. A non-impact vinyl single-hung window costs less, but in the wind-borne debris region it needs approved shutters to meet code, which changes the math.
+Single-hung windows have a fixed top sash and a sliding bottom sash. If you are still deciding on the style, our comparison of [single-hung vs double-hung windows](/resources/single-hung-vs-double-hung-windows) covers ventilation, cleaning and maintenance. This guide is about price.
+## Typical Single-Hung Windows Prices in 2026
 Typical installed ranges in Charlotte, Sarasota and Lee counties:
-- **Impact single hung, standard bedroom or living room size, white frame:** typically toward the lower end of $1,200–$3,800 per opening.
-- **Impact single hung, large size, higher design pressure, bronze or black frame, or upgraded glass:** typically mid-range to upper range.
-- **Impact single hung in an opening that needs buck replacement or significant stucco work:** add the repair cost on top; it is usually itemized.
-- **Non-impact vinyl single hung windows:** typically less per opening than impact units. In the wind-borne debris region you must also budget for approved shutters on each opening, plus the time to install them before every storm.
+- **Impact single-hung, standard bedroom or living room size, white frame:** typically toward the lower end of $1,200–$3,800 per opening.
+- **Impact single-hung, large size, higher design pressure, bronze or black frame, or upgraded glass:** typically mid-range to upper range.
+- **Impact single-hung in an opening that needs buck replacement or significant stucco work:** add the repair cost on top; it is usually itemized.
+- **Non-impact vinyl single-hung windows:** typically less per opening than impact units. In the wind-borne debris region you must also budget for approved shutters on each opening, plus the time to install them before every storm.
 - **Whole-house projects:** priced per opening, but mobilization, permitting and disposal are spread across more windows, so the average per opening often drops on larger jobs.
 These are typical figures for budgeting. Your quote depends on your exact sizes, ratings and opening conditions.
-## What Drives Single Hung Window Replacement Cost
+## What Drives Single-Hung Window Replacement Cost
 ### Size and design pressure
 Bigger windows cost more, and so do windows that must meet a higher design pressure (DP). DP depends on your home's wind speed zone, exposure, height and where the window sits on the wall; corner zones need higher ratings.
 ### Frame material
 - **Aluminum:** slim sightlines, strong, common on block homes. Thermally broken aluminum improves efficiency.
-- **Vinyl:** usually better insulation and often slightly lower cost. Vinyl single hung windows are popular for energy-conscious replacements.
+- **Vinyl:** usually better insulation and often slightly lower cost. Vinyl single-hung windows are popular for energy-conscious replacements.
 ### Glass package
 Low-E coatings, tints, obscure glass for bathrooms, and insulated laminated glass all change the price. Insulated laminated glass costs more but improves comfort and energy performance.
 ### Opening condition
 On concrete block homes, windows are anchored through a wood or concrete buck. Rotted wood bucks, cracked stucco returns or water damage below the sill add labor and materials.
 ### Permits and paperwork
 In Florida, window replacement requires a permit. A licensed contractor pulls it, submits the product approval, and schedules inspections. That cost belongs in your quote.
-![Single-story Florida home with white stucco walls and front windows](${U("1786550860372-116b871a1697")} "Single hung impact windows are the most common replacement on single-story block homes in Southwest Florida. Stock photo.")
-## Single Hung Window Replacement: What the Job Includes
-A complete single hung window replacement quote should list:
+![Single-story Florida home with white stucco walls and front windows](${U("1786550860372-116b871a1697")} "Single-hung impact windows are the most common replacement on single-story block homes in Southwest Florida. Stock photo.")
+## Single-Hung Window Replacement: What the Job Includes
+A complete single-hung window replacement quote should list:
 1. Removal and disposal of the existing window.
 2. Inspection of the buck and opening, with a stated plan and price for rot repair.
 3. The new window: brand, series, size, frame color, glass package and Florida Product Approval number.
@@ -248,14 +248,14 @@ A complete single hung window replacement quote should list:
 8. Permit, inspections and final paperwork you can give your insurer.
 Comparing quotes line by line is the only fair way to compare price. Two quotes that differ by thousands of dollars often differ in scope, not in the window.
 ## Repair or Replace?
-Not every tired single hung window needs to go. Worn balances, broken locks and dried-out weatherstripping are inexpensive parts that a technician can often replace in an afternoon. Replacement makes more sense when:
+Not every tired single-hung window needs to go. Worn balances, broken locks and dried-out weatherstripping are inexpensive parts that a technician can often replace in an afternoon. Replacement makes more sense when:
 - The window is non-impact and the opening is in the wind-borne debris region, so you are relying on shutters every storm.
 - The insulated glass has fogged between the panes, and the frame is old enough that replacing glass alone is poor value.
 - Aluminum frames are pitted, corroded or bent, especially near salt water.
 - Water is getting in around the frame, not just through the sash, which points to failed sealant, flashing or a rotted buck.
 - Parts are no longer available for the brand or series.
 If several of these apply to most of your windows, replacing them as one project is usually more economical than fixing them one at a time.
-## Vinyl Single Hung Windows vs Aluminum in Florida
+## Vinyl Single-Hung Windows vs Aluminum in Florida
 - **Heat and sun:** both work in Florida. Vinyl insulates better; aluminum frames get hotter to the touch unless thermally broken.
 - **Salt air:** vinyl does not corrode; aluminum relies on its finish, so rinsing and care matter near the Gulf.
 - **Size limits:** aluminum lines often allow larger approved sizes or higher ratings in some product lines.
@@ -263,29 +263,29 @@ If several of these apply to most of your windows, replacing them as one project
 ## Ways to Control the Cost
 - Keep standard sizes where the opening allows; custom sizes add cost.
 - Group windows into one permit and one project.
-- Choose single hung for most openings and reserve casements or larger units where they add real value.
+- Choose single-hung for most openings and reserve casements or larger units where they add real value.
 - Ask about glass packages; not every opening needs every upgrade.
 - Ask about [financing options](/financing) if you want to protect the whole house at once.
 - Keep your permit and product approval records; a wind mitigation inspection may qualify you for insurance credits, which vary by insurer.
 ## The Florida Angle
 - **Wind-borne debris region:** most of coastal Southwest Florida requires impact protection on glazed openings, either impact-rated windows or approved shutters.
 - **Florida Building Code, 8th Edition (2023):** replacement windows must meet the design pressure for your location. Verify the current Florida Product Approval for the exact model and size.
-- **Egress:** a bedroom single hung window must provide the required clear opening with the bottom sash open. Some sizes do not qualify.
+- **Egress:** a bedroom single-hung window must provide the required clear opening with the bottom sash open. Some sizes do not qualify.
 - **HOAs:** many associations specify frame color and grid patterns. Get approval before ordering to avoid delays.
 If you are ready to price your home, our [impact window and door installation](/services/impact-windows-doors) team measures every opening and quotes each one line by line. If two or more windows sit side by side, you will also want to understand [mulled windows](/resources/mulled-windows), because how units are joined affects both the price and the rating.
 ## Frequently Asked Questions
-### How much does it cost to replace a single hung window?
-In Southwest Florida in 2026, a single hung impact window typically costs $1,200–$3,800 per opening installed, with standard sizes toward the lower end. Non-impact vinyl units cost less but need approved shutters in the wind-borne debris region.
-### Are single hung windows cheaper than double hung?
-Usually, yes. For the same size, series and glass, single hung windows have fewer moving parts and typically cost less than double hung windows.
-### Can I replace just one single hung window?
+### How much does it cost to replace a single-hung window?
+In Southwest Florida in 2026, a single-hung impact window typically costs $1,200–$3,800 per opening installed, with standard sizes toward the lower end. Non-impact vinyl units cost less but need approved shutters in the wind-borne debris region.
+### Are single-hung windows cheaper than double-hung?
+Usually, yes. For the same size, series and glass, single-hung windows have fewer moving parts and typically cost less than double-hung windows.
+### Can I replace just one single-hung window?
 Yes. Single-window replacements are common, though the per-opening price is usually higher because the permit and setup costs are spread over fewer units.
 ### Does window replacement need a permit in Florida?
 Yes. Window replacement requires a building permit in Florida. Your contractor should pull it and include the product approval with the application.
-### How long does single hung window replacement take?
+### How long does single-hung window replacement take?
 Installation of a typical home's windows often takes a few days once the windows arrive. Ordering and permitting usually take longer than the installation itself.
 ## Bottom Line
-Single hung windows are the most cost-effective way to replace windows in a typical Southwest Florida home. Budget toward the lower end of $1,200–$3,800 per opening for standard impact units, compare quotes line by line, and make sure each window carries the right approval and design pressure.
+Single-hung windows are the most cost-effective way to replace windows in a typical Southwest Florida home. Budget toward the lower end of $1,200–$3,800 per opening for standard impact units, compare quotes line by line, and make sure each window carries the right approval and design pressure.
 Want a precise number for your house? Call Prestigious Home Improvements at (941) 223-4875 for a free in-home estimate.
 `),
     keywords: [
@@ -317,16 +317,16 @@ Want a precise number for your house? Call Prestigious Home Improvements at (941
       "windows-doors",
     ),
     body: lines(`
-Mulled windows are two or more separate window units joined side by side or stacked into a single assembly. The joint between them is called a mullion, and the process of joining them is called mulling. Common examples are a picture window flanked by two single hung windows, or a row of casements. In Florida, the mullion is a structural part: it has to carry the same wind pressure as the windows, so mulled impact windows require a mullion that is tested or engineered for your design pressure.
-If you are still choosing between window styles for each unit in the group, see our guide to [single hung vs double hung windows](/resources/single-hung-vs-double-hung-windows).
+Mulled windows are two or more separate window units joined side by side or stacked into a single assembly. The joint between them is called a mullion, and the process of joining them is called mulling. Common examples are a picture window flanked by two single-hung windows, or a row of casements. In Florida, the mullion is a structural part: it has to carry the same wind pressure as the windows, so mulled impact windows require a mullion that is tested or engineered for your design pressure.
+If you are still choosing between window styles for each unit in the group, see our guide to [single-hung vs double-hung windows](/resources/single-hung-vs-double-hung-windows).
 ## Mullion vs Muntin: Clearing Up the Terms
 These two words get mixed up constantly:
 - **Mullion:** a structural member between two separate window frames. It joins units and transfers wind load.
 - **Muntin (grids):** decorative or dividing bars within a single sash that split the glass into smaller panes. Today they are usually grids between the glass or applied to its surface.
-- **Meeting rail:** where the two sashes of a single or double hung window overlap. It is part of one window, not a mullion.
+- **Meeting rail:** where the two sashes of a single or double-hung window overlap. It is part of one window, not a mullion.
 ## Common Mulled Window Configurations
-- **Twin or triple single hung:** two or three hung units side by side, common in bedrooms and living rooms.
-- **Picture window with operable flankers:** a fixed center unit for the view, with single hung or casement windows on each side for airflow.
+- **Twin or triple single-hung:** two or three hung units side by side, common in bedrooms and living rooms.
+- **Picture window with operable flankers:** a fixed center unit for the view, with single-hung or casement windows on each side for airflow.
 - **Stacked units:** a fixed transom or arched unit mulled on top of a window or door.
 - **Window walls:** multiple fixed and operable units combined to fill a large opening.
 ![Living room with tall wood-framed windows looking out to trees](${U("1774199679021-db3b421867c3")} "Large window groups are usually several units mulled together rather than one giant frame. Stock photo.")
@@ -359,7 +359,7 @@ Under the Florida Building Code, 8th Edition (2023), mullions between window and
 - Size and DP limits of the mullion can restrict the design.
 - Poorly sealed mull joints are a common leak source.
 ## What Mulled Windows Cost
-Each unit in a mulled group is priced like any impact window: typically $1,200–$3,800 per unit installed in Southwest Florida in 2026. The mullion adds cost on top, and structural mullions for tall or high-pressure assemblies cost more than simple short mulls. Ask your contractor to list the mullion as a separate line so you can compare quotes fairly. For a single hung group, our [single hung window replacement cost](/resources/single-hung-window-replacement-cost) guide shows what moves each unit's price.
+Each unit in a mulled group is priced like any impact window: typically $1,200–$3,800 per unit installed in Southwest Florida in 2026. The mullion adds cost on top, and structural mullions for tall or high-pressure assemblies cost more than simple short mulls. Ask your contractor to list the mullion as a separate line so you can compare quotes fairly. For a single-hung group, our [single-hung window replacement cost](/resources/single-hung-window-replacement-cost) guide shows what moves each unit's price.
 ## How to Spec Mulled Windows on a Quote
 When you review a quote for a mulled group, look for these details:
 - The product and approval number for each individual unit.
@@ -378,7 +378,7 @@ If you see these, have the opening inspected. Re-sealing helps with minor gaps; 
 A mulled window is a combination of two or more window units joined together with a mullion into one assembly, so they install and look like a single larger window.
 ### Is a window mulling kit enough for impact windows?
 Only if that specific mulling system is approved or engineered for your required design pressure and impact rating. In coastal Florida, a basic alignment kit is not a substitute for a rated structural mullion.
-### Can you mull a picture window to a single hung window?
+### Can you mull a picture window to a single-hung window?
 Yes, it is one of the most common configurations. The mullion between them must be rated for the opening's design pressure.
 ### Are mulled windows more likely to leak?
 Each joint is a potential leak point, so sealing and flashing matter. A properly installed mulled assembly should perform as well as a single unit.
@@ -421,8 +421,8 @@ Hurricane impact windows typically cost $1,200 to $3,800 per opening installed i
 Brand is rarely what moves the price most. If you are comparing manufacturers, read our fair comparison of [PGT vs ES vs CWS impact windows](/resources/pgt-vs-es-vs-cws-impact-windows). Not sure whether "hurricane windows" and "impact windows" mean the same thing? See [impact windows vs hurricane windows](/resources/impact-windows-vs-hurricane-windows).
 ## Hurricane Impact Windows Prices by Window Type
 Typical 2026 installed ranges in Charlotte, Sarasota and Lee counties:
-- **Single hung, standard size:** typically toward the lower end of $1,200–$3,800 per opening.
-- **Horizontal roller:** similar to single hung for comparable sizes.
+- **Single-hung, standard size:** typically toward the lower end of $1,200–$3,800 per opening.
+- **Horizontal roller:** similar to single-hung for comparable sizes.
 - **Picture (fixed) window:** varies widely with size; small units sit low in the range, large view windows sit higher.
 - **Casement and awning:** typically mid-range to upper range because of the hinges, operators and hardware.
 - **Arched, half-round and custom shapes:** typically toward the upper end, and very large shapes can exceed it.
@@ -431,11 +431,11 @@ Typical 2026 installed ranges in Charlotte, Sarasota and Lee counties:
 ## Impact Windows Cost Calculator: A Simple Method
 Online impact windows cost calculators can be useful, but most use national averages. This quick method gives you a Southwest Florida budget in a few minutes:
 1. **Count your openings.** Walk the house and count every window and glass door. Treat a mulled pair or trio as separate units.
-2. **Sort them by type.** Standard single hung and rollers, picture windows, casements, specialty shapes, sliding doors.
+2. **Sort them by type.** Standard single-hung and rollers, picture windows, casements, specialty shapes, sliding doors.
 3. **Assign a typical figure.** Use the lower part of $1,200–$3,800 for standard hung and roller windows, the middle for most picture windows and casements, and the upper part for large or shaped units.
 4. **Add sliders separately.** Use $4,500–$14,000 per slider depending on size.
 5. **Add a contingency.** Older homes often need buck or stucco repairs around a few openings. A contingency of 10% is a reasonable planning number.
-**Example (typical, for budgeting only):** a single-story home with 12 standard single hung windows and one 8-foot slider would land, at the low-to-middle of the ranges, somewhere around $20,000–$35,000 before contingency. Larger windows, dark frames or upgraded glass move it up. Only an in-home measurement gives a real price.
+**Example (typical, for budgeting only):** a single-story home with 12 standard single-hung windows and one 8-foot slider would land, at the low-to-middle of the ranges, somewhere around $20,000–$35,000 before contingency. Larger windows, dark frames or upgraded glass move it up. Only an in-home measurement gives a real price.
 ## What Drives Impact Window Cost
 ### Size and design pressure
 Larger glass and higher design pressure (DP) ratings cost more. Required DP depends on your wind speed zone under the Florida Building Code, 8th Edition (2023), the exposure category, building height and the window's position on the wall.
@@ -472,7 +472,7 @@ If the cost of protecting every opening at once is a stretch, many owners phase 
 ![Gray single-family home with a stone chimney and front porch in Fort Myers, Florida](${U("1583608205776-bfd35f0d9f83")} "Whole-house projects spread permit and setup costs across more openings. Stock photo.")
 ## Frequently Asked Questions
 ### How much do hurricane impact windows cost per window?
-In Southwest Florida in 2026, typically $1,200–$3,800 per opening installed. Standard single hung and roller windows sit lower in the range; large, shaped or specialty units sit higher.
+In Southwest Florida in 2026, typically $1,200–$3,800 per opening installed. Standard single-hung and roller windows sit lower in the range; large, shaped or specialty units sit higher.
 ### How much does it cost to put impact windows in a whole house?
 Multiply your number of openings by a per-opening figure that matches your window types, add sliding doors at $4,500–$14,000 each, and add a contingency for repairs. A mid-size single-story home commonly lands in the tens of thousands of dollars.
 ### Are impact windows cheaper than hurricane shutters?

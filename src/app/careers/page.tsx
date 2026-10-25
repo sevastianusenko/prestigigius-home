@@ -9,16 +9,19 @@ import KickerCards from "@/components/about/KickerCards";
 import FormSection from "@/components/about/FormSection";
 import CareersForm from "@/components/forms/CareersForm";
 import { careers } from "@/content/about";
+import { jobPhoto } from "@/content/project-posts/helpers";
 
-const title = "Careers | Construction Jobs in Port Charlotte, FL";
+import { OG_DEFAULT } from "@/components/og";
+const title = "Construction Jobs in Port Charlotte, FL | Prestigious";
 const description =
   "Join a small, licensed Port Charlotte crew. No experience needed: learn windows, doors and remodeling from the owners. Apply in two minutes.";
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: { canonical: "/careers" },
-  openGraph: { title, description, url: "/careers", type: "website" },
+  openGraph: {
+    images: [OG_DEFAULT], title, description, url: "/careers", type: "website" },
 };
 
 export default function CareersPage() {
@@ -32,6 +35,12 @@ export default function CareersPage() {
         lead={<p>{hero.lead}</p>}
         primary={{ href: "#apply", label: "Send My Application" }}
         bullets={form.bullets}
+        photo={jobPhoto(
+          "parrish-two-story-block-home-impact-windows",
+          4,
+          "windows-doors",
+          "Double-height opening in a Parrish block home with a four-lite black window above it and a crew member on a ladder inside",
+        )}
       />
 
       <TrustStrip />

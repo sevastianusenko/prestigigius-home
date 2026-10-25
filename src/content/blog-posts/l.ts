@@ -495,7 +495,7 @@ export const postsL: Post[] = [
       "- **Inspections.** Rough inspections must pass before walls and trenches are closed. A missed or failed inspection can cost several days.",
       "- **Stone fabrication backlogs.** Popular fabricators book up, especially in the winter season.",
       "- **Hurricane season.** From June 1 to November 30, a storm can shut down job sites for days, and after a major storm, crews, inspectors and materials shift to repairs. Building some slack into a late-summer or fall schedule is wise.",
-      "- **Hidden conditions.** In older homes, corroded drain lines, an undersized panel or ductwork inside soffits can add days. A good walk-through catches most of it before the price is set.",
+      "- **Hidden conditions.** In older homes, corroded drain lines, an undersized panel or ductwork inside soffits can add days. A good walkthrough catches most of it before the price is set.",
       "- **Late selections.** A tile or faucet chosen mid-project that turns out to be backordered stops the job. Sign off on selections before construction.",
       "- **Condo rules.** Limited work hours and elevator or dumpster restrictions stretch the schedule a little.",
       "## How to Keep the Schedule Short",

@@ -28,7 +28,7 @@ const P = {
 export const additionsPage = {
   seoTitle: "Home Additions & Florida Rooms Port Charlotte FL",
   seoDescription:
-    "Florida rooms, room additions, in-law suites and garage conversions in Port Charlotte, North Port & Venice. Lot checked first, engineered, permitted, CRC1327831. Free site visit.",
+    "Florida rooms, room additions, in-law suites and garage conversions in Port Charlotte, North Port & Venice. Lot checked first, engineered and permitted.",
   hero: {
     eyebrow: "Florida rooms · garage conversions · suites",
     title: "Home Additions & Florida Rooms in Port Charlotte",
@@ -43,7 +43,7 @@ export const additionsPage = {
   products: [
     {
       title: "Florida room",
-      text: "A bright, air-conditioned room off the back of the house, often replacing a screened porch or an open lanai, with impact glass on three sides.",
+      text: "A lanai wall rebuilt in block with storm-rated windows and a door: the first step toward a true Florida room.",
       photo: P.lanaiAfter,
       real: true,
       price: "$45,000–$95,000",

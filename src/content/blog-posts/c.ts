@@ -41,11 +41,11 @@ PGT, ES and CWS are three Florida-based manufacturers of hurricane impact window
 This guide is written by a licensed Southwest Florida contractor who installs impact windows from Charlotte County to Lee and Sarasota. We are not paid by any manufacturer to write it, and we do not rank one brand above the others. Product lines change, so before you sign anything, verify the current Florida Product Approval for the exact model on your quote.
 ## Who Are PGT, ES and CWS?
 ### PGT (PGT Innovations)
-PGT is headquartered in North Venice, Florida, and is one of the best-known impact window names in the state. Its WinGuard line is the one most homeowners have heard of, and it is offered in both aluminum and vinyl frames across common styles: single hung, horizontal roller, casement, picture windows and sliding glass doors. PGT also sells non-impact lines, so when you see "PGT" on a quote, check that the product named is actually an impact product. Because the brand is widely distributed, PGT windows reviews online cover a huge range of installers, which makes them hard to read as a verdict on the product itself.
+PGT is headquartered in North Venice, Florida, and is one of the best-known impact window names in the state. Its WinGuard line is the one most homeowners have heard of, and it is offered in both aluminum and vinyl frames across common styles: single-hung, horizontal roller, casement, picture windows and sliding glass doors. PGT also sells non-impact lines, so when you see "PGT" on a quote, check that the product named is actually an impact product. Because the brand is widely distributed, PGT windows reviews online cover a huge range of installers, which makes them hard to read as a verdict on the product itself.
 ### ES Windows
 ES Windows is based in Miami and is known primarily for aluminum impact windows and doors. You will see ES on many high-rise and coastal projects as well as single-family homes, and its lineup leans toward contemporary aluminum styles, large fixed glass and big sliding doors. Homeowners researching ES windows are usually looking at a modern aluminum look or very large openings.
 ### CWS (Custom Window Systems)
-CWS is based in Ocala, Florida, and builds impact and non-impact windows and doors in aluminum and vinyl. CWS windows are common in Central and Southwest Florida residential work, and the company offers the standard residential styles: single hung, horizontal roller, casement, picture and sliding doors.
+CWS is based in Ocala, Florida, and builds impact and non-impact windows and doors in aluminum and vinyl. CWS windows are common in Central and Southwest Florida residential work, and the company offers the standard residential styles: single-hung, horizontal roller, casement, picture and sliding doors.
 ![White-framed replacement window](${U("1572739275114-ec3764ba1477")} "Brand matters less than the rating, sizing and installation of each opening. Stock photo.")
 ## What Actually Differs Between the Brands
 Laminated impact glass from any reputable manufacturer works on the same principle: two or more lites bonded to a tough interlayer that holds the glass in the frame after it cracks. The meaningful differences are in the details:
@@ -72,7 +72,7 @@ We deliberately do not list "strength" or "quality" scores. Every approved produ
 - Popular lines can have long lead times after storm seasons.
 ## How Much Do PGT, ES and CWS Impact Windows Cost?
 In Southwest Florida in 2026, a typical installed impact window runs about **$1,200 to $3,800 per opening**, including the window, permit, removal of the old unit, installation, sealing and finish trim. Where you land in that range depends far more on size, style, frame material and glass options than on the brand name.
-- Small single hung or horizontal roller, white frame: typically toward the lower end.
+- Small single-hung or horizontal roller, white frame: typically toward the lower end.
 - Casements, large picture windows, custom shapes, bronze or black frames, and upgraded glass: typically toward the upper end.
 - Impact sliding glass doors are priced separately, typically $4,500 to $14,000 installed depending on width, height and panel count.
 When you compare quotes, compare like for like: same style, same frame material, same glass, same DP rating and the same scope of work (stucco repair, buck replacement and trim included or not). Two quotes that differ by thousands of dollars often differ in scope, not in brand.
@@ -380,7 +380,7 @@ An eyebrow window has a flatter arch than a half circle, rising gently from the 
 ### Quarter round window
 A quarter round is one quarter of a circle, often used in pairs on either side of a gable or beside other shapes.
 ### Round-top or arch-top window
-A round-top combines a rectangular window with an arched top in one frame or in two units joined together (mulled). The lower part may be a single hung or casement while the arched part is fixed.
+A round-top combines a rectangular window with an arched top in one frame or in two units joined together (mulled). The lower part may be a single-hung or casement while the arched part is fixed.
 ### Full circle and other custom shapes
 Full circles, ellipses, gothic arches and other specialty shapes are possible but are more custom and more expensive.
 ![Spacious room with wood floors and large windows](${U("1783125127015-bf513362480b")} "Large glass areas, including shaped units above, bring in light but also heat. Stock photo.")

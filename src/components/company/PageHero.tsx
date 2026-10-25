@@ -26,6 +26,8 @@ export default function PageHero({
   secondary,
   bullets,
   photo,
+  photoPlacement = "background",
+  photoBadge,
   aside,
   tone = "light",
   children,
@@ -41,14 +43,18 @@ export default function PageHero({
   secondary?: Cta;
   bullets?: readonly string[];
   photo?: Photo;
+  /** dark tone only: "background" (behind a navy overlay) or "side" (right column, fully visible) */
+  photoPlacement?: "background" | "side";
+  /** small label over the column photo, e.g. "Our job photo" */
+  photoBadge?: string;
   /** right column content (form, card) */
   aside?: ReactNode;
   tone?: "light" | "dark";
   children?: ReactNode;
 }) {
   const dark = tone === "dark";
-  const photoBg = dark && photo;
-  const photoCol = !dark && photo && !aside;
+  const photoBg = dark && photo && photoPlacement === "background";
+  const photoCol = photo && !aside && (!dark || photoPlacement === "side");
   const twoCol = Boolean(aside || photoCol);
 
   return (
@@ -59,7 +65,7 @@ export default function PageHero({
     >
       {photoBg ? (
         <>
-          <Image src={photo.src} alt="" fill priority sizes="100vw" className="object-cover" />
+          <Image src={photo.src} alt="" fill priority fetchPriority="high" sizes="100vw" className="object-cover" />
           <div aria-hidden="true" className="absolute inset-0 bg-navy-950/85" />
         </>
       ) : dark ? (
@@ -139,17 +145,27 @@ export default function PageHero({
 
           {aside ? (
             <div>{aside}</div>
-          ) : photoCol ? (
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[14px] bg-sand-200 shadow-card">
+          ) : photoCol && photo ? (
+            <figure
+              className={`relative aspect-[4/3] overflow-hidden rounded-[14px] shadow-card ${
+                dark ? "bg-navy-900 ring-1 ring-white/10" : "bg-sand-200"
+              }`}
+            >
               <Image
                 src={photo.src}
                 alt={photo.alt}
                 fill
                 priority
+                fetchPriority="high"
                 sizes="(min-width: 1280px) 540px, (min-width: 1024px) 45vw, 100vw"
                 className="object-cover"
               />
-            </div>
+              {photoBadge ? (
+                <figcaption className="absolute bottom-3 left-3 rounded-full bg-navy-950/85 px-3 py-1 font-heading text-[11px] font-bold uppercase tracking-[.08em] text-white">
+                  {photoBadge}
+                </figcaption>
+              ) : null}
+            </figure>
           ) : null}
         </div>
       </Container>

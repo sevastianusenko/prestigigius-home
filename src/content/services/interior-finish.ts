@@ -245,7 +245,7 @@ export const interiorFinish: Service[] = [
       factors: [
         "Square footage and ceiling height, including vaulted great rooms",
         "Amount of stucco crack, drywall or wood rot repair",
-        "Coating system: standard acrylic vs. elastomeric",
+        "Coating system: standard acrylic vs elastomeric",
         "Color changes, especially dark to light",
         "Number of doors, windows and trim pieces",
         "Popcorn texture, nicotine or water stains needing special primer",

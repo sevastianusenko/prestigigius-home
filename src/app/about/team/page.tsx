@@ -6,7 +6,8 @@ import DarkHero from "@/components/about/DarkHero";
 import TeamGrid from "@/components/about/TeamGrid";
 import { teamPage } from "@/content/about";
 
-const title = "Our Team | Prestigious Home Improvements";
+import { OG_DEFAULT } from "@/components/og";
+const title = "Our Team";
 const description =
   "Meet the owners and crew behind Prestigious Home Improvements in Port Charlotte: the same faces from your free estimate to the final walkthrough.";
 
@@ -14,7 +15,8 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: "/about/team" },
-  openGraph: { title, description, url: "/about/team", type: "website" },
+  openGraph: {
+    images: [OG_DEFAULT], title, description, url: "/about/team", type: "website" },
 };
 
 export default function TeamPage() {
@@ -26,7 +28,7 @@ export default function TeamPage() {
         lines={[teamPage.title]}
         accentLast={false}
         lead={<p>{teamPage.lead}</p>}
-        primary={{ href: "/free-estimate", label: "Request a Free Estimate" }}
+        primary={{ href: "/free-estimate", label: "Get a Free Estimate" }}
       />
 
       <Section tone="light" eyebrow="Owners & crew" title="Who You Will Actually Meet">

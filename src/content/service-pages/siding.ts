@@ -25,7 +25,7 @@ const P = {
 export const sidingPage = {
   seoTitle: "Siding Contractor Port Charlotte FL | James Hardie & Vinyl",
   seoDescription:
-    "James Hardie fiber cement, vinyl and board-and-batten siding for frame and manufactured homes in Port Charlotte & SWFL. Every opening flashed by window installers. Free estimate.",
+    "James Hardie fiber cement, vinyl and board-and-batten siding for frame and manufactured homes in Port Charlotte & SWFL. Every opening flashed right.",
   hero: {
     eyebrow: "James Hardie · vinyl · board-and-batten",
     title: "Siding Replacement in Port Charlotte & Englewood",
@@ -50,7 +50,7 @@ export const sidingPage = {
     },
     {
       title: "Vinyl siding",
-      text: "Lightweight and low-maintenance, in high-wind rated profiles and heat-resistant colors. It never needs paint.",
+      text: "Lightweight and low-maintenance, in high-wind rated profiles and heat-resistant colors. It does not need paint.",
       photo: P.whiteLap,
       price: "$12,000–$32,000",
       links: [{ label: "House wrap under siding", href: "/resources/house-wrap-under-siding" }],

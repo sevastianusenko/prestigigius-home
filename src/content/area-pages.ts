@@ -50,7 +50,7 @@ export const areaExtras: Record<string, AreaExtra> = {
     jobCities: ["North Port", "Port Charlotte", "Venice"],
   },
   "punta-gorda": {
-    lead: "Right across the Peace River from us: sailboat-access canals in Punta Gorda Isles and Burnt Store Isles, a historic district with early-1900s frame homes, and roofs and windows from the post-Charley rebuild that are now due.",
+    lead: "Right across the Peace River from us: sailboat-access canals in Punta Gorda Isles and Burnt Store Isles, a historic district with early-1900s frame homes, and windows and doors from the post-Charley rebuild that are now due.",
     permits: "City of Punta Gorda, or Charlotte County outside city limits",
     built: "Historic frame homes to 1970s–2000s canal homes",
     neighborhoods: ["Punta Gorda Isles", "Burnt Store Isles", "Burnt Store Lakes", "Historic District", "Seminole Lakes"],

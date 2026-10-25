@@ -3,7 +3,7 @@ import { photos } from "@/content/photos";
 
 export const fallbackPhoto: Photo = {
   id: "fallback-hero",
-  src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+  src: "/images/stock/hero-01.jpg",
   alt: "Renovated home exterior",
   category: "hero",
   width: 1600,

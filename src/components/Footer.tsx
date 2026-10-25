@@ -1,25 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { nav, site } from "@/content/site";
+import { areas } from "@/content/areas";
 import Container from "./ui/Container";
 
-const slugify = (s: string) =>
-  s
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
-
 const companyLinks = [
-  { label: "About us", href: "/about" },
-  { label: "Our team", href: "/about/team" },
-  { label: "Our process", href: "/process" },
+  { label: "About Us", href: "/about" },
+  { label: "Our Team", href: "/about/team" },
+  { label: "Our Process", href: "/process" },
   { label: "Projects", href: "/projects" },
   { label: "Reviews", href: "/reviews" },
   { label: "Resources", href: "/resources" },
   { label: "Financing", href: "/financing" },
   { label: "Warranty", href: "/warranty" },
   { label: "Careers", href: "/careers" },
-  { label: "Refer someone", href: "/referral" },
+  { label: "Refer Someone", href: "/referral" },
   { label: "Estimate Builder", href: "/estimate-builder" },
   { label: "Contact", href: "/contact" },
 ]
@@ -105,7 +100,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h2 className={heading}>Services</h2>
+            <p className={heading}>Services</p>
             <ul className="space-y-2.5">
               {nav.services.map((s) => (
                 <li key={s.href}>
@@ -119,7 +114,7 @@ export default function Footer() {
 
           {/* Company links */}
           <div>
-            <h2 className={heading}>Company</h2>
+            <p className={heading}>Company</p>
             <ul className="space-y-2.5">
               {companyLinks.map((l) => (
                 <li key={l.href}>
@@ -133,12 +128,12 @@ export default function Footer() {
 
           {/* Areas */}
           <div>
-            <h2 className={heading}>Service areas</h2>
+            <p className={heading}>Service Areas</p>
             <ul className="space-y-2.5">
-              {site.serviceAreas.map((a) => (
-                <li key={a}>
-                  <Link href={`/service-areas/${slugify(a)}`} className={link}>
-                    {a}, FL
+              {areas.map((a) => (
+                <li key={a.slug}>
+                  <Link href={`/service-areas/${a.slug}`} className={link}>
+                    {a.name}, FL
                   </Link>
                 </li>
               ))}

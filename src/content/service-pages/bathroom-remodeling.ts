@@ -27,7 +27,7 @@ const P = {
 export const bathroomPage = {
   seoTitle: "Bathroom Remodeling Port Charlotte FL | Walk-In Showers",
   seoDescription:
-    "Walk-in showers, tub-to-shower conversions, primary baths and curbless senior bathrooms in Port Charlotte & Sarasota. Flood-tested waterproofing, fixed price. Free estimate.",
+    "Walk-in showers, tub-to-shower conversions, primary baths and curbless senior baths in Port Charlotte & Sarasota. Flood-tested waterproofing, fixed price.",
   hero: {
     eyebrow: "Walk-in showers · tub-to-shower · primary baths",
     title: "Bathroom Remodeling in Port Charlotte & Sarasota",
@@ -52,7 +52,7 @@ export const bathroomPage = {
     },
     {
       title: "Tub-to-shower conversion",
-      text: "Our most requested bathroom job. The tub goes, the drain is converted, and a tiled walk-in shower with a low curb or no curb takes its place.",
+      text: "The bathroom job homeowners ask about most. The tub goes, the drain is converted, and a tiled walk-in shower with a low curb or no curb takes its place.",
       photo: P.deepTub,
       price: "$12,000–$22,000",
       links: [

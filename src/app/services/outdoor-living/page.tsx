@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import HeroRatings from "@/components/service-pages/HeroRatings";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TrustStrip from "@/components/TrustStrip";
 import CtaBand from "@/components/CtaBand";
@@ -72,7 +73,7 @@ export default function OutdoorLivingPage() {
                   href={`/free-estimate?service=${SLUG}`}
                   className="inline-flex min-h-12 items-center justify-center rounded-full btn-gold px-7 font-heading text-[15px] font-bold"
                 >
-                  Book a Free Backyard Consultation
+                  Get a Free Estimate
                 </Link>
                 <a
                   href={site.phoneHref}
@@ -81,17 +82,8 @@ export default function OutdoorLivingPage() {
                   Call {site.phone}
                 </a>
               </div>
-              <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/15 pt-6">
-                {C.hero.proof.map((p) => (
-                  <div key={p.label}>
-                    <dt className="sr-only">{p.label}</dt>
-                    <dd>
-                      <span className="block font-heading text-3xl font-extrabold text-amber-500">{p.value}</span>
-                      <span className="mt-1 block text-sm text-navy-100/80">{p.label}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <p className="mt-3 text-sm text-navy-100/75">In-home visit, written price within a week.</p>
+              <HeroRatings className="mt-8" />
             </div>
 
             <div className="grid grid-cols-6 grid-rows-[repeat(6,minmax(0,1fr))] gap-3 sm:gap-4" style={{ aspectRatio: "1 / 1" }}>
@@ -101,12 +93,20 @@ export default function OutdoorLivingPage() {
                 { p: C.hero.photos[2], cls: "col-span-2 row-span-3" },
               ].map(({ p, cls }, i) => (
                 <figure key={p.id} className={`relative overflow-hidden rounded-[16px] bg-navy-900 ${cls}`}>
-                  <Image src={p.src} alt={p.alt} fill priority={i === 0} sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    priority={i === 0}
+                    fetchPriority={i === 0 ? "high" : undefined}
+                    sizes={i === 0 ? "(min-width: 1280px) 370px, (min-width: 1024px) 29vw, 62vw" : "(min-width: 1280px) 180px, (min-width: 1024px) 14vw, 31vw"}
+                    className="object-cover"
+                  />
                 </figure>
               ))}
-              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.06] p-4 ring-1 ring-white/10 sm:p-5">
-                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-amber-500">Illustrative photos</p>
-                <p className="mt-2 text-sm leading-snug text-navy-100 sm:text-[15px]">
+              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.04] p-4 ring-1 ring-white/10 sm:p-5">
+                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-navy-100/60">Illustrative photos</p>
+                <p className="mt-2 text-sm leading-snug text-navy-100/80 sm:text-[15px]">
                   These show the kind of outdoor spaces we build. Two of our own indoor-outdoor jobs are further down the page.
                 </p>
               </div>
@@ -120,7 +120,7 @@ export default function OutdoorLivingPage() {
       {/* 2. WHAT WE BUILD */}
       <section className="section-y bg-sand-50" aria-labelledby="products-heading">
         <Container>
-          <BandHead
+          <BandHead id="products-heading"
             eyebrow="What we build"
             title="Kitchens, Pavers, Pergolas and Patio Covers"
             intro="Built as one project or in phases, with the first phase designed so the next one fits without rework."
@@ -148,7 +148,7 @@ export default function OutdoorLivingPage() {
       {/* 3. GULF COAST — dark band */}
       <section className="section-y bg-navy-900 text-white" aria-labelledby="gulf-heading">
         <Container>
-          <BandHead
+          <BandHead id="gulf-heading"
             dark
             eyebrow="Built for the conditions"
             title="Gulf Coast Wind, Rain and Sun Are Hard on a Backyard"
@@ -169,7 +169,7 @@ export default function OutdoorLivingPage() {
       {/* 4. ESTIMATOR */}
       <section className="section-y bg-sand-100" aria-labelledby="estimate-heading">
         <Container>
-          <BandHead
+          <BandHead id="estimate-heading"
             eyebrow="Ballpark it"
             title="Build Your Backyard, See the Range"
             intro="Combine pavers, a cover and a kitchen to see a typical 2026 range for the whole project."
@@ -182,7 +182,7 @@ export default function OutdoorLivingPage() {
       {/* 6. HOW MUCH COVER */}
       <section className="section-y bg-white" aria-labelledby="options-heading">
         <Container>
-          <BandHead eyebrow="How much cover?" title={service.optionsTitle ?? "Open Shade, a Solid Roof, or Open Sky?"} intro={service.optionsIntro} className="mb-10" />
+          <BandHead id="options-heading" eyebrow="How much cover?" title={service.optionsTitle ?? "Open Shade, a Solid Roof, or Open Sky?"} intro={service.optionsIntro} className="mb-10" />
           <ul className="grid gap-5 md:grid-cols-3">
             {(service.options ?? []).map((o) => (
               <li key={o.title} className="flex flex-col rounded-[16px] border border-sand-200 bg-sand-50 p-6 md:p-7">
@@ -207,7 +207,7 @@ export default function OutdoorLivingPage() {
       {/* 7. INDOOR-OUTDOOR — real jobs */}
       <section className="section-y bg-sand-50" aria-labelledby="connect-heading">
         <Container>
-          <BandHead eyebrow="Our window & door crew" title="The Opening Between the House and the Yard" intro={C.connection.intro} className="mb-10" />
+          <BandHead id="connect-heading" eyebrow="Our window & door crew" title="The Opening Between the House and the Yard" intro={C.connection.intro} className="mb-10" />
           <ul className="grid gap-6 md:grid-cols-2">
             {C.connection.jobs.map((j) => (
               <li key={j.href}>
@@ -240,7 +240,7 @@ export default function OutdoorLivingPage() {
       {/* 7. PRICES */}
       <section className="section-y bg-sand-50" aria-labelledby="scopes-heading">
         <Container>
-          <BandHead
+          <BandHead id="scopes-heading"
             eyebrow="Which project is yours?"
             title="Typical Outdoor Projects and What They Cost"
             intro="Typical 2026 Charlotte, Sarasota and Lee County ranges. Gas, water and electrical runs are measured and priced in your estimate."
@@ -261,7 +261,7 @@ export default function OutdoorLivingPage() {
       {/* 8. LOCAL NOTES */}
       <section className="section-y bg-white" aria-labelledby="rules-heading">
         <Container>
-          <BandHead eyebrow="Southwest Florida" title="Permits, HOA Setbacks and Hurricane Season" className="mb-10" />
+          <BandHead id="rules-heading" eyebrow="Southwest Florida" title="Permits, HOA Setbacks and Hurricane Season" className="mb-10" />
           <ul className="grid gap-5 lg:grid-cols-3">
             {service.localNotes.map((n, i) => (
               <li key={n.title} className="rounded-[16px] border border-sand-200 bg-sand-50 p-6 md:p-7">
@@ -281,7 +281,7 @@ export default function OutdoorLivingPage() {
       {/* 9. LEARN MORE */}
       <section className="section-y bg-sand-50" aria-labelledby="learn-heading">
         <Container>
-          <BandHead eyebrow="Opening up to the yard" title="More From Our Guides" className="mb-8" />
+          <BandHead id="learn-heading" eyebrow="Opening up to the yard" title="More From Our Guides" className="mb-8" />
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {learn.map((p) => (
               <li key={p.slug}>
@@ -301,7 +301,7 @@ export default function OutdoorLivingPage() {
       <ServiceAreasBand />
       <CtaBand
         title="Plan the Backyard You Will Actually Use"
-        text="We look at afternoon sun, drainage, setbacks and how you use the yard, then give you a written, itemized estimate. Free, no pressure."
+        text="We look at afternoon sun, drainage, setbacks and how you use the yard, then give you a written, itemized estimate."
       />
     </>
   );

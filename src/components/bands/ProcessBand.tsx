@@ -26,7 +26,7 @@ export default function ProcessBand({
         <ProcessSteps steps={steps} />
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Button href="/free-estimate" size="lg">
-            Request a Free Estimate
+            Get a Free Estimate
           </Button>
           <Button href={site.phoneHref} size="lg" variant="ghost">
             Call {site.phone}

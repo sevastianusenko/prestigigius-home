@@ -102,3 +102,12 @@ Client photos arrive later. Until then use real Unsplash/Pexels images (verified
 ## Ownership rules (parallel agents)
 
 Each agent writes only the files listed in its brief. Never edit `types.ts`, `site.ts`, `BRIEF.md`. If you need a shared component that does not exist yet, import it anyway per the contract above; it will exist at build time. Do not run `npm install`. Do not start dev servers. Run `npx tsc --noEmit -p .` on your own files only if `node_modules` exists.
+
+## Site-wide rules added 2026-10-24 (after the audit)
+- One primary CTA label everywhere: **"Get a Free Estimate"** (header may use the short "Free Estimate"; city pages "Get a Free Estimate in {City}"; form submit "Get my free estimate"). Service heroes add the line "In-home visit, written price within a week."
+- Service heroes show `HeroRatings` (Google / Yelp / BBB from `site.ratings`) instead of word-stats; `hero.proof` in `service-pages/*.ts` is no longer rendered.
+- Mobile: `MobileCtaBar` (Call + Get a Free Estimate) is mounted in `layout.tsx` and appears after 500px of scroll, except on /free-estimate and /contact.
+- Titles: `layout.tsx` template is `%s | Prestigious Home Improvements`; a page whose own title already carries the brand or is long must use `title: { absolute }`.
+- Facts with one source of truth: prices and durations live in `src/content/services/*.ts`; articles and FAQs must match them. Written estimate "usually within a week of the visit"; callback "within one business day"; impact lead time "8–14 weeks"; install "1–4 working days"; service area phrase `site.serviceSpan`; 4 counties incl. Manatee; 11 cities.
+- Performance: `HeroWall` marks the first two rows of the two always-visible columns as LCP candidates (`priority`); keep hero photos in `public/images/stock/` or `public/images/client/`, never a remote host. Open Sans loads the `latin` + `symbols` subsets so text arrows and check marks (→ ✓ ★) do not pull a late, un-preloaded font file; do not add other symbol ranges without checking the font request waterfall.
+- Honesty: no person is tied to the license or to pulling permits; articles are bylined to the team; chronology = installers for others before 2022 → incorporated Oct 2022 → subcontract installs until early 2025 → own CRC license 2025. Stock photos are self-hosted in `public/images/stock/` and always labelled "Illustrative photo"; people in stock photos are not used next to the owners' names.

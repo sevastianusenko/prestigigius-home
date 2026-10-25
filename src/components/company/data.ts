@@ -30,7 +30,7 @@ export const processStages: Stage[] = [
   {
     n: "02",
     title: "Written, itemized scope",
-    when: "Within about a week of the visit",
+    when: "Usually within a week of the visit",
     we: [
       "Send a line-by-line estimate: labor, materials, allowances, permits, cleanup",
       "Mark every allowance (tile, fixtures, cabinets) so you know what is a placeholder",
@@ -274,13 +274,13 @@ export const warrantyExclusions: string[] = [
 /* ------------------------- /contact, /free-estimate ------------------------- */
 
 export const nextSteps = [
-  { n: "01", title: "We call you back", text: "Usually the same business day. We ask a few questions and pick a visit time that suits your schedule." },
+  { n: "01", title: "We call you back", text: "Within one business day. We ask a few questions and pick a visit time that suits your schedule." },
   { n: "02", title: "In-home visit", text: "About an hour. We walk the house, measure, and talk through options and budget." },
   { n: "03", title: "Written estimate", text: "An itemized price in your inbox, usually within a week. No pressure, no fee." },
 ];
 
 export const estimateBenefits: string[] = [
-  "Free, no-obligation visit — anywhere from Englewood to Cape Coral",
+  "Free, no-obligation visit, anywhere from Sarasota and Lakewood Ranch down to Fort Myers and Bonita Springs",
   "Written, itemized estimate: labor, materials, allowances and permits",
   "Fixed price good for 90 days",
   "Licensed Florida contractor — we pull every permit",

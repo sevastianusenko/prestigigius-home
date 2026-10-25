@@ -35,7 +35,7 @@ export type BuilderOption = { label: string; low: number; high: number };
 export const outdoorPage = {
   seoTitle: "Outdoor Kitchens, Pavers & Patio Covers Port Charlotte FL",
   seoDescription:
-    "Summer kitchens, paver patios and pool decks, pergolas and insulated patio covers in Port Charlotte & SWFL. Engineered for wind, permitted, one contract. Free consultation.",
+    "Summer kitchens, paver patios and pool decks, pergolas and insulated patio covers in Port Charlotte & SWFL. Engineered for wind, permitted, one contract.",
   hero: {
     eyebrow: "Summer kitchens · pavers · pergolas · patio covers",
     title: "Outdoor Living in Port Charlotte & Cape Coral",

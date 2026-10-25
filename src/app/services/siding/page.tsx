@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
+import HeroRatings from "@/components/service-pages/HeroRatings";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import TrustStrip from "@/components/TrustStrip";
 import CtaBand from "@/components/CtaBand";
@@ -74,7 +75,7 @@ export default function SidingPage() {
                   href={`/free-estimate?service=${SLUG}`}
                   className="inline-flex min-h-12 items-center justify-center rounded-full btn-gold px-7 font-heading text-[15px] font-bold"
                 >
-                  Get a Free Siding Estimate
+                  Get a Free Estimate
                 </Link>
                 <a
                   href={site.phoneHref}
@@ -83,17 +84,8 @@ export default function SidingPage() {
                   Call {site.phone}
                 </a>
               </div>
-              <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-white/15 pt-6">
-                {C.hero.proof.map((p) => (
-                  <div key={p.label}>
-                    <dt className="sr-only">{p.label}</dt>
-                    <dd>
-                      <span className="block font-heading text-2xl font-extrabold text-amber-500 sm:text-3xl">{p.value}</span>
-                      <span className="mt-1 block text-sm text-navy-100/80">{p.label}</span>
-                    </dd>
-                  </div>
-                ))}
-              </dl>
+              <p className="mt-3 text-sm text-navy-100/75">In-home visit, written price within a week.</p>
+              <HeroRatings className="mt-8" />
             </div>
 
             <div className="grid grid-cols-6 grid-rows-[repeat(6,minmax(0,1fr))] gap-3 sm:gap-4" style={{ aspectRatio: "1 / 1" }}>
@@ -103,12 +95,20 @@ export default function SidingPage() {
                 { p: C.hero.photos[2], cls: "col-span-2 row-span-3" },
               ].map(({ p, cls }, i) => (
                 <figure key={p.id} className={`relative overflow-hidden rounded-[16px] bg-navy-900 ${cls}`}>
-                  <Image src={p.src} alt={p.alt} fill priority={i === 0} sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    priority={i === 0}
+                    fetchPriority={i === 0 ? "high" : undefined}
+                    sizes={i === 0 ? "(min-width: 1280px) 370px, (min-width: 1024px) 29vw, 62vw" : "(min-width: 1280px) 180px, (min-width: 1024px) 14vw, 31vw"}
+                    className="object-cover"
+                  />
                 </figure>
               ))}
-              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.06] p-4 ring-1 ring-white/10 sm:p-5">
-                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-amber-500">Illustrative photos</p>
-                <p className="mt-2 text-sm leading-snug text-navy-100 sm:text-[15px]">
+              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.04] p-4 ring-1 ring-white/10 sm:p-5">
+                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-navy-100/60">Illustrative photos</p>
+                <p className="mt-2 text-sm leading-snug text-navy-100/80 sm:text-[15px]">
                   These show the materials we install. Siding is one of the jobs our Google reviewers mention by name.
                 </p>
               </div>
@@ -122,7 +122,7 @@ export default function SidingPage() {
       {/* 2. MATERIALS */}
       <section className="section-y bg-sand-50" aria-labelledby="products-heading">
         <Container>
-          <BandHead
+          <BandHead id="products-heading"
             eyebrow="What we install"
             title="Siding for Frame Homes, Additions and Manufactured Homes"
             intro="Every product carries a Florida Product Approval for your wind zone. The right one depends on the house, the budget and what your HOA or park allows."
@@ -159,7 +159,7 @@ export default function SidingPage() {
       {/* 3. WHERE SIDING FAILS — dark band */}
       <section className="section-y bg-navy-900 text-white" aria-labelledby="fail-heading">
         <Container>
-          <BandHead
+          <BandHead id="fail-heading"
             dark
             eyebrow="Why siding fails"
             title="The Leak Is Almost Never in the Siding"
@@ -180,7 +180,7 @@ export default function SidingPage() {
       {/* 4. BEHIND THE SIDING — schematic */}
       <section className="section-y bg-sand-100" aria-labelledby="layers-heading">
         <Container>
-          <BandHead eyebrow="How we build the wall" title="What Goes Behind the Siding, in Order" intro={C.layersIntro} className="mb-10" />
+          <BandHead id="layers-heading" eyebrow="How we build the wall" title="What Goes Behind the Siding, in Order" intro={C.layersIntro} className="mb-10" />
           <WallLayers layers={C.layers} label="Siding wall layers" inside="Inside the wall" outside="Outside" />
         </Container>
       </section>
@@ -188,7 +188,7 @@ export default function SidingPage() {
       {/* 5. MATERIAL CHOICE + REAL REVIEW */}
       <section className="section-y bg-white" aria-labelledby="options-heading">
         <Container>
-          <BandHead eyebrow="Choosing a material" title={service.optionsTitle ?? "Fiber Cement, Vinyl, or Board-and-Batten?"} intro={service.optionsIntro} className="mb-10" />
+          <BandHead id="options-heading" eyebrow="Choosing a material" title={service.optionsTitle ?? "Fiber Cement, Vinyl, or Board-and-Batten?"} intro={service.optionsIntro} className="mb-10" />
           <ul className="grid gap-5 md:grid-cols-3">
             {(service.options ?? []).map((o) => (
               <li key={o.title} className="flex flex-col rounded-[16px] border border-sand-200 bg-sand-50 p-6 md:p-7">
@@ -222,7 +222,7 @@ export default function SidingPage() {
       {/* 6. SIGNS */}
       <section className="section-y bg-sand-50" aria-labelledby="signs-heading">
         <Container>
-          <BandHead eyebrow="Know the signs" title={service.signsTitle ?? "Signs Your Siding Is Due for Replacement"} className="mb-10" />
+          <BandHead id="signs-heading" eyebrow="Know the signs" title={service.signsTitle ?? "Signs Your Siding Is Due for Replacement"} className="mb-10" />
           <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {(service.signs ?? []).map((s, i) => (
               <li key={s.title} className="flex gap-4 rounded-[16px] border border-sand-200 bg-white p-6 shadow-card">
@@ -247,7 +247,7 @@ export default function SidingPage() {
       {/* 7. PRICES */}
       <section className="section-y bg-sand-50" aria-labelledby="scopes-heading">
         <Container>
-          <BandHead
+          <BandHead id="scopes-heading"
             eyebrow="Which project is yours?"
             title="Typical Siding Projects and What They Cost"
             intro="Typical 2026 prices for a 1,600–2,200 sq ft SWFL frame home. Hidden sheathing repair is priced per sheet in the contract."
@@ -268,7 +268,7 @@ export default function SidingPage() {
       {/* 8. FLORIDA RULES */}
       <section className="section-y bg-white" aria-labelledby="rules-heading">
         <Container>
-          <BandHead eyebrow="Southwest Florida" title="Wind Ratings, Termites and Park Rules" className="mb-10" />
+          <BandHead id="rules-heading" eyebrow="Southwest Florida" title="Wind Ratings, Termites and Park Rules" className="mb-10" />
           <ul className="grid gap-5 lg:grid-cols-3">
             {service.localNotes.map((n, i) => (
               <li key={n.title} className="rounded-[16px] border border-sand-200 bg-sand-50 p-6 md:p-7">
@@ -288,7 +288,7 @@ export default function SidingPage() {
       {/* 9. LEARN MORE */}
       <section className="section-y bg-sand-50" aria-labelledby="learn-heading">
         <Container>
-          <BandHead eyebrow="Before you choose" title="Straight Answers From Our Siding Guides" className="mb-8" />
+          <BandHead id="learn-heading" eyebrow="Before you choose" title="Straight Answers From Our Siding Guides" className="mb-8" />
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {learn.map((p) => (
               <li key={p.slug}>
@@ -308,7 +308,7 @@ export default function SidingPage() {
       <ServiceAreasBand />
       <CtaBand
         title="Find Out What Is Behind Your Siding"
-        text="We measure the house, pull a few test pieces to check the sheathing, and bring samples to hold up on your wall. Free, no pressure."
+        text="We measure the house, pull a few test pieces to check the sheathing, and bring samples to hold up on your wall."
       />
     </>
   );

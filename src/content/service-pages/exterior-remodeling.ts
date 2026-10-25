@@ -37,7 +37,7 @@ export type Sequence = { label: string; result: string; tone: "good" | "bad"; st
 export const exteriorPage = {
   seoTitle: "Stucco Repair & Exterior Remodeling Port Charlotte FL",
   seoDescription:
-    "Stucco crack repair, re-texture, soffit and fascia, entry makeovers and curb appeal remodels in Port Charlotte & SWFL. We find the water first. Licensed, free estimate.",
+    "Stucco crack repair, re-texture, soffit and fascia, entry makeovers and curb appeal remodels in Port Charlotte & SWFL. We find the water first.",
   hero: {
     eyebrow: "Stucco · soffit & fascia · entries · curb appeal",
     title: "Stucco Repair & Exterior Remodeling in Port Charlotte",
