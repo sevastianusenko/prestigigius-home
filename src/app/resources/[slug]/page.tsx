@@ -279,7 +279,7 @@ export default async function ResourcePage({ params }: { params: Promise<Params>
 
               <div className="rounded-[14px] border border-sand-200 bg-white p-6 shadow-card">
                 <p className="text-sm text-ink-500">
-                  <span aria-hidden="true" className="text-amber-500">
+                  <span aria-hidden="true" className="text-champagne">
                     ★★★★★
                   </span>{" "}
                   {site.ratings.google.score} on Google · BBB {site.ratings.bbb.grade}

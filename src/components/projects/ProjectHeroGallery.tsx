@@ -61,7 +61,7 @@ export default function ProjectHeroGallery({
                 sizes="(min-width: 1024px) 1024px, 100vw"
                 className="object-contain"
               />
-              <span className="absolute left-4 top-4 rounded-full bg-navy-950/80 px-3 py-1 text-xs font-bold uppercase tracking-[.14em] text-white">
+              <span className="absolute left-4 top-4 rounded-full glass-chip px-3 py-1 text-xs font-bold uppercase tracking-[.14em] text-white">
                 {view.tag}
               </span>
               {total > 1 ? (

@@ -42,7 +42,7 @@ export default function CtaBand({
               ))}
             </ul>
           </div>
-          <div className="rounded-[14px] border border-white/10 bg-white/[.04] p-6 md:p-8">
+          <div className="rounded-[14px] border border-white/10 glass p-6 md:p-8">
             <p className="font-heading text-[13px] font-bold uppercase tracking-[.14em] text-amber-100">Prefer to call?</p>
             <a
               href={site.phoneHref}

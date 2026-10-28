@@ -96,6 +96,7 @@ export function localBusinessSchema(): JsonLd {
     sameAs: [
       site.social.facebook,
       site.social.instagram,
+      site.social.nextdoor,
       site.ratings.yelp.href,
       site.ratings.bbb.href,
     ],

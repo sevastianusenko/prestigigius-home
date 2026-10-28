@@ -12,7 +12,7 @@ Commands: `npm run dev`, `npm run build`. Build must pass with zero TypeScript e
 
 ## Design system (foundation agent implements; everyone uses)
 
-Palette — black, white and true neutral grays (no warm/beige/brown tones), with jewelry gold as a sparing accent that pairs with the gold-and-silver logo (`public/images/logo.png`, `logo-light.png` for dark backgrounds). Changed 2026-10-23 at the client's request ("no brown, premium black-white-gray"). Token NAMES are historical (navy/amber/sand/sea) — values below.
+Palette — black, white and true neutral grays (no warm/beige/brown tones), fully monochrome since 2026-10-27 (the client found the gold accent cheap-looking): the only accent is platinum/silver, no hue anywhere. Logo: `public/images/logo.png`, `logo-light.png` for dark backgrounds. Changed 2026-10-23 ("no brown, premium black-white-gray") and 2026-10-27 (gold removed). Token NAMES are historical (navy/amber/sand/sea) — values below.
 
 | Token | Value | Use |
 |---|---|---|
@@ -20,18 +20,18 @@ Palette — black, white and true neutral grays (no warm/beige/brown tones), wit
 | `--color-navy-900` | `#141414` | headings, primary text |
 | `--color-navy-700` | `#3D3D3D` | secondary dark, hover |
 | `--color-navy-100` / `-50` | `#E6E6E6` / `#F4F4F4` | light gray tints |
-| `--color-amber-500` | `#C9A44C` | THE accent (gold): eyebrows on dark, numerals, check marks, markers, featured frames |
+| `--color-amber-500` | `var(--accent-silver)`: `#8A8A8A` on light, `#C4C4C4` inside `bg-navy-950/900` | THE accent (silver): eyebrows on dark, numerals, check marks, markers, featured frames |
 | `--color-amber-600` | `#6B6B6B` | mid gray: eyebrows and hover on light (no gold text on white) |
 | `--color-amber-100` | `#F1F1F1` | light gray chips and selection |
-| `--color-sea-600` | `#111111` | links (black, gold underline) |
+| `--color-sea-600` | `#111111` | links (black, silver underline) |
 | `--color-sand-50/100/200` | `#F7F7F7` / `#EFEFEF` / `#E3E3E3` | page bg, alt sections, borders |
 | `--color-ink-500` / `-900` | `#666666` / `#141414` | secondary / body text |
 
-Sheen utilities (globals.css): `btn-gold` — metallic gold gradient CTA, main button on dark sections; `btn-black` — black CTA with top highlight and gold hairline, main button on light sections (also `Button` variant `primary`; `variant="gold"` on dark); `frame-gold` — thin gold gradient frame for a featured card; `text-gold` — gold sheen on large numerals. Gold stays an accent: never as a flat fill for whole sections.
+Sheen utilities (globals.css): `btn-gold` — platinum CTA with a soft sheen (name kept), main button on dark sections; `btn-glass` — liquid-glass secondary button on dark/photo backgrounds (`variant="outline-white"`); `btn-black` — black CTA with top highlight and a faint light hairline, main button on light sections (also `Button` variant `primary`; `variant="gold"` on dark); `frame-gold` — thin platinum gradient frame for a featured card; `text-gold` — platinum sheen on large numerals (`--gold-*` vars now hold platinum values). No gold fills or gold text blocks: the client rejected the bright gold. One exception since 2026-10-27, used very rarely: `--color-champagne` `#BFA06A` (`text-champagne`) for rating stars, the nav hover line, the `frame-gold` featured-card frame and the `btn-black` hairline. Do not add it anywhere else.
 
 Fonts (same as hybridrenovations.com): headings **Montserrat** 600/700/800, body **Open Sans** 400/600/700, via next/font as `--font-heading` / `--font-body`.
 
-Shape: radius 12px cards / 999px pills; shadows soft (`0 10px 30px -12px rgb(16 42 67 / .25)`); container 1200px, section padding `py-20 md:py-28`; eyebrow = uppercase 13px tracking-[.14em], gray on light, gold on dark.
+Shape: radius 12px cards / 999px pills; shadows soft (`0 10px 30px -12px rgb(16 42 67 / .25)`); container 1200px, section padding `py-20 md:py-28`; eyebrow = uppercase 13px tracking-[.14em], gray on light, silver on dark.
 
 Tone: premium but plain-spoken contractor. Short sentences. Real numbers. No "we are passionate". American English. Headlines benefit-led ("A kitchen you can actually plan around").
 

@@ -18,7 +18,7 @@ export const exteriorCore: Service[] = [
       "Impact windows, sliding glass doors and entry doors installed by the crew that started out doing nothing else.",
     seoTitle: "Impact Windows & Doors Port Charlotte FL | Prestigious",
     seoDescription:
-      "Impact windows and impact sliding glass doors in Port Charlotte and SWFL. PGT, CWS, ES Windows. Permitted, NOA-approved, insurance-ready. Free estimate.",
+      "Impact windows and sliding glass doors in Port Charlotte and SWFL from PGT, Custom Window Systems and Eastern. Permitted, NOA-approved, insurance-ready.",
     keywords: [
       "impact windows port charlotte",
       "impact sliding glass doors",
@@ -65,7 +65,7 @@ export const exteriorCore: Service[] = [
         summary:
           "Replace every window in the house with impact-rated units in one permit and one install.",
         changes: [
-          { label: "Product", detail: "PGT WinGuard, CWS or ES Windows in aluminum or vinyl frames" },
+          { label: "Product", detail: "PGT, Custom Window Systems or Eastern in aluminum or vinyl frames" },
           { label: "Glass", detail: "Laminated impact glass with Low-E and optional gray or bronze tint" },
           { label: "Install", detail: "Old units out, bucks repaired, new units anchored to the approved pattern" },
           { label: "Finish", detail: "Interior trim, exterior stucco patch and sealant at every opening" },
@@ -132,7 +132,7 @@ export const exteriorCore: Service[] = [
     included: [
       "In-home measurement of every opening by an installer, not a salesperson",
       "Written, fixed-price quote listing each window and door with its size and rating",
-      "Product choice from PGT, CWS and ES Windows with Florida Product Approval or Miami-Dade NOA",
+      "Product choice from PGT, Custom Window Systems and Eastern Architectural Systems with Florida Product Approval or Miami-Dade NOA",
       "Permit, engineering where needed, and all inspections",
       "Removal and disposal of old windows, doors and shutter hardware you no longer need",
       "Buck and framing repair at openings, called out in writing before we start",
@@ -181,7 +181,7 @@ export const exteriorCore: Service[] = [
       },
       {
         q: "Which brands do you install?",
-        a: "Mostly PGT, CWS and ES Windows. All three are built in Florida, carry Florida Product Approval, and have models with Miami-Dade NOAs. We recommend based on your openings, budget and lead time, not on which brand pays the best commission.",
+        a: "PGT, Custom Window Systems (CWS) and Eastern Architectural Systems. All three make aluminum and vinyl impact products with Florida Product Approval, and many models carry Miami-Dade NOAs. We recommend based on your openings, budget and lead time, not on which brand pays the best commission.",
       },
       {
         q: "Are impact windows worth it compared with hurricane shutters?",
@@ -472,7 +472,7 @@ export const exteriorCore: Service[] = [
           "Turn a screened porch under the main roof into a bright, air-conditioned room with impact glass.",
         changes: [
           { label: "Walls", detail: "Screen replaced with framed knee walls or full impact glass" },
-          { label: "Openings", detail: "Impact sliders and windows from PGT, CWS or ES Windows" },
+          { label: "Openings", detail: "Impact sliders and windows from PGT, CWS or Eastern" },
           { label: "Comfort", detail: "Insulated ceiling, mini-split or ducted AC, outlets and lighting" },
           { label: "Floor", detail: "Slab leveled and finished with tile or luxury vinyl" },
           { label: "Code", detail: "Engineering, energy calcs, permit and inspections" },

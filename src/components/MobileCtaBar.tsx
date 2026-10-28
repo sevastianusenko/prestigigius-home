@@ -47,7 +47,7 @@ export default function MobileCtaBar() {
       {/* Spacer so the bar never covers the end of the footer on phones */}
       <div aria-hidden="true" className="h-[76px] bg-navy-950 md:hidden" />
       <div
-        className={`fixed inset-x-0 bottom-0 z-40 border-t border-navy-900/10 bg-white/95 px-3 pt-2.5 shadow-[0_-8px_24px_-12px_rgb(0_0_0/.25)] backdrop-blur-md transition-transform duration-300 motion-reduce:transition-none md:hidden ${
+        className={`fixed inset-x-0 bottom-0 z-40 glass-light border-t border-navy-900/10 px-3 pt-2.5 shadow-[0_-8px_24px_-12px_rgb(0_0_0/.25)] transition-transform duration-300 motion-reduce:transition-none md:hidden ${
           visible ? "translate-y-0" : "pointer-events-none translate-y-full"
         }`}
         style={{ paddingBottom: "calc(0.625rem + env(safe-area-inset-bottom))" }}

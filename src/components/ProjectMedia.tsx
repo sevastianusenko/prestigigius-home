@@ -33,7 +33,7 @@ export function IllustrativeBadge({ className = "absolute left-3 top-3" }: { cla
 export function RealJobBadge({ className = "absolute left-3 top-3" }: { className?: string }) {
   return (
     <span
-      className={`${className} rounded-full bg-navy-950/85 px-3 py-1 font-heading text-[11px] font-bold uppercase tracking-[.08em] text-white`}
+      className={`${className} rounded-full glass-chip px-3 py-1 font-heading text-[11px] font-bold uppercase tracking-[.08em] text-white`}
     >
       Our job photo
     </span>

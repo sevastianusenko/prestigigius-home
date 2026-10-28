@@ -11,7 +11,7 @@ import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AreaMap from "@/components/areas/AreaMap";
 import MapEmbed from "@/components/company/MapEmbed";
-import { ArrowIcon, CarIcon, PinIcon } from "@/components/company/icons";
+import { ArrowIcon, PinIcon } from "@/components/company/icons";
 import { AREA_MAP_EMBED_URL } from "@/components/company/utils";
 import { areas } from "@/content/areas";
 import { generalFaqs } from "@/content/faqs";
@@ -144,10 +144,6 @@ export default function ServiceAreasPage() {
                       <ArrowIcon className="h-4 w-4" />
                     </span>
                   </div>
-                  <p className="mt-3 flex items-center gap-1.5 text-sm font-semibold text-sea-600">
-                    <CarIcon className="h-4 w-4" />
-                    {a.driveTime}
-                  </p>
                   {popular.length > 0 && (
                     <ul className="mt-5 flex flex-wrap gap-2 border-t border-sand-200 pt-5">
                       {popular.map((s) => (

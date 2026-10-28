@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Schema from "@/components/Schema";
 import MobileCtaBar from "@/components/MobileCtaBar";
+import LiquidMotion from "@/components/LiquidMotion";
 import { OG_DEFAULT } from "@/components/og";
 
 const montserrat = Montserrat({
@@ -105,6 +106,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main id="main">{children}</main>
         <Footer />
         <MobileCtaBar />
+        <LiquidMotion />
       </body>
     </html>
   );

@@ -57,7 +57,7 @@ export default function BeforeAfter({ before, after, label }: { before: Photo; a
           />
         </div>
 
-        <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-navy-950/80 px-3 py-1 font-heading text-[11px] font-bold tracking-[.14em] text-white">
+        <span className="pointer-events-none absolute left-3 top-3 rounded-full glass-chip px-3 py-1 font-heading text-[11px] font-bold tracking-[.14em] text-white">
           BEFORE
         </span>
         <span className="pointer-events-none absolute right-3 top-3 rounded-full bg-amber-500 px-3 py-1 font-heading text-[11px] font-bold tracking-[.14em] text-navy-950">

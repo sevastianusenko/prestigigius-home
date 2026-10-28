@@ -238,20 +238,21 @@ export const postsC: Project[] = [
       "Mulled pair of white single-hung windows with dark-tinted glass in light-blue siding beside a Sarasota pool deck",
       "Two single-hungs joined by a mullion. The mullion is part of the wind-load path, so it carries its own rating.",
     ),
+    // Cover = the pool-side view (photo 2); the close-up of the mulled pair is in the gallery.
     after: jobPhoto(
       SP,
-      1,
+      2,
       "windows-doors",
-      "Mulled pair of white single-hung windows with dark-tinted glass in light-blue siding beside a Sarasota pool deck",
-      "Two single-hungs joined by a mullion. The mullion is part of the wind-load path, so it carries its own rating.",
+      "Light-blue Sarasota pool home with new mulled single-hung windows and a small square window above the pool deck",
+      "Tinted glass facing the pool cuts glare bounced off the water and deck.",
     ),
     gallery: [
       jobPhoto(
         SP,
-        2,
+        1,
         "windows-doors",
-        "Light-blue Sarasota pool home with new mulled single-hung windows and a small square window above the pool deck",
-        "Tinted glass facing the pool cuts glare bounced off the water and deck.",
+        "Mulled pair of white single-hung windows with dark-tinted glass in light-blue siding beside a Sarasota pool deck",
+        "Two single-hungs joined by a mullion. The mullion is part of the wind-load path, so it carries its own rating.",
       ),
     ],
     sample: false,

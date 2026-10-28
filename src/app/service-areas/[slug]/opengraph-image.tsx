@@ -8,7 +8,7 @@ export const contentType = "image/png";
 
 const BLACK = "#0A0A0A";
 const DARK = "#141414";
-const GOLD = "#C9A44C";
+const GOLD = "#C2C2C2";
 const TINT = "#E6E6E6";
 
 export function generateStaticParams() {

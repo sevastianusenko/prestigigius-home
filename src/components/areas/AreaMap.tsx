@@ -98,24 +98,24 @@ export default function AreaMap({ current, className = "" }: { current?: string;
           const dx = side === "end" ? -12 : 12;
           const dot = (
             <g className="group">
-              {on ? <circle cx={x(c.lon)} cy={y(c.lat)} r="16" fill="#C9A44C" opacity="0.25" /> : null}
+              {on ? <circle cx={x(c.lon)} cy={y(c.lat)} r="16" fill="#C2C2C2" opacity="0.25" /> : null}
               <circle
                 cx={x(c.lon)}
                 cy={y(c.lat)}
                 r={on ? 8 : 6}
-                fill={on ? "#C9A44C" : "#F4F4F4"}
+                fill={on ? "#C2C2C2" : "#F4F4F4"}
                 stroke="#141414"
                 strokeWidth="2"
-                className="transition-[fill] group-hover:fill-[#C9A44C]"
+                className="transition-[fill] group-hover:fill-[#C2C2C2]"
               />
               <text
                 x={x(c.lon) + dx}
                 y={y(c.lat) + 5}
                 textAnchor={side}
-                fill={on ? "#C9A44C" : "#F4F4F4"}
+                fill={on ? "#C2C2C2" : "#F4F4F4"}
                 fontSize={on ? 16 : 14}
                 fontWeight="700"
-                className="transition-[fill] group-hover:fill-[#C9A44C]"
+                className="transition-[fill] group-hover:fill-[#C2C2C2]"
               >
                 {c.name}
                 {hq ? " ★" : ""}

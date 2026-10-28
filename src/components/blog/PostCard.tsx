@@ -34,7 +34,7 @@ export default function PostCard({ post, category, featured = false, priority = 
             sizes="(min-width: 1024px) 640px, 100vw"
             className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           />
-          <span className="absolute left-4 top-4 rounded-full bg-navy-950/85 px-3 py-1 text-xs font-bold uppercase tracking-[.14em] text-amber-100">
+          <span className="absolute left-4 top-4 rounded-full glass-chip px-3 py-1 text-xs font-bold uppercase tracking-[.14em] text-amber-100">
             Featured
           </span>
         </div>

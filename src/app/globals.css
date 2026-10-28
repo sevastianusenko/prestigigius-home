@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------
-   Design tokens — black, white and true neutral grays, with jewelry gold
-   used sparingly as the accent (primary CTA on dark, frames, numerals,
-   markers). Token NAMES are historical (navy/amber/sand/sea) so existing
-   utilities keep working:
-     navy-*  = black / graphite         amber-500 = gold accent
+   Design tokens — monochrome: black, white and true neutral grays, with
+   platinum/silver as the only "accent" (primary CTA on dark, frames,
+   numerals, markers). No hue anywhere. Token NAMES are historical
+   (navy/amber/sand/sea, --gold-*) so existing utilities keep working:
+     navy-*  = black / graphite         amber-500 = silver accent
      sand-*  = neutral light grays      amber-600 = mid gray (text on light)
      sea-*   = link color (black)       amber-100 = light gray tint
 ------------------------------------------------------------------- */
@@ -16,11 +16,14 @@
   --color-navy-100: #e6e6e6;
   --color-navy-50: #f4f4f4;
 
-  --color-amber-500: #c9a44c;
   --color-amber-600: #6b6b6b;
   --color-amber-100: #f1f1f1;
 
   --color-sea-600: #111111;
+
+  /* The one warm note, used very rarely: rating stars, the nav hover line,
+     the featured-card frame and the black CTA's hairline. Never fills or text blocks. */
+  --color-champagne: #bfa06a;
 
   --color-sand-50: #f7f7f7;
   --color-sand-100: #efefef;
@@ -29,11 +32,11 @@
   --color-ink-500: #666666;
   --color-ink-900: #141414;
 
-  /* metallic gold for gradients (light → base → deep → glint) */
-  --gold-light: #f6e3a1;
-  --gold-base: #d4af4f;
-  --gold-deep: #b48f33;
-  --gold-glint: #ecd083;
+  /* platinum for gradients (light → base → deep → glint); names kept from the gold palette */
+  --gold-light: #ffffff;
+  --gold-base: #ececec;
+  --gold-deep: #c9c9c9;
+  --gold-glint: #f7f7f7;
 
   /* shape */
   --radius-card: 14px;
@@ -51,11 +54,23 @@
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+:root {
+  --accent-silver: #8a8a8a;
+}
+.bg-navy-950,
+.bg-navy-900,
+.bg-black {
+  --accent-silver: #c4c4c4;
+}
+
 /* Fonts are loaded by next/font in src/app/layout.tsx, which sets
    --font-montserrat / --font-opensans on <html>. We map them to the public
    --font-heading / --font-body tokens (and the font-heading / font-body
    utilities) here. `inline` so the utilities carry the real family list. */
 @theme inline {
+  /* The one accent is context-aware: darker steel on light surfaces, light silver
+     inside dark bands (see the rule below), so icons and markers read on both. */
+  --color-amber-500: var(--accent-silver);
   --font-heading: var(--font-montserrat), "Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body: var(--font-opensans), "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -159,20 +174,75 @@
   color: var(--color-amber-600);
 }
 
-/* Use inside dark bands: <p class="eyebrow eyebrow-dark"> — gold accent */
+/* Use inside dark bands: <p class="eyebrow eyebrow-dark"> — silver accent */
 @utility eyebrow-dark {
   color: var(--color-amber-500);
 }
 
-/* Gold CTA with a metallic sheen. Main call to action on dark sections. */
+/* Platinum CTA with a soft sheen (utility name kept from the gold palette). Main call to action on dark sections. */
 @utility btn-gold {
   color: #0a0a0a;
-  background-image: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-base) 38%, var(--gold-deep) 64%, var(--gold-glint) 100%);
-  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.55), 0 6px 18px rgb(201 164 76 / 0.22);
-  transition: filter 0.2s, box-shadow 0.2s;
+  /* gloss on the top half + metallic gold body */
+  background-image:
+    linear-gradient(180deg, rgb(255 255 255 / 0.42) 0%, rgb(255 255 255 / 0.08) 48%, rgb(0 0 0 / 0) 52%, rgb(0 0 0 / 0.1) 100%),
+    linear-gradient(135deg, var(--gold-light) 0%, var(--gold-base) 38%, var(--gold-deep) 64%, var(--gold-glint) 100%);
+  box-shadow:
+    inset 0 1.5px 0 rgb(255 255 255 / 0.75),
+    inset 0 -2px 0 rgb(0 0 0 / 0.12),
+    inset 0 0 0 1px rgb(0 0 0 / 0.1),
+    0 2px 0 rgb(0 0 0 / 0.25),
+    0 10px 24px -6px rgb(0 0 0 / 0.35);
+  text-shadow: 0 1px 0 rgb(255 255 255 / 0.35);
+  transition: filter 0.2s, box-shadow 0.2s, transform 0.2s;
   &:hover {
-    filter: brightness(1.07) saturate(1.05);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.65), 0 8px 24px rgb(201 164 76 / 0.32);
+    filter: brightness(1.06) saturate(1.06);
+    transform: translateY(-1px);
+    box-shadow:
+      inset 0 1.5px 0 rgb(255 255 255 / 0.85),
+      inset 0 -2px 0 rgb(0 0 0 / 0.12),
+      inset 0 0 0 1px rgb(0 0 0 / 0.1),
+      0 3px 0 rgb(0 0 0 / 0.25),
+      0 16px 32px -8px rgb(0 0 0 / 0.4);
+  }
+  &:active {
+    transform: translateY(1px);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.6),
+      inset 0 0 0 1px rgb(0 0 0 / 0.12),
+      0 1px 0 rgb(0 0 0 / 0.25),
+      0 4px 10px -4px rgb(0 0 0 / 0.5);
+  }
+}
+
+/* Liquid glass: frosted, refractive pill for dark photo backgrounds (secondary CTA). */
+@utility btn-glass {
+  color: #ffffff;
+  background-image:
+    radial-gradient(120% 90% at 50% -20%, rgb(255 255 255 / 0.38) 0%, rgb(255 255 255 / 0.06) 55%, rgb(255 255 255 / 0) 70%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.16) 0%, rgb(255 255 255 / 0.04) 50%, rgb(255 255 255 / 0.1) 100%);
+  background-color: rgb(255 255 255 / 0.06);
+  -webkit-backdrop-filter: blur(14px) saturate(1.6);
+  backdrop-filter: blur(14px) saturate(1.6);
+  box-shadow:
+    inset 0 1.5px 0 rgb(255 255 255 / 0.55),
+    inset 0 -1.5px 0 rgb(255 255 255 / 0.18),
+    inset 0 0 0 1px rgb(255 255 255 / 0.28),
+    inset 0 -10px 18px -10px rgb(255 255 255 / 0.25),
+    0 10px 28px -8px rgb(0 0 0 / 0.55);
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.35);
+  transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  &:hover {
+    background-color: rgb(255 255 255 / 0.12);
+    transform: translateY(-1px);
+    box-shadow:
+      inset 0 1.5px 0 rgb(255 255 255 / 0.7),
+      inset 0 -1.5px 0 rgb(255 255 255 / 0.22),
+      inset 0 0 0 1px rgb(255 255 255 / 0.4),
+      inset 0 -10px 18px -10px rgb(255 255 255 / 0.3),
+      0 14px 34px -8px rgb(0 0 0 / 0.6);
+  }
+  &:active {
+    transform: translateY(1px);
   }
 }
 
@@ -180,11 +250,11 @@
 @utility btn-black {
   color: #ffffff;
   background-image: linear-gradient(180deg, #2e2e2e 0%, #0a0a0a 55%, #000000 100%);
-  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.16), 0 0 0 1px rgb(201 164 76 / 0.6), 0 6px 16px rgb(0 0 0 / 0.18);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.16), 0 0 0 1px rgb(191 160 106 / 0.45), 0 6px 16px rgb(0 0 0 / 0.18);
   transition: box-shadow 0.2s, background-image 0.2s;
   &:hover {
     background-image: linear-gradient(180deg, #3a3a3a 0%, #141414 55%, #050505 100%);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.2), 0 0 0 1px rgb(201 164 76 / 0.95), 0 8px 22px rgb(0 0 0 / 0.24);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.2), 0 0 0 1px rgb(191 160 106 / 0.8), 0 8px 22px rgb(0 0 0 / 0.24);
   }
 }
 
@@ -193,7 +263,7 @@
   border: 1px solid transparent;
   background:
     linear-gradient(var(--frame-bg, #ffffff), var(--frame-bg, #ffffff)) padding-box,
-    linear-gradient(135deg, var(--gold-light), var(--gold-deep) 50%, var(--gold-glint)) border-box;
+    linear-gradient(135deg, #e3cfa2, var(--color-champagne) 50%, #d8c08f) border-box;
 }
 
 /* Gold sheen on large numerals and stars. */
@@ -256,12 +326,45 @@
   border: 0;
 }
 
-/* Header mega menu: open on hover / keyboard focus (no JS) */
+/* Header mega menu: open on hover / keyboard focus (no JS).
+   .mega-panel is centred under its trigger; .mega-full spans the header. */
 .mega-trigger:hover > .mega-panel,
 .mega-trigger:focus-within > .mega-panel {
   opacity: 1;
   visibility: visible;
   translate: -50% 0;
+}
+.mega-trigger:hover > .mega-full,
+.mega-trigger:focus-within > .mega-full {
+  translate: 0 0;
+}
+/* After a click inside a panel, keep it shut until the pointer leaves the menu (MegaMenuCloser). */
+.mega-suppress .mega-panel {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+/* Top-level header links: gold underline grows in on hover, focus and while the panel is open */
+.nav-top {
+  position: relative;
+}
+.nav-top::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.3rem;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-champagne) 20%, var(--color-champagne) 80%, transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.nav-top:hover::after,
+.mega-trigger:hover > .nav-top::after,
+.mega-trigger:focus-within > .nav-top::after,
+.nav-top[aria-current="page"]::after {
+  transform: scaleX(1);
 }
 
 /* ------------------------------------------------------------------
@@ -306,4 +409,171 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-wall__col { animation: none; }
 }
+}
+
+/* ------------------------------------------------------------------
+   Liquid glass + motion (2026-10-27)
+   glass       — frosted panel/card inside dark bands and over photos
+   glass-chip  — small label pill over photos
+   glass-light — light frosted surface (header, dropdowns, mobile bar)
+   All glass surfaces get a soft highlight that follows the pointer
+   (--mx / --my, set by LiquidMotion.tsx).
+------------------------------------------------------------------- */
+@utility glass {
+  background-color: rgb(255 255 255 / 0.05);
+  background-image:
+    radial-gradient(420px circle at var(--mx, 30%) var(--my, -20%), rgb(255 255 255 / 0.12), transparent 60%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.09) 0%, rgb(255 255 255 / 0.02) 45%, rgb(255 255 255 / 0.05) 100%);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  backdrop-filter: blur(16px) saturate(1.5);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.22),
+    inset 0 0 0 1px rgb(255 255 255 / 0.1),
+    inset 0 -14px 24px -18px rgb(255 255 255 / 0.18),
+    0 18px 40px -22px rgb(0 0 0 / 0.7);
+  transition: box-shadow 0.3s, transform 0.3s var(--ease-out-soft), background-color 0.3s;
+}
+
+@utility glass-chip {
+  color: #ffffff;
+  background-color: rgb(10 10 10 / 0.36);
+  background-image: linear-gradient(180deg, rgb(255 255 255 / 0.18), rgb(255 255 255 / 0.02));
+  -webkit-backdrop-filter: blur(10px) saturate(1.6);
+  backdrop-filter: blur(10px) saturate(1.6);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.35), inset 0 0 0 1px rgb(255 255 255 / 0.16), 0 4px 14px -6px rgb(0 0 0 / 0.45);
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.35);
+}
+
+@utility glass-light {
+  background-color: rgb(255 255 255 / 0.72);
+  background-image:
+    radial-gradient(520px circle at var(--mx, 50%) var(--my, -40%), rgb(255 255 255 / 0.6), transparent 60%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.55), rgb(255 255 255 / 0.15));
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  backdrop-filter: blur(20px) saturate(1.8);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.9), inset 0 0 0 1px rgb(0 0 0 / 0.05);
+}
+
+/* Glass cards lift a little on hover */
+.glass:is(a, li):hover,
+li.glass:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.3),
+    inset 0 0 0 1px rgb(255 255 255 / 0.16),
+    inset 0 -14px 24px -18px rgb(255 255 255 / 0.22),
+    0 24px 48px -22px rgb(0 0 0 / 0.8);
+}
+
+/* The pointer highlight also plays on the glass button */
+.btn-glass {
+  background-image:
+    radial-gradient(160px circle at var(--mx, 50%) var(--my, -40%), rgb(255 255 255 / 0.28), transparent 65%),
+    radial-gradient(120% 90% at 50% -20%, rgb(255 255 255 / 0.38) 0%, rgb(255 255 255 / 0.06) 55%, rgb(255 255 255 / 0) 70%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.16) 0%, rgb(255 255 255 / 0.04) 50%, rgb(255 255 255 / 0.1) 100%);
+}
+
+/* Main CTA: a light sweep runs across on hover */
+.btn-gold,
+.btn-black {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-gold::after,
+.btn-black::after {
+  content: "";
+  position: absolute;
+  inset: -2px auto -2px -60%;
+  width: 45%;
+  z-index: -1;
+  background: linear-gradient(100deg, transparent, rgb(255 255 255 / 0.55), transparent);
+  transform: skewX(-18deg);
+  transition: left 0.7s var(--ease-out-soft);
+  pointer-events: none;
+}
+.btn-black::after {
+  background: linear-gradient(100deg, transparent, rgb(255 255 255 / 0.16), transparent);
+}
+.btn-gold:hover::after,
+.btn-black:hover::after {
+  left: 120%;
+}
+
+/* Hero entrance: copy settles into focus. The H1 and lead never start
+   transparent (they can be the LCP element); they slide and un-blur. */
+@keyframes hero-focus {
+  from { transform: translateY(16px); filter: blur(8px); }
+  to { transform: none; filter: none; }
+}
+@keyframes hero-fade {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+main > section:first-of-type :is(h1, h1 + p) {
+  animation: hero-focus 0.9s var(--ease-out-soft) both;
+}
+main > section:first-of-type h1 + p { animation-delay: 0.08s; }
+main > section:first-of-type :is(.eyebrow, nav[aria-label="Breadcrumb"]) {
+  animation: hero-fade 0.7s var(--ease-out-soft) both;
+}
+main > section:first-of-type h1 ~ div,
+main > section:first-of-type h1 ~ ul,
+main > section:first-of-type h1 ~ p ~ p {
+  animation: hero-fade 0.8s 0.22s var(--ease-out-soft) both;
+}
+
+/* Dark bands below the hero: two soft light pools drift slowly behind the
+   content, so the glass cards on top have something to refract. */
+@keyframes ambient-drift {
+  0% { transform: translate3d(-6%, -4%, 0) scale(1); }
+  50% { transform: translate3d(5%, 6%, 0) scale(1.08); }
+  100% { transform: translate3d(-6%, -4%, 0) scale(1); }
+}
+main > section:not(:first-of-type):is(.bg-navy-900, .bg-navy-950) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+main > section:not(:first-of-type):is(.bg-navy-900, .bg-navy-950)::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(38% 45% at 18% 25%, rgb(255 255 255 / 0.075), transparent 70%),
+    radial-gradient(32% 40% at 82% 78%, rgb(255 255 255 / 0.06), transparent 70%);
+  animation: ambient-drift 26s ease-in-out infinite;
+}
+
+/* Scroll reveal (classes added by LiquidMotion.tsx; nothing is hidden without JS) */
+.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.8s var(--ease-out-soft), transform 0.8s var(--ease-out-soft);
+  transition-delay: calc(var(--i, 0) * 70ms);
+}
+.js-reveal .reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main > section:first-of-type :is(h1, h1 + p, .eyebrow, nav, div, ul, p) { animation: none !important; }
+  .js-reveal .reveal { opacity: 1; transform: none; transition: none; }
+  .btn-gold::after, .btn-black::after { display: none; }
+  .glass:hover { transform: none; }
+  main > section::before { animation: none !important; }
+}
+
+/* Denser light glass for dropdown panels that sit over busy photos */
+@utility glass-panel {
+  background-color: rgb(255 255 255 / 0.9);
+  background-image:
+    radial-gradient(520px circle at var(--mx, 50%) var(--my, -40%), rgb(255 255 255 / 0.7), transparent 60%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.5), rgb(255 255 255 / 0.1));
+  -webkit-backdrop-filter: blur(28px) saturate(1.8);
+  backdrop-filter: blur(28px) saturate(1.8);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.95), inset 0 0 0 1px rgb(0 0 0 / 0.05);
 }

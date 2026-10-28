@@ -161,7 +161,7 @@ export default function PageHero({
                 className="object-cover"
               />
               {photoBadge ? (
-                <figcaption className="absolute bottom-3 left-3 rounded-full bg-navy-950/85 px-3 py-1 font-heading text-[11px] font-bold uppercase tracking-[.08em] text-white">
+                <figcaption className="absolute bottom-3 left-3 rounded-full glass-chip px-3 py-1 font-heading text-[11px] font-bold uppercase tracking-[.08em] text-white">
                   {photoBadge}
                 </figcaption>
               ) : null}

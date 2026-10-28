@@ -36,7 +36,7 @@ export default function FinancingBand({
           </div>
           <ol className="grid gap-4">
             {financingSteps.map((s, i) => (
-              <li key={s.title} className="flex gap-4 rounded-[14px] border border-white/10 bg-white/[.05] p-5 md:p-6">
+              <li key={s.title} className="flex gap-4 rounded-[14px] border border-white/10 glass p-5 md:p-6">
                 <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-amber-500 font-heading text-[15px] font-extrabold text-navy-950">
                   {String(i + 1).padStart(2, "0")}
                 </span>

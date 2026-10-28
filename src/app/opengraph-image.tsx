@@ -7,7 +7,7 @@ export const contentType = "image/png";
 
 const NAVY = "#141414";
 const NAVY_DEEP = "#111111";
-const AMBER = "#C9A44C";
+const AMBER = "#C2C2C2";
 const TINT = "#E6E6E6";
 
 /** Default Open Graph / Twitter card for every route without its own image. */

@@ -104,7 +104,7 @@ export default function OutdoorLivingPage() {
                   />
                 </figure>
               ))}
-              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.04] p-4 ring-1 ring-white/10 sm:p-5">
+              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] glass p-4 ring-1 ring-white/10 sm:p-5">
                 <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-navy-100/60">Illustrative photos</p>
                 <p className="mt-2 text-sm leading-snug text-navy-100/80 sm:text-[15px]">
                   These show the kind of outdoor spaces we build. Two of our own indoor-outdoor jobs are further down the page.
@@ -156,7 +156,7 @@ export default function OutdoorLivingPage() {
           />
           <ul className="mt-10 grid gap-5 md:grid-cols-3">
             {C.gulf.map((w, i) => (
-              <li key={w.title} className="rounded-[16px] bg-white/[.06] p-7 ring-1 ring-white/10">
+              <li key={w.title} className="rounded-[16px] glass p-7 ring-1 ring-white/10">
                 <span className="font-heading text-4xl font-extrabold text-amber-500/90">0{i + 1}</span>
                 <h3 className="mt-4 font-heading text-xl font-bold !text-white">{w.title}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-navy-100/85">{w.text}</p>

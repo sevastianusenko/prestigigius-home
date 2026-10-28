@@ -12,6 +12,7 @@ import BandHead from "@/components/bands/BandHead";
 import ReviewsBand from "@/components/bands/ReviewsBand";
 import FinancingBand from "@/components/bands/FinancingBand";
 import FaqBand from "@/components/bands/FaqBand";
+import BrandsBand from "@/components/bands/BrandsBand";
 import PriceCards from "@/components/service-pages/PriceCards";
 import WallLayers from "@/components/service-pages/WallLayers";
 import KitchenTimeline from "@/components/service-pages/KitchenTimeline";
@@ -163,7 +164,7 @@ export default async function CityServicePage({ params }: { params: Promise<Para
               ))}
               <div
                 className={`col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] p-4 ring-1 ring-white/10 sm:p-5 ${
-                  hero.real ? "bg-white/[.06]" : "bg-white/[.04]"
+                  hero.real ? "glass" : "glass"
                 }`}
               >
                 <p
@@ -277,7 +278,7 @@ export default async function CityServicePage({ params }: { params: Promise<Para
                 <Link href={`/projects/${p.slug}`} className="group block overflow-hidden rounded-[16px] bg-white shadow-card transition hover:-translate-y-1 hover:shadow-card-hover">
                   <div className="relative aspect-[4/3] overflow-hidden bg-navy-50">
                     <Image src={p.after.src} alt={p.after.alt} fill sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <span className="absolute left-3 top-3 rounded-full bg-navy-950/85 px-3 py-1 font-heading text-[11px] font-bold uppercase tracking-[.08em] text-white">
+                    <span className="absolute left-3 top-3 rounded-full glass-chip px-3 py-1 font-heading text-[11px] font-bold uppercase tracking-[.08em] text-white">
                       {p.city}
                     </span>
                   </div>
@@ -304,6 +305,7 @@ export default async function CityServicePage({ params }: { params: Promise<Para
         </Container>
       </section>
 
+      {service.slug === "impact-windows-doors" && <BrandsBand className="bg-white" />}
       <ReviewsBand service={service.slug} limit={3} />
 
       <FinancingBand />

@@ -41,13 +41,13 @@ const items: { title: string; text: string; icon: ReactNode; href?: string }[] =
   },
   {
     title: `${site.ratings.google.score} on Google`,
-    text: `${site.ratings.google.count} homeowner reviews`,
+    text: "Rated by homeowners",
     href: site.ratings.google.href,
     icon: icon(<path d="m12 3 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8L12 3Z" />),
   },
   {
     title: "Family-owned",
-    text: `Port Charlotte since ${site.founded}`,
+    text: "Based in Port Charlotte, FL",
     icon: icon(
       <>
         <path d="M3 11.5 12 4l9 7.5" />

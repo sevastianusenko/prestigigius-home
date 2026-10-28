@@ -81,7 +81,7 @@ export default function ReviewsPage() {
               Real customers from around Southwest Florida, describing their jobs in their own words. Every review here
               was posted publicly on Google, Yelp or the BBB; we shorten last names to an initial and trim long reviews with an ellipsis.
             </p>
-            <div className="mt-6 flex gap-0.5 text-amber-500" role="img" aria-label="5 out of 5 stars">
+            <div className="mt-6 flex gap-0.5 text-champagne" role="img" aria-label="5 out of 5 stars">
               {Array.from({ length: 5 }).map((_, i) => (
                 <StarIcon key={i} className="h-6 w-6" />
               ))}

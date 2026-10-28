@@ -19,7 +19,7 @@ export default function HomeownerQuotes() {
       <ul className="grid gap-6 lg:grid-cols-3">
         {items.map((t) => (
           <li key={t.name} className="flex flex-col rounded-[14px] border border-sand-200 bg-white p-7 shadow-card">
-            <p aria-label="5 out of 5 stars" className="text-amber-500">
+            <p aria-label="5 out of 5 stars" className="text-champagne">
               <span aria-hidden="true">★★★★★</span>
             </p>
             <blockquote className="mt-4 flex-1 text-[15px] leading-relaxed text-ink-900">&ldquo;{t.text}&rdquo;</blockquote>

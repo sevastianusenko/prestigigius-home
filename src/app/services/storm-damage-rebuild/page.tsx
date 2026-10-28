@@ -109,7 +109,7 @@ export default function StormDamageRebuildPage() {
                   />
                 </figure>
               ))}
-              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.04] p-4 ring-1 ring-white/10 sm:p-5">
+              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] glass p-4 ring-1 ring-white/10 sm:p-5">
                 <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-navy-100/60">Illustrative photos</p>
                 <p className="mt-2 text-sm leading-snug text-navy-100/80 sm:text-[15px]">
                   These show the stages of a rebuild. The before-and-after further down is one of our own jobs.
@@ -156,7 +156,7 @@ export default function StormDamageRebuildPage() {
           <BandHead id="order-heading" dark eyebrow="What to do first" title={service.optionsTitle ?? "Mitigation First, Rebuild Second"} intro={service.optionsIntro} />
           <ol className="mt-10 grid gap-5 md:grid-cols-3">
             {(service.options ?? []).map((o, i) => (
-              <li key={o.title} className="flex flex-col rounded-[16px] bg-white/[.06] p-7 ring-1 ring-white/10">
+              <li key={o.title} className="flex flex-col rounded-[16px] glass p-7 ring-1 ring-white/10">
                 <span className="font-heading text-4xl font-extrabold text-amber-500/90">0{i + 1}</span>
                 <h3 className="mt-4 font-heading text-xl font-bold !text-white">{o.title}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-navy-100/85">{o.text}</p>

@@ -12,6 +12,7 @@ import BandHead from "@/components/bands/BandHead";
 import ReviewsBand from "@/components/bands/ReviewsBand";
 import FinancingBand from "@/components/bands/FinancingBand";
 import FaqBand from "@/components/bands/FaqBand";
+import BrandsBand from "@/components/bands/BrandsBand";
 import ServiceAreasBand from "@/components/bands/ServiceAreasBand";
 import LocalPagesLinks from "@/components/service-pages/LocalPagesLinks";
 import PriceCards from "@/components/service-pages/PriceCards";
@@ -114,7 +115,7 @@ export default function ImpactWindowsDoorsPage() {
                   />
                 </figure>
               ))}
-              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] bg-white/[.06] p-4 ring-1 ring-white/10 sm:p-5">
+              <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] glass p-4 ring-1 ring-white/10 sm:p-5">
                 <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-amber-500">Real jobs, real photos</p>
                 <p className="mt-2 text-sm leading-snug text-navy-100 sm:text-[15px]">
                   Every photo on this page was taken by our crew on a Southwest Florida job, from Siesta Key to Bonita Springs.
@@ -161,6 +162,8 @@ export default function ImpactWindowsDoorsPage() {
         </Container>
       </section>
 
+      <BrandsBand className="bg-white" />
+
       {/* 3. WHY IMPACT — dark band */}
       <section className="section-y bg-navy-900 text-white" aria-labelledby="why-heading">
         <Container>
@@ -173,7 +176,7 @@ export default function ImpactWindowsDoorsPage() {
             />
             <ul className="mt-10 grid gap-5 md:grid-cols-3">
               {C.why.map((w, i) => (
-                <li key={w.title} className="rounded-[16px] bg-white/[.06] p-7 ring-1 ring-white/10">
+                <li key={w.title} className="rounded-[16px] glass p-7 ring-1 ring-white/10">
                   <span className="font-heading text-4xl font-extrabold text-amber-500/90">0{i + 1}</span>
                   <h3 className="mt-4 font-heading text-xl font-bold !text-white">{w.title}</h3>
                   <p className="mt-2 text-[15px] leading-relaxed text-navy-100/85">{w.text}</p>
@@ -240,7 +243,7 @@ export default function ImpactWindowsDoorsPage() {
                 <Link href={`/projects/${p.slug}`} className="group block overflow-hidden rounded-[16px] bg-white shadow-card transition hover:-translate-y-1 hover:shadow-card-hover">
                   <div className="relative aspect-[4/3] overflow-hidden bg-navy-50">
                     <Image src={p.after.src} alt={p.after.alt} fill sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <span className="absolute left-3 top-3 rounded-full bg-navy-950/85 px-3 py-1 font-heading text-[11px] font-bold uppercase tracking-[.08em] text-white">
+                    <span className="absolute left-3 top-3 rounded-full glass-chip px-3 py-1 font-heading text-[11px] font-bold uppercase tracking-[.08em] text-white">
                       {p.city}
                     </span>
                   </div>

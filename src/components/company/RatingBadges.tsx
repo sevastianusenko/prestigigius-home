@@ -5,14 +5,14 @@ const badges = [
   {
     label: "Google",
     value: site.ratings.google.score,
-    sub: `${site.ratings.google.count} reviews`,
+    sub: "Homeowner reviews",
     href: site.ratings.google.href,
     star: true,
   },
   {
     label: "Yelp",
     value: site.ratings.yelp.score,
-    sub: `${site.ratings.yelp.count} reviews`,
+    sub: "Homeowner reviews",
     href: site.ratings.yelp.href,
     star: true,
   },

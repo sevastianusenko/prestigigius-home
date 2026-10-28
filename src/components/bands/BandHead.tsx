@@ -59,7 +59,7 @@ export function CheckIcon({ className = "h-5 w-5" }: { className?: string }) {
 
 export function Stars({ className = "h-5 w-5" }: { className?: string }) {
   return (
-    <span className="inline-flex gap-0.5 text-amber-500" role="img" aria-label="5 out of 5 stars">
+    <span className="inline-flex gap-0.5 text-champagne" role="img" aria-label="5 out of 5 stars">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg key={i} aria-hidden="true" viewBox="0 0 20 20" className={className} fill="currentColor">
           <path d="M10 1.5 12.6 7l6 .7-4.5 4.1 1.2 5.9L10 14.8l-5.3 2.9 1.2-5.9L1.4 7.7l6-.7L10 1.5Z" />

@@ -3,8 +3,10 @@ import TrustStrip from "@/components/TrustStrip";
 import CtaBand from "@/components/CtaBand";
 import HeroWall from "@/components/bands/HeroWall";
 import ServicesGridBand from "@/components/bands/ServicesGridBand";
+import BrandsBand from "@/components/bands/BrandsBand";
 import ProcessBand from "@/components/bands/ProcessBand";
 import RecentProjectsBand from "@/components/bands/RecentProjectsBand";
+import { projects } from "@/content/projects";
 import ReviewsBand from "@/components/bands/ReviewsBand";
 import FinancingBand from "@/components/bands/FinancingBand";
 import FaqBand from "@/components/bands/FaqBand";
@@ -48,9 +50,9 @@ export default function HomePage() {
         accentLast
         lead={
           <>
-            We started as window and door installers, and that is still what homeowners hire us for most. Today the
-            same crew also remodels kitchens and bathrooms and rebuilds after storm and water damage.
-            <span className="hidden sm:inline"> One point of contact, one written price, permits included.</span>
+            Licensed Port Charlotte contractor for hurricane impact windows and doors, kitchen and bathroom remodeling,
+            and storm damage repair.
+            <span className="hidden sm:inline"> One crew, one written price and permits handled, from Sarasota to Fort Myers.</span>
           </>
         }
         primary={{ href: "/free-estimate", label: "Get a Free Estimate" }}
@@ -72,12 +74,17 @@ export default function HomePage() {
       />
       <MoreServices exclude={CORE} />
       <AboutTeaser />
+      <BrandsBand variant="strip" className="border-y border-sand-200 bg-white" />
       <ProcessBand
         eyebrow="Our process"
         title="Four Steps. No Surprises."
         intro="Straight answers and a written plan, from the first phone call to the last walkthrough."
       />
-      <RecentProjectsBand eyebrow="Recent jobs" />
+      <RecentProjectsBand
+        eyebrow="Recent jobs"
+        // Lead with a finished home (pool-side Sarasota windows), not a site still under construction.
+        projects={[...projects].sort((a, b) => Number(b.slug === "sarasota-pool-home-window-replacement") - Number(a.slug === "sarasota-pool-home-window-replacement"))}
+      />
       <ReviewsBand />
       <FinancingBand
         title="Start the Remodel Now, Pay for It Over Time"

@@ -34,8 +34,8 @@ function sortForService(list: Testimonial[], slug?: string): Testimonial[] {
 }
 
 const badges = [
-  { name: "Google", value: `${site.ratings.google.score} ★`, note: `${site.ratings.google.count} reviews`, href: site.ratings.google.href },
-  { name: "Yelp", value: `${site.ratings.yelp.score} ★`, note: `${site.ratings.yelp.count} reviews`, href: site.ratings.yelp.href },
+  { name: "Google", value: `${site.ratings.google.score} ★`, note: "Rating", href: site.ratings.google.href },
+  { name: "Yelp", value: `${site.ratings.yelp.score} ★`, note: "Rating", href: site.ratings.yelp.href },
   { name: "BBB", value: site.ratings.bbb.grade, note: "Accredited", href: site.ratings.bbb.href },
 ];
 
@@ -72,7 +72,7 @@ export default function ReviewsBand({ title = reviewsHeadline, limit = 6, servic
                   className="flex h-full flex-col items-center rounded-[14px] border border-navy-900/[.08] bg-sand-50 px-2 py-4 text-center transition-colors hover:border-amber-500"
                 >
                   <span className="font-heading text-[11px] font-bold uppercase tracking-[.14em] text-ink-500">{b.name}</span>
-                  <span className="mt-1 font-heading text-[1.5rem] font-extrabold text-navy-900">{b.value}</span>
+                  <span className="mt-1 font-heading text-[1.5rem] font-extrabold text-navy-900">{b.value.endsWith(" ★") ? (<>{b.value.slice(0, -2)} <span className="text-champagne">★</span></>) : b.value}</span>
                   <span className="text-[12px] text-ink-500">{b.note}</span>
                 </a>
               </li>

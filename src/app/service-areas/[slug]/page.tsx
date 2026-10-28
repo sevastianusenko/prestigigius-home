@@ -276,7 +276,7 @@ export default async function AreaPage({ params }: { params: Promise<Params> }) 
                   <Link href={`/projects/${p.slug}`} className="group block overflow-hidden rounded-[16px] bg-white shadow-card transition hover:-translate-y-1 hover:shadow-card-hover">
                     <div className="relative aspect-[4/3] overflow-hidden bg-navy-50">
                       <Image src={p.after.src} alt={p.after.alt} fill sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
-                      <span className="absolute left-3 top-3 rounded-full bg-navy-950/85 px-3 py-1 font-heading text-[11px] font-bold uppercase tracking-[.08em] text-white">
+                      <span className="absolute left-3 top-3 rounded-full glass-chip px-3 py-1 font-heading text-[11px] font-bold uppercase tracking-[.08em] text-white">
                         {p.city}
                       </span>
                     </div>

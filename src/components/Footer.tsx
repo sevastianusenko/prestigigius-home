@@ -95,7 +95,53 @@ export default function Footer() {
                   <path d="M21.4 10.2H12v3.9h5.4c-.5 2.4-2.6 3.9-5.4 3.9a6 6 0 1 1 3.9-10.6l2.9-2.8A10 10 0 1 0 12 22c5.8 0 9.6-4 9.6-9.8 0-.7 0-1.3-.2-2Z" />
                 </svg>
               </a>
+              <a
+                href={site.ratings.yelp.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Yelp reviews"
+                className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-navy-950"
+              >
+                {/* Yelp burst mark */}
+                <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+                  <path d="M10.9 2.2c.8-.2 1.4.4 1.4 1.2l.2 8.3c0 1-1.2 1.4-1.8.6L6.1 5.4c-.5-.6-.3-1.5.4-1.8a17 17 0 0 1 4.4-1.4Z" />
+                  <path d="M13.6 14.4c-.9-.3-1.7.6-1.2 1.4l2.8 4.6c.4.7 1.3.8 1.9.3a8.5 8.5 0 0 0 2.3-2.9c.4-.7 0-1.5-.7-1.7l-5.1-1.7Z" />
+                  <path d="M14.3 12.1c-.9.3-1.6-.6-1.1-1.4l2.9-4.4c.4-.7 1.4-.7 1.9-.1a8.5 8.5 0 0 1 1.8 3.2c.2.8-.2 1.5-1 1.7l-4.5 1Z" />
+                  <path d="M10.8 14.7c0-.9-1-1.4-1.7-.9l-4.3 3c-.6.5-.6 1.4 0 1.9a8.5 8.5 0 0 0 3.3 1.7c.8.2 1.5-.3 1.6-1.1l1.1-4.6Z" />
+                  <path d="M9.8 12.4c.9-.2 1-1.4.2-1.8L5.5 8.3c-.7-.4-1.6 0-1.7.8a8.5 8.5 0 0 0 .2 3.6c.2.8 1 1.2 1.7 1l4.1-1.3Z" />
+                </svg>
+              </a>
+              <a
+                href={site.social.nextdoor}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Nextdoor"
+                className="grid h-10 w-10 place-items-center rounded-full bg-white/10 text-white transition-colors hover:bg-white hover:text-navy-950"
+              >
+                {/* Nextdoor mark: a lowercase "n" with a roof-line stem */}
+                <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+                  <path d="M12.6 6.2c-2 0-3.6.8-4.6 2.1V5.1c0-1.6-1.1-2.6-2.9-2.6H3v2.6h.9c.5 0 .8.3.8.8v6.5L2 14.6l1.3 2.2 1.4-1v6.7H8v-8.6c0-2.2 1.9-3.9 4.4-3.9 2.4 0 4.3 1.7 4.3 3.9v8.6H20v-8.9c0-4.1-3.1-7.4-7.4-7.4Z" />
+                </svg>
+              </a>
             </div>
+            <a
+              href={site.ratings.bbb.seal.href}
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              className="mt-6 inline-block rounded-md opacity-90 transition-opacity hover:opacity-100"
+            >
+              {/* BBB serves this seal and updates the rating on it, so it stays a plain <img> from bbb.org */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={site.ratings.bbb.seal.src}
+                alt={`${site.name} BBB Business Review, BBB Rating ${site.ratings.bbb.grade}`}
+                width={site.ratings.bbb.seal.width}
+                height={site.ratings.bbb.seal.height}
+                loading="lazy"
+                decoding="async"
+                className="h-[52px] w-[250px]"
+              />
+            </a>
           </div>
 
           {/* Services */}

@@ -17,7 +17,7 @@ export default function ReviewMasonry({ items }: { items: Testimonial[] }) {
         <li key={`${t.name}-${i}`} className="mb-6 break-inside-avoid">
           <figure className="rounded-xl border border-sand-200 bg-white p-7 shadow-card">
             <div className="flex items-center justify-between gap-3">
-              <div className="flex gap-0.5 text-amber-500" role="img" aria-label={`${t.rating} out of 5 stars`}>
+              <div className="flex gap-0.5 text-champagne" role="img" aria-label={`${t.rating} out of 5 stars`}>
                 {Array.from({ length: 5 }).map((_, k) => (
                   <StarIcon key={k} className="h-5 w-5" />
                 ))}

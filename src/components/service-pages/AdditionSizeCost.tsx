@@ -30,7 +30,7 @@ export default function AdditionSizeCost({ min, max, start, low, high, note }: P
           value={sqft}
           onChange={(e) => setSqft(Number(e.target.value))}
           className="mt-4 h-2 w-full cursor-pointer appearance-none rounded-full accent-amber-500"
-          style={{ background: `linear-gradient(to right, #C9A44C ${pct}%, #E3E3E3 ${pct}%)` }}
+          style={{ background: `linear-gradient(to right, #C2C2C2 ${pct}%, #E3E3E3 ${pct}%)` }}
         />
         <div className="mt-2 flex justify-between text-[12px] font-semibold text-ink-500">
           <span>{min} sq ft</span>
