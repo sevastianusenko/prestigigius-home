@@ -104,6 +104,6 @@ export const contactNext: TitledText[] = [
   },
 ];
 
-export const reviewsHeadline = `${site.ratings.google.score} stars on Google from Southwest Florida homeowners.`;
+export const reviewsHeadline = `Prestigious Home Improvements: ${site.ratings.google.score} stars on Google from Southwest Florida homeowners.`;
 
 export const areasHeadline = "Serving Charlotte, Sarasota and Lee Counties";

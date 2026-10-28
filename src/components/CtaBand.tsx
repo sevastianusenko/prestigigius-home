@@ -9,7 +9,7 @@ const checks = [
 ];
 
 export default function CtaBand({
-  title = "Get Your Free Estimate",
+  title = "Get Your Free Estimate From Prestigious",
   text = "We come to the house, measure, talk through the work and leave you with a written, itemized number. Free and no-obligation, anywhere from Sarasota and Lakewood Ranch down to Fort Myers and Bonita Springs.",
 }: {
   title?: string;

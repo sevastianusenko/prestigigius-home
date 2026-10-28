@@ -379,17 +379,17 @@
   width: 125%;
   height: 160%;
   display: grid;
-  grid-template-columns: repeat(var(--wall-cols, 2), minmax(0, 1fr));
+  grid-template-columns: repeat(var(--wall-cols, 3), minmax(0, 1fr));
   gap: 6px;
   transform: translate(-50%, -50%) rotate(6deg);
   pointer-events: none;
   z-index: 0;
 }
 @media (width >= 48rem) {
-  .hero-wall__grid { --wall-cols: 3; }
+  .hero-wall__grid { --wall-cols: 4; }
 }
 @media (width >= 64rem) {
-  .hero-wall__grid { --wall-cols: 4; }
+  .hero-wall__grid { --wall-cols: 5; }
 }
 .hero-wall__col {
   display: flex;

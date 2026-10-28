@@ -37,7 +37,7 @@ export default function HomePage() {
     <>
       <Schema data={faqSchema(HOME_FAQS)} />
       <HeroWall
-        eyebrow="FAMILY-OWNED · LICENSED CRC1327831 · 5.0 ON GOOGLE"
+        eyebrow="PRESTIGIOUS HOME IMPROVEMENTS · LICENSED CRC1327831"
         lines={[
           <>
             Impact Windows<span className="hidden sm:inline"> &amp; Doors</span>,
@@ -50,8 +50,8 @@ export default function HomePage() {
         accentLast
         lead={
           <>
-            Licensed Port Charlotte contractor for hurricane impact windows and doors, kitchen and bathroom remodeling,
-            and storm damage repair.
+            Prestigious Home Improvements is a licensed Port Charlotte contractor for hurricane impact windows and doors,
+            kitchen and bathroom remodeling, and storm damage repair.
             <span className="hidden sm:inline"> One crew, one written price and permits handled, from Sarasota to Fort Myers.</span>
           </>
         }

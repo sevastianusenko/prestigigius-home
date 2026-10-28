@@ -84,7 +84,7 @@ export default function SidingPage() {
                   Call {site.phone}
                 </a>
               </div>
-              <p className="mt-3 text-sm text-navy-100/75">In-home visit, written price within a week.</p>
+              <p className="mt-3 text-sm text-navy-100/75">Prestigious Home Improvements · in-home visit, written price within a week.</p>
               <HeroRatings className="mt-8" />
             </div>
 

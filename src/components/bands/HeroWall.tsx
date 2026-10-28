@@ -6,9 +6,11 @@ import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import { CheckIcon } from "./BandHead";
 
-/** 12 large tiles (was 42) — keeps the reference look without 40+ image requests. */
-const COLS = 4;
-const ROWS = 3;
+/** 25 smaller tiles (5 x 5). Tiles are 4:3 like the photos themselves, so nothing is
+ *  cropped and stretched (a 3:2 photo in a portrait tile was upscaled ~1.4x and looked
+ *  soft). Only the first four load eagerly (see `lcp`). */
+const COLS = 5;
+const ROWS = 5;
 
 /** Interleave categories so neighbouring tiles show different kinds of work. */
 function defaultWall(): Photo[] {
@@ -28,7 +30,9 @@ function defaultWall(): Photo[] {
     "florida",
     "hero",
   ];
-  const buckets = order.map((c) => allPhotos.filter((p) => p.category === c));
+  // Skip panoramic and small shots that would be upscaled in a 4:3 tile and look soft.
+  const sharp = (p: Photo) => !p.height || (p.height >= 1000 && (!p.width || p.width / p.height <= 1.6));
+  const buckets = order.map((c) => allPhotos.filter((p) => p.category === c && sharp(p)));
   const out: Photo[] = [];
   for (let round = 0; out.length < COLS * ROWS && round < 20; round++) {
     for (const b of buckets) {
@@ -69,13 +73,13 @@ export default function HeroWall({
   const columns = Array.from({ length: COLS }, (_, c) => tiles.filter((_, i) => i % COLS === c));
 
   return (
-    <section className="relative isolate flex min-h-[560px] items-center overflow-hidden bg-navy-950 py-10 sm:min-h-[620px] sm:py-16 md:min-h-[730px] md:py-24">
+    <section className="relative isolate flex min-h-[500px] items-center overflow-hidden bg-navy-950 py-10 sm:min-h-[560px] sm:py-14 md:min-h-[640px] md:py-20">
       {/* Photo mosaic */}
       <div aria-hidden="true" className="hero-wall__grid">
         {columns.map((col, c) => (
           <div
             key={c}
-            className={`hero-wall__col ${c >= 3 ? "hidden lg:flex" : c >= 2 ? "hidden md:flex" : ""}`}
+            className={`hero-wall__col ${c >= 4 ? "hidden lg:flex" : c >= 3 ? "hidden md:flex" : ""}`}
           >
             {col.map((p, r) => {
               // The first two rows of the two always-visible columns are the LCP
@@ -83,13 +87,13 @@ export default function HeroWall({
               // everything else waits.
               const lcp = c <= 1 && r <= 1;
               return (
-                <div key={`${p.id}-${r}`} className="relative aspect-[4/5] w-full shrink-0 overflow-hidden bg-navy-900">
+                <div key={`${p.id}-${r}`} className="relative aspect-[4/3] w-full shrink-0 overflow-hidden bg-navy-900">
                   <Image
                     src={p.src}
                     alt=""
                     fill
-                    sizes="(min-width: 1024px) 32vw, (min-width: 768px) 42vw, 62vw"
-                    quality={55}
+                    sizes="(min-width: 1024px) 27vw, (min-width: 768px) 34vw, 45vw"
+                    quality={85}
                     className="object-cover"
                     priority={lcp}
                     fetchPriority={lcp ? "high" : "low"}
