@@ -59,7 +59,8 @@ Local files are referenced as `src: "/images/kitchen-01.jpg"`; remote files as a
 
 | Variable | Used by | Notes |
 |---|---|---|
-| `RESEND_API_KEY` | `src/app/api/contact/route.ts` | Sends lead-form submissions via [Resend](https://resend.com). Without it the form still validates but no email is sent. |
+| `RESEND_API_KEY` | `src/app/api/contact/route.ts` | Sends lead-form submissions via [Resend](https://resend.com) from the verified domain `prestigiousimprovements.com`: the lead goes to `Office@prestigiousimprovements.com` (reply-to = the customer), and the customer gets a confirmation from Office@. Without the key the form still validates but only logs the lead. The key must come from the Resend account where the domain is verified. |
+| `CONTACT_TO` / `CONTACT_FROM` | same | Optional overrides. Defaults: `site.email` / `Prestigious Home Improvements <website@prestigiousimprovements.com>`. |
 
 Create `.env.local` for local development (it is git-ignored):
 

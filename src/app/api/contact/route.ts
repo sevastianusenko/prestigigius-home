@@ -65,19 +65,54 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true });
   }
 
+  // prestigiousimprovements.com is verified in Resend, so any address on it can send.
+  const from = process.env.CONTACT_FROM ?? `${site.name} <website@${site.domain}>`;
+  const office = process.env.CONTACT_TO ?? site.email;
+
   try {
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
-      from: process.env.CONTACT_FROM ?? `${site.name} <onboarding@resend.dev>`,
-      to: [process.env.CONTACT_TO ?? site.email],
+      from,
+      to: [office],
       ...(lead.email ? { replyTo: lead.email } : {}),
       subject: `New estimate request: ${lead.name}${lead.service ? ` · ${lead.service}` : ""}`,
       text,
-      html: `<h2>New estimate request</h2><table cellpadding="6">${rows
-        .map(([k, v]) => `<tr><td><strong>${k}</strong></td><td>${escape(v || "-").replace(/\n/g, "<br>")}</td></tr>`)
-        .join("")}</table>`,
+      html: `<h2 style="font-family:Arial,sans-serif">New estimate request</h2><table cellpadding="6" style="font-family:Arial,sans-serif;font-size:14px">${rows
+        .map(([k, v]) => `<tr><td valign="top"><strong>${k}</strong></td><td>${escape(v || "-").replace(/\n/g, "<br>")}</td></tr>`)
+        .join("")}</table>${
+        lead.phone ? `<p style="font-family:Arial,sans-serif"><a href="tel:${escape(lead.phone.replace(/[^\d+]/g, ""))}">Call ${escape(lead.name)}</a></p>` : ""
+      }`,
     });
     if (error) throw new Error(error.message);
+
+    // Confirmation to the homeowner. Best effort: the lead is already with the office.
+    if (lead.email) {
+      const first = lead.name.split(/\s+/)[0];
+      const confirm = [
+        `Hi ${first},`,
+        "",
+        `Thanks for contacting ${site.name}. We got your request${lead.service ? ` about ${lead.service.toLowerCase()}` : ""}.`,
+        "Tim or Vlad will call you within one business day to pick a time for your free in-home estimate.",
+        "",
+        `In a hurry? Call ${site.phone} or just reply to this email.`,
+        "",
+        site.name,
+        `Licensed contractor ${site.license}`,
+        site.url,
+      ].join("\n");
+      const { error: confirmError } = await resend.emails.send({
+        from: `${site.name} <${site.email}>`,
+        to: [lead.email],
+        replyTo: office,
+        subject: `We got your request · ${site.name}`,
+        text: confirm,
+        html: `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.6;color:#141414">${escape(confirm)
+          .replace(/\n/g, "<br>")
+          .replace(escape(site.url), `<a href="${site.url}">${site.domain}</a>`)}</div>`,
+      });
+      if (confirmError) console.error("[contact] confirmation failed", confirmError.message);
+    }
+
     return NextResponse.json({ ok: true });
   } catch (err) {
     console.error("[contact] send failed", err, "\n" + text);
