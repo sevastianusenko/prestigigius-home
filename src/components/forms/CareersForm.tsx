@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { usePathname } from "next/navigation";
+import { useFormToken } from "@/lib/useFormToken";
 import { site } from "@/content/site";
 import {
   ErrorNote,
@@ -22,6 +23,7 @@ export default function CareersForm() {
   const pathname = usePathname();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [error, setError] = useState("");
+  const getToken = useFormToken();
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -67,7 +69,7 @@ export default function CareersForm() {
         service: "Careers application",
         page: pathname ?? "/careers",
         company: val(fd, "company"),
-      });
+      }, await getToken());
       setStatus("success");
       form.reset();
     } catch (err) {

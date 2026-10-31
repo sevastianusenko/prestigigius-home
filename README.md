@@ -60,6 +60,7 @@ Local files are referenced as `src: "/images/kitchen-01.jpg"`; remote files as a
 | Variable | Used by | Notes |
 |---|---|---|
 | `RESEND_API_KEY` | `src/app/api/contact/route.ts` | Sends lead-form submissions via [Resend](https://resend.com) from the verified domain `prestigiousimprovements.com`: the lead goes to `Office@prestigiousimprovements.com` (reply-to = the customer), and the customer gets a confirmation from Office@. Without the key the form still validates but only logs the lead. The key must come from the Resend account where the domain is verified. |
+| `FORM_SECRET` | `src/lib/formToken.ts` | Optional. Signs the anti-spam form token; falls back to `RESEND_API_KEY`. Spam guard: honeypot, signed token with a 3-second time trap, same-origin check, 5 requests per IP per 10 min, link-spam filter. The estimate form (`LeadForm`) takes up to 6 photos, downscaled to 1600 px JPEG in the browser and attached to the office email. |
 | `CONTACT_TO` / `CONTACT_FROM` | same | Optional overrides. Defaults: `site.email` / `Prestigious Home Improvements <website@prestigiousimprovements.com>`. |
 
 Create `.env.local` for local development (it is git-ignored):

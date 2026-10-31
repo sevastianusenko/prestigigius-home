@@ -1,8 +1,14 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { site } from "@/content/site";
+import { checkToken, issueToken, looksLikeSpam, rateLimited } from "@/lib/formToken";
 
 export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+/** Matches PhotoPicker: up to 6 downscaled JPEGs, each well under 1.5 MB. */
+const MAX_PHOTOS = 6;
+const MAX_PHOTO_B64 = 2_000_000;
 
 type Lead = {
   name: string;
@@ -15,6 +21,27 @@ type Lead = {
 };
 
 const str = (v: unknown, max = 2000) => (typeof v === "string" ? v.trim().slice(0, max) : "");
+
+type Photo = { filename: string; content: string };
+
+/** Keep only real JPEGs of a sane size (PhotoPicker always re-encodes to JPEG). */
+function readPhotos(v: unknown): Photo[] {
+  if (!Array.isArray(v)) return [];
+  return v
+    .slice(0, MAX_PHOTOS)
+    .map((p, i): Photo | null => {
+      const content = typeof p?.content === "string" ? p.content : "";
+      if (!content || content.length > MAX_PHOTO_B64 || !content.startsWith("/9j/")) return null; // /9j/ = FF D8 FF
+      const name = (typeof p?.filename === "string" ? p.filename : "").replace(/[^\w.-]+/g, "-").replace(/\.[^.]*$/, "");
+      return { filename: `${name.slice(0, 40) || `photo-${i + 1}`}.jpg`, content };
+    })
+    .filter((p): p is Photo => p !== null);
+}
+
+/** Forms ask for a signed timestamp on mount (src/lib/useFormToken.ts). */
+export function GET() {
+  return NextResponse.json({ token: issueToken() }, { headers: { "Cache-Control": "no-store" } });
+}
 
 const escape = (s: string) =>
   s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c] as string);
@@ -29,6 +56,26 @@ export async function POST(req: Request) {
 
   // Honeypot: bots fill hidden "company" field. Pretend success.
   if (str(body.company)) return NextResponse.json({ ok: true });
+
+  // Posted from another site (browsers always send Origin on fetch POST).
+  const origin = req.headers.get("origin");
+  const host = req.headers.get("x-forwarded-host") ?? req.headers.get("host");
+  if (origin && host && new URL(origin).host !== host)
+    return NextResponse.json({ ok: false, error: "Invalid request." }, { status: 403 });
+
+  const ip = (req.headers.get("x-forwarded-for") ?? "").split(",")[0].trim();
+  if (rateLimited(ip))
+    return NextResponse.json(
+      { ok: false, error: `Too many requests. Please call us at ${site.phone}.` },
+      { status: 429 },
+    );
+
+  const token = checkToken(str(body.token, 200));
+  if (token === "too-fast")
+    return NextResponse.json({ ok: false, error: "Please wait a moment and press the button again." }, { status: 400 });
+  if (token === "expired")
+    return NextResponse.json({ ok: false, error: "This page was open for a while. Please refresh it and try again." }, { status: 400 });
+  if (token !== "ok") return NextResponse.json({ ok: false, error: "Invalid request." }, { status: 400 });
 
   const lead: Lead = {
     name: str(body.name, 120),
@@ -48,6 +95,14 @@ export async function POST(req: Request) {
   if (lead.phone && lead.phone.replace(/\D/g, "").length < 10)
     return NextResponse.json({ ok: false, error: "Please enter a 10-digit phone number." }, { status: 400 });
 
+  // Link spam: pretend success so the bot learns nothing.
+  if (looksLikeSpam(lead.name, lead.message)) {
+    console.warn("[contact] dropped as spam", { ip, name: lead.name });
+    return NextResponse.json({ ok: true });
+  }
+
+  const photos = readPhotos(body.photos);
+
   const rows: [string, string][] = [
     ["Name", lead.name],
     ["Phone", lead.phone],
@@ -56,6 +111,7 @@ export async function POST(req: Request) {
     ["Service", lead.service],
     ["Message", lead.message],
     ["Page", lead.page],
+    ...(photos.length ? ([["Photos", `${photos.length} attached`]] as [string, string][]) : []),
   ];
   const text = rows.map(([k, v]) => `${k}: ${v || "-"}`).join("\n");
 
@@ -75,6 +131,7 @@ export async function POST(req: Request) {
       from,
       to: [office],
       ...(lead.email ? { replyTo: lead.email } : {}),
+      ...(photos.length ? { attachments: photos } : {}),
       subject: `New estimate request: ${lead.name}${lead.service ? ` · ${lead.service}` : ""}`,
       text,
       html: `<h2 style="font-family:Arial,sans-serif">New estimate request</h2><table cellpadding="6" style="font-family:Arial,sans-serif;font-size:14px">${rows

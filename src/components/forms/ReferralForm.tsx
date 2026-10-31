@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { usePathname } from "next/navigation";
+import { useFormToken } from "@/lib/useFormToken";
 import { nav, site } from "@/content/site";
 import {
   ErrorNote,
@@ -26,6 +27,7 @@ export default function ReferralForm() {
   const pathname = usePathname();
   const [status, setStatus] = useState<FormStatus>("idle");
   const [error, setError] = useState("");
+  const getToken = useFormToken();
   const reward = site.referral.reward; // TODO confirm reward amount with client
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -73,7 +75,7 @@ export default function ReferralForm() {
         service: "Referral",
         page: pathname ?? "/referral",
         company: val(fd, "company"),
-      });
+      }, await getToken());
       setStatus("success");
       form.reset();
     } catch (err) {

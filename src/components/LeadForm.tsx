@@ -3,6 +3,8 @@
 import { useState, type FormEvent } from "react";
 import { usePathname } from "next/navigation";
 import { nav, site } from "@/content/site";
+import { useFormToken } from "@/lib/useFormToken";
+import PhotoPicker, { type LeadPhoto } from "@/components/forms/PhotoPicker";
 
 const OTHER = "Other / not sure";
 const serviceOptions = [...nav.services.map((s) => s.label), OTHER];
@@ -23,6 +25,8 @@ export default function LeadForm({ compact = false, service }: { compact?: boole
   const pathname = usePathname();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const [photos, setPhotos] = useState<LeadPhoto[]>([]);
+  const getToken = useFormToken();
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -37,6 +41,7 @@ export default function LeadForm({ compact = false, service }: { compact?: boole
       message: String(fd.get("message") ?? "").trim(),
       company: String(fd.get("company") ?? ""),
       page: pathname ?? "",
+      photos: photos.map(({ filename, content }) => ({ filename, content })),
     };
     if (!payload.name || (!payload.phone && !payload.email)) {
       setStatus("error");
@@ -49,12 +54,13 @@ export default function LeadForm({ compact = false, service }: { compact?: boole
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ ...payload, token: await getToken() }),
       });
       const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
       if (!res.ok || !data.ok) throw new Error(data.error || "Something went wrong.");
       setStatus("success");
       form.reset();
+      setPhotos([]);
     } catch (err) {
       setStatus("error");
       setError(err instanceof Error ? err.message : "Something went wrong.");
@@ -71,7 +77,7 @@ export default function LeadForm({ compact = false, service }: { compact?: boole
         </div>
         <h3 className="mt-5 text-2xl font-bold">Thanks. We got your request.</h3>
         <p className="mt-3 text-ink-500">
-          Tim or Vlad will phone you within one business day, and together you'll pick a time for your free estimate. In a hurry? Call{" "}
+          Tim or Vlad will phone you within one business day, and together you&apos;ll pick a time for your free estimate. In a hurry? Call{" "}
           <a href={site.phoneHref} className="font-semibold text-sea-600 hover:underline">
             {site.phone}
           </a>
@@ -141,6 +147,7 @@ export default function LeadForm({ compact = false, service }: { compact?: boole
             className={field}
           />
         </div>
+        <PhotoPicker photos={photos} onChange={setPhotos} className={compact ? "" : "sm:col-span-2"} />
         {/* honeypot */}
         <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
           <label htmlFor="lf-company">Company</label>

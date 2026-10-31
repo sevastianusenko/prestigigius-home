@@ -22,12 +22,12 @@ export type ContactPayload = {
   company: string;
 };
 
-/** POST to /api/contact; throws with the server's message on failure. */
-export async function postContact(payload: ContactPayload): Promise<void> {
+/** POST to /api/contact with the spam-guard token (useFormToken); throws with the server's message on failure. */
+export async function postContact(payload: ContactPayload, token: string): Promise<void> {
   const res = await fetch("/api/contact", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload),
+    body: JSON.stringify({ ...payload, token }),
   });
   const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
   if (!res.ok || !data.ok) throw new Error(data.error || `Something went wrong. Please call ${site.phone}.`);

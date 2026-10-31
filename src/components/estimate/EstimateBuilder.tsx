@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
+import { useFormToken } from "@/lib/useFormToken";
 import { formatRange, parsePriceRange, roundBallpark, type ParsedPrice } from "./price";
 
 /* ------------------------------------------------------------------ */
@@ -114,6 +115,7 @@ export default function EstimateBuilder({ services, contact }: { services: Estim
   const [stepError, setStepError] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [formError, setFormError] = useState("");
+  const getToken = useFormToken();
 
   const headingRef = useRef<HTMLHeadingElement>(null);
   const firstRender = useRef(true);
@@ -216,7 +218,7 @@ export default function EstimateBuilder({ services, contact }: { services: Estim
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({ ...payload, token: await getToken() }),
       });
       const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
       if (!res.ok || !data.ok) throw new Error(data.error || "Something went wrong.");
