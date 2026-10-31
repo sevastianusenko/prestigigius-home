@@ -29,7 +29,7 @@ export const about: AboutContent = {
     },
     {
       title: "Permits and inspections, always",
-      text: "Every job that needs a permit gets one, under our license, with the inspections passed before we ask for final payment. No exceptions and no 'we can skip it to save you money'.",
+      text: "Every job that needs a permit gets one, under our license, and we see every inspection through until the permit is closed. No exceptions and no 'we can skip it to save you money'.",
     },
     {
       title: "Built for the Florida we work in",
@@ -159,8 +159,9 @@ export const owner = {
   title: "Meet the Owners of Prestigious Home Improvements",
   name: "Tim Fomin",
   role: "President & Co-Founder · Estimates & Project Management",
-  /** Not shown on the site. Put Tim's own approved words here, then render it in MeetOwner. */
-  quote: "",
+  /** Tim's own words (sent 2026-10-31), lightly edited for grammar. Rendered in MeetOwner. */
+  quote:
+    "I started Prestigious Home Improvements because, working as a subcontractor for a number of contractors and window companies, I saw homeowners being taken advantage of: lies, bad or no customer service, and a price tag the workmanship didn't justify. We bring competitive pricing with no runaround. We are a small, family-owned company that takes pride in its craftsmanship.",
   bio: [
     "Tim came into this business with a drill in his hand, not a sales binder. Before the company existed he and Vlad were installing impact windows and doors for other Southwest Florida contractors, and that is where he learned the part of renovation that rarely makes the brochure: the trouble usually is not the carpentry, it is the hand-off.",
     "So when they opened Prestigious in October 2022, Tim built it so the hand-off disappears. He walks every estimate himself, writes the scope, coordinates permits and inspections and stays your contact until the final inspection. Vlad leads the crew on site, so the two people who made you the promise are the two people keeping it.",

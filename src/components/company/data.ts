@@ -102,7 +102,7 @@ export const processStages: Stage[] = [
       "Close the punch list, pass the final inspection and close the permit",
       "Hand over manufacturer warranties, care instructions and our written workmanship warranty",
     ],
-    you: "Walk the job with us, sign off on the punch list, and make the final payment once you are satisfied.",
+    you: "Walk the job with us, sign off on the punch list and pay the final balance; then we schedule the final inspection.",
   },
 ];
 
@@ -159,11 +159,13 @@ export const qualifyingProjects: string[] = [
 ];
 
 export const paymentSchedule = [
-  { stage: "Contract signed", detail: "Deposit to reserve your start date and order materials." },
-  { stage: "Materials on site / work starts", detail: "Progress payment when demo begins or major materials are delivered." },
-  { stage: "Rough-in inspection passed", detail: "Progress payment once the work behind the walls is inspected and approved." },
-  { stage: "Substantial completion", detail: "Progress payment when finishes are in and the punch list is written." },
-  { stage: "Final inspection & walkthrough", detail: "Final payment only after the permit is closed and you sign off." },
+  { stage: "Contract signed", detail: "50% deposit to reserve your start date and order materials." },
+  {
+    stage: "Larger projects",
+    detail: "Additional progress payments may be requested, depending on the size and scope. Your contract lists each one.",
+  },
+  { stage: "Work complete", detail: "Final balance once the project is complete, before the final inspection is scheduled." },
+  { stage: "Final inspection", detail: "We schedule it, meet the inspector and close the permit under our license." },
 ];
 
 export const financingFaqs: Faq[] = [

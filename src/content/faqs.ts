@@ -51,7 +51,7 @@ export const generalFaqs: Faq[] = [
   },
   {
     q: "How does the payment schedule work?",
-    a: "A deposit when you sign, progress payments tied to clear milestones (for example, materials delivered, rough-in inspection passed), and the final payment only after the final inspection passes and you have signed off on the punch list. Under Florida law, a contractor who takes more than 10% of the contract price as a deposit must apply for the permit within 30 days and start work within 90 days of the permit being issued, and your contract will include the required notice about the Florida Homeowners' Construction Recovery Fund.",
+    a: "A 50% deposit when you sign the contract. On larger projects we may ask for additional progress payments, depending on the size and scope; your contract lists each one. The final payment is due when the project is complete, before the final inspection is scheduled. Because the deposit is more than 10%, Florida law requires us to apply for the permit within 30 days and start work within 90 days of the permit being issued, and we do. Under Florida law, a contractor who takes more than 10% of the contract price as a deposit must apply for the permit within 30 days and start work within 90 days of the permit being issued, and your contract will include the required notice about the Florida Homeowners' Construction Recovery Fund.",
   },
   {
     q: "Who actually does the work?",

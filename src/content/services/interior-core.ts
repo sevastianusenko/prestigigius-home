@@ -508,7 +508,7 @@ export const interiorCore: Service[] = [
         n: "06",
         title: "Final walkthrough",
         kicker: "Before the last invoice",
-        text: "We walk the kitchen side by side, write down every punch item and close each one. Final inspection passed, written warranty in your hands, then we bill.",
+        text: "We walk the kitchen side by side, write down every punch item and close each one. Then the final balance, the final inspection and the written warranty in your hands.",
       },
     ],
     faqs: [
@@ -829,7 +829,7 @@ export const interiorCore: Service[] = [
         n: "06",
         title: "Final walkthrough",
         kicker: "Before the last invoice",
-        text: "We run the shower, check the drain and the fan, walk the room side by side and close every punch item. Final inspection passed, written warranty in hand, then we bill.",
+        text: "We run the shower, check the drain and the fan, walk the room side by side and close every punch item. Then the final balance, the final inspection and the written warranty in hand.",
       },
     ],
     faqs: [

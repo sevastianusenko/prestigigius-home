@@ -102,11 +102,10 @@ export default function FinancingPage() {
             </div>
           </div>
           <div>
-            <p className="eyebrow">Progress payments</p>
-            <h2 className="mt-4 text-3xl font-bold md:text-[35px]">You Pay as the Work Gets Done</h2>
+            <p className="eyebrow">Payment schedule</p>
+            <h2 className="mt-4 text-3xl font-bold md:text-[35px]">Half to Start, the Rest When It&apos;s Done</h2>
             <p className="mt-5 text-lg leading-relaxed text-ink-500">
-              Cash or financed, payments follow progress you can see on site. A typical schedule looks like this; your
-              contract lists the exact amounts.
+              Cash or financed, the schedule is simple and written into your contract with the exact amounts.
             </p>
             <ol className="mt-8 overflow-hidden rounded-[14px] border border-sand-200 bg-white shadow-card">
               {paymentSchedule.map((p, i) => (
@@ -122,9 +121,9 @@ export default function FinancingPage() {
               ))}
             </ol>
             <p className="mt-4 text-sm leading-relaxed text-ink-500">
-              Florida law (§ 489.126, F.S.) requires a contractor who takes more than 10% of the contract price as a
-              deposit to apply for permits within 30 days and start work within 90 days after the permit is issued. We
-              follow it on every job.
+              Because our deposit is more than 10% of the contract price, Florida law (§ 489.126, F.S.) requires us to
+              apply for permits within 30 days and start work within 90 days after the permit is issued. We follow it on
+              every job.
             </p>
           </div>
         </div>

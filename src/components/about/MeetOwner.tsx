@@ -16,14 +16,12 @@ export default function MeetOwner() {
         <div>
           <Eyebrow>{owner.eyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-bold md:text-4xl">{owner.title}</h2>
-          {/* Real customer review about Tim (Google). Replace with Tim's own words once he approves a quote. */}
+          {/* Tim's own words (owner.quote). */}
           <figure className="mt-8 rounded-[14px] bg-navy-900 p-8 shadow-card">
-            <p className="eyebrow eyebrow-dark mb-4">What a customer wrote about Tim</p>
-            <blockquote className="font-heading text-xl font-bold leading-snug text-white md:text-2xl">
-              &ldquo;From start to finish the installation of our sliders by Tim Fomin and his skilled team was professional,
-              smooth and stress-free.&rdquo;
+            <p className="eyebrow eyebrow-dark mb-4">Why Tim started the company</p>
+            <blockquote className="font-heading text-lg font-bold leading-snug text-white md:text-xl">
+              &ldquo;{owner.quote}&rdquo;
             </blockquote>
-            <p className="mt-3 text-sm text-navy-100/80">Brad N. · 5-star review on Google</p>
             <figcaption className="mt-6 flex items-center gap-4">
               <span
                 aria-hidden="true"

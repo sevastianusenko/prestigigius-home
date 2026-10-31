@@ -310,7 +310,7 @@ const basePosts: Post[] = [
       "- Sale trouble. Buyers' inspectors and title searches flag open or missing permits, and you may have to legalize the work before closing.",
       "- Safety. Permits exist because bad wiring and bad drains cause fires and leaks behind walls.",
       "## Bottom line",
-      "In Charlotte County, cosmetic kitchen and bathroom updates such as paint, flooring and like-for-like fixture swaps typically do not need a permit. Moving plumbing, adding circuits, replacing a water heater, venting a fan, changing walls or replacing windows does. A licensed contractor should pull the permit in their own name, schedule every inspection and close it out before final payment.",
+      "In Charlotte County, cosmetic kitchen and bathroom updates such as paint, flooring and like-for-like fixture swaps typically do not need a permit. Moving plumbing, adding circuits, replacing a water heater, venting a fan, changing walls or replacing windows does. A licensed contractor should pull the permit in their own name, schedule every inspection and close the permit out.",
       "Planning a kitchen or bathroom remodel? Prestigious Home Improvements (CRC1327831) handles permits, HOA submittals and inspections in Charlotte, Sarasota and Lee counties as part of every job. Call (941) 223-4875 for a free in-home estimate, or request one online.",
     ],
     keywords: [

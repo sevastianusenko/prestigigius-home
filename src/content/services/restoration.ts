@@ -365,7 +365,7 @@ export const restorationServices: Service[] = [
       },
       {
         title: "Walkthrough before the final invoice",
-        text: "We finish the punch list with you and hand over finaled permits. Then we bill, on the written payment schedule you signed.",
+        text: "We finish the punch list with you, collect the final balance on the written schedule you signed, then schedule the final inspection and hand over the closed permits.",
       },
     ],
     promises: [
