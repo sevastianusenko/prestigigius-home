@@ -40,7 +40,11 @@ function readPhotos(v: unknown): Photo[] {
 
 /** Forms ask for a signed timestamp on mount (src/lib/useFormToken.ts). */
 export function GET() {
-  return NextResponse.json({ token: issueToken() }, { headers: { "Cache-Control": "no-store" } });
+  // `mail` says whether this deployment can send at all (no secret is exposed).
+  return NextResponse.json(
+    { token: issueToken(), mail: Boolean(process.env.RESEND_API_KEY) },
+    { headers: { "Cache-Control": "no-store" } },
+  );
 }
 
 const escape = (s: string) =>
@@ -117,6 +121,14 @@ export async function POST(req: Request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
+    // Locally a missing key is fine; on Vercel it would silently lose real leads.
+    if (process.env.VERCEL) {
+      console.error("[contact] RESEND_API_KEY is not set on this deployment; lead not emailed\n" + text);
+      return NextResponse.json(
+        { ok: false, error: `We couldn't send that. Please call us at ${site.phone}.` },
+        { status: 500 },
+      );
+    }
     console.log("[contact] New lead (RESEND_API_KEY not set)\n" + text);
     return NextResponse.json({ ok: true });
   }
