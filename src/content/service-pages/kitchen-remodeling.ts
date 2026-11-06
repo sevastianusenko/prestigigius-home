@@ -1,10 +1,12 @@
 /**
  * Content for the redesigned Kitchen Remodeling service page
- * (src/app/services/kitchen-remodeling/page.tsx). No client kitchen photos yet:
- * every image here is stock and is labelled "Illustrative" on the page.
+ * (src/app/services/kitchen-remodeling/page.tsx). The hero shows our own job photos
+ * (public/images/projects, received 2026-11-05); the product cards are still stock
+ * and are labelled "Illustrative" on the page.
  * Prices and durations must stay consistent with src/content/services/interior-core.ts.
  */
 import { photos } from "../photos";
+import { jobPhoto } from "../project-posts/helpers";
 import type { Photo } from "../types";
 
 function stock(id: string): Photo {
@@ -34,7 +36,12 @@ export const kitchenPage = {
     eyebrow: "Cabinets · countertops · islands · open layouts",
     title: "Kitchen Remodeling in Port Charlotte & Sarasota",
     lead: "Kitchen remodels rarely go wrong on the tile. They go wrong on timing and on money nobody wrote down. We order and inspect your cabinets before the old kitchen comes out, and your finish date goes into the contract.",
-    photos: [P.patio, P.marbleIsland, P.gray] as Photo[],
+    real: true,
+    photos: [
+      jobPhoto("gray-shaker-kitchen-remodel-espresso-island", 1, "kitchen", "Remodeled kitchen with light gray shaker cabinets, a charcoal island under white quartz, stainless appliances and light oak vinyl plank flooring"),
+      jobPhoto("condo-lvp-flooring-white-shaker-kitchen", 2, "kitchen", "White shaker kitchen with tall pantry cabinets, a stainless French-door fridge and an island with a built-in microwave"),
+      jobPhoto("gray-shaker-kitchen-remodel-espresso-island", 4, "kitchen", "Charcoal-stained shaker island with a white veined quartz top in front of a stainless range and subway tile"),
+    ] as Photo[],
     proof: [
       { value: "1", label: "point of contact, start to finish" },
       { value: "Fixed", label: "written price before demo" },

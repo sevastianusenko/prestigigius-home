@@ -41,10 +41,10 @@ export default function AboutPage() {
     "Front of a new two-story concrete block home in Parrish with black impact windows set in red liquid-flashed openings and a covered entry",
   );
   const sidePhoto = jobPhoto(
-    "manatee-county-lanai-wall-block-rebuild",
-    3,
-    "lanai",
-    "New white stucco block wall on a Manatee County lanai with storm-rated windows, a full-lite door and a tall narrow window under the screen enclosure",
+    "arched-french-door-installation-stucco-home",
+    2,
+    "team",
+    "Two Prestigious Home Improvements installers in company shirts at a French door opening: one sealing the threshold on the pavers, one clearing dust inside the dining room",
   );
 
   const aboutSchema = {

@@ -5,6 +5,7 @@
  * Prices must stay consistent with src/content/services/interior-finish.ts.
  */
 import { photos } from "../photos";
+import { jobPhoto } from "../project-posts/helpers";
 import type { Photo } from "../types";
 
 function stock(id: string): Photo {
@@ -33,7 +34,12 @@ export const flooringPage = {
     eyebrow: "LVP · porcelain tile · engineered wood",
     title: "Flooring & Tile Installation in Port Charlotte",
     lead: "Nearly every home here sits on a concrete slab, and the slab decides how a new floor performs. We check it for flatness and moisture before we quote, so leveling is a line on the estimate, not a mid-job phone call.",
-    photos: [P.bigRoom, P.living, P.parquet] as Photo[],
+    real: true,
+    photos: [
+      jobPhoto("condo-lvp-flooring-white-shaker-kitchen", 1, "flooring", "Condo great room with new brown oak wide-plank vinyl flooring running into a white shaker kitchen"),
+      jobPhoto("pool-home-kitchen-and-lvp-flooring-remodel", 3, "flooring", "Vaulted-ceiling living room with gray walls and new light oak vinyl plank flooring, baseboards not yet installed"),
+      jobPhoto("condo-lvp-flooring-white-shaker-kitchen", 7, "flooring", "Condo hallway with white baseboards and brown oak vinyl plank flooring running toward a window"),
+    ] as Photo[],
     proof: [
       { value: "Laser", label: "flatness check before the price" },
       { value: "Same day", label: "debris haul-off" },

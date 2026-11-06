@@ -24,6 +24,15 @@ const HOME_FAQS = generalFaqs.slice(0, 8);
 
 const CORE = ["impact-windows-doors", "bathroom-remodeling", "kitchen-remodeling", "storm-damage-rebuild"];
 
+/** "Recent jobs" order: a finished pool home first, then the newest kitchen, door and flooring jobs; the rest by date. */
+const HOME_FIRST = [
+  "sarasota-pool-home-window-replacement",
+  "gray-shaker-kitchen-remodel-espresso-island",
+  "arched-french-door-installation-stucco-home",
+  "condo-lvp-flooring-white-shaker-kitchen",
+];
+const homeRank = (slug: string) => (HOME_FIRST.includes(slug) ? HOME_FIRST.indexOf(slug) : HOME_FIRST.length);
+
 export const metadata: Metadata = {
   title: { absolute: "Impact Windows, Kitchen & Bath Remodeling, Port Charlotte FL" },
   description:
@@ -82,8 +91,8 @@ export default function HomePage() {
       />
       <RecentProjectsBand
         eyebrow="Recent jobs"
-        // Lead with a finished home (pool-side Sarasota windows), not a site still under construction.
-        projects={[...projects].sort((a, b) => Number(b.slug === "sarasota-pool-home-window-replacement") - Number(a.slug === "sarasota-pool-home-window-replacement"))}
+        intro="Impact windows, sliders and entry doors, plus kitchens and new floors, photographed by our crew in homes and condos across Sarasota, Manatee, Charlotte and Lee Counties."
+        projects={[...projects].sort((a, b) => homeRank(a.slug) - homeRank(b.slug))}
       />
       <ReviewsBand />
       <FinancingBand

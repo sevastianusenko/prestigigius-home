@@ -106,7 +106,9 @@ export default function KitchenRemodelingPage() {
                 </figure>
               ))}
               <div className="col-span-4 row-span-2 flex flex-col justify-center rounded-[16px] glass p-4 ring-1 ring-white/10 sm:p-5">
-                <p className="font-heading text-xs font-bold uppercase tracking-[.16em] text-navy-100/60">Illustrative photos</p>
+                <p className={`font-heading text-xs font-bold uppercase tracking-[.16em] ${C.hero.real ? "text-amber-500" : "text-navy-100/60"}`}>
+                  {C.hero.real ? "Our job photos" : "Illustrative photos"}
+                </p>
                 <p className="mt-2 text-sm leading-snug text-navy-100/80 sm:text-[15px]">
                   These show the finishes we build. At your estimate, ask how we sequence cabinets, stone and inspections on a job like yours.
                 </p>

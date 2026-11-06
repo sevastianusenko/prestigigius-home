@@ -68,10 +68,10 @@ export default function ProcessPage() {
         title="One Crew. One Contract."
         accent="No Guesswork."
         photo={jobPhoto(
-          "parrish-two-story-block-home-impact-windows",
-          7,
-          "windows-doors",
-          "Two-story block home in Parrish with new impact windows and an entry door set in the openings",
+          "arched-french-door-installation-stucco-home",
+          1,
+          "team",
+          "Our installer sealing the sill of dark bronze French doors under an arched transom on a stucco home, blue tape along the threshold",
         )}
         photoPlacement="side"
         photoBadge="Our job photo"

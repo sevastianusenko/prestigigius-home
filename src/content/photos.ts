@@ -1,4 +1,5 @@
 import type { Photo } from "./types";
+import { jobPhoto } from "./project-posts/helpers";
 
 /**
  * Free-license stock photos standing in for client photos. These are self-hosted
@@ -11,6 +12,10 @@ import type { Photo } from "./types";
  * (see alt text containing "dated", "older", "outdated", "before", "weathered").
  */
 export const photos: Photo[] = [
+  // Real job photos (client, 2026-11-05) come first in each category so photo()/photosOf() prefer them.
+  jobPhoto("gray-shaker-kitchen-remodel-espresso-island", 1, "kitchen", "Remodeled kitchen with light gray shaker cabinets, a charcoal island under white quartz, stainless appliances and light oak vinyl plank flooring"),
+  jobPhoto("condo-lvp-flooring-white-shaker-kitchen", 2, "kitchen", "White shaker kitchen with tall pantry cabinets, a stainless French-door fridge and an island with a built-in microwave on brown oak vinyl flooring"),
+  jobPhoto("gray-shaker-kitchen-remodel-espresso-island", 4, "kitchen", "Charcoal-stained shaker island with a white veined quartz top in front of a stainless range and subway tile"),
   // origin: https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1600&q=80
   {
     id: "kitchen-01",
@@ -781,6 +786,9 @@ export const photos: Photo[] = [
     height: 1067,
     credit: "Unsplash",
   },
+  jobPhoto("condo-lvp-flooring-white-shaker-kitchen", 1, "flooring", "Condo great room with new brown oak wide-plank vinyl flooring running into a white shaker kitchen"),
+  jobPhoto("pool-home-kitchen-and-lvp-flooring-remodel", 3, "flooring", "Vaulted-ceiling living room with gray walls and new light oak vinyl plank flooring, baseboards not yet installed"),
+  jobPhoto("condo-lvp-flooring-white-shaker-kitchen", 4, "flooring", "Condo living room with crown molding, a tall window and new brown oak wide-plank vinyl flooring"),
   // origin: https://images.unsplash.com/photo-1573869908170-64b53a60d8da?auto=format&fit=crop&w=1600&q=80
   {
     id: "flooring-01",
@@ -1021,6 +1029,8 @@ export const photos: Photo[] = [
     height: 937,
     credit: "Unsplash",
   },
+  jobPhoto("arched-french-door-installation-stucco-home", 1, "team", "Prestigious Home Improvements installer sealing the sill of dark bronze French doors under an arched transom in a stucco wall"),
+  jobPhoto("arched-french-door-installation-stucco-home", 2, "team", "Two Prestigious Home Improvements installers at a French door opening, one sealing the threshold and one clearing dust with a blower"),
   // origin: https://images.unsplash.com/photo-1587582423116-ec07293f0395?auto=format&fit=crop&w=1600&q=80
   {
     id: "team-01",

@@ -5,6 +5,7 @@
  * Prices and durations must stay consistent with src/content/services/interior-core.ts.
  */
 import { photos } from "../photos";
+import { jobPhoto } from "../project-posts/helpers";
 import type { Photo } from "../types";
 
 function stock(id: string): Photo {
@@ -33,7 +34,12 @@ export const wholeHomePage = {
     eyebrow: "Kitchen · baths · floors · open layouts",
     title: "Whole-Home Remodeling in Port Charlotte & North Port",
     lead: "The kitchen is dated, both baths have the original tile, and the popcorn ceilings came with the house. We plan the whole house at once, price every room in writing, and build it with one crew on one schedule.",
-    photos: [P.open, P.gutted, P.drywall] as Photo[],
+    real: true,
+    photos: [
+      jobPhoto("pool-home-kitchen-and-lvp-flooring-remodel", 3, "whole-home", "Vaulted-ceiling living room mid-remodel with fresh gray paint and new light oak vinyl plank flooring"),
+      jobPhoto("pool-home-kitchen-and-lvp-flooring-remodel", 1, "whole-home", "White shaker cabinets being set under a black-framed window over a screened pool, new vinyl plank floor already down"),
+      jobPhoto("condo-lvp-flooring-white-shaker-kitchen", 2, "whole-home", "Finished white shaker kitchen in a condo with a stainless French-door fridge and new brown oak flooring"),
+    ] as Photo[],
     proof: [
       { value: "1", label: "contract, crew and schedule" },
       { value: "Often", label: "cheaper than room by room" },

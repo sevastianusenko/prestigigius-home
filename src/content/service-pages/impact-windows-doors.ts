@@ -8,6 +8,7 @@ import { jobPhoto } from "../project-posts/helpers";
 import type { Photo } from "../types";
 
 const P = {
+  frenchArch: jobPhoto("arched-french-door-installation-stucco-home", 1, "windows-doors", "Dark bronze outswing French doors with an arched transom being sealed at the sill by our installer on a yellow stucco home", "Southwest Florida: bronze French doors with an arched transom, sill sealed before the trim goes on."),
   sliderCanal: jobPhoto("siesta-key-waterfront-new-build-windows-sliders", 7, "windows-doors", "Black-frame multi-panel impact sliding door wall facing a canal in a new Siesta Key home", "Siesta Key: a black-frame multi-panel slider set before drywall, facing the canal."),
   siestaExterior: jobPhoto("siesta-key-waterfront-new-build-windows-sliders", 1, "windows-doors", "Two-story block home with black-frame impact windows on Siesta Key", "Siesta Key: windows set in white-bucked openings before stucco."),
   veniceDoors: jobPhoto("venice-double-entry-doors-decorative-glass", 1, "windows-doors", "White double entry doors with decorative glass in Venice, FL", "Venice: double entry doors with decorative glass and a matte black handleset."),
@@ -66,7 +67,7 @@ export const impactPage = {
     {
       title: "Entry & French doors",
       text: "Impact front doors, doubles with decorative glass, French doors to the lanai and modern pivot-look entries, set with a sloped, sealed sill.",
-      photo: P.veniceDoors,
+      photo: P.frenchArch,
       price: "$2,800–$15,000 per door",
       links: [
         { label: "Outswing vs inswing", href: "/resources/outswing-vs-inswing-front-door" },

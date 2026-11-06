@@ -51,10 +51,10 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   };
 }
 
-/** Hero photos per service; impact photos are real jobs, the others are stock. */
+/** Hero photos per service; impact and kitchen photos are real jobs, bathroom is stock. */
 const HERO: Record<string, { photos: Photo[]; real: boolean }> = {
   "bathroom-remodeling": { photos: bathroomPage.hero.photos, real: false },
-  "kitchen-remodeling": { photos: kitchenPage.hero.photos, real: false },
+  "kitchen-remodeling": { photos: kitchenPage.hero.photos, real: true },
   "impact-windows-doors": { photos: impactPage.hero.photos, real: true },
 };
 
