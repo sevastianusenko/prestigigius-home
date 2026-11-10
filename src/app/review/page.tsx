@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 const hrefs = {
-  google: site.ratings.google.href,
+  google: site.ratings.google.reviewHref,
   yelp: site.ratings.yelp.href,
   bbb: site.ratings.bbb.href,
 } as const;

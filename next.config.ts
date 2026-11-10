@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
       // The blog now lives at /resources (reference site naming).
       { source: "/blog", destination: "/resources", permanent: true },
       { source: "/blog/:slug", destination: "/resources/:slug", permanent: true },
+      // Old Wix site: its portfolio page is still indexed by Google (checked 09.11.2026).
+      { source: "/work", destination: "/projects", permanent: true },
+      { source: "/work/:path*", destination: "/projects", permanent: true },
     ];
   },
 };

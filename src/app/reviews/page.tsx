@@ -53,7 +53,7 @@ export default function ReviewsPage() {
   ];
 
   const leave = [
-    { label: "Google", href: google.href },
+    { label: "Google", href: google.reviewHref },
     { label: "Yelp", href: site.ratings.yelp.href },
     { label: "BBB", href: site.ratings.bbb.href },
   ];

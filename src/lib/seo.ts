@@ -93,7 +93,9 @@ export function localBusinessSchema(): JsonLd {
       },
     },
     founder: site.owners.map((o) => ({ "@type": "Person", name: o.name, jobTitle: o.role })),
+    hasMap: google.href,
     sameAs: [
+      google.href,
       site.social.facebook,
       site.social.instagram,
       site.social.nextdoor,

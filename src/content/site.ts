@@ -26,7 +26,14 @@ export const site = {
     { name: "Vlad Filippov", role: "Co-Founder · Field Operations" },
   ],
   ratings: {
-    google: { score: "5.0", count: 8, href: "https://www.google.com/maps/search/Prestigious+Home+Improvements+Inc+Port+Charlotte+FL" },
+    google: {
+      score: "5.0",
+      count: 8,
+      /** Our Business Profile on Google Maps (CID 9499251855156913053) */
+      href: "https://www.google.com/maps?cid=9499251855156913053",
+      /** Opens the "write a review" dialog for the profile */
+      reviewHref: "https://g.page/r/CZ0jmao7H9SDEBM/review",
+    },
     yelp: { score: "5.0", count: 3, href: "https://www.yelp.com/biz/prestigious-home-improvements-port-charlotte" },
     bbb: {
       grade: "A+",

@@ -79,7 +79,8 @@ const contractorSchema = {
     ...site.serviceAreas.map((name) => ({ "@type": "City", name: `${name}, FL` })),
     ...site.counties.map((name) => ({ "@type": "AdministrativeArea", name: `${name}, FL` })),
   ],
-  sameAs: [site.social.facebook, site.social.instagram, site.ratings.yelp.href, site.ratings.bbb.href],
+  hasMap: site.ratings.google.href,
+  sameAs: [site.ratings.google.href, site.social.facebook, site.social.instagram, site.ratings.yelp.href, site.ratings.bbb.href],
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
