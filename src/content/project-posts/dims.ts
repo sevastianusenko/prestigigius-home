@@ -22,4 +22,5 @@ export const projectPhotoDims: Record<string, [number, number][]> = {
   "pool-home-kitchen-and-lvp-flooring-remodel": [[960, 1280], [960, 1280], [960, 1280], [960, 1280], [960, 1280], [960, 1280]],
   "condo-lvp-flooring-white-shaker-kitchen": [[960, 1280], [960, 1280], [960, 1280], [960, 1280], [960, 1280], [960, 1280], [960, 1280], [960, 1280], [960, 1280], [960, 1280]],
   "arched-french-door-installation-stucco-home": [[960, 1280], [960, 1280], [960, 1280], [960, 1280]],
+  "new-construction-black-windows-full-lite-doors": [[1280, 960], [960, 1280], [960, 1280], [1280, 960], [1280, 960], [960, 1280], [960, 1280]],
 };

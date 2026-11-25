@@ -5,6 +5,7 @@ import { postsB } from "./project-posts/b";
 import { postsC } from "./project-posts/c";
 import { postsD } from "./project-posts/d";
 import { postsE } from "./project-posts/e";
+import { postsF } from "./project-posts/f";
 
 /**
  * CUSTOMER STORIES — every fact below comes from a real, published customer review
@@ -203,7 +204,7 @@ const reviewStories: Project[] = [
 ];
 
 /** Real job posts (client photos), newest first; posts with unknown dates last. */
-const realPosts: Project[] = [...postsA, ...postsB, ...postsC, ...postsD, ...postsE].sort((a, b) =>
+const realPosts: Project[] = [...postsA, ...postsB, ...postsC, ...postsD, ...postsE, ...postsF].sort((a, b) =>
   a.date && b.date ? b.date.localeCompare(a.date) : a.date ? -1 : b.date ? 1 : 0,
 );
 

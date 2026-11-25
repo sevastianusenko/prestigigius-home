@@ -27,6 +27,7 @@ const CORE = ["impact-windows-doors", "bathroom-remodeling", "kitchen-remodeling
 /** "Recent jobs" order: a finished pool home first, then the newest kitchen, door and flooring jobs; the rest by date. */
 const HOME_FIRST = [
   "sarasota-pool-home-window-replacement",
+  "new-construction-black-windows-full-lite-doors",
   "gray-shaker-kitchen-remodel-espresso-island",
   "arched-french-door-installation-stucco-home",
   "condo-lvp-flooring-white-shaker-kitchen",
